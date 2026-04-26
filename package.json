@@ -1,0 +1,29 @@
+{
+  "name": "supermarket-price-compare",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Israeli online supermarket basket comparison — monorepo root",
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=18.18"
+  },
+  "scripts": {
+    "predev": "pnpm --filter @supermarket-price-compare/shared build && pnpm --filter @supermarket-price-compare/db generate",
+    "dev": "concurrently -k -n shared,web,api -c cyan,green,magenta \"pnpm --filter @supermarket-price-compare/shared dev\" \"pnpm --filter @supermarket-price-compare/web dev\" \"pnpm --filter @supermarket-price-compare/api start:dev\"",
+    "dev:web": "pnpm --filter @supermarket-price-compare/shared build && pnpm --filter @supermarket-price-compare/web dev",
+    "dev:api": "pnpm --filter @supermarket-price-compare/shared build && pnpm --filter @supermarket-price-compare/api start:dev",
+    "build": "pnpm --filter @supermarket-price-compare/shared build && pnpm --filter @supermarket-price-compare/db generate && pnpm --filter @supermarket-price-compare/db build && pnpm --filter @supermarket-price-compare/ingestion build && pnpm --filter @supermarket-price-compare/web build && pnpm --filter @supermarket-price-compare/api build",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  }
+}

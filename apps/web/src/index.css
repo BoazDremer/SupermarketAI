@@ -1,0 +1,39 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+  line-height: 1.5;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+.app {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+h1 {
+  font-size: clamp(1.35rem, 4vw, 1.75rem);
+  margin: 0 0 0.5rem;
+}
+
+.lede {
+  margin: 0 0 1rem;
+  color: #334155;
+}
+
+.meta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
