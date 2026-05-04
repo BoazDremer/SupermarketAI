@@ -1,0 +1,239 @@
+{
+  "retailerKey": "sample",
+  "fixtureRoot": "/Users/boazdremer/Documents/Work/Astricom/AgentTools/SupermarketAI/SupermarketAI/packages/ingestion/fixtures/sample",
+  "generatedAt": "2026-04-26T13:47:19.549Z",
+  "stores": [
+    {
+      "file": {
+        "id": "d710a29aeb409084",
+        "retailerKey": "sample",
+        "kind": "STORE",
+        "name": "stores.xml",
+        "relativePath": "stores.xml",
+        "sizeBytes": 316,
+        "lastModifiedMs": 1777210892177.61
+      },
+      "stores": [
+        {
+          "externalStoreId": "online-1",
+          "displayName": "סניף אינטרנט",
+          "city": "",
+          "deliveryOffered": true,
+          "raw": {
+            "@_externalStoreId": "online-1",
+            "@_displayName": "סניף אינטרנט",
+            "@_city": "",
+            "@_deliveryOffered": true
+          }
+        },
+        {
+          "externalStoreId": "77",
+          "displayName": "סניף קרקע חיפה",
+          "city": "חיפה",
+          "deliveryOffered": false,
+          "raw": {
+            "@_externalStoreId": 77,
+            "@_displayName": "סניף קרקע חיפה",
+            "@_city": "חיפה",
+            "@_deliveryOffered": false
+          }
+        }
+      ]
+    }
+  ],
+  "priceFull": [
+    {
+      "file": {
+        "id": "675365203f87eb7a",
+        "retailerKey": "sample",
+        "kind": "PRICE_FULL",
+        "name": "price_full.xml",
+        "relativePath": "price_full.xml",
+        "sizeBytes": 439,
+        "lastModifiedMs": 1777210892171.4172
+      },
+      "products": [
+        {
+          "externalItemCode": "7290001234567",
+          "externalStoreId": "online-1",
+          "name": "חלב 3%",
+          "nameHe": "חלב 3%",
+          "barcode": "7290001234567",
+          "raw": {
+            "@_externalItemCode": 7290001234567,
+            "@_externalStoreId": "online-1",
+            "@_name": "חלב 3%",
+            "@_nameHe": "חלב 3%",
+            "@_barcode": 7290001234567,
+            "@_priceMinor": 529,
+            "@_currency": "ILS",
+            "@_isCurrent": true
+          }
+        },
+        {
+          "externalItemCode": "7290001234568",
+          "externalStoreId": "77",
+          "name": "לחם כפרי",
+          "raw": {
+            "@_externalItemCode": 7290001234568,
+            "@_externalStoreId": 77,
+            "@_name": "לחם כפרי",
+            "@_priceMinor": 699,
+            "@_currency": "ILS",
+            "@_isCurrent": true
+          }
+        }
+      ],
+      "prices": [
+        {
+          "externalItemCode": "7290001234567",
+          "externalStoreId": "online-1",
+          "amountMinor": 529,
+          "currency": "ILS",
+          "isCurrent": true,
+          "raw": {
+            "@_externalItemCode": 7290001234567,
+            "@_externalStoreId": "online-1",
+            "@_name": "חלב 3%",
+            "@_nameHe": "חלב 3%",
+            "@_barcode": 7290001234567,
+            "@_priceMinor": 529,
+            "@_currency": "ILS",
+            "@_isCurrent": true
+          }
+        },
+        {
+          "externalItemCode": "7290001234568",
+          "externalStoreId": "77",
+          "amountMinor": 699,
+          "currency": "ILS",
+          "isCurrent": true,
+          "raw": {
+            "@_externalItemCode": 7290001234568,
+            "@_externalStoreId": 77,
+            "@_name": "לחם כפרי",
+            "@_priceMinor": 699,
+            "@_currency": "ILS",
+            "@_isCurrent": true
+          }
+        }
+      ]
+    }
+  ],
+  "priceUpdate": [
+    {
+      "file": {
+        "id": "74610646f76887bf",
+        "retailerKey": "sample",
+        "kind": "PRICE_UPDATE",
+        "name": "price_update.xml",
+        "relativePath": "price_update.xml",
+        "sizeBytes": 230,
+        "lastModifiedMs": 1777210892171.3735
+      },
+      "prices": [
+        {
+          "externalItemCode": "7290001234567",
+          "externalStoreId": "online-1",
+          "amountMinor": 499,
+          "currency": "ILS",
+          "isCurrent": true,
+          "raw": {
+            "@_externalItemCode": 7290001234567,
+            "@_externalStoreId": "online-1",
+            "@_name": "חלב 3%",
+            "@_priceMinor": 499,
+            "@_currency": "ILS",
+            "@_isCurrent": true
+          }
+        }
+      ]
+    }
+  ],
+  "promoFull": [
+    {
+      "file": {
+        "id": "479cf00484e92388",
+        "retailerKey": "sample",
+        "kind": "PROMO_FULL",
+        "name": "promo_full.xml",
+        "relativePath": "promo_full.xml",
+        "sizeBytes": 427,
+        "lastModifiedMs": 1777210892171.3394
+      },
+      "promotions": [
+        {
+          "externalPromotionId": "promo-1",
+          "externalStoreId": "online-1",
+          "title": "מבצע 1+1",
+          "description": "על מגוון מוצרים",
+          "startsAt": "2026-01-01T00:00:00.000Z",
+          "endsAt": "2026-12-31T23:59:59.000Z",
+          "raw": {
+            "@_externalPromotionId": "promo-1",
+            "@_externalStoreId": "online-1",
+            "@_title": "מבצע 1+1",
+            "@_description": "על מגוון מוצרים",
+            "@_startsAt": "2026-01-01T00:00:00.000Z",
+            "@_endsAt": "2026-12-31T23:59:59.000Z"
+          }
+        }
+      ],
+      "items": [
+        {
+          "externalPromotionId": "promo-1",
+          "externalItemCode": "7290001234567",
+          "role": "PRIMARY_TARGET",
+          "minQuantity": 1,
+          "raw": {
+            "@_externalPromotionId": "promo-1",
+            "@_externalItemCode": 7290001234567,
+            "@_role": "PRIMARY_TARGET",
+            "@_minQuantity": 1
+          }
+        }
+      ]
+    }
+  ],
+  "promoUpdate": [
+    {
+      "file": {
+        "id": "eca65999680fb333",
+        "retailerKey": "sample",
+        "kind": "PROMO_UPDATE",
+        "name": "promo_update.xml",
+        "relativePath": "promo_update.xml",
+        "sizeBytes": 353,
+        "lastModifiedMs": 1777210892171.4604
+      },
+      "promotions": [
+        {
+          "externalPromotionId": "promo-2",
+          "externalStoreId": "online-1",
+          "title": "עדכון מבצע",
+          "startsAt": "2026-04-01T00:00:00.000Z",
+          "raw": {
+            "@_externalPromotionId": "promo-2",
+            "@_externalStoreId": "online-1",
+            "@_title": "עדכון מבצע",
+            "@_startsAt": "2026-04-01T00:00:00.000Z"
+          }
+        }
+      ],
+      "items": [
+        {
+          "externalPromotionId": "promo-2",
+          "externalItemCode": "7290001234568",
+          "role": "PRIMARY_TARGET",
+          "minQuantity": 2,
+          "raw": {
+            "@_externalPromotionId": "promo-2",
+            "@_externalItemCode": 7290001234568,
+            "@_role": "PRIMARY_TARGET",
+            "@_minQuantity": 2
+          }
+        }
+      ]
+    }
+  ]
+}

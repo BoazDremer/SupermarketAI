@@ -1,8 +1,9 @@
 import { z } from 'zod';
 
+export * from './domain/index.js';
+
 /**
- * Workspace placeholder for shared domain types, DTOs, and Zod schemas.
- * Replace with real schemas as the domain model is defined.
+ * Lightweight workspace health check for wiring tests between apps and packages.
  */
 export const workspaceHealthSchema = z.object({
   ok: z.literal(true),

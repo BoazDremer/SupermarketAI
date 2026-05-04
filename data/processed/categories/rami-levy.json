@@ -1,0 +1,815 @@
+{
+  "retailerSlug": "rami-levy",
+  "retailerNameHe": "רמי לוי",
+  "scrapedAt": "2026-04-30T11:10:04.523Z",
+  "source": "https://www.rami-levy.co.il/api/menu + /api/catalog",
+  "roots": [
+    {
+      "id": "54",
+      "nameHe": "שימורים בישול ואפיה",
+      "slug": "שימורים-בישול-ואפיה",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%91%D7%99%D7%A9%D7%95%D7%9C-%D7%95%D7%90%D7%A4%D7%99%D7%94",
+      "depth": 0,
+      "children": [
+        {
+          "id": "225",
+          "nameHe": "שימורים",
+          "slug": "שימורים",
+          "depth": 1,
+          "children": [],
+          "productCount": 315
+        },
+        {
+          "id": "275",
+          "nameHe": "מוצרי אפיה",
+          "slug": "מוצרי-אפיה",
+          "depth": 1,
+          "children": [],
+          "productCount": 183
+        },
+        {
+          "id": "226",
+          "nameHe": "רטבים",
+          "slug": "רטבים",
+          "depth": 1,
+          "children": [],
+          "productCount": 138
+        },
+        {
+          "id": "231",
+          "nameHe": "תבלינים",
+          "slug": "תבלינים",
+          "depth": 1,
+          "children": [],
+          "productCount": 130
+        },
+        {
+          "id": "264",
+          "nameHe": "דבש, ריבה וממרחים",
+          "slug": "דבש-ריבה-וממרחים",
+          "depth": 1,
+          "children": [],
+          "productCount": 104
+        },
+        {
+          "id": "229",
+          "nameHe": "מרקים ותבשילים",
+          "slug": "מרקים-ותבשילים",
+          "depth": 1,
+          "children": [],
+          "productCount": 88
+        },
+        {
+          "id": "305",
+          "nameHe": "קמח ופירורי לחם",
+          "slug": "קמח-ופירורי-לחם",
+          "depth": 1,
+          "children": [],
+          "productCount": 83
+        },
+        {
+          "id": "267",
+          "nameHe": "שמן, חומץ ומיץ לימון",
+          "slug": "שמן-חומץ-ומיץ-לימון",
+          "depth": 1,
+          "children": [],
+          "productCount": 40
+        },
+        {
+          "id": "306",
+          "nameHe": "המטבח האסייאתי",
+          "slug": "המטבח-האסייאתי",
+          "depth": 1,
+          "children": [],
+          "productCount": 33
+        }
+      ],
+      "productCount": 1114
+    },
+    {
+      "id": "60",
+      "nameHe": "פארם ותינוקות",
+      "slug": "פארם-ותינוקות",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%A4%D7%90%D7%A8%D7%9D-%D7%95%D7%AA%D7%99%D7%A0%D7%95%D7%A7%D7%95%D7%AA",
+      "depth": 0,
+      "children": [
+        {
+          "id": "258",
+          "nameHe": "שמפו, מרכך וטיפוח הגוף",
+          "slug": "שמפו-ומרכך",
+          "depth": 1,
+          "children": [],
+          "productCount": 208
+        },
+        {
+          "id": "293",
+          "nameHe": "היגיינת הפה",
+          "slug": "היגיינת-הפה",
+          "depth": 1,
+          "children": [],
+          "productCount": 191
+        },
+        {
+          "id": "257",
+          "nameHe": "סבונים",
+          "slug": "סבונים",
+          "depth": 1,
+          "children": [],
+          "productCount": 109
+        },
+        {
+          "id": "255",
+          "nameHe": "מזון לתינוקות",
+          "slug": "מזון-לתינוקות",
+          "depth": 1,
+          "children": [],
+          "productCount": 100
+        },
+        {
+          "id": "261",
+          "nameHe": "דאודורנט",
+          "slug": "דאודורנט",
+          "depth": 1,
+          "children": [],
+          "productCount": 100
+        },
+        {
+          "id": "256",
+          "nameHe": "טיפוח ואביזרי תינוקות וילדים",
+          "slug": "טיפוח-ואביזרי-תינוקות-וילדים",
+          "depth": 1,
+          "children": [],
+          "productCount": 94
+        },
+        {
+          "id": "251",
+          "nameHe": "מוצרי הגיינה",
+          "slug": "מוצרי-הגיינה",
+          "depth": 1,
+          "children": [],
+          "productCount": 86
+        },
+        {
+          "id": "254",
+          "nameHe": "חיתולים ומגבונים",
+          "slug": "חיתולים-ומגבונים",
+          "depth": 1,
+          "children": [],
+          "productCount": 86
+        },
+        {
+          "id": "252",
+          "nameHe": "מוצרי פארם",
+          "slug": "מוצרי-פארם",
+          "depth": 1,
+          "children": [],
+          "productCount": 74
+        },
+        {
+          "id": "292",
+          "nameHe": "גילוח והסרת שיער",
+          "slug": "גילוח-והסרת-שיער",
+          "depth": 1,
+          "children": [],
+          "productCount": 32
+        }
+      ],
+      "productCount": 1080
+    },
+    {
+      "id": "59",
+      "nameHe": "אחזקת הבית ובע\"ח",
+      "slug": "אחזקת-הבית-ובע-ח",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%90%D7%97%D7%96%D7%A7%D7%AA-%D7%94%D7%91%D7%99%D7%AA-%D7%95%D7%91%D7%A2-%D7%97",
+      "depth": 0,
+      "children": [
+        {
+          "id": "245",
+          "nameHe": "מוצרי ניקיון לבית",
+          "slug": "מוצרי-ניקיון-לבית",
+          "depth": 1,
+          "children": [],
+          "productCount": 243
+        },
+        {
+          "id": "247",
+          "nameHe": "מוצרי כביסה",
+          "slug": "מוצרי-כביסה",
+          "depth": 1,
+          "children": [],
+          "productCount": 203
+        },
+        {
+          "id": "283",
+          "nameHe": "הכל לבית",
+          "slug": "כלי-בית",
+          "depth": 1,
+          "children": [],
+          "productCount": 128
+        },
+        {
+          "id": "249",
+          "nameHe": "קוטל חרקים ומבשמי אויר",
+          "slug": "קוטל-חרקים-ומבשמי-אויר",
+          "depth": 1,
+          "children": [],
+          "productCount": 108
+        },
+        {
+          "id": "248",
+          "nameHe": "אביזרי ניקיון",
+          "slug": "אביזרי-ניקיון",
+          "depth": 1,
+          "children": [],
+          "productCount": 106
+        },
+        {
+          "id": "246",
+          "nameHe": "ניקוי כלים",
+          "slug": "ניקוי-כלים",
+          "depth": 1,
+          "children": [],
+          "productCount": 74
+        },
+        {
+          "id": "589",
+          "nameHe": "מוצרי חשמל",
+          "slug": "מוצרי-חשמל",
+          "depth": 1,
+          "children": [],
+          "productCount": 11
+        },
+        {
+          "id": "294",
+          "nameHe": "מוצרי ילדים",
+          "slug": "מוצרי-ילדים",
+          "depth": 1,
+          "children": [],
+          "productCount": 8
+        },
+        {
+          "id": "471",
+          "nameHe": "ביגוד ואקססוריס",
+          "slug": "ביגוד",
+          "depth": 1,
+          "children": [],
+          "productCount": 8
+        }
+      ],
+      "productCount": 889
+    },
+    {
+      "id": "57",
+      "nameHe": "משקאות",
+      "slug": "משקאות",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%9E%D7%A9%D7%A7%D7%90%D7%95%D7%AA",
+      "depth": 0,
+      "children": [
+        {
+          "id": "239",
+          "nameHe": "יינות",
+          "slug": "יינות",
+          "depth": 1,
+          "children": [],
+          "productCount": 177
+        },
+        {
+          "id": "290",
+          "nameHe": "אלכוהול ואנרגיה",
+          "slug": "אלכוהול-ואנרגיה",
+          "depth": 1,
+          "children": [],
+          "productCount": 162
+        },
+        {
+          "id": "237",
+          "nameHe": "משקאות קלים",
+          "slug": "משקאות-קלים",
+          "depth": 1,
+          "children": [],
+          "productCount": 160
+        },
+        {
+          "id": "238",
+          "nameHe": "משקאות חמים",
+          "slug": "משקאות-חמים",
+          "depth": 1,
+          "children": [],
+          "productCount": 116
+        },
+        {
+          "id": "595",
+          "nameHe": "תה וחליטות",
+          "slug": "תה-וחליטות",
+          "depth": 1,
+          "children": [],
+          "productCount": 93
+        },
+        {
+          "id": "591",
+          "nameHe": "משקאות במארזים",
+          "slug": "משקאות-במארזים",
+          "depth": 1,
+          "children": [],
+          "productCount": 53
+        },
+        {
+          "id": "291",
+          "nameHe": "תרכיזים",
+          "slug": "תרכיזים",
+          "depth": 1,
+          "children": [],
+          "productCount": 51
+        }
+      ],
+      "productCount": 812
+    },
+    {
+      "id": "56",
+      "nameHe": "חטיפים ומתוקים",
+      "slug": "חטיפים-ומתוקים",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%97%D7%98%D7%99%D7%A4%D7%99%D7%9D-%D7%95%D7%9E%D7%AA%D7%95%D7%A7%D7%99%D7%9D",
+      "depth": 0,
+      "children": [
+        {
+          "id": "236",
+          "nameHe": "חטיפים מלוחים",
+          "slug": "חטיפים-מלוחים",
+          "depth": 1,
+          "children": [],
+          "productCount": 164
+        },
+        {
+          "id": "235",
+          "nameHe": "ממתקים",
+          "slug": "ממתקים",
+          "depth": 1,
+          "children": [],
+          "productCount": 158
+        },
+        {
+          "id": "301",
+          "nameHe": "סוכריות ומסטיקים",
+          "slug": "סוכריות-ומסטיקים",
+          "depth": 1,
+          "children": [],
+          "productCount": 132
+        },
+        {
+          "id": "302",
+          "nameHe": "עוגות ועוגיות",
+          "slug": "עוגות-ועוגיות",
+          "depth": 1,
+          "children": [],
+          "productCount": 121
+        },
+        {
+          "id": "299",
+          "nameHe": "וופלים וביסקוויטים",
+          "slug": "וופלים-וביסקוויטים",
+          "depth": 1,
+          "children": [],
+          "productCount": 94
+        },
+        {
+          "id": "300",
+          "nameHe": "חטיפים מתוקים",
+          "slug": "חטיפים-מתוקים",
+          "depth": 1,
+          "children": [],
+          "productCount": 69
+        }
+      ],
+      "productCount": 738
+    },
+    {
+      "id": "50",
+      "nameHe": "חלב ביצים וסלטים",
+      "slug": "חלב-ביצים-וסלטים",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%97%D7%9C%D7%91-%D7%91%D7%99%D7%A6%D7%99%D7%9D-%D7%95%D7%A1%D7%9C%D7%98%D7%99%D7%9D",
+      "depth": 0,
+      "children": [
+        {
+          "id": "202",
+          "nameHe": "גבינות",
+          "slug": "גבינות",
+          "depth": 1,
+          "children": [],
+          "productCount": 221
+        },
+        {
+          "id": "204",
+          "nameHe": "סלטים",
+          "slug": "סלטים",
+          "depth": 1,
+          "children": [],
+          "productCount": 143
+        },
+        {
+          "id": "203",
+          "nameHe": "יוגורט ומעדני חלב",
+          "slug": "יוגורט-ומעדני-חלב",
+          "depth": 1,
+          "children": [],
+          "productCount": 120
+        },
+        {
+          "id": "198",
+          "nameHe": "חלב",
+          "slug": "חלב",
+          "depth": 1,
+          "children": [],
+          "productCount": 93
+        },
+        {
+          "id": "201",
+          "nameHe": "חמאה מרגרינה שמנת",
+          "slug": "חמאה-מרגרינה-שמנת",
+          "depth": 1,
+          "children": [],
+          "productCount": 29
+        },
+        {
+          "id": "498",
+          "nameHe": "מזון מצונן",
+          "slug": "מזון-מצונן",
+          "depth": 1,
+          "children": [],
+          "productCount": 17
+        },
+        {
+          "id": "200",
+          "nameHe": "ביצים",
+          "slug": "ביצים",
+          "depth": 1,
+          "children": [],
+          "productCount": 2
+        }
+      ],
+      "productCount": 625
+    },
+    {
+      "id": "53",
+      "nameHe": "קפואים",
+      "slug": "קפואים",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%A7%D7%A4%D7%95%D7%90%D7%99%D7%9D",
+      "depth": 0,
+      "children": [
+        {
+          "id": "222",
+          "nameHe": "ירקות, פירות וצ'יפס קפואים",
+          "slug": "ירקות-פירות-וצ-יפס-קפואים",
+          "depth": 1,
+          "children": [],
+          "productCount": 129
+        },
+        {
+          "id": "223",
+          "nameHe": "פיצות, מאפים ובצקים קפואים",
+          "slug": "פיצות-מאפים-ובצקים-קפואים",
+          "depth": 1,
+          "children": [],
+          "productCount": 129
+        },
+        {
+          "id": "221",
+          "nameHe": "אוכל להכנה מהירה",
+          "slug": "אוכל-מוכן",
+          "depth": 1,
+          "children": [],
+          "productCount": 101
+        },
+        {
+          "id": "220",
+          "nameHe": "גלידות וארטיקים",
+          "slug": "גלידות-וארטיקים",
+          "depth": 1,
+          "children": [],
+          "productCount": 100
+        }
+      ],
+      "productCount": 459
+    },
+    {
+      "id": "58",
+      "nameHe": "חד-פעמי ומתכלה",
+      "slug": "חד-פעמי-ומתכלה",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%97%D7%93-%D7%A4%D7%A2%D7%9E%D7%99-%D7%95%D7%9E%D7%AA%D7%9B%D7%9C%D7%94",
+      "depth": 0,
+      "children": [
+        {
+          "id": "241",
+          "nameHe": "חד פעמי",
+          "slug": "חד-פעמי",
+          "depth": 1,
+          "children": [],
+          "productCount": 174
+        },
+        {
+          "id": "242",
+          "nameHe": "עטיפות, שקיות ותבניות",
+          "slug": "עטיפות-שקיות-ותבניות",
+          "depth": 1,
+          "children": [],
+          "productCount": 173
+        },
+        {
+          "id": "263",
+          "nameHe": "מוצרי נייר וחד פעמי",
+          "slug": "מוצרי-נייר-וחד-פעמי",
+          "depth": 1,
+          "children": [],
+          "productCount": 41
+        },
+        {
+          "id": "281",
+          "nameHe": "פיקניק",
+          "slug": "פיקניק",
+          "depth": 1,
+          "children": [],
+          "productCount": 20
+        },
+        {
+          "id": "277",
+          "nameHe": "נרות וגפרורים",
+          "slug": "נרות-וגפרורים",
+          "depth": 1,
+          "children": [],
+          "productCount": 18
+        }
+      ],
+      "productCount": 426
+    },
+    {
+      "id": "55",
+      "nameHe": "קטניות ודגנים",
+      "slug": "קטניות-ודגנים",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%A7%D7%98%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%93%D7%92%D7%A0%D7%99%D7%9D",
+      "depth": 0,
+      "children": [
+        {
+          "id": "234",
+          "nameHe": "דגנים וחטיפי אנרגיה",
+          "slug": "דגנים-וחטיפי-אנרגיה",
+          "depth": 1,
+          "children": [],
+          "productCount": 137
+        },
+        {
+          "id": "230",
+          "nameHe": "פסטה, פתיתים, קוסקוס",
+          "slug": "פסטה-פתיתים-קוסקוס",
+          "depth": 1,
+          "children": [],
+          "productCount": 111
+        },
+        {
+          "id": "303",
+          "nameHe": "אורז וקטניות",
+          "slug": "אורז-וקטניות",
+          "depth": 1,
+          "children": [],
+          "productCount": 101
+        },
+        {
+          "id": "272",
+          "nameHe": "פריכיות וקרקרים",
+          "slug": "מאפה-מלוח",
+          "depth": 1,
+          "children": [],
+          "productCount": 70
+        }
+      ],
+      "productCount": 419
+    },
+    {
+      "id": "52",
+      "nameHe": "אורגני ובריאות",
+      "slug": "אורגני-ובריאות",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%90%D7%95%D7%A8%D7%92%D7%A0%D7%99-%D7%95%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA",
+      "depth": 0,
+      "children": [
+        {
+          "id": "282",
+          "nameHe": "ללא גלוטן",
+          "slug": "ללא-גלוטן",
+          "depth": 1,
+          "children": [],
+          "productCount": 109
+        },
+        {
+          "id": "274",
+          "nameHe": "נטול ומופחת סוכר",
+          "slug": "נטול-ומופחת-סוכר",
+          "depth": 1,
+          "children": [],
+          "productCount": 70
+        },
+        {
+          "id": "276",
+          "nameHe": "אורגני וטבעוני",
+          "slug": "אורגני-וטבעוני",
+          "depth": 1,
+          "children": [],
+          "productCount": 54
+        },
+        {
+          "id": "542",
+          "nameHe": "תחליפי גבינה וטופו",
+          "slug": "תחליפי-גבינה-וטופו",
+          "depth": 1,
+          "children": [],
+          "productCount": 13
+        },
+        {
+          "id": "214",
+          "nameHe": "מעדנים ללא לקטוז",
+          "slug": "סויה-וללא-לקטוז",
+          "depth": 1,
+          "children": [],
+          "productCount": 9
+        },
+        {
+          "id": "497",
+          "nameHe": "מזון ותוספים לספורטאים",
+          "slug": "מזון-ותוספים-לספורטאים",
+          "depth": 1,
+          "children": [],
+          "productCount": 1
+        }
+      ],
+      "productCount": 256
+    },
+    {
+      "id": "51",
+      "nameHe": "בשר  ודגים",
+      "slug": "בשר-ודגים",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%91%D7%A9%D7%A8-%D7%95%D7%93%D7%92%D7%99%D7%9D",
+      "depth": 0,
+      "children": [
+        {
+          "id": "210",
+          "nameHe": "נקניקים ומזון מצונן",
+          "slug": "נקניקיות-ונקניקים",
+          "depth": 1,
+          "children": [],
+          "productCount": 114
+        },
+        {
+          "id": "206",
+          "nameHe": "בשרים על האש",
+          "slug": "בשרים-על-האש",
+          "depth": 1,
+          "children": [],
+          "productCount": 23
+        },
+        {
+          "id": "304",
+          "nameHe": "תחליפי בשר קפואים",
+          "slug": "תחליפי-בשר-קפואים",
+          "depth": 1,
+          "children": [],
+          "productCount": 23
+        },
+        {
+          "id": "209",
+          "nameHe": "דגים",
+          "slug": "דגים",
+          "depth": 1,
+          "children": [],
+          "productCount": 19
+        },
+        {
+          "id": "278",
+          "nameHe": "עוף טרי",
+          "slug": "עוף-טרי",
+          "depth": 1,
+          "children": [],
+          "productCount": 14
+        },
+        {
+          "id": "211",
+          "nameHe": "עוף קפוא",
+          "slug": "עוף-קפוא",
+          "depth": 1,
+          "children": [],
+          "productCount": 9
+        },
+        {
+          "id": "207",
+          "nameHe": "בשר קפוא",
+          "slug": "בשר-קפוא",
+          "depth": 1,
+          "children": [],
+          "productCount": 6
+        },
+        {
+          "id": "298",
+          "nameHe": "בשר בקר וכבש טרי",
+          "slug": "בשר-בקר-וכבש-טרי",
+          "depth": 1,
+          "children": [],
+          "productCount": 6
+        },
+        {
+          "id": "498",
+          "nameHe": "מזון מצונן",
+          "slug": "מזון-מצונן",
+          "depth": 1,
+          "children": [],
+          "productCount": 1
+        }
+      ],
+      "productCount": 215
+    },
+    {
+      "id": "49",
+      "nameHe": "פירות וירקות",
+      "slug": "פירות-וירקות",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%A4%D7%99%D7%A8%D7%95%D7%AA-%D7%95%D7%99%D7%A8%D7%A7%D7%95%D7%AA",
+      "depth": 0,
+      "children": [
+        {
+          "id": "197",
+          "nameHe": "ירקות",
+          "slug": "ירקות",
+          "depth": 1,
+          "children": [],
+          "productCount": 103
+        },
+        {
+          "id": "279",
+          "nameHe": "פיצוחים ופירות יבשים",
+          "slug": "פיצוחים",
+          "depth": 1,
+          "children": [],
+          "productCount": 39
+        },
+        {
+          "id": "196",
+          "nameHe": "פירות",
+          "slug": "פירות",
+          "depth": 1,
+          "children": [],
+          "productCount": 20
+        }
+      ],
+      "productCount": 162
+    },
+    {
+      "id": "61",
+      "nameHe": "לחם ומאפים טריים",
+      "slug": "לחם-מאפים-והמאפייה-הטריה",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%9C%D7%97%D7%9D-%D7%9E%D7%90%D7%A4%D7%99%D7%9D-%D7%95%D7%94%D7%9E%D7%90%D7%A4%D7%99%D7%99%D7%94-%D7%94%D7%98%D7%A8%D7%99%D7%94",
+      "depth": 0,
+      "children": [
+        {
+          "id": "195",
+          "nameHe": "לחם, פיתה, לחמניה",
+          "slug": "לחם-פיתה-לחמניה",
+          "depth": 1,
+          "children": [],
+          "productCount": 56
+        },
+        {
+          "id": "280",
+          "nameHe": "מצות  ומאפים לפסח",
+          "slug": "מצות-ומאפים-לפסח",
+          "depth": 1,
+          "children": [],
+          "productCount": 5
+        }
+      ],
+      "productCount": 61
+    },
+    {
+      "id": "1237",
+      "nameHe": "מחלקה 1237",
+      "depth": 0,
+      "children": [],
+      "productCount": 7
+    },
+    {
+      "id": "1238",
+      "nameHe": "מחלקה 1238",
+      "depth": 0,
+      "children": [],
+      "productCount": 2
+    },
+    {
+      "id": "1243",
+      "nameHe": "מחלקה 1243",
+      "depth": 0,
+      "children": [],
+      "productCount": 2
+    },
+    {
+      "id": "85",
+      "nameHe": "מחלקה 85",
+      "depth": 0,
+      "children": [],
+      "productCount": 1
+    }
+  ],
+  "leafCount": 81
+}

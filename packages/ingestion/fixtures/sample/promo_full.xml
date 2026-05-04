@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PromoFull>
+  <Promotion
+    externalPromotionId="promo-1"
+    externalStoreId="online-1"
+    title="מבצע 1+1"
+    description="על מגוון מוצרים"
+    startsAt="2026-01-01T00:00:00.000Z"
+    endsAt="2026-12-31T23:59:59.000Z"
+  />
+  <Item
+    externalPromotionId="promo-1"
+    externalItemCode="7290001234567"
+    role="PRIMARY_TARGET"
+    minQuantity="1"
+  />
+</PromoFull>

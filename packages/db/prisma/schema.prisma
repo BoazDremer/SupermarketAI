@@ -1,4 +1,3 @@
-// PostgreSQL datasource — domain models will be added in a later iteration.
 generator client {
   provider = "prisma-client-js"
 }
@@ -6,4 +5,471 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+// --- Enums (aligned with packages/shared domain where applicable) ---
+
+enum ProductMatchType {
+  EXACT_BARCODE
+  EQUIVALENT
+  SUBSTITUTE
+}
+
+enum RetailerPromotionKind {
+  UNKNOWN
+  PRICE_OVERRIDE
+  PERCENT_OFF
+  MULTI_BUY
+  THRESHOLD
+  BOGO
+  LOYALTY
+  CART_LEVEL
+}
+
+enum RetailerPromotionItemRole {
+  PRIMARY_TARGET
+  QUALIFYING
+  REWARD
+  BUNDLE_COMPONENT
+}
+
+enum BasketComparisonLineResolution {
+  EXACT_BARCODE
+  EQUIVALENT
+  SUBSTITUTE
+  MISSING
+}
+
+enum IngestionRunStatus {
+  PENDING
+  RUNNING
+  COMPLETED
+  FAILED
+  CANCELLED
+}
+
+enum IngestionFileType {
+  PRICE
+  PROMOTION
+  STORE
+  PRODUCT
+  OTHER
+}
+
+// --- Core retailer / catalog ---
+
+/// Supermarket chain operating in Israel (delivery scope for MVP).
+model Retailer {
+  id              String   @id @default(cuid())
+  /// Stable business key / slug, e.g. `shufersal`.
+  slug            String   @unique
+  displayName     String
+  displayNameHe   String?
+  supportsDelivery Boolean @default(true)
+  websiteUrl      String?
+  isActive        Boolean  @default(true)
+  rawData         Json?
+
+  stores          RetailerStore[]
+  products        RetailerProduct[]
+  prices          RetailerPrice[]
+  promotions      RetailerPromotion[]
+  ingestionFiles  IngestionFile[]
+  shoppingBagItems ShoppingBagItem[]
+  basketComparisonRetailerResults BasketComparisonRetailerResult[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+/// A branch or online storefront belonging to a retailer.
+model RetailerStore {
+  id               String  @id @default(cuid())
+  retailerId       String
+  externalStoreId  String
+  displayName      String
+  city             String?
+  deliveryOffered  Boolean @default(false)
+  rawData          Json?
+
+  retailer Retailer @relation(fields: [retailerId], references: [id], onDelete: Cascade)
+
+  products   RetailerProduct[]
+  prices     RetailerPrice[]
+  promotions RetailerPromotion[]
+  basketComparisonRetailerResults BasketComparisonRetailerResult[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([retailerId, externalStoreId])
+}
+
+/// Product row exactly as published by the chain for a given store context.
+model RetailerProduct {
+  id               String  @id @default(cuid())
+  retailerId       String
+  storeId          String
+  /// Chain-native item / SKU identifier within the store feed.
+  externalItemCode String
+  barcode          String?
+  /// Normalized text for search / dedupe (implementation-defined).
+  normalizedName   String?
+  name             String
+  nameHe           String?
+  brand            String?
+  unitLabel        String?
+  packDescription  String?
+  rawData          Json?
+
+  retailer Retailer      @relation(fields: [retailerId], references: [id], onDelete: Cascade)
+  store    RetailerStore @relation(fields: [storeId], references: [id], onDelete: Cascade)
+
+  prices           RetailerPrice[]
+  promotionItems   RetailerPromotionItem[]
+  productMatches   ProductMatch[]
+  shoppingBagItems ShoppingBagItem[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([retailerId, storeId, externalItemCode])
+  @@index([barcode])
+  @@index([retailerId, externalItemCode])
+  @@index([normalizedName])
+}
+
+/// Price observation for a retailer product at a store (history + current flag).
+model RetailerPrice {
+  id                 String   @id @default(cuid())
+  retailerId         String
+  storeId            String
+  retailerProductId  String
+  amountMinor        Int
+  currency           String   @default("ILS")
+  effectiveFrom      DateTime
+  effectiveTo        DateTime?
+  observedAt         DateTime
+  /// Marks the row application logic treats as the latest price for lookups.
+  isCurrent          Boolean  @default(false)
+  rawData            Json?
+
+  retailer        Retailer        @relation(fields: [retailerId], references: [id], onDelete: Cascade)
+  store           RetailerStore   @relation(fields: [storeId], references: [id], onDelete: Cascade)
+  retailerProduct RetailerProduct @relation(fields: [retailerProductId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@index([retailerId, storeId, retailerProductId])
+  @@index([isCurrent])
+  @@index([retailerProductId, storeId, isCurrent])
+  // Enforce at most one "current" price per product+store via partial unique index in SQL migrations when ready.
+}
+
+/// Promotion anchored to a retailer store; `rawData` holds chain-specific payloads.
+model RetailerPromotion {
+  id                  String                @id @default(cuid())
+  retailerId          String
+  storeId             String
+  kind                RetailerPromotionKind @default(UNKNOWN)
+  title               String
+  description         String?
+  startsAt            DateTime
+  endsAt              DateTime?
+  externalPromotionId String?
+  rawData             Json?
+
+  retailer Retailer      @relation(fields: [retailerId], references: [id], onDelete: Cascade)
+  store    RetailerStore @relation(fields: [storeId], references: [id], onDelete: Cascade)
+
+  items RetailerPromotionItem[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([retailerId, storeId])
+}
+
+model RetailerPromotionItem {
+  id                 String                     @id @default(cuid())
+  promotionId        String
+  retailerProductId  String
+  role               RetailerPromotionItemRole @default(PRIMARY_TARGET)
+  minQuantity        Decimal?                   @db.Decimal(12, 3)
+  promoPriceMinor    Int?
+  percentOff         Decimal?                   @db.Decimal(5, 2)
+  rawData            Json?
+
+  promotion        RetailerPromotion @relation(fields: [promotionId], references: [id], onDelete: Cascade)
+  retailerProduct  RetailerProduct   @relation(fields: [retailerProductId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([promotionId])
+  @@index([retailerProductId])
+}
+
+/// Internal normalized catalog product.
+model CanonicalProduct {
+  id            String  @id @default(cuid())
+  displayName   String
+  displayNameHe String?
+  brand         String?
+  barcodeGtin   String?
+  /// Legacy heuristic key (dairy/produce/...). Retained for back-compat; new
+  /// code should join via `commonCategoryId` to the `Category` table instead.
+  categoryKey   String?
+  /// Backbone category id (e.g. "dairy/milk"). Populated by the back-fill
+  /// step that follows category scraping.
+  commonCategoryId String?
+  unitHint      String?
+  /// Public image URL harvested from a chain catalog (Rami Levy /api/catalog
+  /// or Shufersal product cards). Stored as the "primary" image; per-retailer
+  /// images may be added later when we need a side-by-side comparison view.
+  imageUrl      String?
+  rawData       Json?
+
+  productMatches   ProductMatch[]
+  shoppingBagItems ShoppingBagItem[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([barcodeGtin])
+  @@index([commonCategoryId])
+}
+
+/// Edge linking a chain product to a canonical product.
+model ProductMatch {
+  id                 String           @id @default(cuid())
+  canonicalProductId String
+  retailerProductId  String
+  matchType          ProductMatchType
+  confidence         Float
+  notes              String?
+
+  canonicalProduct CanonicalProduct @relation(fields: [canonicalProductId], references: [id], onDelete: Cascade)
+  retailerProduct  RetailerProduct  @relation(fields: [retailerProductId], references: [id], onDelete: Cascade)
+
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  @@unique([canonicalProductId, retailerProductId])
+  @@index([canonicalProductId])
+  @@index([retailerProductId])
+}
+
+// --- Shopping & comparison ---
+
+model ShoppingBag {
+  id             String  @id @default(cuid())
+  userSessionId  String?
+  label          String?
+  rawData        Json?
+
+  items       ShoppingBagItem[]
+  comparisons BasketComparison[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userSessionId])
+}
+
+/// Bag line prefers canonical identity; may reference a raw retailer product during MVP.
+model ShoppingBagItem {
+  id                  String  @id @default(cuid())
+  bagId               String
+  quantity            Decimal @db.Decimal(12, 3)
+  canonicalProductId  String?
+  retailerId          String?
+  retailerProductId   String?
+  note                String?
+  rawData             Json?
+
+  bag               ShoppingBag       @relation(fields: [bagId], references: [id], onDelete: Cascade)
+  canonicalProduct  CanonicalProduct? @relation(fields: [canonicalProductId], references: [id], onDelete: SetNull)
+  retailer          Retailer?         @relation(fields: [retailerId], references: [id], onDelete: SetNull)
+  retailerProduct   RetailerProduct?  @relation(fields: [retailerProductId], references: [id], onDelete: SetNull)
+
+  basketLineResults BasketComparisonItemResult[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([bagId])
+  @@index([canonicalProductId])
+  @@index([retailerProductId])
+}
+
+/// Snapshot comparing one bag across retailers at a point in time.
+model BasketComparison {
+  id                     String   @id @default(cuid())
+  shoppingBagId          String
+  comparedAt             DateTime @default(now())
+  overallConfidenceScore Float?
+  rawData                Json?
+
+  shoppingBag     ShoppingBag                     @relation(fields: [shoppingBagId], references: [id], onDelete: Cascade)
+  retailerResults BasketComparisonRetailerResult[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([shoppingBagId])
+}
+
+/// Per-retailer outcome for a basket comparison (totals, counts, ranking).
+model BasketComparisonRetailerResult {
+  id                           String   @id @default(cuid())
+  basketComparisonId           String
+  retailerId                   String
+  storeId                      String
+  rank                         Int
+  totalMinor                   Int
+  totalBeforePromotionsMinor   Int
+  promotionSavingsMinor        Int
+  missingShoppingBagItemIds    Json
+  substitutedShoppingBagItemIds Json
+  exactMatchCount              Int
+  equivalentMatchCount         Int
+  substituteMatchCount         Int
+  confidenceScore              Float
+  rawData                      Json?
+
+  basketComparison BasketComparison @relation(fields: [basketComparisonId], references: [id], onDelete: Cascade)
+  retailer         Retailer         @relation(fields: [retailerId], references: [id], onDelete: Restrict)
+  store            RetailerStore    @relation(fields: [storeId], references: [id], onDelete: Restrict)
+
+  lineResults BasketComparisonItemResult[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([basketComparisonId])
+  @@index([retailerId, storeId])
+}
+
+/// Line-level outcome inside a retailer comparison result.
+model BasketComparisonItemResult {
+  id                              String                         @id @default(cuid())
+  basketComparisonRetailerResultId String
+  shoppingBagItemId               String
+  resolution                      BasketComparisonLineResolution
+  matchType                       ProductMatchType?
+  canonicalProductId              String?
+  chosenRetailerProductId         String?
+  lineTotalMinor                  Int?
+  lineTotalBeforePromotionsMinor  Int?
+  linePromotionSavingsMinor       Int?
+  detail                          String?
+  rawData                         Json?
+
+  basketComparisonRetailerResult BasketComparisonRetailerResult @relation(fields: [basketComparisonRetailerResultId], references: [id], onDelete: Cascade)
+  shoppingBagItem                ShoppingBagItem               @relation(fields: [shoppingBagItemId], references: [id], onDelete: Restrict)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([basketComparisonRetailerResultId])
+  @@index([shoppingBagItemId])
+}
+
+// --- Common category backbone ---
+
+/// User-facing category in the common backbone tree (group or leaf).
+model Category {
+  /// Stable slug, e.g. "dairy" or "dairy/milk".
+  id            String   @id
+  parentId      String?
+  /// Hebrew display name.
+  nameHe        String
+  /// English display name.
+  nameEn        String
+  /// Lucide icon name (top-level groups only).
+  icon          String?
+  /// Order among siblings (0-based).
+  sortOrder     Int       @default(0)
+  /// Convenience flag: leaves are user-selectable filters; groups are nav headers.
+  isLeaf        Boolean   @default(false)
+
+  parent        Category? @relation("CategoryParent", fields: [parentId], references: [id], onDelete: SetNull)
+  children      Category[] @relation("CategoryParent")
+  aliases       RetailerCategoryAlias[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([parentId])
+}
+
+/// Edge linking a chain-native category id to a backbone Category.
+model RetailerCategoryAlias {
+  id                  String   @id @default(cuid())
+  /// Retailer slug ("shufersal" / "rami-levy"). Free-form to avoid enum churn.
+  retailerSlug        String
+  /// Chain-native category code/id (Shufersal letter-code or Rami Levy numeric id).
+  chainCategoryId     String
+  /// Snapshot of the chain category's Hebrew display name at scrape time.
+  chainCategoryName   String
+  /// 0..3 — depth of this node in the chain's own tree.
+  chainCategoryDepth  Int
+  /// Backbone category id this maps to (Category.id).
+  categoryId          String
+  /// 0..1 — auto-matcher confidence; 1.0 for manually curated mappings.
+  confidence          Float
+  matchedSynonym      String?
+  /// True if generated by the auto-matcher; false if added by hand.
+  auto                Boolean  @default(true)
+  /// Free-form audit notes.
+  notes               String?
+
+  category            Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([retailerSlug, chainCategoryId])
+  @@index([categoryId])
+}
+
+// --- Ingestion ---
+
+/// One execution of the ingestion pipeline.
+model IngestionRun {
+  id           String             @id @default(cuid())
+  status       IngestionRunStatus @default(PENDING)
+  startedAt    DateTime           @default(now())
+  completedAt  DateTime?
+  errorMessage String?
+  stats        Json?
+  rawData      Json?
+
+  files IngestionFile[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+/// A downloaded or received feed file (price, promo, stores, etc.).
+model IngestionFile {
+  id             String           @id @default(cuid())
+  retailerId     String
+  fileType       IngestionFileType
+  fileName       String
+  storagePath    String
+  sha256         String?
+  sizeBytes      Int?
+  downloadedAt   DateTime         @default(now())
+  ingestionRunId String?
+  rawData        Json?
+
+  retailer     Retailer     @relation(fields: [retailerId], references: [id], onDelete: Cascade)
+  ingestionRun IngestionRun? @relation(fields: [ingestionRunId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([retailerId, fileType, fileName])
 }

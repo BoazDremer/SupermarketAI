@@ -1,0 +1,133 @@
+{
+  "builtAt": "2026-04-30T15:27:12.914Z",
+  "unmapped": [
+    {
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "1237",
+      "chainCategoryName": "מחלקה 1237",
+      "chainCategoryDepth": 0,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "1238",
+      "chainCategoryName": "מחלקה 1238",
+      "chainCategoryDepth": 0,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "1243",
+      "chainCategoryName": "מחלקה 1243",
+      "chainCategoryDepth": 0,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "497",
+      "chainCategoryName": "מזון ותוספים לספורטאים",
+      "chainCategoryDepth": 1,
+      "nearMisses": [
+        {
+          "commonId": "produce/organic",
+          "score": 0.162
+        },
+        {
+          "commonId": "dairy/cheese",
+          "score": 0.049
+        }
+      ]
+    },
+    {
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "85",
+      "chainCategoryName": "מחלקה 85",
+      "chainCategoryDepth": 0,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A",
+      "chainCategoryName": "סופרמרקט",
+      "chainCategoryDepth": 0,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A44",
+      "chainCategoryName": "שבועות בשופרסל",
+      "chainCategoryDepth": 1,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "C",
+      "chainCategoryName": "C",
+      "chainCategoryDepth": 0,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "G",
+      "chainCategoryName": "הקניון הכל לבית",
+      "chainCategoryDepth": 0,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "G01",
+      "chainCategoryName": "מוצרי חשמל ואלקטרוניקה לבית ולמשרד",
+      "chainCategoryDepth": 1,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "G02",
+      "chainCategoryName": "מוצרי חשמל למטבח",
+      "chainCategoryDepth": 1,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "G03",
+      "chainCategoryName": "אלקטרוניקה מחשבים וסלולר",
+      "chainCategoryDepth": 0,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "G13",
+      "chainCategoryName": "גאלה הום GALA HOME",
+      "chainCategoryDepth": 1,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "G16",
+      "chainCategoryName": "נסיעות קמפינג ופנאי",
+      "chainCategoryDepth": 1,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "G17",
+      "chainCategoryName": "עיצוב וארגון לחדר השינה",
+      "chainCategoryDepth": 1,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "G18",
+      "chainCategoryName": "ריהוט ועיצוב לבית",
+      "chainCategoryDepth": 1,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "G20",
+      "chainCategoryName": "DIY ולמשרד",
+      "chainCategoryDepth": 1,
+      "nearMisses": []
+    }
+  ]
+}

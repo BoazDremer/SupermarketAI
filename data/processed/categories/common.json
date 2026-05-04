@@ -1,0 +1,1569 @@
+{
+  "builtAt": "2026-04-30T15:27:12.914Z",
+  "backbone": [
+    {
+      "id": "dairy",
+      "nameHe": "חלב ומוצרי חלב",
+      "nameEn": "Dairy",
+      "icon": "Milk",
+      "children": [
+        {
+          "id": "dairy/milk",
+          "nameHe": "חלב",
+          "nameEn": "Milk",
+          "parentId": "dairy",
+          "children": []
+        },
+        {
+          "id": "dairy/cheese",
+          "nameHe": "גבינות",
+          "nameEn": "Cheese",
+          "parentId": "dairy",
+          "children": []
+        },
+        {
+          "id": "dairy/yogurt",
+          "nameHe": "יוגורט ומעדנים",
+          "nameEn": "Yogurt & Desserts",
+          "parentId": "dairy",
+          "children": []
+        },
+        {
+          "id": "dairy/eggs",
+          "nameHe": "ביצים",
+          "nameEn": "Eggs",
+          "parentId": "dairy",
+          "children": []
+        },
+        {
+          "id": "dairy/butter-cream",
+          "nameHe": "חמאה ושמנת",
+          "nameEn": "Butter & Cream",
+          "parentId": "dairy",
+          "children": []
+        },
+        {
+          "id": "dairy/plant-based",
+          "nameHe": "חלב צמחי",
+          "nameEn": "Plant-based dairy",
+          "parentId": "dairy",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "produce",
+      "nameHe": "פירות וירקות",
+      "nameEn": "Produce",
+      "icon": "Salad",
+      "children": [
+        {
+          "id": "produce/vegetables",
+          "nameHe": "ירקות",
+          "nameEn": "Vegetables",
+          "parentId": "produce",
+          "children": []
+        },
+        {
+          "id": "produce/fruits",
+          "nameHe": "פירות",
+          "nameEn": "Fruits",
+          "parentId": "produce",
+          "children": []
+        },
+        {
+          "id": "produce/herbs",
+          "nameHe": "עשבי תיבול",
+          "nameEn": "Herbs",
+          "parentId": "produce",
+          "children": []
+        },
+        {
+          "id": "produce/organic",
+          "nameHe": "אורגני",
+          "nameEn": "Organic produce",
+          "parentId": "produce",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "bakery",
+      "nameHe": "מאפיה",
+      "nameEn": "Bakery",
+      "icon": "Croissant",
+      "children": [
+        {
+          "id": "bakery/bread",
+          "nameHe": "לחם",
+          "nameEn": "Bread",
+          "parentId": "bakery",
+          "children": []
+        },
+        {
+          "id": "bakery/pita-challah",
+          "nameHe": "פיתות וחלות",
+          "nameEn": "Pita & Challah",
+          "parentId": "bakery",
+          "children": []
+        },
+        {
+          "id": "bakery/pastries",
+          "nameHe": "מאפים ועוגות",
+          "nameEn": "Pastries & cakes",
+          "parentId": "bakery",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "breakfast",
+      "nameHe": "ארוחת בוקר",
+      "nameEn": "Breakfast",
+      "icon": "Wheat",
+      "children": [
+        {
+          "id": "breakfast/cereals",
+          "nameHe": "דגני בוקר",
+          "nameEn": "Cereals",
+          "parentId": "breakfast",
+          "children": []
+        },
+        {
+          "id": "breakfast/spreads",
+          "nameHe": "ממרחים וריבות",
+          "nameEn": "Spreads & jams",
+          "parentId": "breakfast",
+          "children": []
+        },
+        {
+          "id": "breakfast/honey",
+          "nameHe": "דבש וסילאן",
+          "nameEn": "Honey & syrup",
+          "parentId": "breakfast",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "meat-fish",
+      "nameHe": "בשר ודגים",
+      "nameEn": "Meat & Fish",
+      "icon": "Beef",
+      "children": [
+        {
+          "id": "meat-fish/beef",
+          "nameHe": "בקר וטלה",
+          "nameEn": "Beef & Lamb",
+          "parentId": "meat-fish",
+          "children": []
+        },
+        {
+          "id": "meat-fish/poultry",
+          "nameHe": "עוף והודו",
+          "nameEn": "Poultry",
+          "parentId": "meat-fish",
+          "children": []
+        },
+        {
+          "id": "meat-fish/fish",
+          "nameHe": "דגים",
+          "nameEn": "Fish",
+          "parentId": "meat-fish",
+          "children": []
+        },
+        {
+          "id": "meat-fish/deli",
+          "nameHe": "נקניקים וקציצות",
+          "nameEn": "Deli & sausage",
+          "parentId": "meat-fish",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "frozen",
+      "nameHe": "קפואים",
+      "nameEn": "Frozen",
+      "icon": "Snowflake",
+      "children": [
+        {
+          "id": "frozen/meals",
+          "nameHe": "ארוחות קפואות",
+          "nameEn": "Frozen meals",
+          "parentId": "frozen",
+          "children": []
+        },
+        {
+          "id": "frozen/ice-cream",
+          "nameHe": "גלידה וקרח",
+          "nameEn": "Ice cream",
+          "parentId": "frozen",
+          "children": []
+        },
+        {
+          "id": "frozen/vegetables",
+          "nameHe": "ירקות קפואים",
+          "nameEn": "Frozen vegetables",
+          "parentId": "frozen",
+          "children": []
+        },
+        {
+          "id": "frozen/fish",
+          "nameHe": "דגים קפואים",
+          "nameEn": "Frozen fish",
+          "parentId": "frozen",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "pantry",
+      "nameHe": "מזווה ויסודות מטבח",
+      "nameEn": "Pantry",
+      "icon": "Package",
+      "children": [
+        {
+          "id": "pantry/grains",
+          "nameHe": "אורז ופסטה",
+          "nameEn": "Rice & pasta",
+          "parentId": "pantry",
+          "children": []
+        },
+        {
+          "id": "pantry/oils",
+          "nameHe": "שמן וחומץ",
+          "nameEn": "Oils & Vinegar",
+          "parentId": "pantry",
+          "children": []
+        },
+        {
+          "id": "pantry/flour-sugar",
+          "nameHe": "קמח וסוכר",
+          "nameEn": "Flour & sugar",
+          "parentId": "pantry",
+          "children": []
+        },
+        {
+          "id": "pantry/spices",
+          "nameHe": "תבלינים ומלח",
+          "nameEn": "Spices & salt",
+          "parentId": "pantry",
+          "children": []
+        },
+        {
+          "id": "pantry/sauces",
+          "nameHe": "רטבים וקטשופ",
+          "nameEn": "Sauces",
+          "parentId": "pantry",
+          "children": []
+        },
+        {
+          "id": "pantry/canned",
+          "nameHe": "שימורים",
+          "nameEn": "Canned goods",
+          "parentId": "pantry",
+          "children": []
+        },
+        {
+          "id": "pantry/legumes",
+          "nameHe": "קטניות",
+          "nameEn": "Legumes",
+          "parentId": "pantry",
+          "children": []
+        },
+        {
+          "id": "pantry/middle-eastern",
+          "nameHe": "טחינה וחומוס",
+          "nameEn": "Tahini & Hummus",
+          "parentId": "pantry",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "snacks",
+      "nameHe": "חטיפים וממתקים",
+      "nameEn": "Snacks & Sweets",
+      "icon": "Cookie",
+      "children": [
+        {
+          "id": "snacks/salty",
+          "nameHe": "חטיפים מלוחים",
+          "nameEn": "Salty snacks",
+          "parentId": "snacks",
+          "children": []
+        },
+        {
+          "id": "snacks/chocolate",
+          "nameHe": "שוקולד",
+          "nameEn": "Chocolate",
+          "parentId": "snacks",
+          "children": []
+        },
+        {
+          "id": "snacks/candy",
+          "nameHe": "סוכריות וגומי",
+          "nameEn": "Candy",
+          "parentId": "snacks",
+          "children": []
+        },
+        {
+          "id": "snacks/cookies",
+          "nameHe": "עוגיות וביסקוויטים",
+          "nameEn": "Cookies",
+          "parentId": "snacks",
+          "children": []
+        },
+        {
+          "id": "snacks/dried-fruit",
+          "nameHe": "פירות יבשים ואגוזים",
+          "nameEn": "Dried fruit & nuts",
+          "parentId": "snacks",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "beverages",
+      "nameHe": "משקאות",
+      "nameEn": "Beverages",
+      "icon": "CupSoda",
+      "children": [
+        {
+          "id": "beverages/water",
+          "nameHe": "מים מינרליים",
+          "nameEn": "Water",
+          "parentId": "beverages",
+          "children": []
+        },
+        {
+          "id": "beverages/soft",
+          "nameHe": "משקאות קלים",
+          "nameEn": "Soft drinks",
+          "parentId": "beverages",
+          "children": []
+        },
+        {
+          "id": "beverages/juice",
+          "nameHe": "מיצים",
+          "nameEn": "Juice",
+          "parentId": "beverages",
+          "children": []
+        },
+        {
+          "id": "beverages/coffee-tea",
+          "nameHe": "קפה ותה",
+          "nameEn": "Coffee & tea",
+          "parentId": "beverages",
+          "children": []
+        },
+        {
+          "id": "beverages/energy",
+          "nameHe": "משקאות אנרגיה",
+          "nameEn": "Energy drinks",
+          "parentId": "beverages",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "alcohol",
+      "nameHe": "אלכוהול",
+      "nameEn": "Alcohol",
+      "icon": "Wine",
+      "children": [
+        {
+          "id": "alcohol/beer",
+          "nameHe": "בירה",
+          "nameEn": "Beer",
+          "parentId": "alcohol",
+          "children": []
+        },
+        {
+          "id": "alcohol/wine",
+          "nameHe": "יין",
+          "nameEn": "Wine",
+          "parentId": "alcohol",
+          "children": []
+        },
+        {
+          "id": "alcohol/spirits",
+          "nameHe": "משקאות חריפים",
+          "nameEn": "Spirits",
+          "parentId": "alcohol",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "baby",
+      "nameHe": "תינוקות",
+      "nameEn": "Baby",
+      "icon": "Baby",
+      "children": [
+        {
+          "id": "baby/diapers",
+          "nameHe": "חיתולים",
+          "nameEn": "Diapers",
+          "parentId": "baby",
+          "children": []
+        },
+        {
+          "id": "baby/formula-food",
+          "nameHe": "פורמולה ומחית",
+          "nameEn": "Formula & baby food",
+          "parentId": "baby",
+          "children": []
+        },
+        {
+          "id": "baby/wipes",
+          "nameHe": "מגבונים",
+          "nameEn": "Wipes",
+          "parentId": "baby",
+          "children": []
+        },
+        {
+          "id": "baby/care",
+          "nameHe": "טיפוח ואביזרי תינוקות",
+          "nameEn": "Baby care & accessories",
+          "parentId": "baby",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "household",
+      "nameHe": "בית וניקיון",
+      "nameEn": "Household",
+      "icon": "Home",
+      "children": [
+        {
+          "id": "household/cleaning",
+          "nameHe": "ניקיון",
+          "nameEn": "Cleaning",
+          "parentId": "household",
+          "children": []
+        },
+        {
+          "id": "household/paper",
+          "nameHe": "נייר וטישו",
+          "nameEn": "Paper & tissues",
+          "parentId": "household",
+          "children": []
+        },
+        {
+          "id": "household/laundry",
+          "nameHe": "כביסה",
+          "nameEn": "Laundry",
+          "parentId": "household",
+          "children": []
+        },
+        {
+          "id": "household/kitchen",
+          "nameHe": "כלי בית ומטבח",
+          "nameEn": "Kitchen & home",
+          "parentId": "household",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "personal-care",
+      "nameHe": "טיפוח ויופי",
+      "nameEn": "Personal Care",
+      "icon": "Sparkles",
+      "children": [
+        {
+          "id": "personal-care/toiletries",
+          "nameHe": "סבון ושמפו",
+          "nameEn": "Toiletries",
+          "parentId": "personal-care",
+          "children": []
+        },
+        {
+          "id": "personal-care/cosmetics",
+          "nameHe": "איפור וקוסמטיקה",
+          "nameEn": "Cosmetics",
+          "parentId": "personal-care",
+          "children": []
+        },
+        {
+          "id": "personal-care/oral",
+          "nameHe": "טיפוח שיניים",
+          "nameEn": "Oral care",
+          "parentId": "personal-care",
+          "children": []
+        },
+        {
+          "id": "personal-care/shaving",
+          "nameHe": "גילוח והסרת שיער",
+          "nameEn": "Shaving",
+          "parentId": "personal-care",
+          "children": []
+        },
+        {
+          "id": "personal-care/feminine",
+          "nameHe": "מוצרי היגיינה לנשים",
+          "nameEn": "Feminine care",
+          "parentId": "personal-care",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "pet",
+      "nameHe": "חיות מחמד",
+      "nameEn": "Pet",
+      "icon": "Dog",
+      "children": [
+        {
+          "id": "pet/dog",
+          "nameHe": "כלבים",
+          "nameEn": "Dog food & care",
+          "parentId": "pet",
+          "children": []
+        },
+        {
+          "id": "pet/cat",
+          "nameHe": "חתולים",
+          "nameEn": "Cat food & care",
+          "parentId": "pet",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "aliases": [
+    {
+      "commonId": "alcohol",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A13",
+      "chainCategoryName": "משקאות, אלכוהול, יין וטבק",
+      "chainCategoryDepth": 1,
+      "confidence": 0.304,
+      "matchedSynonym": "אלכוהול",
+      "auto": true
+    },
+    {
+      "commonId": "alcohol/spirits",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "G15",
+      "chainCategoryName": "גינה וחוץ",
+      "chainCategoryDepth": 1,
+      "confidence": 0.2,
+      "matchedSynonym": "גין",
+      "auto": true
+    },
+    {
+      "commonId": "alcohol/wine",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "239",
+      "chainCategoryName": "יינות",
+      "chainCategoryDepth": 1,
+      "confidence": 0.3,
+      "matchedSynonym": "יין",
+      "auto": true
+    },
+    {
+      "commonId": "alcohol/wine",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "251",
+      "chainCategoryName": "מוצרי הגיינה",
+      "chainCategoryDepth": 1,
+      "confidence": 0.3,
+      "matchedSynonym": "יין",
+      "auto": true
+    },
+    {
+      "commonId": "baby",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "252",
+      "chainCategoryName": "מוצרי פארם",
+      "chainCategoryDepth": 1,
+      "confidence": 1.111,
+      "matchedSynonym": "פארם ותינוקות",
+      "auto": true
+    },
+    {
+      "commonId": "baby",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "60",
+      "chainCategoryName": "פארם ותינוקות",
+      "chainCategoryDepth": 0,
+      "confidence": 1.538,
+      "matchedSynonym": "פארם ותינוקות",
+      "auto": true
+    },
+    {
+      "commonId": "baby",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "G23",
+      "chainCategoryName": "ילדים ותינוקות",
+      "chainCategoryDepth": 1,
+      "confidence": 0.3,
+      "matchedSynonym": "תינוקות",
+      "auto": true
+    },
+    {
+      "commonId": "baby/care",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "256",
+      "chainCategoryName": "טיפוח ואביזרי תינוקות וילדים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.257,
+      "matchedSynonym": "אביזרי תינוק",
+      "auto": true
+    },
+    {
+      "commonId": "baby/diapers",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "254",
+      "chainCategoryName": "חיתולים ומגבונים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.75,
+      "matchedSynonym": "חיתולים",
+      "auto": true
+    },
+    {
+      "commonId": "baby/formula-food",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "255",
+      "chainCategoryName": "מזון לתינוקות",
+      "chainCategoryDepth": 1,
+      "confidence": 1.846,
+      "matchedSynonym": "מזון לתינוקות",
+      "auto": true
+    },
+    {
+      "commonId": "bakery/bread",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "305",
+      "chainCategoryName": "קמח ופירורי לחם",
+      "chainCategoryDepth": 1,
+      "confidence": 0.2,
+      "matchedSynonym": "לחם",
+      "auto": true
+    },
+    {
+      "commonId": "bakery/pastries",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "223",
+      "chainCategoryName": "פיצות, מאפים ובצקים קפואים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.36,
+      "matchedSynonym": "מאפים",
+      "auto": true
+    },
+    {
+      "commonId": "bakery/pastries",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "280",
+      "chainCategoryName": "מצות  ומאפים לפסח",
+      "chainCategoryDepth": 1,
+      "confidence": 0.337,
+      "matchedSynonym": "מאפים",
+      "auto": true
+    },
+    {
+      "commonId": "bakery/pastries",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "61",
+      "chainCategoryName": "לחם ומאפים טריים",
+      "chainCategoryDepth": 0,
+      "confidence": 0.337,
+      "matchedSynonym": "מאפים",
+      "auto": true
+    },
+    {
+      "commonId": "bakery/pita-challah",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "195",
+      "chainCategoryName": "לחם, פיתה, לחמניה",
+      "chainCategoryDepth": 1,
+      "confidence": 0.267,
+      "matchedSynonym": "פיתה",
+      "auto": true
+    },
+    {
+      "commonId": "beverages",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "57",
+      "chainCategoryName": "משקאות",
+      "chainCategoryDepth": 0,
+      "confidence": 1,
+      "matchedSynonym": "משקאות",
+      "auto": true
+    },
+    {
+      "commonId": "beverages",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "591",
+      "chainCategoryName": "משקאות במארזים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.429,
+      "matchedSynonym": "משקאות",
+      "auto": true
+    },
+    {
+      "commonId": "beverages/coffee-tea",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "238",
+      "chainCategoryName": "משקאות חמים",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "משקאות חמים",
+      "auto": true
+    },
+    {
+      "commonId": "beverages/coffee-tea",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "595",
+      "chainCategoryName": "תה וחליטות",
+      "chainCategoryDepth": 1,
+      "confidence": 0.2,
+      "matchedSynonym": "תה",
+      "auto": true
+    },
+    {
+      "commonId": "beverages/energy",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "234",
+      "chainCategoryName": "דגנים וחטיפי אנרגיה",
+      "chainCategoryDepth": 1,
+      "confidence": 0.316,
+      "matchedSynonym": "אנרגיה",
+      "auto": true
+    },
+    {
+      "commonId": "beverages/energy",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "290",
+      "chainCategoryName": "אלכוהול ואנרגיה",
+      "chainCategoryDepth": 1,
+      "confidence": 0.24,
+      "matchedSynonym": "אנרגיה",
+      "auto": true
+    },
+    {
+      "commonId": "beverages/juice",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "291",
+      "chainCategoryName": "תרכיזים",
+      "chainCategoryDepth": 1,
+      "confidence": 1.714,
+      "matchedSynonym": "תרכיזים",
+      "auto": true
+    },
+    {
+      "commonId": "beverages/soft",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "237",
+      "chainCategoryName": "משקאות קלים",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "משקאות קלים",
+      "auto": true
+    },
+    {
+      "commonId": "breakfast/spreads",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "264",
+      "chainCategoryName": "דבש, ריבה וממרחים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.875,
+      "matchedSynonym": "ממרחים",
+      "auto": true
+    },
+    {
+      "commonId": "dairy/butter-cream",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "201",
+      "chainCategoryName": "חמאה מרגרינה שמנת",
+      "chainCategoryDepth": 1,
+      "confidence": 0.471,
+      "matchedSynonym": "חמאה",
+      "auto": true
+    },
+    {
+      "commonId": "dairy/cheese",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "202",
+      "chainCategoryName": "גבינות",
+      "chainCategoryDepth": 1,
+      "confidence": 0.4,
+      "matchedSynonym": "גבינ",
+      "auto": true
+    },
+    {
+      "commonId": "dairy/eggs",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "200",
+      "chainCategoryName": "ביצים",
+      "chainCategoryDepth": 1,
+      "confidence": 1.5,
+      "matchedSynonym": "ביצים",
+      "auto": true
+    },
+    {
+      "commonId": "dairy/eggs",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "204",
+      "chainCategoryName": "סלטים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.409,
+      "matchedSynonym": "ביצים",
+      "auto": true
+    },
+    {
+      "commonId": "dairy/eggs",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "498",
+      "chainCategoryName": "מזון מצונן",
+      "chainCategoryDepth": 1,
+      "confidence": 0.333,
+      "matchedSynonym": "ביצים",
+      "auto": true
+    },
+    {
+      "commonId": "dairy/eggs",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "50",
+      "chainCategoryName": "חלב ביצים וסלטים",
+      "chainCategoryDepth": 0,
+      "confidence": 0.563,
+      "matchedSynonym": "ביצים",
+      "auto": true
+    },
+    {
+      "commonId": "dairy/milk",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "198",
+      "chainCategoryName": "חלב",
+      "chainCategoryDepth": 1,
+      "confidence": 0.5,
+      "matchedSynonym": "חלב",
+      "auto": true
+    },
+    {
+      "commonId": "dairy/yogurt",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "203",
+      "chainCategoryName": "יוגורט ומעדני חלב",
+      "chainCategoryDepth": 1,
+      "confidence": 0.588,
+      "matchedSynonym": "יוגורט",
+      "auto": true
+    },
+    {
+      "commonId": "dairy/yogurt",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "214",
+      "chainCategoryName": "מעדנים ללא לקטוז",
+      "chainCategoryDepth": 1,
+      "confidence": 0.625,
+      "matchedSynonym": "מעדנים",
+      "auto": true
+    },
+    {
+      "commonId": "frozen",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "221",
+      "chainCategoryName": "אוכל להכנה מהירה",
+      "chainCategoryDepth": 1,
+      "confidence": 0.435,
+      "matchedSynonym": "קפואים",
+      "auto": true
+    },
+    {
+      "commonId": "frozen",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "304",
+      "chainCategoryName": "תחליפי בשר קפואים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.588,
+      "matchedSynonym": "קפואים",
+      "auto": true
+    },
+    {
+      "commonId": "frozen",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "53",
+      "chainCategoryName": "קפואים",
+      "chainCategoryDepth": 0,
+      "confidence": 1.667,
+      "matchedSynonym": "קפואים",
+      "auto": true
+    },
+    {
+      "commonId": "frozen/ice-cream",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "220",
+      "chainCategoryName": "גלידות וארטיקים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.2,
+      "matchedSynonym": "ארטיק",
+      "auto": true
+    },
+    {
+      "commonId": "household",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "283",
+      "chainCategoryName": "הכל לבית",
+      "chainCategoryDepth": 1,
+      "confidence": 0.476,
+      "matchedSynonym": "אחזקת הבית",
+      "auto": true
+    },
+    {
+      "commonId": "household",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "294",
+      "chainCategoryName": "מוצרי ילדים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.455,
+      "matchedSynonym": "אחזקת הבית",
+      "auto": true
+    },
+    {
+      "commonId": "household",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "471",
+      "chainCategoryName": "ביגוד ואקססוריס",
+      "chainCategoryDepth": 1,
+      "confidence": 0.313,
+      "matchedSynonym": "אחזקת הבית",
+      "auto": true
+    },
+    {
+      "commonId": "household",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "589",
+      "chainCategoryName": "מוצרי חשמל",
+      "chainCategoryDepth": 1,
+      "confidence": 0.476,
+      "matchedSynonym": "אחזקת הבית",
+      "auto": true
+    },
+    {
+      "commonId": "household",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "59",
+      "chainCategoryName": "אחזקת הבית ובע\"ח",
+      "chainCategoryDepth": 0,
+      "confidence": 0.625,
+      "matchedSynonym": "אחזקת הבית",
+      "auto": true
+    },
+    {
+      "commonId": "household/cleaning",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "245",
+      "chainCategoryName": "מוצרי ניקיון לבית",
+      "chainCategoryDepth": 1,
+      "confidence": 0.545,
+      "matchedSynonym": "ניקיון",
+      "auto": true
+    },
+    {
+      "commonId": "household/cleaning",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "246",
+      "chainCategoryName": "ניקוי כלים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.5,
+      "matchedSynonym": "ניקוי",
+      "auto": true
+    },
+    {
+      "commonId": "household/cleaning",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "248",
+      "chainCategoryName": "אביזרי ניקיון",
+      "chainCategoryDepth": 1,
+      "confidence": 0.462,
+      "matchedSynonym": "ניקיון",
+      "auto": true
+    },
+    {
+      "commonId": "household/cleaning",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "249",
+      "chainCategoryName": "קוטל חרקים ומבשמי אויר",
+      "chainCategoryDepth": 1,
+      "confidence": 0.909,
+      "matchedSynonym": "קוטל חרקים",
+      "auto": true
+    },
+    {
+      "commonId": "household/kitchen",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "241",
+      "chainCategoryName": "חד פעמי",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "חד פעמי",
+      "auto": true
+    },
+    {
+      "commonId": "household/kitchen",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "242",
+      "chainCategoryName": "עטיפות, שקיות ותבניות",
+      "chainCategoryDepth": 1,
+      "confidence": 0.2,
+      "matchedSynonym": "חד פעמי",
+      "auto": true
+    },
+    {
+      "commonId": "household/kitchen",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "263",
+      "chainCategoryName": "מוצרי נייר וחד פעמי",
+      "chainCategoryDepth": 1,
+      "confidence": 0.323,
+      "matchedSynonym": "חד פעמי",
+      "auto": true
+    },
+    {
+      "commonId": "household/kitchen",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "277",
+      "chainCategoryName": "נרות וגפרורים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.25,
+      "matchedSynonym": "חד פעמי",
+      "auto": true
+    },
+    {
+      "commonId": "household/kitchen",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "281",
+      "chainCategoryName": "פיקניק",
+      "chainCategoryDepth": 1,
+      "confidence": 0.333,
+      "matchedSynonym": "חד פעמי",
+      "auto": true
+    },
+    {
+      "commonId": "household/kitchen",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "58",
+      "chainCategoryName": "חד-פעמי ומתכלה",
+      "chainCategoryDepth": 0,
+      "confidence": 0.5,
+      "matchedSynonym": "חד פעמי",
+      "auto": true
+    },
+    {
+      "commonId": "household/kitchen",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "G14",
+      "chainCategoryName": "כלי מטבח, בישול ואירוח",
+      "chainCategoryDepth": 1,
+      "confidence": 0.381,
+      "matchedSynonym": "כלי מטבח",
+      "auto": true
+    },
+    {
+      "commonId": "household/laundry",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "247",
+      "chainCategoryName": "מוצרי כביסה",
+      "chainCategoryDepth": 1,
+      "confidence": 0.833,
+      "matchedSynonym": "כביסה",
+      "auto": true
+    },
+    {
+      "commonId": "household/laundry",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "G19",
+      "chainCategoryName": "Shufersal - שופרסל אונלין - אמבטיה וחדר כביסה",
+      "chainCategoryDepth": 1,
+      "confidence": 0.756,
+      "matchedSynonym": "אמבטיה וחדר כביסה",
+      "auto": true
+    },
+    {
+      "commonId": "meat-fish",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "207",
+      "chainCategoryName": "בשר קפוא",
+      "chainCategoryDepth": 1,
+      "confidence": 0.722,
+      "matchedSynonym": "בשר ודגים",
+      "auto": true
+    },
+    {
+      "commonId": "meat-fish/beef",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "206",
+      "chainCategoryName": "בשרים על האש",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "בשרים על האש",
+      "auto": true
+    },
+    {
+      "commonId": "meat-fish/beef",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "298",
+      "chainCategoryName": "בשר בקר וכבש טרי",
+      "chainCategoryDepth": 1,
+      "confidence": 0.375,
+      "matchedSynonym": "בקר",
+      "auto": true
+    },
+    {
+      "commonId": "meat-fish/deli",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "210",
+      "chainCategoryName": "נקניקים ומזון מצונן",
+      "chainCategoryDepth": 1,
+      "confidence": 0.284,
+      "matchedSynonym": "נקניק",
+      "auto": true
+    },
+    {
+      "commonId": "meat-fish/fish",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "209",
+      "chainCategoryName": "דגים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.667,
+      "matchedSynonym": "דגים",
+      "auto": true
+    },
+    {
+      "commonId": "meat-fish/fish",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "51",
+      "chainCategoryName": "בשר  ודגים",
+      "chainCategoryDepth": 0,
+      "confidence": 0.267,
+      "matchedSynonym": "דגים",
+      "auto": true
+    },
+    {
+      "commonId": "meat-fish/poultry",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "211",
+      "chainCategoryName": "עוף קפוא",
+      "chainCategoryDepth": 1,
+      "confidence": 0.375,
+      "matchedSynonym": "עוף",
+      "auto": true
+    },
+    {
+      "commonId": "meat-fish/poultry",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "278",
+      "chainCategoryName": "עוף טרי",
+      "chainCategoryDepth": 1,
+      "confidence": 0.429,
+      "matchedSynonym": "עוף",
+      "auto": true
+    },
+    {
+      "commonId": "meat-fish/poultry",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A07",
+      "chainCategoryName": "בשר, עוף ודגים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.231,
+      "matchedSynonym": "עוף",
+      "auto": true
+    },
+    {
+      "commonId": "pantry/canned",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "225",
+      "chainCategoryName": "שימורים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.943,
+      "matchedSynonym": "שימורי",
+      "auto": true
+    },
+    {
+      "commonId": "pantry/canned",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "226",
+      "chainCategoryName": "רטבים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.264,
+      "matchedSynonym": "שימורי",
+      "auto": true
+    },
+    {
+      "commonId": "pantry/canned",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "229",
+      "chainCategoryName": "מרקים ותבשילים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.194,
+      "matchedSynonym": "שימורי",
+      "auto": true
+    },
+    {
+      "commonId": "pantry/canned",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "275",
+      "chainCategoryName": "מוצרי אפיה",
+      "chainCategoryDepth": 1,
+      "confidence": 0.275,
+      "matchedSynonym": "שימורי",
+      "auto": true
+    },
+    {
+      "commonId": "pantry/canned",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "306",
+      "chainCategoryName": "המטבח האסייאתי",
+      "chainCategoryDepth": 1,
+      "confidence": 0.194,
+      "matchedSynonym": "שימורי",
+      "auto": true
+    },
+    {
+      "commonId": "pantry/canned",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "54",
+      "chainCategoryName": "שימורים בישול ואפיה",
+      "chainCategoryDepth": 0,
+      "confidence": 0.347,
+      "matchedSynonym": "שימורי",
+      "auto": true
+    },
+    {
+      "commonId": "pantry/flour-sugar",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "274",
+      "chainCategoryName": "נטול ומופחת סוכר",
+      "chainCategoryDepth": 1,
+      "confidence": 0.25,
+      "matchedSynonym": "סוכר",
+      "auto": true
+    },
+    {
+      "commonId": "pantry/grains",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "230",
+      "chainCategoryName": "פסטה, פתיתים, קוסקוס",
+      "chainCategoryDepth": 1,
+      "confidence": 0.556,
+      "matchedSynonym": "קוסקוס",
+      "auto": true
+    },
+    {
+      "commonId": "pantry/grains",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "303",
+      "chainCategoryName": "אורז וקטניות",
+      "chainCategoryDepth": 1,
+      "confidence": 0.333,
+      "matchedSynonym": "אורז",
+      "auto": true
+    },
+    {
+      "commonId": "pantry/legumes",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "272",
+      "chainCategoryName": "פריכיות וקרקרים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.207,
+      "matchedSynonym": "קטניות",
+      "auto": true
+    },
+    {
+      "commonId": "pantry/legumes",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "55",
+      "chainCategoryName": "קטניות ודגנים",
+      "chainCategoryDepth": 0,
+      "confidence": 0.462,
+      "matchedSynonym": "קטניות",
+      "auto": true
+    },
+    {
+      "commonId": "pantry/sauces",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "267",
+      "chainCategoryName": "שמן, חומץ ומיץ לימון",
+      "chainCategoryDepth": 1,
+      "confidence": 0.211,
+      "matchedSynonym": "חומץ",
+      "auto": true
+    },
+    {
+      "commonId": "pantry/spices",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "231",
+      "chainCategoryName": "תבלינים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.429,
+      "matchedSynonym": "תבלין",
+      "auto": true
+    },
+    {
+      "commonId": "personal-care",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A31",
+      "chainCategoryName": "מוצרי פארם וטיפוח",
+      "chainCategoryDepth": 1,
+      "confidence": 0.818,
+      "matchedSynonym": "טיפוח",
+      "auto": true
+    },
+    {
+      "commonId": "personal-care",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "B",
+      "chainCategoryName": "פארם וקוסמטיקה",
+      "chainCategoryDepth": 0,
+      "confidence": 0.857,
+      "matchedSynonym": "קוסמטיקה",
+      "auto": true
+    },
+    {
+      "commonId": "personal-care/oral",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "293",
+      "chainCategoryName": "היגיינת הפה",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "היגיינת הפה",
+      "auto": true
+    },
+    {
+      "commonId": "personal-care/shaving",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "292",
+      "chainCategoryName": "גילוח והסרת שיער",
+      "chainCategoryDepth": 1,
+      "confidence": 0.875,
+      "matchedSynonym": "הסרת שיער",
+      "auto": true
+    },
+    {
+      "commonId": "personal-care/toiletries",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "257",
+      "chainCategoryName": "סבונים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.4,
+      "matchedSynonym": "סבון",
+      "auto": true
+    },
+    {
+      "commonId": "personal-care/toiletries",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "258",
+      "chainCategoryName": "שמפו, מרכך וטיפוח הגוף",
+      "chainCategoryDepth": 1,
+      "confidence": 0.333,
+      "matchedSynonym": "שמפו",
+      "auto": true
+    },
+    {
+      "commonId": "personal-care/toiletries",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "261",
+      "chainCategoryName": "דאודורנט",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "דאודורנט",
+      "auto": true
+    },
+    {
+      "commonId": "produce/fruits",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "196",
+      "chainCategoryName": "פירות",
+      "chainCategoryDepth": 1,
+      "confidence": 1.333,
+      "matchedSynonym": "פירות",
+      "auto": true
+    },
+    {
+      "commonId": "produce/fruits",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "49",
+      "chainCategoryName": "פירות וירקות",
+      "chainCategoryDepth": 0,
+      "confidence": 0.667,
+      "matchedSynonym": "פירות",
+      "auto": true
+    },
+    {
+      "commonId": "produce/organic",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "276",
+      "chainCategoryName": "אורגני וטבעוני",
+      "chainCategoryDepth": 1,
+      "confidence": 0.429,
+      "matchedSynonym": "אורגני",
+      "auto": true
+    },
+    {
+      "commonId": "produce/organic",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "282",
+      "chainCategoryName": "ללא גלוטן",
+      "chainCategoryDepth": 1,
+      "confidence": 0.25,
+      "matchedSynonym": "אורגני",
+      "auto": true
+    },
+    {
+      "commonId": "produce/organic",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "52",
+      "chainCategoryName": "אורגני ובריאות",
+      "chainCategoryDepth": 0,
+      "confidence": 0.429,
+      "matchedSynonym": "אורגני",
+      "auto": true
+    },
+    {
+      "commonId": "produce/organic",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "542",
+      "chainCategoryName": "תחליפי גבינה וטופו",
+      "chainCategoryDepth": 1,
+      "confidence": 0.182,
+      "matchedSynonym": "אורגני",
+      "auto": true
+    },
+    {
+      "commonId": "produce/organic",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A28",
+      "chainCategoryName": "green אורגני ובריאות",
+      "chainCategoryDepth": 1,
+      "confidence": 0.3,
+      "matchedSynonym": "אורגני",
+      "auto": true
+    },
+    {
+      "commonId": "produce/organic",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "F",
+      "chainCategoryName": "שופרסל גרין green בריאות וטבע",
+      "chainCategoryDepth": 0,
+      "confidence": 0.897,
+      "matchedSynonym": "שופרסל גרין",
+      "auto": true
+    },
+    {
+      "commonId": "produce/vegetables",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "197",
+      "chainCategoryName": "ירקות",
+      "chainCategoryDepth": 1,
+      "confidence": 1.333,
+      "matchedSynonym": "ירקות",
+      "auto": true
+    },
+    {
+      "commonId": "produce/vegetables",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "222",
+      "chainCategoryName": "ירקות, פירות וצ'יפס קפואים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.32,
+      "matchedSynonym": "ירקות",
+      "auto": true
+    },
+    {
+      "commonId": "produce/vegetables",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A04",
+      "chainCategoryName": "עולם הפירות והירקות",
+      "chainCategoryDepth": 1,
+      "confidence": 0.253,
+      "matchedSynonym": "ירקות",
+      "auto": true
+    },
+    {
+      "commonId": "snacks/candy",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "301",
+      "chainCategoryName": "סוכריות ומסטיקים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.438,
+      "matchedSynonym": "סוכריות",
+      "auto": true
+    },
+    {
+      "commonId": "snacks/dried-fruit",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "279",
+      "chainCategoryName": "פיצוחים ופירות יבשים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.9,
+      "matchedSynonym": "פירות יבשים",
+      "auto": true
+    },
+    {
+      "commonId": "snacks/salty",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "235",
+      "chainCategoryName": "ממתקים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.476,
+      "matchedSynonym": "חטיפים",
+      "auto": true
+    },
+    {
+      "commonId": "snacks/salty",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "236",
+      "chainCategoryName": "חטיפים מלוחים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.769,
+      "matchedSynonym": "חטיפים",
+      "auto": true
+    },
+    {
+      "commonId": "snacks/salty",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "299",
+      "chainCategoryName": "וופלים וביסקוויטים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.303,
+      "matchedSynonym": "חטיפים",
+      "auto": true
+    },
+    {
+      "commonId": "snacks/salty",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "300",
+      "chainCategoryName": "חטיפים מתוקים",
+      "chainCategoryDepth": 1,
+      "confidence": 0.769,
+      "matchedSynonym": "חטיפים",
+      "auto": true
+    },
+    {
+      "commonId": "snacks/salty",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "302",
+      "chainCategoryName": "עוגות ועוגיות",
+      "chainCategoryDepth": 1,
+      "confidence": 0.357,
+      "matchedSynonym": "חטיפים",
+      "auto": true
+    },
+    {
+      "commonId": "snacks/salty",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "56",
+      "chainCategoryName": "חטיפים ומתוקים",
+      "chainCategoryDepth": 0,
+      "confidence": 0.714,
+      "matchedSynonym": "חטיפים",
+      "auto": true
+    }
+  ]
+}

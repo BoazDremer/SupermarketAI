@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PriceFull>
+  <Row
+    externalItemCode="7290001234567"
+    externalStoreId="online-1"
+    name="חלב 3%"
+    nameHe="חלב 3%"
+    barcode="7290001234567"
+    priceMinor="529"
+    currency="ILS"
+    isCurrent="true"
+  />
+  <Row
+    externalItemCode="7290001234568"
+    externalStoreId="77"
+    name="לחם כפרי"
+    priceMinor="699"
+    currency="ILS"
+    isCurrent="true"
+  />
+</PriceFull>

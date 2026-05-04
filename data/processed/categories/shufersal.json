@@ -1,0 +1,2050 @@
+{
+  "retailerSlug": "shufersal",
+  "retailerNameHe": "שופרסל",
+  "scrapedAt": "2026-04-30T15:11:34.589Z",
+  "source": "https://www.shufersal.co.il/online/he/{categoryCode}",
+  "roots": [
+    {
+      "id": "A",
+      "nameHe": "סופרמרקט",
+      "url": "https://www.shufersal.co.il/online/he/A",
+      "depth": 0,
+      "children": [
+        {
+          "id": "A07",
+          "nameHe": "בשר, עוף ודגים",
+          "url": "https://www.shufersal.co.il/online/he/A07",
+          "depth": 1,
+          "children": [
+            {
+              "id": "A0720",
+              "nameHe": "A0720",
+              "url": "https://www.shufersal.co.il/online/he/A0720",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A072002",
+                  "nameHe": "A072002",
+                  "url": "https://www.shufersal.co.il/online/he/A072002",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "A0702",
+              "nameHe": "A0702",
+              "url": "https://www.shufersal.co.il/online/he/A0702",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A070201",
+                  "nameHe": "A070201",
+                  "url": "https://www.shufersal.co.il/online/he/A070201",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "A0705",
+              "nameHe": "A0705",
+              "url": "https://www.shufersal.co.il/online/he/A0705",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A070504",
+                  "nameHe": "A070504",
+                  "url": "https://www.shufersal.co.il/online/he/A070504",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "A0714",
+              "nameHe": "A0714",
+              "url": "https://www.shufersal.co.il/online/he/A0714",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A071422",
+                  "nameHe": "A071422",
+                  "url": "https://www.shufersal.co.il/online/he/A071422",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A28",
+          "nameHe": "green אורגני ובריאות",
+          "url": "https://www.shufersal.co.il/online/he/A28",
+          "depth": 1,
+          "children": [
+            {
+              "id": "A2817",
+              "nameHe": "A2817",
+              "url": "https://www.shufersal.co.il/online/he/A2817",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A281704",
+                  "nameHe": "A281704",
+                  "url": "https://www.shufersal.co.il/online/he/A281704",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "A281701",
+                  "nameHe": "A281701",
+                  "url": "https://www.shufersal.co.il/online/he/A281701",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A04",
+          "nameHe": "עולם הפירות והירקות",
+          "url": "https://www.shufersal.co.il/online/he/A04",
+          "depth": 1,
+          "children": [
+            {
+              "id": "A0410",
+              "nameHe": "A0410",
+              "url": "https://www.shufersal.co.il/online/he/A0410",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A041002",
+                  "nameHe": "A041002",
+                  "url": "https://www.shufersal.co.il/online/he/A041002",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "A041001",
+                  "nameHe": "A041001",
+                  "url": "https://www.shufersal.co.il/online/he/A041001",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "A0411",
+              "nameHe": "A0411",
+              "url": "https://www.shufersal.co.il/online/he/A0411",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A041102",
+                  "nameHe": "A041102",
+                  "url": "https://www.shufersal.co.il/online/he/A041102",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "A041101",
+                  "nameHe": "A041101",
+                  "url": "https://www.shufersal.co.il/online/he/A041101",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "A0409",
+              "nameHe": "A0409",
+              "url": "https://www.shufersal.co.il/online/he/A0409",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A040901",
+                  "nameHe": "A040901",
+                  "url": "https://www.shufersal.co.il/online/he/A040901",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "A040902",
+                  "nameHe": "A040902",
+                  "url": "https://www.shufersal.co.il/online/he/A040902",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A13",
+          "nameHe": "משקאות, אלכוהול, יין וטבק",
+          "url": "https://www.shufersal.co.il/online/he/A13",
+          "depth": 1,
+          "children": [
+            {
+              "id": "A1306",
+              "nameHe": "A1306",
+              "url": "https://www.shufersal.co.il/online/he/A1306",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A130605",
+                  "nameHe": "A130605",
+                  "url": "https://www.shufersal.co.il/online/he/A130605",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "A1302",
+              "nameHe": "A1302",
+              "url": "https://www.shufersal.co.il/online/he/A1302",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A130207",
+                  "nameHe": "A130207",
+                  "url": "https://www.shufersal.co.il/online/he/A130207",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "A130205",
+                  "nameHe": "A130205",
+                  "url": "https://www.shufersal.co.il/online/he/A130205",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "A1317",
+              "nameHe": "A1317",
+              "url": "https://www.shufersal.co.il/online/he/A1317",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A131701",
+                  "nameHe": "A131701",
+                  "url": "https://www.shufersal.co.il/online/he/A131701",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "A131713",
+                  "nameHe": "A131713",
+                  "url": "https://www.shufersal.co.il/online/he/A131713",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "A1305",
+              "nameHe": "A1305",
+              "url": "https://www.shufersal.co.il/online/he/A1305",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A130519",
+                  "nameHe": "A130519",
+                  "url": "https://www.shufersal.co.il/online/he/A130519",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "A130513",
+                  "nameHe": "A130513",
+                  "url": "https://www.shufersal.co.il/online/he/A130513",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "A130510",
+                  "nameHe": "A130510",
+                  "url": "https://www.shufersal.co.il/online/he/A130510",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A44",
+          "nameHe": "שבועות בשופרסל",
+          "url": "https://www.shufersal.co.il/online/he/A44",
+          "depth": 1,
+          "children": [
+            {
+              "id": "A4404",
+              "nameHe": "A4404",
+              "url": "https://www.shufersal.co.il/online/he/A4404",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A440401",
+                  "nameHe": "A440401",
+                  "url": "https://www.shufersal.co.il/online/he/A440401",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A31",
+          "nameHe": "מוצרי פארם וטיפוח",
+          "url": "https://www.shufersal.co.il/online/he/A31",
+          "depth": 1,
+          "children": [
+            {
+              "id": "A3124",
+              "nameHe": "A3124",
+              "url": "https://www.shufersal.co.il/online/he/A3124",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A312404",
+                  "nameHe": "A312404",
+                  "url": "https://www.shufersal.co.il/online/he/A312404",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A91",
+          "nameHe": "A91",
+          "url": "https://www.shufersal.co.il/online/he/A91",
+          "depth": 1,
+          "children": [
+            {
+              "id": "A9105",
+              "nameHe": "A9105",
+              "url": "https://www.shufersal.co.il/online/he/A9105",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A910503",
+                  "nameHe": "A910503",
+                  "url": "https://www.shufersal.co.il/online/he/A910503",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A25",
+          "nameHe": "A25",
+          "url": "https://www.shufersal.co.il/online/he/A25",
+          "depth": 1,
+          "children": [
+            {
+              "id": "A2508",
+              "nameHe": "A2508",
+              "url": "https://www.shufersal.co.il/online/he/A2508",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A250804",
+                  "nameHe": "A250804",
+                  "url": "https://www.shufersal.co.il/online/he/A250804",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A22",
+          "nameHe": "A22",
+          "url": "https://www.shufersal.co.il/online/he/A22",
+          "depth": 1,
+          "children": [
+            {
+              "id": "A2226",
+              "nameHe": "A2226",
+              "url": "https://www.shufersal.co.il/online/he/A2226",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A222605",
+                  "nameHe": "A222605",
+                  "url": "https://www.shufersal.co.il/online/he/A222605",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "A2217",
+              "nameHe": "A2217",
+              "url": "https://www.shufersal.co.il/online/he/A2217",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A221707",
+                  "nameHe": "A221707",
+                  "url": "https://www.shufersal.co.il/online/he/A221707",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "A2214",
+              "nameHe": "A2214",
+              "url": "https://www.shufersal.co.il/online/he/A2214",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A221416",
+                  "nameHe": "A221416",
+                  "url": "https://www.shufersal.co.il/online/he/A221416",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "A2220",
+              "nameHe": "A2220",
+              "url": "https://www.shufersal.co.il/online/he/A2220",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A222008",
+                  "nameHe": "A222008",
+                  "url": "https://www.shufersal.co.il/online/he/A222008",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A37",
+          "nameHe": "A37",
+          "url": "https://www.shufersal.co.il/online/he/A37",
+          "depth": 1,
+          "children": [
+            {
+              "id": "A3705",
+              "nameHe": "A3705",
+              "url": "https://www.shufersal.co.il/online/he/A3705",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "A370501",
+                  "nameHe": "A370501",
+                  "url": "https://www.shufersal.co.il/online/he/A370501",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "nameHe": "שופרסל גרין green בריאות וטבע",
+      "url": "https://www.shufersal.co.il/online/he/F",
+      "depth": 0,
+      "children": [
+        {
+          "id": "F01",
+          "nameHe": "F01",
+          "url": "https://www.shufersal.co.il/online/he/F01",
+          "depth": 1,
+          "children": [
+            {
+              "id": "F0102",
+              "nameHe": "F0102",
+              "url": "https://www.shufersal.co.il/online/he/F0102",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "F010204",
+                  "nameHe": "F010204",
+                  "url": "https://www.shufersal.co.il/online/he/F010204",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "nameHe": "פארם וקוסמטיקה",
+      "url": "https://www.shufersal.co.il/online/he/B",
+      "depth": 0,
+      "children": [
+        {
+          "id": "B02",
+          "nameHe": "B02",
+          "url": "https://www.shufersal.co.il/online/he/B02",
+          "depth": 1,
+          "children": [
+            {
+              "id": "B0206",
+              "nameHe": "B0206",
+              "url": "https://www.shufersal.co.il/online/he/B0206",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "B0210",
+              "nameHe": "B0210",
+              "url": "https://www.shufersal.co.il/online/he/B0210",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "B0202",
+              "nameHe": "B0202",
+              "url": "https://www.shufersal.co.il/online/he/B0202",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "B0204",
+              "nameHe": "B0204",
+              "url": "https://www.shufersal.co.il/online/he/B0204",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "B09",
+          "nameHe": "B09",
+          "url": "https://www.shufersal.co.il/online/he/B09",
+          "depth": 1,
+          "children": [
+            {
+              "id": "B0904",
+              "nameHe": "B0904",
+              "url": "https://www.shufersal.co.il/online/he/B0904",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "B03",
+          "nameHe": "B03",
+          "url": "https://www.shufersal.co.il/online/he/B03",
+          "depth": 1,
+          "children": [
+            {
+              "id": "B0305",
+              "nameHe": "B0305",
+              "url": "https://www.shufersal.co.il/online/he/B0305",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "B0306",
+              "nameHe": "B0306",
+              "url": "https://www.shufersal.co.il/online/he/B0306",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "B0312",
+              "nameHe": "B0312",
+              "url": "https://www.shufersal.co.il/online/he/B0312",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "B12",
+          "nameHe": "B12",
+          "url": "https://www.shufersal.co.il/online/he/B12",
+          "depth": 1,
+          "children": [
+            {
+              "id": "B1202",
+              "nameHe": "B1202",
+              "url": "https://www.shufersal.co.il/online/he/B1202",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "B1201",
+              "nameHe": "B1201",
+              "url": "https://www.shufersal.co.il/online/he/B1201",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "B04",
+          "nameHe": "B04",
+          "url": "https://www.shufersal.co.il/online/he/B04",
+          "depth": 1,
+          "children": [
+            {
+              "id": "B0403",
+              "nameHe": "B0403",
+              "url": "https://www.shufersal.co.il/online/he/B0403",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "nameHe": "הקניון הכל לבית",
+      "url": "https://www.shufersal.co.il/online/he/G",
+      "depth": 0,
+      "children": [
+        {
+          "id": "G02",
+          "nameHe": "מוצרי חשמל למטבח",
+          "url": "https://www.shufersal.co.il/online/he/G02",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G0204",
+              "nameHe": "G0204",
+              "url": "https://www.shufersal.co.il/online/he/G0204",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G020402",
+                  "nameHe": "G020402",
+                  "url": "https://www.shufersal.co.il/online/he/G020402",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G020403",
+                  "nameHe": "G020403",
+                  "url": "https://www.shufersal.co.il/online/he/G020403",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G020401",
+                  "nameHe": "G020401",
+                  "url": "https://www.shufersal.co.il/online/he/G020401",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G020404",
+                  "nameHe": "G020404",
+                  "url": "https://www.shufersal.co.il/online/he/G020404",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G0205",
+              "nameHe": "G0205",
+              "url": "https://www.shufersal.co.il/online/he/G0205",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G020506",
+                  "nameHe": "G020506",
+                  "url": "https://www.shufersal.co.il/online/he/G020506",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G020507",
+                  "nameHe": "G020507",
+                  "url": "https://www.shufersal.co.il/online/he/G020507",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G020502",
+                  "nameHe": "G020502",
+                  "url": "https://www.shufersal.co.il/online/he/G020502",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G0201",
+              "nameHe": "G0201",
+              "url": "https://www.shufersal.co.il/online/he/G0201",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G020109",
+                  "nameHe": "G020109",
+                  "url": "https://www.shufersal.co.il/online/he/G020109",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G020111",
+                  "nameHe": "G020111",
+                  "url": "https://www.shufersal.co.il/online/he/G020111",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G020110",
+                  "nameHe": "G020110",
+                  "url": "https://www.shufersal.co.il/online/he/G020110",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G020107",
+                  "nameHe": "G020107",
+                  "url": "https://www.shufersal.co.il/online/he/G020107",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G0203",
+              "nameHe": "G0203",
+              "url": "https://www.shufersal.co.il/online/he/G0203",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G020303",
+                  "nameHe": "G020303",
+                  "url": "https://www.shufersal.co.il/online/he/G020303",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G020301",
+                  "nameHe": "G020301",
+                  "url": "https://www.shufersal.co.il/online/he/G020301",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G020305",
+                  "nameHe": "G020305",
+                  "url": "https://www.shufersal.co.il/online/he/G020305",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G020304",
+                  "nameHe": "G020304",
+                  "url": "https://www.shufersal.co.il/online/he/G020304",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G0202",
+              "nameHe": "G0202",
+              "url": "https://www.shufersal.co.il/online/he/G0202",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G020203",
+                  "nameHe": "G020203",
+                  "url": "https://www.shufersal.co.il/online/he/G020203",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G020201",
+                  "nameHe": "G020201",
+                  "url": "https://www.shufersal.co.il/online/he/G020201",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G020202",
+                  "nameHe": "G020202",
+                  "url": "https://www.shufersal.co.il/online/he/G020202",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G020204",
+                  "nameHe": "G020204",
+                  "url": "https://www.shufersal.co.il/online/he/G020204",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G19",
+          "nameHe": "Shufersal - שופרסל אונלין - אמבטיה וחדר כביסה",
+          "url": "https://www.shufersal.co.il/online/he/G19",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G1903",
+              "nameHe": "G1903",
+              "url": "https://www.shufersal.co.il/online/he/G1903",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G190301",
+                  "nameHe": "G190301",
+                  "url": "https://www.shufersal.co.il/online/he/G190301",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G190302",
+                  "nameHe": "G190302",
+                  "url": "https://www.shufersal.co.il/online/he/G190302",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G190304",
+                  "nameHe": "G190304",
+                  "url": "https://www.shufersal.co.il/online/he/G190304",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1902",
+              "nameHe": "G1902",
+              "url": "https://www.shufersal.co.il/online/he/G1902",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G190201",
+                  "nameHe": "G190201",
+                  "url": "https://www.shufersal.co.il/online/he/G190201",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G190202",
+                  "nameHe": "G190202",
+                  "url": "https://www.shufersal.co.il/online/he/G190202",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1901",
+              "nameHe": "G1901",
+              "url": "https://www.shufersal.co.il/online/he/G1901",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G190101",
+                  "nameHe": "G190101",
+                  "url": "https://www.shufersal.co.il/online/he/G190101",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G14",
+          "nameHe": "כלי מטבח, בישול ואירוח",
+          "url": "https://www.shufersal.co.il/online/he/G14",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G1401",
+              "nameHe": "G1401",
+              "url": "https://www.shufersal.co.il/online/he/G1401",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G140102",
+                  "nameHe": "G140102",
+                  "url": "https://www.shufersal.co.il/online/he/G140102",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G140101",
+                  "nameHe": "G140101",
+                  "url": "https://www.shufersal.co.il/online/he/G140101",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G140105",
+                  "nameHe": "G140105",
+                  "url": "https://www.shufersal.co.il/online/he/G140105",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1402",
+              "nameHe": "G1402",
+              "url": "https://www.shufersal.co.il/online/he/G1402",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G140202",
+                  "nameHe": "G140202",
+                  "url": "https://www.shufersal.co.il/online/he/G140202",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G140209",
+                  "nameHe": "G140209",
+                  "url": "https://www.shufersal.co.il/online/he/G140209",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G140205",
+                  "nameHe": "G140205",
+                  "url": "https://www.shufersal.co.il/online/he/G140205",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G140203",
+                  "nameHe": "G140203",
+                  "url": "https://www.shufersal.co.il/online/he/G140203",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G140201",
+                  "nameHe": "G140201",
+                  "url": "https://www.shufersal.co.il/online/he/G140201",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G140206",
+                  "nameHe": "G140206",
+                  "url": "https://www.shufersal.co.il/online/he/G140206",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1410",
+              "nameHe": "G1410",
+              "url": "https://www.shufersal.co.il/online/he/G1410",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G141002",
+                  "nameHe": "G141002",
+                  "url": "https://www.shufersal.co.il/online/he/G141002",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G141001",
+                  "nameHe": "G141001",
+                  "url": "https://www.shufersal.co.il/online/he/G141001",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G141006",
+                  "nameHe": "G141006",
+                  "url": "https://www.shufersal.co.il/online/he/G141006",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G141003",
+                  "nameHe": "G141003",
+                  "url": "https://www.shufersal.co.il/online/he/G141003",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G141008",
+                  "nameHe": "G141008",
+                  "url": "https://www.shufersal.co.il/online/he/G141008",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G141004",
+                  "nameHe": "G141004",
+                  "url": "https://www.shufersal.co.il/online/he/G141004",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1403",
+              "nameHe": "G1403",
+              "url": "https://www.shufersal.co.il/online/he/G1403",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G140303",
+                  "nameHe": "G140303",
+                  "url": "https://www.shufersal.co.il/online/he/G140303",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1407",
+              "nameHe": "G1407",
+              "url": "https://www.shufersal.co.il/online/he/G1407",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G140701",
+                  "nameHe": "G140701",
+                  "url": "https://www.shufersal.co.il/online/he/G140701",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G140702",
+                  "nameHe": "G140702",
+                  "url": "https://www.shufersal.co.il/online/he/G140702",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G140703",
+                  "nameHe": "G140703",
+                  "url": "https://www.shufersal.co.il/online/he/G140703",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1411",
+              "nameHe": "G1411",
+              "url": "https://www.shufersal.co.il/online/he/G1411",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G141102",
+                  "nameHe": "G141102",
+                  "url": "https://www.shufersal.co.il/online/he/G141102",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G17",
+          "nameHe": "עיצוב וארגון לחדר השינה",
+          "url": "https://www.shufersal.co.il/online/he/G17",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G1702",
+              "nameHe": "G1702",
+              "url": "https://www.shufersal.co.il/online/he/G1702",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G170202",
+                  "nameHe": "G170202",
+                  "url": "https://www.shufersal.co.il/online/he/G170202",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G170203",
+                  "nameHe": "G170203",
+                  "url": "https://www.shufersal.co.il/online/he/G170203",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G170206",
+                  "nameHe": "G170206",
+                  "url": "https://www.shufersal.co.il/online/he/G170206",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1701",
+              "nameHe": "G1701",
+              "url": "https://www.shufersal.co.il/online/he/G1701",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G170101",
+                  "nameHe": "G170101",
+                  "url": "https://www.shufersal.co.il/online/he/G170101",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G170103",
+                  "nameHe": "G170103",
+                  "url": "https://www.shufersal.co.il/online/he/G170103",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G170106",
+                  "nameHe": "G170106",
+                  "url": "https://www.shufersal.co.il/online/he/G170106",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1703",
+              "nameHe": "G1703",
+              "url": "https://www.shufersal.co.il/online/he/G1703",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G170303",
+                  "nameHe": "G170303",
+                  "url": "https://www.shufersal.co.il/online/he/G170303",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G170306",
+                  "nameHe": "G170306",
+                  "url": "https://www.shufersal.co.il/online/he/G170306",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G170304",
+                  "nameHe": "G170304",
+                  "url": "https://www.shufersal.co.il/online/he/G170304",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1705",
+              "nameHe": "G1705",
+              "url": "https://www.shufersal.co.il/online/he/G1705",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G170505",
+                  "nameHe": "G170505",
+                  "url": "https://www.shufersal.co.il/online/he/G170505",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G170502",
+                  "nameHe": "G170502",
+                  "url": "https://www.shufersal.co.il/online/he/G170502",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G170501",
+                  "nameHe": "G170501",
+                  "url": "https://www.shufersal.co.il/online/he/G170501",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G170504",
+                  "nameHe": "G170504",
+                  "url": "https://www.shufersal.co.il/online/he/G170504",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G170506",
+                  "nameHe": "G170506",
+                  "url": "https://www.shufersal.co.il/online/he/G170506",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G170503",
+                  "nameHe": "G170503",
+                  "url": "https://www.shufersal.co.il/online/he/G170503",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1704",
+              "nameHe": "G1704",
+              "url": "https://www.shufersal.co.il/online/he/G1704",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G170402",
+                  "nameHe": "G170402",
+                  "url": "https://www.shufersal.co.il/online/he/G170402",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G170401",
+                  "nameHe": "G170401",
+                  "url": "https://www.shufersal.co.il/online/he/G170401",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G170403",
+                  "nameHe": "G170403",
+                  "url": "https://www.shufersal.co.il/online/he/G170403",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G16",
+          "nameHe": "נסיעות קמפינג ופנאי",
+          "url": "https://www.shufersal.co.il/online/he/G16",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G1601",
+              "nameHe": "G1601",
+              "url": "https://www.shufersal.co.il/online/he/G1601",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G160110",
+                  "nameHe": "G160110",
+                  "url": "https://www.shufersal.co.il/online/he/G160110",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G160108",
+                  "nameHe": "G160108",
+                  "url": "https://www.shufersal.co.il/online/he/G160108",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G160106",
+                  "nameHe": "G160106",
+                  "url": "https://www.shufersal.co.il/online/he/G160106",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G160101",
+                  "nameHe": "G160101",
+                  "url": "https://www.shufersal.co.il/online/he/G160101",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G160107",
+                  "nameHe": "G160107",
+                  "url": "https://www.shufersal.co.il/online/he/G160107",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G160111",
+                  "nameHe": "G160111",
+                  "url": "https://www.shufersal.co.il/online/he/G160111",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G160105",
+                  "nameHe": "G160105",
+                  "url": "https://www.shufersal.co.il/online/he/G160105",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G160104",
+                  "nameHe": "G160104",
+                  "url": "https://www.shufersal.co.il/online/he/G160104",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1603",
+              "nameHe": "G1603",
+              "url": "https://www.shufersal.co.il/online/he/G1603",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G160301",
+                  "nameHe": "G160301",
+                  "url": "https://www.shufersal.co.il/online/he/G160301",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1609",
+              "nameHe": "G1609",
+              "url": "https://www.shufersal.co.il/online/he/G1609",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G160906",
+                  "nameHe": "G160906",
+                  "url": "https://www.shufersal.co.il/online/he/G160906",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G160905",
+                  "nameHe": "G160905",
+                  "url": "https://www.shufersal.co.il/online/he/G160905",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G160907",
+                  "nameHe": "G160907",
+                  "url": "https://www.shufersal.co.il/online/he/G160907",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1608",
+              "nameHe": "G1608",
+              "url": "https://www.shufersal.co.il/online/he/G1608",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G160803",
+                  "nameHe": "G160803",
+                  "url": "https://www.shufersal.co.il/online/he/G160803",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G15",
+          "nameHe": "גינה וחוץ",
+          "url": "https://www.shufersal.co.il/online/he/G15",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G1501",
+              "nameHe": "G1501",
+              "url": "https://www.shufersal.co.il/online/he/G1501",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G150103",
+                  "nameHe": "G150103",
+                  "url": "https://www.shufersal.co.il/online/he/G150103",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G150101",
+                  "nameHe": "G150101",
+                  "url": "https://www.shufersal.co.il/online/he/G150101",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G150102",
+                  "nameHe": "G150102",
+                  "url": "https://www.shufersal.co.il/online/he/G150102",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G150104",
+                  "nameHe": "G150104",
+                  "url": "https://www.shufersal.co.il/online/he/G150104",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1502",
+              "nameHe": "G1502",
+              "url": "https://www.shufersal.co.il/online/he/G1502",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G150202",
+                  "nameHe": "G150202",
+                  "url": "https://www.shufersal.co.il/online/he/G150202",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1503",
+              "nameHe": "G1503",
+              "url": "https://www.shufersal.co.il/online/he/G1503",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G150304",
+                  "nameHe": "G150304",
+                  "url": "https://www.shufersal.co.il/online/he/G150304",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G150301",
+                  "nameHe": "G150301",
+                  "url": "https://www.shufersal.co.il/online/he/G150301",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G150302",
+                  "nameHe": "G150302",
+                  "url": "https://www.shufersal.co.il/online/he/G150302",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1504",
+              "nameHe": "G1504",
+              "url": "https://www.shufersal.co.il/online/he/G1504",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G150402",
+                  "nameHe": "G150402",
+                  "url": "https://www.shufersal.co.il/online/he/G150402",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1506",
+              "nameHe": "G1506",
+              "url": "https://www.shufersal.co.il/online/he/G1506",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G150601",
+                  "nameHe": "G150601",
+                  "url": "https://www.shufersal.co.il/online/he/G150601",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G01",
+          "nameHe": "מוצרי חשמל ואלקטרוניקה לבית ולמשרד",
+          "url": "https://www.shufersal.co.il/online/he/G01",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G0103",
+              "nameHe": "G0103",
+              "url": "https://www.shufersal.co.il/online/he/G0103",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G010301",
+                  "nameHe": "G010301",
+                  "url": "https://www.shufersal.co.il/online/he/G010301",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G010310",
+                  "nameHe": "G010310",
+                  "url": "https://www.shufersal.co.il/online/he/G010310",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G010309",
+                  "nameHe": "G010309",
+                  "url": "https://www.shufersal.co.il/online/he/G010309",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G0101",
+              "nameHe": "G0101",
+              "url": "https://www.shufersal.co.il/online/he/G0101",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G010103",
+                  "nameHe": "G010103",
+                  "url": "https://www.shufersal.co.il/online/he/G010103",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G010102",
+                  "nameHe": "G010102",
+                  "url": "https://www.shufersal.co.il/online/he/G010102",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G0102",
+              "nameHe": "G0102",
+              "url": "https://www.shufersal.co.il/online/he/G0102",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G010201",
+                  "nameHe": "G010201",
+                  "url": "https://www.shufersal.co.il/online/he/G010201",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G010205",
+                  "nameHe": "G010205",
+                  "url": "https://www.shufersal.co.il/online/he/G010205",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G010204",
+                  "nameHe": "G010204",
+                  "url": "https://www.shufersal.co.il/online/he/G010204",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G010202",
+                  "nameHe": "G010202",
+                  "url": "https://www.shufersal.co.il/online/he/G010202",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G0106",
+              "nameHe": "G0106",
+              "url": "https://www.shufersal.co.il/online/he/G0106",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G010604",
+                  "nameHe": "G010604",
+                  "url": "https://www.shufersal.co.il/online/he/G010604",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G13",
+          "nameHe": "גאלה הום GALA HOME",
+          "url": "https://www.shufersal.co.il/online/he/G13",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G1303",
+              "nameHe": "G1303",
+              "url": "https://www.shufersal.co.il/online/he/G1303",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G130307",
+                  "nameHe": "G130307",
+                  "url": "https://www.shufersal.co.il/online/he/G130307",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1301",
+              "nameHe": "G1301",
+              "url": "https://www.shufersal.co.il/online/he/G1301",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G130109",
+                  "nameHe": "G130109",
+                  "url": "https://www.shufersal.co.il/online/he/G130109",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G130112",
+                  "nameHe": "G130112",
+                  "url": "https://www.shufersal.co.il/online/he/G130112",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G18",
+          "nameHe": "ריהוט ועיצוב לבית",
+          "url": "https://www.shufersal.co.il/online/he/G18",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G1802",
+              "nameHe": "G1802",
+              "url": "https://www.shufersal.co.il/online/he/G1802",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G180203",
+                  "nameHe": "G180203",
+                  "url": "https://www.shufersal.co.il/online/he/G180203",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G180201",
+                  "nameHe": "G180201",
+                  "url": "https://www.shufersal.co.il/online/he/G180201",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1801",
+              "nameHe": "G1801",
+              "url": "https://www.shufersal.co.il/online/he/G1801",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G180102",
+                  "nameHe": "G180102",
+                  "url": "https://www.shufersal.co.il/online/he/G180102",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G180101",
+                  "nameHe": "G180101",
+                  "url": "https://www.shufersal.co.il/online/he/G180101",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G1803",
+              "nameHe": "G1803",
+              "url": "https://www.shufersal.co.il/online/he/G1803",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G180303",
+                  "nameHe": "G180303",
+                  "url": "https://www.shufersal.co.il/online/he/G180303",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G23",
+          "nameHe": "ילדים ותינוקות",
+          "url": "https://www.shufersal.co.il/online/he/G23",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G2301",
+              "nameHe": "G2301",
+              "url": "https://www.shufersal.co.il/online/he/G2301",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G230104",
+                  "nameHe": "G230104",
+                  "url": "https://www.shufersal.co.il/online/he/G230104",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G20",
+          "nameHe": "DIY ולמשרד",
+          "url": "https://www.shufersal.co.il/online/he/G20",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G2006",
+              "nameHe": "G2006",
+              "url": "https://www.shufersal.co.il/online/he/G2006",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G200602",
+                  "nameHe": "G200602",
+                  "url": "https://www.shufersal.co.il/online/he/G200602",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "G2001",
+              "nameHe": "G2001",
+              "url": "https://www.shufersal.co.il/online/he/G2001",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G200101",
+                  "nameHe": "G200101",
+                  "url": "https://www.shufersal.co.il/online/he/G200101",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G200103",
+                  "nameHe": "G200103",
+                  "url": "https://www.shufersal.co.il/online/he/G200103",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "id": "G200102",
+                  "nameHe": "G200102",
+                  "url": "https://www.shufersal.co.il/online/he/G200102",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G99",
+          "nameHe": "G99",
+          "url": "https://www.shufersal.co.il/online/he/G99",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G9901",
+              "nameHe": "G9901",
+              "url": "https://www.shufersal.co.il/online/he/G9901",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "G990102",
+                  "nameHe": "G990102",
+                  "url": "https://www.shufersal.co.il/online/he/G990102",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G03",
+      "nameHe": "אלקטרוניקה מחשבים וסלולר",
+      "url": "https://www.shufersal.co.il/online/he/G03",
+      "depth": 0,
+      "children": [
+        {
+          "id": "G0301",
+          "nameHe": "G0301",
+          "url": "https://www.shufersal.co.il/online/he/G0301",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G030102",
+              "nameHe": "G030102",
+              "url": "https://www.shufersal.co.il/online/he/G030102",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "G030103",
+              "nameHe": "G030103",
+              "url": "https://www.shufersal.co.il/online/he/G030103",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "G030104",
+              "nameHe": "G030104",
+              "url": "https://www.shufersal.co.il/online/he/G030104",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "G030111",
+              "nameHe": "G030111",
+              "url": "https://www.shufersal.co.il/online/he/G030111",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "G0302",
+          "nameHe": "G0302",
+          "url": "https://www.shufersal.co.il/online/he/G0302",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G030208",
+              "nameHe": "G030208",
+              "url": "https://www.shufersal.co.il/online/he/G030208",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "G030202",
+              "nameHe": "G030202",
+              "url": "https://www.shufersal.co.il/online/he/G030202",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "G0307",
+          "nameHe": "G0307",
+          "url": "https://www.shufersal.co.il/online/he/G0307",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G030702",
+              "nameHe": "G030702",
+              "url": "https://www.shufersal.co.il/online/he/G030702",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "G0304",
+          "nameHe": "G0304",
+          "url": "https://www.shufersal.co.il/online/he/G0304",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G030405",
+              "nameHe": "G030405",
+              "url": "https://www.shufersal.co.il/online/he/G030405",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "G030407",
+              "nameHe": "G030407",
+              "url": "https://www.shufersal.co.il/online/he/G030407",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "G030406",
+              "nameHe": "G030406",
+              "url": "https://www.shufersal.co.il/online/he/G030406",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G09",
+      "nameHe": "G09",
+      "url": "https://www.shufersal.co.il/online/he/G09",
+      "depth": 0,
+      "children": [
+        {
+          "id": "G0903",
+          "nameHe": "G0903",
+          "url": "https://www.shufersal.co.il/online/he/G0903",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G090309",
+              "nameHe": "G090309",
+              "url": "https://www.shufersal.co.il/online/he/G090309",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "G09012",
+          "nameHe": "G09012",
+          "url": "https://www.shufersal.co.il/online/he/G09012",
+          "depth": 1,
+          "children": [
+            {
+              "id": "G090122",
+              "nameHe": "G090122",
+              "url": "https://www.shufersal.co.il/online/he/G090122",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "nameHe": "C",
+      "url": "https://www.shufersal.co.il/online/he/C",
+      "depth": 0,
+      "children": [
+        {
+          "id": "C05",
+          "nameHe": "C05",
+          "url": "https://www.shufersal.co.il/online/he/C05",
+          "depth": 1,
+          "children": [
+            {
+              "id": "C0501",
+              "nameHe": "C0501",
+              "url": "https://www.shufersal.co.il/online/he/C0501",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "C050101",
+                  "nameHe": "C050101",
+                  "url": "https://www.shufersal.co.il/online/he/C050101",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C01",
+          "nameHe": "C01",
+          "url": "https://www.shufersal.co.il/online/he/C01",
+          "depth": 1,
+          "children": [
+            {
+              "id": "C0101",
+              "nameHe": "C0101",
+              "url": "https://www.shufersal.co.il/online/he/C0101",
+              "depth": 2,
+              "children": [
+                {
+                  "id": "C010105",
+                  "nameHe": "C010105",
+                  "url": "https://www.shufersal.co.il/online/he/C010105",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A4510",
+      "nameHe": "A4510",
+      "url": "https://www.shufersal.co.il/online/he/A4510",
+      "depth": 0,
+      "children": [
+        {
+          "id": "A451002",
+          "nameHe": "A451002",
+          "url": "https://www.shufersal.co.il/online/he/A451002",
+          "depth": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "G160607",
+      "nameHe": "G160607",
+      "url": "https://www.shufersal.co.il/online/he/G160607",
+      "depth": 0,
+      "children": []
+    }
+  ],
+  "leafCount": 167
+}

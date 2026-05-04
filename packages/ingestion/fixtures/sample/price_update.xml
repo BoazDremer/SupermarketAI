@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PriceUpdate>
+  <Row
+    externalItemCode="7290001234567"
+    externalStoreId="online-1"
+    name="חלב 3%"
+    priceMinor="499"
+    currency="ILS"
+    isCurrent="true"
+  />
+</PriceUpdate>

@@ -1,39 +1,58 @@
-:root {
-  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
-  line-height: 1.5;
-  color: #0f172a;
-  background: #f8fafc;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@layer base {
+  :root {
+    --background: 270 30% 99%;
+    --foreground: 270 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 270 30% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 30% 12%;
+    --primary: 265 80% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 30% 95%;
+    --secondary-foreground: 270 35% 22%;
+    --muted: 270 18% 94%;
+    --muted-foreground: 270 8% 42%;
+    --accent: 38 95% 55%;
+    --accent-foreground: 30 35% 12%;
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 270 18% 90%;
+    --input: 270 18% 90%;
+    --ring: 265 80% 50%;
+    --radius: 0.75rem;
+  }
 
-body {
-  margin: 0;
-  min-height: 100dvh;
-}
+  .dark {
+    --background: 270 22% 9%;
+    --foreground: 270 20% 96%;
+    --card: 270 20% 12%;
+    --card-foreground: 270 20% 96%;
+    --popover: 270 20% 12%;
+    --popover-foreground: 270 20% 96%;
+    --primary: 265 75% 65%;
+    --primary-foreground: 270 35% 12%;
+    --secondary: 270 14% 18%;
+    --secondary-foreground: 270 20% 92%;
+    --muted: 270 14% 20%;
+    --muted-foreground: 270 10% 65%;
+    --accent: 38 92% 55%;
+    --accent-foreground: 30 35% 10%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 270 12% 22%;
+    --input: 270 12% 22%;
+    --ring: 265 75% 65%;
+  }
 
-.app {
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 1.25rem;
-}
+  * {
+    @apply border-border;
+  }
 
-h1 {
-  font-size: clamp(1.35rem, 4vw, 1.75rem);
-  margin: 0 0 0.5rem;
-}
-
-.lede {
-  margin: 0 0 1rem;
-  color: #334155;
-}
-
-.meta {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #64748b;
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
 }

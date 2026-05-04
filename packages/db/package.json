@@ -2,18 +2,24 @@
   "name": "@supermarket-price-compare/db",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
+      "require": "./dist/index.js",
       "default": "./dist/index.js"
     }
   },
   "scripts": {
     "generate": "prisma generate",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:cleanup-fixtures": "tsx prisma/cleanup-fixtures.ts",
+    "db:inspect": "tsx prisma/inspect.ts",
+    "prisma:studio": "prisma studio",
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "lint": "eslint src",
@@ -23,7 +29,9 @@
     "@prisma/client": "^6.1.0"
   },
   "devDependencies": {
+    "@types/node": "^22.10.2",
     "prisma": "^6.1.0",
+    "tsx": "^4.20.6",
     "typescript": "^5.7.2"
   }
 }

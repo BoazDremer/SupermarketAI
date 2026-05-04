@@ -15,7 +15,10 @@
     "build": "pnpm --filter @supermarket-price-compare/shared build && pnpm --filter @supermarket-price-compare/db generate && pnpm --filter @supermarket-price-compare/db build && pnpm --filter @supermarket-price-compare/ingestion build && pnpm --filter @supermarket-price-compare/web build && pnpm --filter @supermarket-price-compare/api build",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "typecheck": "pnpm -r typecheck"
+    "typecheck": "pnpm -r typecheck",
+    "ingest:prices": "pnpm --filter @supermarket-price-compare/ingestion ingest:prices",
+    "scrape:categories": "pnpm --filter @supermarket-price-compare/ingestion scrape:categories",
+    "map:products": "pnpm --filter @supermarket-price-compare/ingestion map:products"
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PromoUpdate>
+  <Promotion
+    externalPromotionId="promo-2"
+    externalStoreId="online-1"
+    title="עדכון מבצע"
+    startsAt="2026-04-01T00:00:00.000Z"
+  />
+  <Item
+    externalPromotionId="promo-2"
+    externalItemCode="7290001234568"
+    role="PRIMARY_TARGET"
+    minQuantity="2"
+  />
+</PromoUpdate>

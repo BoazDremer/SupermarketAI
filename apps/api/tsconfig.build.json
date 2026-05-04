@@ -3,7 +3,8 @@
   "compilerOptions": {
     "noEmit": false,
     "declaration": true,
-    "removeComments": true
+    "removeComments": true,
+    "incremental": false
   },
   "exclude": ["node_modules", "dist", "test", "**/*spec.ts"]
 }

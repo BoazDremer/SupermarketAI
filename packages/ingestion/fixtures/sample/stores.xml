@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Stores>
+  <Store
+    externalStoreId="online-1"
+    displayName="סניף אינטרנט"
+    city=""
+    deliveryOffered="true"
+  />
+  <Store
+    externalStoreId="77"
+    displayName="סניף קרקע חיפה"
+    city="חיפה"
+    deliveryOffered="false"
+  />
+</Stores>

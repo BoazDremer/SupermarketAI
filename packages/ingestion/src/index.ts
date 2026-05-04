@@ -1,25 +1,14 @@
-export type { WorkspaceHealth } from '@supermarket-price-compare/shared';
+export * from './types.js';
+export * from './file-utils.js';
+export * from './xml-parser.js';
+export * from './normalizers.js';
+export * from './retailer-sources.js';
 
-/**
- * Ingestion framework for Israeli supermarket price and promotion files.
- * Parsers, validators, and pipeline orchestration will live here.
- */
-export type IngestionContext = {
-  /** Absolute or workspace-relative path to a raw feed file under `data/raw`. */
-  inputPath: string;
-};
+export * from './providers/base-provider.js';
+export * from './providers/local-fixture-provider.js';
+export * from './providers/shufersal-provider.js';
+export * from './providers/carrefour-provider.js';
+export * from './providers/published-prices-provider.js';
+export * from './providers/matrix-nibit-provider.js';
 
-export interface IngestionStep {
-  readonly name: string;
-  run(ctx: IngestionContext): Promise<void>;
-}
-
-export function createIngestionPipeline(_steps: readonly IngestionStep[]): {
-  run: (ctx: IngestionContext) => Promise<void>;
-} {
-  return {
-    async run(_ctx: IngestionContext): Promise<void> {
-      // Skeleton: wire steps in a later iteration.
-    },
-  };
-}
+export * from './db/import-pricefull.js';

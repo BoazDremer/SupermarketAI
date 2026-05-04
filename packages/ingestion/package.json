@@ -15,13 +15,22 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "ingest:fixture": "pnpm run build && node dist/cli/ingest-fixture.js",
+    "detect:online-stores": "pnpm run build && node dist/cli/detect-online-stores.js",
+    "ingest:prices": "tsx src/cli/ingest-prices.ts",
+    "scrape:categories": "tsx src/cli/scrape-categories.ts",
+    "map:products": "tsx src/cli/map-products.ts"
   },
   "dependencies": {
-    "@supermarket-price-compare/shared": "workspace:*"
+    "@supermarket-price-compare/db": "workspace:*",
+    "cheerio": "^1.0.0",
+    "fast-xml-parser": "^4.5.3",
+    "iconv-lite": "^0.7.2"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "tsx": "^4.20.6",
     "typescript": "^5.7.2"
   }
 }
