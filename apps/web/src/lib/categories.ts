@@ -15,6 +15,7 @@ import {
   Boxes,
   Cigarette,
   Cookie,
+  CookingPot,
   Croissant,
   CupSoda,
   Dog,
@@ -33,7 +34,6 @@ import {
   Tag,
   ToyBrick,
   TreePine,
-  UtensilsCrossed,
   Wheat,
   Wine,
 } from 'lucide-react';
@@ -45,6 +45,7 @@ const ICON_BY_NAME: Record<string, LucideIcon> = {
   Boxes,
   Cigarette,
   Cookie,
+  CookingPot,
   Croissant,
   CupSoda,
   Dog,
@@ -63,7 +64,6 @@ const ICON_BY_NAME: Record<string, LucideIcon> = {
   Tag,
   ToyBrick,
   TreePine,
-  UtensilsCrossed,
   Wheat,
   Wine,
 };

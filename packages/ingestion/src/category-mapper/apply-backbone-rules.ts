@@ -29,6 +29,7 @@ const DEPT_DAIRY = 'dept/חלב-ביצים-וסלטים';
 const DEPT_MEAT = 'dept/בשר-ודגים';
 const DEPT_BREAD = 'dept/לחם-מאפים-והמאפייה-הטריה';
 const DEPT_LEGUMES = 'dept/קטניות-ודגנים';
+const DEPT_PANTRY = 'dept/שימורים-בישול-ואפיה';
 const SPICES_BY_WEIGHT_ID = 'dept/שימורים-בישול-ואפיה/תבלינים/תבלינים-במשקל';
 
 const FALLBACK_LEAF_SUFFIX = /\/(general|other|misc)$/;
@@ -681,6 +682,7 @@ function loadAllRulePacks(): RulePackJson[] {
     readRulePack('dept-בשר-ודגים.json'),
     readRulePack('dept-לחם-מאפים-והמאפייה-הטריה.json'),
     readRulePack('dept-קטניות-ודגנים.json'),
+    readRulePack('dept-שימורים-בישול-ואפיה.json'),
   ];
 }
 
@@ -752,9 +754,162 @@ export function applyInternalBackboneRules(
   const legumesDept = findNodeById(cloned, DEPT_LEGUMES);
   if (legumesDept) patchLegumesDepartment(cloned, legumesDept);
 
+  const pantryDept = findNodeById(cloned, DEPT_PANTRY);
+  if (pantryDept) patchPantryDepartment(cloned, pantryDept);
+
   patchRootDepartmentOrder(cloned);
 
   return cloned;
+}
+
+function patchPantryDepartment(roots: readonly BackboneNode[], dept: BackboneNode): void {
+  const preservesId = `${DEPT_PANTRY}/שימורים`;
+  const fruitPreservesId = `${preservesId}/שימורי-פירות-ולפתנים`;
+  const preserves = findChild(dept, preservesId);
+
+  const mergePreservesInto = (fromId: string, toId: string) => {
+    if (!preserves) return;
+    const from = findChild(preserves, fromId);
+    if (from) mergeHintsIntoNode(roots, toId, from.chainHints);
+  };
+
+  if (preserves) {
+    mergePreservesInto(`${preservesId}/שימורי-טונה-סיטונאות`, `${preservesId}/שימורי-טונה`);
+    mergePreservesInto(`${preservesId}/שימורי-ירקות-סיטונאות`, `${preservesId}/שימורי-ירקות`);
+    mergePreservesInto(`${preservesId}/שימורי-עגבניות-סיטונאות`, `${preservesId}/שימורי-עגבניות`);
+    mergePreservesInto(`${preservesId}/ירקות-כבושים`, `${preservesId}/שימורי-ירקות`);
+    mergePreservesInto(`${preservesId}/שימורי-פטריות`, `${preservesId}/שימורי-ירקות`);
+
+    const removedPreserveIds = new Set([
+      `${preservesId}/שימורי-טונה-סיטונאות`,
+      `${preservesId}/שימורי-ירקות-סיטונאות`,
+      `${preservesId}/שימורי-עגבניות-סיטונאות`,
+      `${preservesId}/ירקות-כבושים`,
+      `${preservesId}/שימורי-פטריות`,
+    ]);
+    preserves.children = preserves.children.filter(
+      (c) => !isFallbackLeafId(c.id) && !removedPreserveIds.has(c.id),
+    );
+
+    mergeHintsIntoNode(roots, `${preservesId}/שימורי-עגבניות`, preserves.chainHints);
+    preserves.children = preserves.children.filter((c) => !isFallbackLeafId(c.id));
+
+    reorderChildren(preserves, [
+      `${preservesId}/שימורי-עגבניות`,
+      `${preservesId}/שימורי-זיתים`,
+      `${preservesId}/שימורי-מלפפונים`,
+      `${preservesId}/שימורי-טונה`,
+      `${preservesId}/שימורי-תירס-פטריות`,
+      `${preservesId}/שימורי-ירקות`,
+      `${preservesId}/שימורי-דגים`,
+      fruitPreservesId,
+    ]);
+  }
+
+  const fruitAtDept = findChild(dept, fruitPreservesId);
+  if (fruitAtDept && preserves) {
+    dept.children = dept.children.filter((c) => c.id !== fruitPreservesId);
+    fruitAtDept.parentId = preservesId;
+    preserves.children.push(fruitAtDept);
+    reorderChildren(preserves, [
+      `${preservesId}/שימורי-עגבניות`,
+      `${preservesId}/שימורי-זיתים`,
+      `${preservesId}/שימורי-מלפפונים`,
+      `${preservesId}/שימורי-טונה`,
+      `${preservesId}/שימורי-תירס-פטריות`,
+      `${preservesId}/שימורי-ירקות`,
+      `${preservesId}/שימורי-דגים`,
+      fruitPreservesId,
+    ]);
+  }
+
+  const saucesId = `${DEPT_PANTRY}/רטבים`;
+  const ketchupId = `${saucesId}/קטשופ`;
+  const sauces = findChild(dept, saucesId);
+  if (sauces) {
+    mergeHintsIntoNode(roots, ketchupId, sauces.chainHints);
+    sauces.children = sauces.children.filter((c) => !isFallbackLeafId(c.id));
+    reorderChildren(sauces, [
+      ketchupId,
+      `${saucesId}/רטבי-עגבניות`,
+      `${saucesId}/מיונז`,
+      `${saucesId}/חרדל`,
+      `${saucesId}/רוטב-לסלט`,
+      `${saucesId}/רוטב-לבישול`,
+      `${saucesId}/רוטב-סויה`,
+      `${saucesId}/רוטב-צ-ילי`,
+    ]);
+  }
+
+  const soupsId = `${DEPT_PANTRY}/מרקים-ותבשילים`;
+  const soupSeasoningId = `${soupsId}/מרקי-תיבול`;
+  const soups = findChild(dept, soupsId);
+  if (soups) {
+    mergeHintsIntoNode(roots, soupSeasoningId, soups.chainHints);
+    soups.children = soups.children.filter((c) => !isFallbackLeafId(c.id));
+  }
+
+  const spicesId = `${DEPT_PANTRY}/תבלינים`;
+  const sugarId = `${spicesId}/סוכר`;
+  const spices = findChild(dept, spicesId);
+  if (spices) {
+    mergeHintsIntoNode(roots, sugarId, spices.chainHints);
+    spices.children = spices.children.filter((c) => !isFallbackLeafId(c.id));
+    reorderChildren(spices, [
+      sugarId,
+      `${spicesId}/מלח`,
+      `${spicesId}/פלפל`,
+      `${spicesId}/פפריקה`,
+      `${spicesId}/תבלינים-בשקית-במיכל`,
+      `${spicesId}/תיבולים-למזון`,
+      `${spicesId}/תבלינים-במשקל`,
+      `${spicesId}/תבלינים-במיכל`,
+    ]);
+  }
+
+  const spreadsId = `${DEPT_PANTRY}/דבש-ריבה-וממרחים`;
+  const jamId = `${spreadsId}/ריבות-וקונפיטורה`;
+  const spreads = findChild(dept, spreadsId);
+  if (spreads) {
+    mergeHintsIntoNode(roots, jamId, spreads.chainHints);
+    spreads.children = spreads.children.filter((c) => !isFallbackLeafId(c.id));
+  }
+
+  const oilsId = `${DEPT_PANTRY}/שמן-חומץ-ומיץ-לימון`;
+  const oliveOilId = `${oilsId}/שמן-זית`;
+  const vegOilsId = `${oilsId}/שמנים-צמחיים`;
+  const oils = findChild(dept, oilsId);
+  if (oils) {
+    const bulkOils = findChild(oils, `${oilsId}/שמנים-סיטונאות`);
+    if (bulkOils) mergeHintsIntoNode(roots, vegOilsId, bulkOils.chainHints);
+    mergeHintsIntoNode(roots, oliveOilId, oils.chainHints);
+    oils.children = oils.children.filter(
+      (c) => !isFallbackLeafId(c.id) && c.id !== `${oilsId}/שמנים-סיטונאות`,
+    );
+  }
+
+  const bakingId = `${DEPT_PANTRY}/מוצרי-אפיה`;
+  const bakingMixId = `${bakingId}/תערובת-ובסיס-לעוגה-ומאפים`;
+  const baking = findChild(dept, bakingId);
+  if (baking) {
+    mergeHintsIntoNode(roots, bakingMixId, baking.chainHints);
+    baking.children = baking.children.filter((c) => !isFallbackLeafId(c.id));
+  }
+
+  const flourId = `${DEPT_PANTRY}/קמח-ופירורי-לחם`;
+  const flourMealId = `${flourId}/קמח-וסולת`;
+  const flour = findChild(dept, flourId);
+  if (flour) {
+    const bulkFlour = findChild(flour, `${flourId}/קמח-וסולת-סיטונאות`);
+    if (bulkFlour) mergeHintsIntoNode(roots, flourMealId, bulkFlour.chainHints);
+    mergeHintsIntoNode(roots, flourMealId, flour.chainHints);
+    flour.children = flour.children.filter(
+      (c) => !isFallbackLeafId(c.id) && c.id !== `${flourId}/קמח-וסולת-סיטונאות`,
+    );
+  }
+
+  mergeHintsIntoNode(roots, `${preservesId}/שימורי-עגבניות`, dept.chainHints);
+  dept.children = dept.children.filter((c) => !isFallbackLeafId(c.id));
 }
 
 /** Top-level dept order + display names not tied to a single department rule pack. */
@@ -774,6 +929,15 @@ function patchRootDepartmentOrder(roots: BackboneNode[]): void {
     const [legumes] = roots.splice(legumesIdx, 1);
     const breadPos = roots.findIndex((d) => d.id === DEPT_BREAD);
     roots.splice(breadPos + 1, 0, legumes);
+  }
+
+  const pantryIdx = roots.findIndex((d) => d.id === DEPT_PANTRY);
+  const legumesIdxAfter = roots.findIndex((d) => d.id === DEPT_LEGUMES);
+  if (pantryIdx >= 0 && legumesIdxAfter >= 0) {
+    const [pantry] = roots.splice(pantryIdx, 1);
+    pantry.icon = 'CookingPot';
+    const legumesPos = roots.findIndex((d) => d.id === DEPT_LEGUMES);
+    roots.splice(legumesPos + 1, 0, pantry);
   }
 }
 
