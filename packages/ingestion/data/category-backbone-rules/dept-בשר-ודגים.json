@@ -3,12 +3,21 @@
   "departmentId": "dept/בשר-ודגים",
   "description": "Hand-curated overrides for meat & fish.",
   "skipAutoGeneralUnder": [
-    "dept/בשר-ודגים/בשר-בקר-וכבש-טרי"
+    "dept/בשר-ודגים",
+    "dept/בשר-ודגים/בשר-בקר-וכבש-טרי",
+    "dept/בשר-ודגים/עוף-טרי",
+    "dept/בשר-ודגים/עוף-קפוא",
+    "dept/בשר-ודגים/בשר-קפוא",
+    "dept/בשר-ודגים/בשרים-על-האש",
+    "dept/בשר-ודגים/דגים",
+    "dept/בשר-ודגים/נקניקיות-ונקניקים",
+    "dept/בשר-ודגים/אוכל-מוכן",
+    "dept/בשר-ודגים/תחליפי-בשר-קפואים"
   ],
   "rules": [
     {
       "id": "meat-top-order",
-      "summary": "Under בשר-ודגים: עוף-טרי, עוף-קפוא, בשר-בקר-וכבש-טרי first."
+      "summary": "Under בשר-ודגים: עוף-טרי, עוף-קפוא, בשר-בקר-וכבש-טרי first; בשר-קפוא then בשרים-על-האש."
     },
     {
       "id": "rename-fresh-meat",
@@ -17,6 +26,30 @@
     {
       "id": "no-fresh-meat-general",
       "summary": "No /general under בשר-בקר-וכבש-טרי; drop nested …/בשר-קפוא leaf."
+    },
+    {
+      "id": "no-meat-group-generals",
+      "summary": "No /general under meat sub-groups or dept/בשר-ודגים."
+    },
+    {
+      "id": "remove-meat-chilled-food",
+      "summary": "Drop dept/בשר-ודגים/מזון-מצונן subtree."
+    },
+    {
+      "id": "rename-deli-group",
+      "summary": "Rename נקניקיות-ונקניקים → נקניקים ונקניקיות."
+    },
+    {
+      "id": "move-chilled-meals",
+      "summary": "Reparent ארוחה-מוכנה-מצוננת under אוכל-מוכן (stable id)."
+    },
+    {
+      "id": "consolidate-fresh-poultry",
+      "summary": "Merge premium/machpud/kashrut fresh-poultry leaves; reorder הודו before special kashrut."
+    },
+    {
+      "id": "frozen-poultry-order",
+      "summary": "Rename עוף-קפוא-מהדרין display; order טחון second under עוף-קפוא."
     }
   ],
   "productCategoryIdRemaps": [
@@ -27,6 +60,72 @@
     {
       "from": "dept/בשר-ודגים/בשר-בקר-וכבש-טרי/general",
       "to": "dept/בשר-ודגים/בשר-בקר-וכבש-טרי/בשר-טרי-איכותי"
+    },
+    {
+      "from": "dept/בשר-ודגים/עוף-קפוא/general",
+      "to": "dept/בשר-ודגים/עוף-קפוא/עוף-קפוא"
+    },
+    {
+      "from": "dept/בשר-ודגים/בשר-קפוא/general",
+      "to": "dept/בשר-ודגים/בשר-קפוא/בשר-קפוא"
+    },
+    {
+      "from": "dept/בשר-ודגים/בשרים-על-האש/general",
+      "to": "dept/בשר-ודגים/בשרים-על-האש/המבורגר"
+    },
+    {
+      "from": "dept/בשר-ודגים/דגים/general",
+      "to": "dept/בשר-ודגים/דגים/דגים-טריים"
+    },
+    {
+      "from": "dept/בשר-ודגים/נקניקיות-ונקניקים/general",
+      "to": "dept/בשר-ודגים/נקניקיות-ונקניקים/נקניק"
+    },
+    {
+      "from": "dept/בשר-ודגים/עוף-טרי/general",
+      "to": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-איכותי"
+    },
+    {
+      "from": "dept/בשר-ודגים/אוכל-מוכן/general",
+      "to": "dept/בשר-ודגים/אוכל-מוכן/מוצרי-בשר-ועוף-מוכנים"
+    },
+    {
+      "from": "dept/בשר-ודגים/תחליפי-בשר-קפואים/general",
+      "to": "dept/בשר-ודגים/תחליפי-בשר-קפואים/תחליפי-בשר-קפואים"
+    },
+    {
+      "from": "dept/בשר-ודגים/מזון-מצונן/general",
+      "to": "dept/בשר-ודגים/נקניקיות-ונקניקים/נקניק"
+    },
+    {
+      "from": "dept/בשר-ודגים/מזון-מצונן/נקניק",
+      "to": "dept/בשר-ודגים/נקניקיות-ונקניקים/נקניק"
+    },
+    {
+      "from": "dept/בשר-ודגים/general",
+      "to": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-איכותי"
+    },
+    {
+      "from": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-פרימיום-ארוז",
+      "to": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-ארוז"
+    },
+    {
+      "from": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-מחפוד",
+      "to": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-איכותי"
+    },
+    {
+      "from": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-בכשרות-קהילות",
+      "to": "dept/בשר-ודגים/עוף-טרי/עוף-והודו-ארוז-כשרויות-מיוחדות"
+    },
+    {
+      "from": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-כשרות-רובין",
+      "to": "dept/בשר-ודגים/עוף-טרי/עוף-והודו-ארוז-כשרויות-מיוחדות"
+    }
+  ],
+  "productCategoryIdPrefixRemaps": [
+    {
+      "fromPrefix": "dept/בשר-ודגים/מזון-מצונן",
+      "toPrefix": "dept/בשר-ודגים/נקניקיות-ונקניקים"
     }
   ]
 }

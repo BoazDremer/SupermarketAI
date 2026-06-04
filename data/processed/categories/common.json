@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-06-04T06:27:44.168Z",
+  "builtAt": "2026-06-04T07:25:17.419Z",
   "_meta": {
     "backboneSource": "packages/ingestion/src/category-mapper/backbone.ts + data/category-backbone-rules/",
     "rulesApplied": true
@@ -457,20 +457,6 @@
               "children": []
             },
             {
-              "id": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-פרימיום-ארוז",
-              "nameHe": "עוף טרי פרימיום ארוז",
-              "nameEn": "עוף טרי פרימיום ארוז",
-              "parentId": "dept/בשר-ודגים/עוף-טרי",
-              "children": []
-            },
-            {
-              "id": "dept/בשר-ודגים/עוף-טרי/עוף-והודו-ארוז-כשרויות-מיוחדות",
-              "nameHe": "עוף והודו ארוז כשרויות מיוחדות",
-              "nameEn": "עוף והודו ארוז כשרויות מיוחדות",
-              "parentId": "dept/בשר-ודגים/עוף-טרי",
-              "children": []
-            },
-            {
               "id": "dept/בשר-ודגים/עוף-טרי/הודו-טרי-ארוז",
               "nameHe": "הודו טרי ארוז",
               "nameEn": "הודו טרי ארוז",
@@ -478,30 +464,9 @@
               "children": []
             },
             {
-              "id": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-מחפוד",
-              "nameHe": "עוף טרי מחפוד",
-              "nameEn": "עוף טרי מחפוד",
-              "parentId": "dept/בשר-ודגים/עוף-טרי",
-              "children": []
-            },
-            {
-              "id": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-בכשרות-קהילות",
-              "nameHe": "עוף טרי בכשרות קהילות",
-              "nameEn": "עוף טרי בכשרות קהילות",
-              "parentId": "dept/בשר-ודגים/עוף-טרי",
-              "children": []
-            },
-            {
-              "id": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-כשרות-רובין",
-              "nameHe": "עוף טרי כשרות רובין",
-              "nameEn": "עוף טרי כשרות רובין",
-              "parentId": "dept/בשר-ודגים/עוף-טרי",
-              "children": []
-            },
-            {
-              "id": "dept/בשר-ודגים/עוף-טרי/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
+              "id": "dept/בשר-ודגים/עוף-טרי/עוף-והודו-ארוז-כשרויות-מיוחדות",
+              "nameHe": "עוף והודו ארוז כשרויות מיוחדות",
+              "nameEn": "עוף והודו ארוז כשרויות מיוחדות",
               "parentId": "dept/בשר-ודגים/עוף-טרי",
               "children": []
             }
@@ -521,13 +486,6 @@
               "children": []
             },
             {
-              "id": "dept/בשר-ודגים/עוף-קפוא/עוף-קפוא-מהדרין",
-              "nameHe": "עוף קפוא מהדרין",
-              "nameEn": "עוף קפוא מהדרין",
-              "parentId": "dept/בשר-ודגים/עוף-קפוא",
-              "children": []
-            },
-            {
               "id": "dept/בשר-ודגים/עוף-קפוא/עוף-קפוא-טחון",
               "nameHe": "עוף קפוא טחון",
               "nameEn": "עוף קפוא טחון",
@@ -535,16 +493,16 @@
               "children": []
             },
             {
-              "id": "dept/בשר-ודגים/עוף-קפוא/עוף-קפוא-כשרות-רובין",
-              "nameHe": "עוף קפוא כשרות רובין",
-              "nameEn": "עוף קפוא כשרות רובין",
+              "id": "dept/בשר-ודגים/עוף-קפוא/עוף-קפוא-מהדרין",
+              "nameHe": "עוף קפוא - כשרויות מיוחדות",
+              "nameEn": "עוף קפוא - כשרויות מיוחדות",
               "parentId": "dept/בשר-ודגים/עוף-קפוא",
               "children": []
             },
             {
-              "id": "dept/בשר-ודגים/עוף-קפוא/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
+              "id": "dept/בשר-ודגים/עוף-קפוא/עוף-קפוא-כשרות-רובין",
+              "nameHe": "עוף קפוא כשרות רובין",
+              "nameEn": "עוף קפוא כשרות רובין",
               "parentId": "dept/בשר-ודגים/עוף-קפוא",
               "children": []
             }
@@ -580,6 +538,28 @@
           ]
         },
         {
+          "id": "dept/בשר-ודגים/בשר-קפוא",
+          "nameHe": "בשר קפוא",
+          "nameEn": "בשר קפוא",
+          "parentId": "dept/בשר-ודגים",
+          "children": [
+            {
+              "id": "dept/בשר-ודגים/בשר-קפוא/בשר-קפוא",
+              "nameHe": "בשר קפוא",
+              "nameEn": "בשר קפוא",
+              "parentId": "dept/בשר-ודגים/בשר-קפוא",
+              "children": []
+            },
+            {
+              "id": "dept/בשר-ודגים/בשר-קפוא/בשר-טחון-קפוא",
+              "nameHe": "בשר טחון קפוא",
+              "nameEn": "בשר טחון קפוא",
+              "parentId": "dept/בשר-ודגים/בשר-קפוא",
+              "children": []
+            }
+          ]
+        },
+        {
           "id": "dept/בשר-ודגים/בשרים-על-האש",
           "nameHe": "בשרים על האש",
           "nameEn": "בשרים על האש",
@@ -605,42 +585,6 @@
               "nameEn": "קבב",
               "parentId": "dept/בשר-ודגים/בשרים-על-האש",
               "children": []
-            },
-            {
-              "id": "dept/בשר-ודגים/בשרים-על-האש/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/בשר-ודגים/בשרים-על-האש",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/בשר-ודגים/בשר-קפוא",
-          "nameHe": "בשר קפוא",
-          "nameEn": "בשר קפוא",
-          "parentId": "dept/בשר-ודגים",
-          "children": [
-            {
-              "id": "dept/בשר-ודגים/בשר-קפוא/בשר-קפוא",
-              "nameHe": "בשר קפוא",
-              "nameEn": "בשר קפוא",
-              "parentId": "dept/בשר-ודגים/בשר-קפוא",
-              "children": []
-            },
-            {
-              "id": "dept/בשר-ודגים/בשר-קפוא/בשר-טחון-קפוא",
-              "nameHe": "בשר טחון קפוא",
-              "nameEn": "בשר טחון קפוא",
-              "parentId": "dept/בשר-ודגים/בשר-קפוא",
-              "children": []
-            },
-            {
-              "id": "dept/בשר-ודגים/בשר-קפוא/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/בשר-ודגים/בשר-קפוא",
-              "children": []
             }
           ]
         },
@@ -663,20 +607,13 @@
               "nameEn": "דגים טריים",
               "parentId": "dept/בשר-ודגים/דגים",
               "children": []
-            },
-            {
-              "id": "dept/בשר-ודגים/דגים/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/בשר-ודגים/דגים",
-              "children": []
             }
           ]
         },
         {
           "id": "dept/בשר-ודגים/נקניקיות-ונקניקים",
-          "nameHe": "נקניקים ומזון מצונן",
-          "nameEn": "נקניקים ומזון מצונן",
+          "nameHe": "נקניקים ונקניקיות",
+          "nameEn": "נקניקים ונקניקיות",
           "parentId": "dept/בשר-ודגים",
           "children": [
             {
@@ -706,20 +643,6 @@
               "nameEn": "פסטרמה",
               "parentId": "dept/בשר-ודגים/נקניקיות-ונקניקים",
               "children": []
-            },
-            {
-              "id": "dept/בשר-ודגים/נקניקיות-ונקניקים/ארוחה-מוכנה-מצוננת",
-              "nameHe": "ארוחות מצוננות",
-              "nameEn": "ארוחות מצוננות",
-              "parentId": "dept/בשר-ודגים/נקניקיות-ונקניקים",
-              "children": []
-            },
-            {
-              "id": "dept/בשר-ודגים/נקניקיות-ונקניקים/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/בשר-ודגים/נקניקיות-ונקניקים",
-              "children": []
             }
           ]
         },
@@ -737,9 +660,9 @@
               "children": []
             },
             {
-              "id": "dept/בשר-ודגים/אוכל-מוכן/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
+              "id": "dept/בשר-ודגים/נקניקיות-ונקניקים/ארוחה-מוכנה-מצוננת",
+              "nameHe": "ארוחות מצוננות",
+              "nameEn": "ארוחות מצוננות",
               "parentId": "dept/בשר-ודגים/אוכל-מוכן",
               "children": []
             }
@@ -764,44 +687,8 @@
               "nameEn": "תחליפי בשר",
               "parentId": "dept/בשר-ודגים/תחליפי-בשר-קפואים",
               "children": []
-            },
-            {
-              "id": "dept/בשר-ודגים/תחליפי-בשר-קפואים/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/בשר-ודגים/תחליפי-בשר-קפואים",
-              "children": []
             }
           ]
-        },
-        {
-          "id": "dept/בשר-ודגים/מזון-מצונן",
-          "nameHe": "מזון מצונן",
-          "nameEn": "מזון מצונן",
-          "parentId": "dept/בשר-ודגים",
-          "children": [
-            {
-              "id": "dept/בשר-ודגים/מזון-מצונן/נקניק",
-              "nameHe": "נקניק",
-              "nameEn": "נקניק",
-              "parentId": "dept/בשר-ודגים/מזון-מצונן",
-              "children": []
-            },
-            {
-              "id": "dept/בשר-ודגים/מזון-מצונן/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/בשר-ודגים/מזון-מצונן",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/בשר-ודגים/general",
-          "nameHe": "כללי",
-          "nameEn": "General",
-          "parentId": "dept/בשר-ודגים",
-          "children": []
         }
       ]
     },
@@ -8520,7 +8407,7 @@
       "auto": false
     },
     {
-      "commonId": "dept/בשר-ודגים/אוכל-מוכן/general",
+      "commonId": "dept/בשר-ודגים/אוכל-מוכן/מוצרי-בשר-ועוף-מוכנים",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "221",
       "chainCategoryName": "אוכל להכנה מהירה",
@@ -8600,21 +8487,21 @@
       "auto": false
     },
     {
-      "commonId": "dept/בשר-ודגים/בשר-קפוא/general",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "207",
-      "chainCategoryName": "בשר קפוא",
-      "chainCategoryDepth": 1,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
       "commonId": "dept/בשר-ודגים/בשר-קפוא/בשר-טחון-קפוא",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "461",
       "chainCategoryName": "בשר טחון קפוא",
       "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/בשר-ודגים/בשר-קפוא/בשר-קפוא",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "207",
+      "chainCategoryName": "בשר קפוא",
+      "chainCategoryDepth": 1,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -8630,7 +8517,7 @@
       "auto": false
     },
     {
-      "commonId": "dept/בשר-ודגים/בשרים-על-האש/general",
+      "commonId": "dept/בשר-ודגים/בשרים-על-האש/המבורגר",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "206",
       "chainCategoryName": "בשרים על האש",
@@ -8710,7 +8597,7 @@
       "auto": false
     },
     {
-      "commonId": "dept/בשר-ודגים/דגים/general",
+      "commonId": "dept/בשר-ודגים/דגים/דגים-טריים",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "209",
       "chainCategoryName": "דגים",
@@ -8810,41 +8697,21 @@
       "auto": false
     },
     {
-      "commonId": "dept/בשר-ודגים/מזון-מצונן/general",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "498",
-      "chainCategoryName": "מזון מצונן",
-      "chainCategoryDepth": 1,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/בשר-ודגים/מזון-מצונן/נקניק",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A380116",
-      "chainCategoryName": "תרופות טבעיות לצינון, כאבי גרון ושיעול",
-      "chainCategoryDepth": 3,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/בשר-ודגים/נקניקיות-ונקניקים/general",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "210",
-      "chainCategoryName": "נקניקים ומזון מצונן",
-      "chainCategoryDepth": 1,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
       "commonId": "dept/בשר-ודגים/נקניקיות-ונקניקים/ארוחה-מוכנה-מצוננת",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "1218",
       "chainCategoryName": "ארוחות מצוננות",
       "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/בשר-ודגים/נקניקיות-ונקניקים/נקניק",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "210",
+      "chainCategoryName": "נקניקים ומזון מצונן",
+      "chainCategoryDepth": 1,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -8920,16 +8787,6 @@
       "auto": false
     },
     {
-      "commonId": "dept/בשר-ודגים/עוף-טרי/general",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "278",
-      "chainCategoryName": "עוף טרי",
-      "chainCategoryDepth": 1,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
       "commonId": "dept/בשר-ודגים/עוף-טרי/הודו-טרי-ארוז",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "772",
@@ -8952,9 +8809,39 @@
     {
       "commonId": "dept/בשר-ודגים/עוף-טרי/עוף-והודו-ארוז-כשרויות-מיוחדות",
       "retailerSlug": "rami-levy",
+      "chainCategoryId": "1180",
+      "chainCategoryName": "עוף טרי כשרות רובין",
+      "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/בשר-ודגים/עוף-טרי/עוף-והודו-ארוז-כשרויות-מיוחדות",
+      "retailerSlug": "rami-levy",
       "chainCategoryId": "767",
       "chainCategoryName": "עוף והודו ארוז כשרויות מיוחדות",
       "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/בשר-ודגים/עוף-טרי/עוף-והודו-ארוז-כשרויות-מיוחדות",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "929",
+      "chainCategoryName": "עוף טרי בכשרות קהילות",
+      "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-איכותי",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "278",
+      "chainCategoryName": "עוף טרי",
+      "chainCategoryDepth": 1,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -8964,6 +8851,16 @@
       "retailerSlug": "rami-levy",
       "chainCategoryId": "66",
       "chainCategoryName": "עוף טרי איכותי",
+      "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-איכותי",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "853",
+      "chainCategoryName": "עוף טרי מחפוד",
       "chainCategoryDepth": 2,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
@@ -9010,37 +8907,7 @@
       "auto": false
     },
     {
-      "commonId": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-בכשרות-קהילות",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "929",
-      "chainCategoryName": "עוף טרי בכשרות קהילות",
-      "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-כשרות-רובין",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "1180",
-      "chainCategoryName": "עוף טרי כשרות רובין",
-      "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-מחפוד",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "853",
-      "chainCategoryName": "עוף טרי מחפוד",
-      "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-פרימיום-ארוז",
+      "commonId": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-ארוז",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "737",
       "chainCategoryName": "עוף טרי פרימיום ארוז",
@@ -9050,7 +8917,7 @@
       "auto": false
     },
     {
-      "commonId": "dept/בשר-ודגים/עוף-קפוא/general",
+      "commonId": "dept/בשר-ודגים/עוף-קפוא/עוף-קפוא",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "211",
       "chainCategoryName": "עוף קפוא",
@@ -9150,16 +9017,6 @@
       "auto": false
     },
     {
-      "commonId": "dept/בשר-ודגים/תחליפי-בשר-קפואים/general",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "304",
-      "chainCategoryName": "תחליפי בשר קפואים",
-      "chainCategoryDepth": 1,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
       "commonId": "dept/בשר-ודגים/תחליפי-בשר-קפואים/קציצות-ונקניקיות-טבע",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "613",
@@ -9235,6 +9092,16 @@
       "chainCategoryId": "1052",
       "chainCategoryName": "תחליפי בשר",
       "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/בשר-ודגים/תחליפי-בשר-קפואים/תחליפי-בשר-קפואים",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "304",
+      "chainCategoryName": "תחליפי בשר קפואים",
+      "chainCategoryDepth": 1,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -11680,6 +11547,16 @@
       "auto": false
     },
     {
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מזון-מצונן/general",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "498",
+      "chainCategoryName": "מזון מצונן",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
       "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח/general",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "280",
@@ -13945,6 +13822,16 @@
       "chainCategoryId": "A380102",
       "chainCategoryName": "תוספי תזונה למערכת העיכול",
       "chainCategoryDepth": 8,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/פארם-ותינוקות/מוצרי-הגיינה/טמפונים",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A380116",
+      "chainCategoryName": "תרופות טבעיות לצינון, כאבי גרון ושיעול",
+      "chainCategoryDepth": 3,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false

@@ -982,6 +982,43 @@ const RAW_COMMON_BACKBONE: ReadonlyArray<BackboneNode> = [
     },
     "children": [
       {
+        "id": "dept/בשר-ודגים/בשר-קפוא",
+        "nameHe": "בשר קפוא",
+        "nameEn": "בשר קפוא",
+        "parentId": "dept/בשר-ודגים",
+        "chainHints": {
+          "ramiLevy": [
+            "207"
+          ]
+        },
+        "children": [
+          {
+            "id": "dept/בשר-ודגים/בשר-קפוא/בשר-קפוא",
+            "nameHe": "בשר קפוא",
+            "nameEn": "בשר קפוא",
+            "parentId": "dept/בשר-ודגים/בשר-קפוא",
+            "chainHints": {
+              "ramiLevy": [
+                "54"
+              ]
+            },
+            "children": []
+          },
+          {
+            "id": "dept/בשר-ודגים/בשר-קפוא/בשר-טחון-קפוא",
+            "nameHe": "בשר טחון קפוא",
+            "nameEn": "בשר טחון קפוא",
+            "parentId": "dept/בשר-ודגים/בשר-קפוא",
+            "chainHints": {
+              "ramiLevy": [
+                "461"
+              ]
+            },
+            "children": []
+          }
+        ]
+      },
+      {
         "id": "dept/בשר-ודגים/בשרים-על-האש",
         "nameHe": "בשרים על האש",
         "nameEn": "בשרים על האש",
@@ -1040,43 +1077,6 @@ const RAW_COMMON_BACKBONE: ReadonlyArray<BackboneNode> = [
         ]
       },
       {
-        "id": "dept/בשר-ודגים/בשר-קפוא",
-        "nameHe": "בשר קפוא",
-        "nameEn": "בשר קפוא",
-        "parentId": "dept/בשר-ודגים",
-        "chainHints": {
-          "ramiLevy": [
-            "207"
-          ]
-        },
-        "children": [
-          {
-            "id": "dept/בשר-ודגים/בשר-קפוא/בשר-קפוא",
-            "nameHe": "בשר קפוא",
-            "nameEn": "בשר קפוא",
-            "parentId": "dept/בשר-ודגים/בשר-קפוא",
-            "chainHints": {
-              "ramiLevy": [
-                "54"
-              ]
-            },
-            "children": []
-          },
-          {
-            "id": "dept/בשר-ודגים/בשר-קפוא/בשר-טחון-קפוא",
-            "nameHe": "בשר טחון קפוא",
-            "nameEn": "בשר טחון קפוא",
-            "parentId": "dept/בשר-ודגים/בשר-קפוא",
-            "chainHints": {
-              "ramiLevy": [
-                "461"
-              ]
-            },
-            "children": []
-          }
-        ]
-      },
-      {
         "id": "dept/בשר-ודגים/דגים",
         "nameHe": "דגים",
         "nameEn": "דגים",
@@ -1126,8 +1126,8 @@ const RAW_COMMON_BACKBONE: ReadonlyArray<BackboneNode> = [
       },
       {
         "id": "dept/בשר-ודגים/נקניקיות-ונקניקים",
-        "nameHe": "נקניקים ומזון מצונן",
-        "nameEn": "נקניקים ומזון מצונן",
+        "nameHe": "נקניקים ונקניקיות",
+        "nameEn": "נקניקים ונקניקיות",
         "parentId": "dept/בשר-ודגים",
         "chainHints": {
           "ramiLevy": [
@@ -1189,18 +1189,6 @@ const RAW_COMMON_BACKBONE: ReadonlyArray<BackboneNode> = [
               ]
             },
             "children": []
-          },
-          {
-            "id": "dept/בשר-ודגים/נקניקיות-ונקניקים/ארוחה-מוכנה-מצוננת",
-            "nameHe": "ארוחות מצוננות",
-            "nameEn": "ארוחות מצוננות",
-            "parentId": "dept/בשר-ודגים/נקניקיות-ונקניקים",
-            "chainHints": {
-              "ramiLevy": [
-                "1218"
-              ]
-            },
-            "children": []
           }
         ]
       },
@@ -1235,18 +1223,6 @@ const RAW_COMMON_BACKBONE: ReadonlyArray<BackboneNode> = [
             "children": []
           },
           {
-            "id": "dept/בשר-ודגים/עוף-קפוא/עוף-קפוא-מהדרין",
-            "nameHe": "עוף קפוא מהדרין",
-            "nameEn": "עוף קפוא מהדרין",
-            "parentId": "dept/בשר-ודגים/עוף-קפוא",
-            "chainHints": {
-              "ramiLevy": [
-                "429"
-              ]
-            },
-            "children": []
-          },
-          {
             "id": "dept/בשר-ודגים/עוף-קפוא/עוף-קפוא-טחון",
             "nameHe": "עוף קפוא טחון",
             "nameEn": "עוף קפוא טחון",
@@ -1254,6 +1230,18 @@ const RAW_COMMON_BACKBONE: ReadonlyArray<BackboneNode> = [
             "chainHints": {
               "ramiLevy": [
                 "768"
+              ]
+            },
+            "children": []
+          },
+          {
+            "id": "dept/בשר-ודגים/עוף-קפוא/עוף-קפוא-מהדרין",
+            "nameHe": "עוף קפוא - כשרויות מיוחדות",
+            "nameEn": "עוף קפוא - כשרויות מיוחדות",
+            "parentId": "dept/בשר-ודגים/עוף-קפוא",
+            "chainHints": {
+              "ramiLevy": [
+                "429"
               ]
             },
             "children": []
@@ -1298,6 +1286,18 @@ const RAW_COMMON_BACKBONE: ReadonlyArray<BackboneNode> = [
               ]
             },
             "children": []
+          },
+          {
+            "id": "dept/בשר-ודגים/נקניקיות-ונקניקים/ארוחה-מוכנה-מצוננת",
+            "nameHe": "ארוחות מצוננות",
+            "nameEn": "ארוחות מצוננות",
+            "parentId": "dept/בשר-ודגים/אוכל-מוכן",
+            "chainHints": {
+              "ramiLevy": [
+                "1218"
+              ]
+            },
+            "children": []
           }
         ]
       },
@@ -1319,7 +1319,8 @@ const RAW_COMMON_BACKBONE: ReadonlyArray<BackboneNode> = [
             "parentId": "dept/בשר-ודגים/עוף-טרי",
             "chainHints": {
               "ramiLevy": [
-                "66"
+                "66",
+                "853"
               ],
               "shufersal": [
                 "A071422",
@@ -1336,31 +1337,8 @@ const RAW_COMMON_BACKBONE: ReadonlyArray<BackboneNode> = [
             "parentId": "dept/בשר-ודגים/עוף-טרי",
             "chainHints": {
               "ramiLevy": [
-                "646"
-              ]
-            },
-            "children": []
-          },
-          {
-            "id": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-פרימיום-ארוז",
-            "nameHe": "עוף טרי פרימיום ארוז",
-            "nameEn": "עוף טרי פרימיום ארוז",
-            "parentId": "dept/בשר-ודגים/עוף-טרי",
-            "chainHints": {
-              "ramiLevy": [
+                "646",
                 "737"
-              ]
-            },
-            "children": []
-          },
-          {
-            "id": "dept/בשר-ודגים/עוף-טרי/עוף-והודו-ארוז-כשרויות-מיוחדות",
-            "nameHe": "עוף והודו ארוז כשרויות מיוחדות",
-            "nameEn": "עוף והודו ארוז כשרויות מיוחדות",
-            "parentId": "dept/בשר-ודגים/עוף-טרי",
-            "chainHints": {
-              "ramiLevy": [
-                "767"
               ]
             },
             "children": []
@@ -1381,36 +1359,14 @@ const RAW_COMMON_BACKBONE: ReadonlyArray<BackboneNode> = [
             "children": []
           },
           {
-            "id": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-מחפוד",
-            "nameHe": "עוף טרי מחפוד",
-            "nameEn": "עוף טרי מחפוד",
+            "id": "dept/בשר-ודגים/עוף-טרי/עוף-והודו-ארוז-כשרויות-מיוחדות",
+            "nameHe": "עוף והודו ארוז כשרויות מיוחדות",
+            "nameEn": "עוף והודו ארוז כשרויות מיוחדות",
             "parentId": "dept/בשר-ודגים/עוף-טרי",
             "chainHints": {
               "ramiLevy": [
-                "853"
-              ]
-            },
-            "children": []
-          },
-          {
-            "id": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-בכשרות-קהילות",
-            "nameHe": "עוף טרי בכשרות קהילות",
-            "nameEn": "עוף טרי בכשרות קהילות",
-            "parentId": "dept/בשר-ודגים/עוף-טרי",
-            "chainHints": {
-              "ramiLevy": [
-                "929"
-              ]
-            },
-            "children": []
-          },
-          {
-            "id": "dept/בשר-ודגים/עוף-טרי/עוף-טרי-כשרות-רובין",
-            "nameHe": "עוף טרי כשרות רובין",
-            "nameEn": "עוף טרי כשרות רובין",
-            "parentId": "dept/בשר-ודגים/עוף-טרי",
-            "chainHints": {
-              "ramiLevy": [
+                "767",
+                "929",
                 "1180"
               ]
             },
@@ -1521,34 +1477,6 @@ const RAW_COMMON_BACKBONE: ReadonlyArray<BackboneNode> = [
           }
         ]
       },
-      {
-        "id": "dept/בשר-ודגים/מזון-מצונן",
-        "nameHe": "מזון מצונן",
-        "nameEn": "מזון מצונן",
-        "parentId": "dept/בשר-ודגים",
-        "chainHints": {
-          "ramiLevy": [
-            "498"
-          ]
-        },
-        "children": [
-          {
-            "id": "dept/בשר-ודגים/מזון-מצונן/נקניק",
-            "nameHe": "נקניק",
-            "nameEn": "נקניק",
-            "parentId": "dept/בשר-ודגים/מזון-מצונן",
-            "chainHints": {
-              "ramiLevy": [
-                "288"
-              ],
-              "shufersal": [
-                "A380116"
-              ]
-            },
-            "children": []
-          }
-        ]
-      }
     ]
   },
   {

@@ -338,14 +338,114 @@ function patchMeatDepartment(roots: readonly BackboneNode[], dept: BackboneNode)
     `${DEPT_MEAT}/עוף-טרי`,
     `${DEPT_MEAT}/עוף-קפוא`,
     `${DEPT_MEAT}/בשר-בקר-וכבש-טרי`,
-    `${DEPT_MEAT}/בשרים-על-האש`,
     `${DEPT_MEAT}/בשר-קפוא`,
+    `${DEPT_MEAT}/בשרים-על-האש`,
     `${DEPT_MEAT}/דגים`,
     `${DEPT_MEAT}/נקניקיות-ונקניקים`,
     `${DEPT_MEAT}/אוכל-מוכן`,
     `${DEPT_MEAT}/תחליפי-בשר-קפואים`,
-    `${DEPT_MEAT}/מזון-מצונן`,
   ]);
+
+  const chilledFood = findChild(dept, `${DEPT_MEAT}/מזון-מצונן`);
+  if (chilledFood) {
+    mergeHintsIntoNode(roots, `${DEPT_MEAT}/נקניקיות-ונקניקים/נקניק`, chilledFood.chainHints);
+    const chilledNaknik = findChild(chilledFood, `${DEPT_MEAT}/מזון-מצונן/נקניק`);
+    if (chilledNaknik) {
+      mergeHintsIntoNode(roots, `${DEPT_MEAT}/נקניקיות-ונקניקים/נקניק`, chilledNaknik.chainHints);
+    }
+  }
+
+  const stripGeneralUnder = [
+    { group: `${DEPT_MEAT}/עוף-טרי`, hintTarget: `${DEPT_MEAT}/עוף-טרי/עוף-טרי-איכותי` },
+    { group: `${DEPT_MEAT}/עוף-קפוא`, hintTarget: `${DEPT_MEAT}/עוף-קפוא/עוף-קפוא` },
+    { group: `${DEPT_MEAT}/בשר-קפוא`, hintTarget: `${DEPT_MEAT}/בשר-קפוא/בשר-קפוא` },
+    { group: `${DEPT_MEAT}/בשרים-על-האש`, hintTarget: `${DEPT_MEAT}/בשרים-על-האש/המבורגר` },
+    { group: `${DEPT_MEAT}/דגים`, hintTarget: `${DEPT_MEAT}/דגים/דגים-טריים` },
+    { group: `${DEPT_MEAT}/נקניקיות-ונקניקים`, hintTarget: `${DEPT_MEAT}/נקניקיות-ונקניקים/נקניק` },
+    { group: `${DEPT_MEAT}/אוכל-מוכן`, hintTarget: `${DEPT_MEAT}/אוכל-מוכן/מוצרי-בשר-ועוף-מוכנים` },
+    {
+      group: `${DEPT_MEAT}/תחליפי-בשר-קפואים`,
+      hintTarget: `${DEPT_MEAT}/תחליפי-בשר-קפואים/תחליפי-בשר-קפואים`,
+    },
+  ] as const;
+  for (const { group, hintTarget } of stripGeneralUnder) {
+    const node = findChild(dept, group);
+    if (!node) continue;
+    mergeHintsIntoNode(roots, hintTarget, node.chainHints);
+    node.children = node.children.filter((c) => !isFallbackLeafId(c.id));
+  }
+
+  const delicatessen = findChild(dept, `${DEPT_MEAT}/נקניקיות-ונקניקים`);
+  if (delicatessen) {
+    delicatessen.nameHe = 'נקניקים ונקניקיות';
+    delicatessen.nameEn = 'נקניקים ונקניקיות';
+    const mealId = `${DEPT_MEAT}/נקניקיות-ונקניקים/ארוחה-מוכנה-מצוננת`;
+    const mealIdx = delicatessen.children.findIndex((c) => c.id === mealId);
+    if (mealIdx >= 0) {
+      const [meal] = delicatessen.children.splice(mealIdx, 1);
+      meal.parentId = `${DEPT_MEAT}/אוכל-מוכן`;
+      const readyFood = findChild(dept, `${DEPT_MEAT}/אוכל-מוכן`);
+      if (readyFood) {
+        readyFood.children.push(meal);
+        reorderChildren(readyFood, [
+          `${DEPT_MEAT}/אוכל-מוכן/מוצרי-בשר-ועוף-מוכנים`,
+          mealId,
+        ]);
+      }
+    }
+  }
+
+  const frozenPoultry = findChild(dept, `${DEPT_MEAT}/עוף-קפוא`);
+  if (frozenPoultry) {
+    const mehadrin = findChild(frozenPoultry, `${DEPT_MEAT}/עוף-קפוא/עוף-קפוא-מהדרין`);
+    if (mehadrin) {
+      mehadrin.nameHe = 'עוף קפוא - כשרויות מיוחדות';
+      mehadrin.nameEn = 'עוף קפוא - כשרויות מיוחדות';
+    }
+    reorderChildren(frozenPoultry, [
+      `${DEPT_MEAT}/עוף-קפוא/עוף-קפוא`,
+      `${DEPT_MEAT}/עוף-קפוא/עוף-קפוא-טחון`,
+      `${DEPT_MEAT}/עוף-קפוא/עוף-קפוא-מהדרין`,
+      `${DEPT_MEAT}/עוף-קפוא/עוף-קפוא-כשרות-רובין`,
+    ]);
+  }
+
+  const freshPoultry = findChild(dept, `${DEPT_MEAT}/עוף-טרי`);
+  if (freshPoultry) {
+    const mergeFreshInto = (fromId: string, toId: string) => {
+      const from = findChild(freshPoultry, fromId);
+      if (from) mergeHintsIntoNode(roots, toId, from.chainHints);
+    };
+    mergeFreshInto(
+      `${DEPT_MEAT}/עוף-טרי/עוף-טרי-פרימיום-ארוז`,
+      `${DEPT_MEAT}/עוף-טרי/עוף-טרי-ארוז`,
+    );
+    mergeFreshInto(
+      `${DEPT_MEAT}/עוף-טרי/עוף-טרי-מחפוד`,
+      `${DEPT_MEAT}/עוף-טרי/עוף-טרי-איכותי`,
+    );
+    mergeFreshInto(
+      `${DEPT_MEAT}/עוף-טרי/עוף-טרי-בכשרות-קהילות`,
+      `${DEPT_MEAT}/עוף-טרי/עוף-והודו-ארוז-כשרויות-מיוחדות`,
+    );
+    mergeFreshInto(
+      `${DEPT_MEAT}/עוף-טרי/עוף-טרי-כשרות-רובין`,
+      `${DEPT_MEAT}/עוף-טרי/עוף-והודו-ארוז-כשרויות-מיוחדות`,
+    );
+    const removedFreshIds = new Set([
+      `${DEPT_MEAT}/עוף-טרי/עוף-טרי-פרימיום-ארוז`,
+      `${DEPT_MEAT}/עוף-טרי/עוף-טרי-מחפוד`,
+      `${DEPT_MEAT}/עוף-טרי/עוף-טרי-בכשרות-קהילות`,
+      `${DEPT_MEAT}/עוף-טרי/עוף-טרי-כשרות-רובין`,
+    ]);
+    freshPoultry.children = freshPoultry.children.filter((c) => !removedFreshIds.has(c.id));
+    reorderChildren(freshPoultry, [
+      `${DEPT_MEAT}/עוף-טרי/עוף-טרי-איכותי`,
+      `${DEPT_MEAT}/עוף-טרי/עוף-טרי-ארוז`,
+      `${DEPT_MEAT}/עוף-טרי/הודו-טרי-ארוז`,
+      `${DEPT_MEAT}/עוף-טרי/עוף-והודו-ארוז-כשרויות-מיוחדות`,
+    ]);
+  }
 
   const freshMeat = findChild(dept, `${DEPT_MEAT}/בשר-בקר-וכבש-טרי`);
   if (freshMeat) {
@@ -360,7 +460,10 @@ function patchMeatDepartment(roots: readonly BackboneNode[], dept: BackboneNode)
     );
   }
 
-  dept.children = dept.children.filter((c) => !isFallbackLeafId(c.id));
+  const removedGroupIds = new Set([`${DEPT_MEAT}/מזון-מצונן`]);
+  dept.children = dept.children.filter(
+    (c) => !isFallbackLeafId(c.id) && !removedGroupIds.has(c.id),
+  );
 }
 
 function loadAllRulePacks(): RulePackJson[] {
