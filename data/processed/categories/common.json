@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-06-04T07:25:17.419Z",
+  "builtAt": "2026-06-04T07:53:48.270Z",
   "_meta": {
     "backboneSource": "packages/ingestion/src/category-mapper/backbone.ts + data/category-backbone-rules/",
     "rulesApplied": true
@@ -686,6 +686,166 @@
               "nameHe": "תחליפי בשר",
               "nameEn": "תחליפי בשר",
               "parentId": "dept/בשר-ודגים/תחליפי-בשר-קפואים",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dept/לחם-מאפים-והמאפייה-הטריה",
+      "nameHe": "לחמים ומוצרי מאפה",
+      "nameEn": "לחמים ומוצרי מאפה",
+      "icon": "Croissant",
+      "children": [
+        {
+          "id": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה",
+          "nameHe": "לחם, פיתה, לחמניה",
+          "nameEn": "לחם, פיתה, לחמניה",
+          "parentId": "dept/לחם-מאפים-והמאפייה-הטריה",
+          "children": [
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/לחמים",
+              "nameHe": "לחמים",
+              "nameEn": "לחמים",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה",
+              "children": []
+            },
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/לחמניות",
+              "nameHe": "לחמניות",
+              "nameEn": "לחמניות",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה",
+              "children": []
+            },
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/פיתות",
+              "nameHe": "פיתות",
+              "nameEn": "פיתות",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה",
+              "children": []
+            },
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/חלה-לשבת",
+              "nameHe": "חלה לשבת",
+              "nameEn": "חלה לשבת",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח",
+          "nameHe": "פריכיות וקרקרים",
+          "nameEn": "פריכיות וקרקרים",
+          "parentId": "dept/לחם-מאפים-והמאפייה-הטריה",
+          "children": [
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות",
+              "nameHe": "פריכיות",
+              "nameEn": "פריכיות",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח",
+              "children": [
+                {
+                  "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/טורטיות",
+                  "nameHe": "טורטיות",
+                  "nameEn": "טורטיות",
+                  "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות",
+                  "children": []
+                },
+                {
+                  "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/טורטיות",
+                  "nameHe": "טורטיות",
+                  "nameEn": "טורטיות",
+                  "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות",
+                  "children": []
+                },
+                {
+                  "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות/general",
+                  "nameHe": "כללי",
+                  "nameEn": "General",
+                  "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פתית-לחמית-וצנימים",
+              "nameHe": "פתית, לחמית וצנימים",
+              "nameEn": "פתית, לחמית וצנימים",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח",
+              "children": []
+            },
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/קרקרים",
+              "nameHe": "קרקרים",
+              "nameEn": "קרקרים",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום",
+          "nameHe": "מאפים טריים",
+          "nameEn": "מאפים טריים",
+          "parentId": "dept/לחם-מאפים-והמאפייה-הטריה",
+          "children": [
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/מאפים-טריים",
+              "nameHe": "מאפים, עוגות ועוגיות",
+              "nameEn": "מאפים, עוגות ועוגיות",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום",
+              "children": []
+            },
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/מאפים-מלוחים-מתוקים",
+              "nameHe": "מאפים מלוחים, מתוקים",
+              "nameEn": "מאפים מלוחים, מתוקים",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום",
+              "children": []
+            },
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/לחמי-מאפייה",
+              "nameHe": "לחמי המאפייה וחלות",
+              "nameEn": "לחמי המאפייה וחלות",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום",
+              "children": []
+            },
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/בגטים-ולחמניות",
+              "nameHe": "בגטים ולחמניות",
+              "nameEn": "בגטים ולחמניות",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום",
+              "children": []
+            },
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/סופגניות-ודונאטס",
+              "nameHe": "סופגניות ודונאטס",
+              "nameEn": "סופגניות ודונאטס",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח",
+          "nameHe": "מצות  ומאפים לפסח",
+          "nameEn": "מצות  ומאפים לפסח",
+          "parentId": "dept/לחם-מאפים-והמאפייה-הטריה",
+          "children": [
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח/מצות",
+              "nameHe": "מצות",
+              "nameEn": "מצות",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח",
+              "children": []
+            },
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח/מאפה-לפסח-מתוק-מלוח",
+              "nameHe": "מאפה לפסח מתוק,מלוח",
+              "nameEn": "מאפה לפסח מתוק,מלוח",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח",
               "children": []
             }
           ]
@@ -4134,222 +4294,6 @@
       ]
     },
     {
-      "id": "dept/לחם-מאפים-והמאפייה-הטריה",
-      "nameHe": "לחם ומאפים טריים",
-      "nameEn": "לחם ומאפים טריים",
-      "icon": "Croissant",
-      "children": [
-        {
-          "id": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה",
-          "nameHe": "לחם, פיתה, לחמניה",
-          "nameEn": "לחם, פיתה, לחמניה",
-          "parentId": "dept/לחם-מאפים-והמאפייה-הטריה",
-          "children": [
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/לחמים",
-              "nameHe": "לחמים",
-              "nameEn": "לחמים",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/לחמניות",
-              "nameHe": "לחמניות",
-              "nameEn": "לחמניות",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/חלה-לשבת",
-              "nameHe": "חלה לשבת",
-              "nameEn": "חלה לשבת",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/טורטיות",
-              "nameHe": "טורטיות",
-              "nameEn": "טורטיות",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/פיתות",
-              "nameHe": "פיתות",
-              "nameEn": "פיתות",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/סופגניות-ודונאטס",
-              "nameHe": "סופגניות ודונאטס",
-              "nameEn": "סופגניות ודונאטס",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח",
-          "nameHe": "פריכיות וקרקרים",
-          "nameEn": "פריכיות וקרקרים",
-          "parentId": "dept/לחם-מאפים-והמאפייה-הטריה",
-          "children": [
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות",
-              "nameHe": "פריכיות",
-              "nameEn": "פריכיות",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פתית-לחמית-וצנימים",
-              "nameHe": "פתית, לחמית וצנימים",
-              "nameEn": "פתית, לחמית וצנימים",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/קרקרים",
-              "nameHe": "קרקרים",
-              "nameEn": "קרקרים",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/טורטיות",
-              "nameHe": "טורטיות",
-              "nameEn": "טורטיות",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום",
-          "nameHe": "המאפייה הטרייה שלנו",
-          "nameEn": "המאפייה הטרייה שלנו",
-          "parentId": "dept/לחם-מאפים-והמאפייה-הטריה",
-          "children": [
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/מאפים-טריים",
-              "nameHe": "מאפים, עוגות ועוגיות",
-              "nameEn": "מאפים, עוגות ועוגיות",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/מאפים-מלוחים-מתוקים",
-              "nameHe": "מאפים מלוחים, מתוקים",
-              "nameEn": "מאפים מלוחים, מתוקים",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/לחמי-מאפייה",
-              "nameHe": "לחמי המאפייה וחלות",
-              "nameEn": "לחמי המאפייה וחלות",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/סופגניות-ודונאטס",
-              "nameHe": "סופגניות ודונאטס",
-              "nameEn": "סופגניות ודונאטס",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/בגטים-ולחמניות",
-              "nameHe": "בגטים ולחמניות",
-              "nameEn": "בגטים ולחמניות",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח",
-          "nameHe": "מצות  ומאפים לפסח",
-          "nameEn": "מצות  ומאפים לפסח",
-          "parentId": "dept/לחם-מאפים-והמאפייה-הטריה",
-          "children": [
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח/מצות",
-              "nameHe": "מצות",
-              "nameEn": "מצות",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח/מאפה-לפסח-מתוק-מלוח",
-              "nameHe": "מאפה לפסח מתוק,מלוח",
-              "nameEn": "מאפה לפסח מתוק,מלוח",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/לחם-מאפים-והמאפייה-הטריה/מזון-מצונן",
-          "nameHe": "מזון מצונן",
-          "nameEn": "מזון מצונן",
-          "parentId": "dept/לחם-מאפים-והמאפייה-הטריה",
-          "children": [
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מזון-מצונן/מאפה-לפסח-מתוק-מלוח",
-              "nameHe": "מאפה לפסח מתוק,מלוח",
-              "nameEn": "מאפה לפסח מתוק,מלוח",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מזון-מצונן",
-              "children": []
-            },
-            {
-              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מזון-מצונן/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מזון-מצונן",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/לחם-מאפים-והמאפייה-הטריה/general",
-          "nameHe": "כללי",
-          "nameEn": "General",
-          "parentId": "dept/לחם-מאפים-והמאפייה-הטריה",
-          "children": []
-        }
-      ]
-    },
-    {
       "id": "dept/מחלקה-85",
       "nameHe": "מחלקה 85",
       "nameEn": "מחלקה 85",
@@ -5152,16 +5096,6 @@
       "chainCategoryId": "507",
       "chainCategoryName": "מוצרים ללא גלוטן",
       "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/אורגני-ובריאות/ללא-גלוטן/מוצרים-ללא-גלוטן",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A100208",
-      "chainCategoryName": "מאפים כשרים לפסח",
-      "chainCategoryDepth": 3,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -11237,6 +11171,16 @@
       "auto": false
     },
     {
+      "commonId": "dept/חלב-ביצים-וסלטים/מזון-מצונן",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "498",
+      "chainCategoryName": "מזון מצונן",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
       "commonId": "dept/חלב-ביצים-וסלטים/מזון-מצונן/בצקים-טריים",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "860",
@@ -11437,6 +11381,16 @@
       "auto": false
     },
     {
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/מאפים-טריים",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "305",
+      "chainCategoryName": "קמח ופירורי לחם",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
       "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/מאפים-מלוחים-מתוקים",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "476",
@@ -11447,11 +11401,41 @@
       "auto": false
     },
     {
-      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/general",
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/מאפים-מלוחים-מתוקים",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A220602",
+      "chainCategoryName": "סושי ומוצריו",
+      "chainCategoryDepth": 7,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/סופגניות-ודונאטס",
       "retailerSlug": "rami-levy",
-      "chainCategoryId": "195",
-      "chainCategoryName": "לחם, פיתה, לחמניה",
-      "chainCategoryDepth": 1,
+      "chainCategoryId": "840",
+      "chainCategoryName": "סופגניות ודונאטס",
+      "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/סופגניות-ודונאטס",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A100201",
+      "chainCategoryName": "מאפה מתוק",
+      "chainCategoryDepth": 8,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/המאפיה-הטריה-אפיה-במקום/סופגניות-ודונאטס",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A101603",
+      "chainCategoryName": "סופגניות ודונאטס",
+      "chainCategoryDepth": 4,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -11461,16 +11445,6 @@
       "retailerSlug": "rami-levy",
       "chainCategoryId": "473",
       "chainCategoryName": "חלה לשבת",
-      "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/טורטיות",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "515",
-      "chainCategoryName": "טורטיות",
       "chainCategoryDepth": 2,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
@@ -11488,10 +11462,30 @@
     },
     {
       "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/לחמים",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "195",
+      "chainCategoryName": "לחם, פיתה, לחמניה",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/לחמים",
       "retailerSlug": "shufersal",
       "chainCategoryId": "A100504",
       "chainCategoryName": "בגט, ג'בטה ופוקצ'ה",
       "chainCategoryDepth": 12,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/לחמים",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A100507",
+      "chainCategoryName": "לחמניות בייגל ופיתות",
+      "chainCategoryDepth": 9,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -11507,36 +11501,6 @@
       "auto": false
     },
     {
-      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/סופגניות-ודונאטס",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "840",
-      "chainCategoryName": "סופגניות ודונאטס",
-      "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/סופגניות-ודונאטס",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A100201",
-      "chainCategoryName": "מאפה מתוק",
-      "chainCategoryDepth": 8,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/סופגניות-ודונאטס",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A101603",
-      "chainCategoryName": "סופגניות ודונאטס",
-      "chainCategoryDepth": 4,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
       "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/לחם-פיתה-לחמניה/פיתות",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "627",
@@ -11547,21 +11511,51 @@
       "auto": false
     },
     {
-      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מזון-מצונן/general",
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/טורטיות",
       "retailerSlug": "rami-levy",
-      "chainCategoryId": "498",
-      "chainCategoryName": "מזון מצונן",
+      "chainCategoryId": "515",
+      "chainCategoryName": "טורטיות",
+      "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות/general",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "272",
+      "chainCategoryName": "פריכיות וקרקרים",
       "chainCategoryDepth": 1,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
     },
     {
-      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח/general",
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות/general",
       "retailerSlug": "rami-levy",
-      "chainCategoryId": "280",
-      "chainCategoryName": "מצות  ומאפים לפסח",
-      "chainCategoryDepth": 1,
+      "chainCategoryId": "311",
+      "chainCategoryName": "פריכיות",
+      "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פתית-לחמית-וצנימים",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "312",
+      "chainCategoryName": "פתית, לחמית וצנימים",
+      "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/קרקרים",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "313",
+      "chainCategoryName": "קרקרים",
+      "chainCategoryDepth": 2,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -11589,9 +11583,29 @@
     {
       "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח/מאפה-לפסח-מתוק-מלוח",
       "retailerSlug": "shufersal",
+      "chainCategoryId": "A100208",
+      "chainCategoryName": "מאפים כשרים לפסח",
+      "chainCategoryDepth": 3,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח/מאפה-לפסח-מתוק-מלוח",
+      "retailerSlug": "shufersal",
       "chainCategoryId": "A440204",
       "chainCategoryName": "מאפה מתוק/מלוח",
       "chainCategoryDepth": 8,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח/מצות",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "280",
+      "chainCategoryName": "מצות  ומאפים לפסח",
+      "chainCategoryDepth": 1,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -15947,51 +15961,11 @@
       "auto": false
     },
     {
-      "commonId": "dept/קטניות-ודגנים/מאפה-מלוח/general",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "272",
-      "chainCategoryName": "פריכיות וקרקרים",
-      "chainCategoryDepth": 1,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/קטניות-ודגנים/מאפה-מלוח/פריכיות",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "311",
-      "chainCategoryName": "פריכיות",
-      "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
       "commonId": "dept/קטניות-ודגנים/מאפה-מלוח/פריכיות",
       "retailerSlug": "shufersal",
       "chainCategoryId": "A100207",
       "chainCategoryName": "עוגיות מאפיה",
       "chainCategoryDepth": 6,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/קטניות-ודגנים/מאפה-מלוח/פתית-לחמית-וצנימים",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "312",
-      "chainCategoryName": "פתית, לחמית וצנימים",
-      "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/קטניות-ודגנים/מאפה-מלוח/קרקרים",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "313",
-      "chainCategoryName": "קרקרים",
-      "chainCategoryDepth": 2,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -16202,16 +16176,6 @@
       "chainCategoryId": "258",
       "chainCategoryName": "שניצלים,שניצלונים",
       "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/קפואים/בשרים-על-האש/המבורגר",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A100507",
-      "chainCategoryName": "לחמניות בייגל ופיתות",
-      "chainCategoryDepth": 9,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -16719,16 +16683,6 @@
     {
       "commonId": "dept/שימורים-בישול-ואפיה/מוצרי-אפיה/עזרי-אפיה",
       "retailerSlug": "shufersal",
-      "chainCategoryId": "A220602",
-      "chainCategoryName": "סושי ומוצריו",
-      "chainCategoryDepth": 7,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/שימורים-בישול-ואפיה/מוצרי-אפיה/עזרי-אפיה",
-      "retailerSlug": "shufersal",
       "chainCategoryId": "A220604",
       "chainCategoryName": "קרם/ נוזל קוקוס",
       "chainCategoryDepth": 7,
@@ -16992,16 +16946,6 @@
       "chainCategoryId": "277",
       "chainCategoryName": "תבשילי אינסטנט ומנה חמה",
       "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/שימורים-בישול-ואפיה/קמח-ופירורי-לחם/general",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "305",
-      "chainCategoryName": "קמח ופירורי לחם",
-      "chainCategoryDepth": 1,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
