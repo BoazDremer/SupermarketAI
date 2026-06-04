@@ -16,6 +16,7 @@ import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { scrapeShufersalCategories } from '../scrapers/shufersal-categories.js';
 import { scrapeRamiLevyCategories } from '../scrapers/rami-levy-categories.js';
+import { logBackboneRulesStatus } from '../category-mapper/apply-backbone-rules.js';
 import {
   buildCommonTree,
   summarizeBuildResult,
@@ -112,8 +113,8 @@ function printHelpAndExit(code: number): never {
       '  --output=PATH                         Output directory (default data/processed/categories)',
       '  --shufersal-delay-ms=N                Per-request delay for Shufersal (default 10000ms = robots.txt)',
       '  --shufersal-cache-max-age-ms=N        Reuse cached pages younger than N ms (default 7d)',
-      '  --shufersal-max-requests=N            Hard cap on Shufersal HTTP fetches (default 600)',
-      '  --shufersal-max-depth=N               Skip nodes deeper than this in BFS (default 3)',
+      '  --shufersal-max-requests=N            Hard cap on Shufersal HTTP fetches (default 900)',
+      '  --shufersal-max-depth=N               Skip nodes deeper than this in BFS (default 4)',
       '  --shufersal-cache-only                Re-parse cached HTML only; never hit the network',
       '  --rami-levy-max-pages=N               Cap /api/catalog pages (default 60)',
     ].join('\n'),
@@ -155,8 +156,8 @@ async function loadOrScrapeShufersal(
   const tree = await scrapeShufersalCategories({
     delayMs: args.shufersalDelayMs ?? 10_000,
     cacheMaxAgeMs: args.shufersalCacheMaxAgeMs,
-    maxRequests: args.shufersalMaxRequests,
-    maxDepth: args.shufersalMaxDepth,
+    maxRequests: args.shufersalMaxRequests ?? 900,
+    maxDepth: args.shufersalMaxDepth ?? 4,
     cacheOnly: args.shufersalCacheOnly,
   });
   console.log(
@@ -205,10 +206,16 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
+  logBackboneRulesStatus();
   console.log(`[merge] mapping ${trees.length} chain tree(s) onto common backbone…`);
   const result = buildCommonTree(trees);
-  await writeJson(path.join(args.outputDir, 'common.json'), {
+  const commonPath = path.join(args.outputDir, 'common.json');
+  await writeJson(commonPath, {
     builtAt: result.builtAt,
+    _meta: {
+      backboneSource: 'packages/ingestion/src/category-mapper/backbone.ts + data/category-backbone-rules/',
+      rulesApplied: true,
+    },
     backbone: result.backbone,
     aliases: result.aliases,
   });
@@ -218,19 +225,22 @@ async function main(): Promise<void> {
   });
 
   console.log(summarizeBuildResult(result));
-  console.log(`Wrote ${path.join(args.outputDir, 'common.json')}`);
+  console.log(`Wrote ${commonPath} (builtAt=${result.builtAt})`);
   console.log(`Wrote ${path.join(args.outputDir, 'unmapped.json')}`);
 
   if (args.persist === 'db') {
     if (!process.env.DATABASE_URL) {
       console.warn(
-        '[persist] DATABASE_URL not set; skipping DB upsert. Re-run with `--persist=none` to silence this warning.',
+        '[persist] DATABASE_URL not set; skipping DB upsert — the app still serves the OLD tree from Postgres.',
+      );
+      console.warn(
+        '[persist] common.json on disk was updated, but restart scrape with DATABASE_URL set to refresh the API.',
       );
     } else {
       console.log('[persist] upserting backbone + aliases into Postgres…');
       const persistResult = await persistCommonTree(result);
       console.log(
-        `[persist] groups=${persistResult.groups} leaves=${persistResult.leaves} aliases=${JSON.stringify(persistResult.aliasesByRetailer)}`,
+        `[persist] nodes=${persistResult.nodesUpserted} terminals=${persistResult.terminals} staleCategoriesRemoved=${persistResult.removedStaleCategories} aliases=${JSON.stringify(persistResult.aliasesByRetailer)}`,
       );
     }
   }

@@ -41,6 +41,34 @@ export type ShufersalHarvestResult = {
   cardOccurrences: number;
 };
 
+export type ShufersalCacheSummary = {
+  htmlFiles: number;
+  emptyFiles: number;
+  pagesWithProductCards: number;
+};
+
+/** Count how many cached category pages actually contain product cards. */
+export async function summarizeShufersalCache(
+  cacheDir: string,
+): Promise<ShufersalCacheSummary> {
+  const dirStat = await stat(cacheDir).catch(() => undefined);
+  if (!dirStat?.isDirectory()) {
+    return { htmlFiles: 0, emptyFiles: 0, pagesWithProductCards: 0 };
+  }
+  const files = (await readdir(cacheDir)).filter((f) => f.endsWith('.html'));
+  let emptyFiles = 0;
+  let pagesWithProductCards = 0;
+  for (const f of files) {
+    const html = await readFile(path.join(cacheDir, f), 'utf8');
+    if (html.length === 0) {
+      emptyFiles += 1;
+      continue;
+    }
+    if (/data-product-code="P_/.test(html)) pagesWithProductCards += 1;
+  }
+  return { htmlFiles: files.length, emptyFiles, pagesWithProductCards };
+}
+
 /** Internal accumulator while harvesting cards across many HTML pages. */
 type CardAccumulator = {
   chainCodes: Set<string>;

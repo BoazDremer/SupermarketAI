@@ -56,6 +56,9 @@ export default {
     showingCount: 'מציג {{shown}} מתוך {{total}}',
     placeholder: 'חיפוש מוצרים…',
     ariaSearch: 'חיפוש מוצרים',
+    sectionUncategorised: 'אחר',
+    sectionCount: '{{count}} פריטים',
+    sectionCount_one: 'פריט אחד',
   },
   searchEmpty: {
     title: 'אין מוצרים התואמים לחיפוש',
@@ -63,6 +66,7 @@ export default {
   },
   product: {
     imageSoon: 'תמונה בקרוב',
+    transparencyName: 'שם במחירון',
     imagePlaceholder: 'מצב תמונה',
     imageLargePlaceholder: 'מצב תמונה גדול',
     priceRangeHint: 'טווח מחירים בין הרשתות שמוכרות את המוצר. השוואת סל מלאה בעמוד ההשוואה.',
@@ -76,6 +80,9 @@ export default {
     chainAriaRamiLevy: 'זמין ברמי לוי',
     chainAriaShufersal: 'זמין בשופרסל',
     chainAriaOther: 'זמין ב{{slug}}',
+    categoryPathTitle: 'קטגוריה',
+    categoryPathOurApp: 'במערכת שלנו',
+    categoryPathNone: 'אין נתוני קטגוריה עדיין.',
   },
   bag: {
     title: 'סל קניות',

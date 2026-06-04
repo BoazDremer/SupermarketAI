@@ -46,9 +46,12 @@ export function useInfiniteProductSearchQuery(
   retailerId?: string,
   category?: string,
   pageSize = 24,
+  options?: { enabled?: boolean },
 ) {
+  const enabled = options?.enabled ?? true;
   return useInfiniteQuery<SearchResponse>({
     queryKey: ['products', 'search-infinite', q, retailerId ?? '', category ?? '', pageSize],
+    enabled,
     queryFn: ({ pageParam }) => {
       const offset = typeof pageParam === 'number' ? pageParam : 0;
       const params = new URLSearchParams();
@@ -91,23 +94,27 @@ export function useProductSubstitutionsQuery(id: string | undefined) {
   });
 }
 
-export type CategoryTreeLeafApi = {
-  id: string;
-  nameHe: string;
-  nameEn: string;
-  parentId: string;
-};
-
-export type CategoryTreeGroupApi = {
+/**
+ * Public category node — recursive, up to 3 depths deep. Top-level
+ * "departments" carry the icon; intermediate "categories" may have their own
+ * `children` (sub-categories that are the actual shopper filters).
+ */
+export type CategoryTreeNodeApi = {
   id: string;
   nameHe: string;
   nameEn: string;
   icon: string | null;
-  children: CategoryTreeLeafApi[];
+  parentId: string | null;
+  isLeaf: boolean;
+  children: CategoryTreeNodeApi[];
 };
 
+/** Back-compat aliases — same shape as `CategoryTreeNodeApi`. */
+export type CategoryTreeLeafApi = CategoryTreeNodeApi;
+export type CategoryTreeGroupApi = CategoryTreeNodeApi;
+
 export type CategoryTreeApi = {
-  groups: CategoryTreeGroupApi[];
+  groups: CategoryTreeNodeApi[];
   lastUpdatedAt: string | null;
 };
 

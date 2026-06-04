@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "departmentId": "dept/בשר-ודגים",
+  "description": "Hand-curated overrides for meat & fish.",
+  "skipAutoGeneralUnder": [
+    "dept/בשר-ודגים/בשר-בקר-וכבש-טרי"
+  ],
+  "rules": [
+    {
+      "id": "meat-top-order",
+      "summary": "Under בשר-ודגים: עוף-טרי, עוף-קפוא, בשר-בקר-וכבש-טרי first."
+    },
+    {
+      "id": "rename-fresh-meat",
+      "summary": "Rename בשר בקר וכבש טרי → בשר טרי (id …/בשר-בקר-וכבש-טרי)."
+    },
+    {
+      "id": "no-fresh-meat-general",
+      "summary": "No /general under בשר-בקר-וכבש-טרי; drop nested …/בשר-קפוא leaf."
+    }
+  ],
+  "productCategoryIdRemaps": [
+    {
+      "from": "dept/בשר-ודגים/בשר-בקר-וכבש-טרי/בשר-קפוא",
+      "to": "dept/בשר-ודגים/בשר-קפוא/בשר-קפוא"
+    },
+    {
+      "from": "dept/בשר-ודגים/בשר-בקר-וכבש-טרי/general",
+      "to": "dept/בשר-ודגים/בשר-בקר-וכבש-טרי/בשר-טרי-איכותי"
+    }
+  ]
+}

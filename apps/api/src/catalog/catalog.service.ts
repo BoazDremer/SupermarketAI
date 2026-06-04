@@ -10,16 +10,20 @@ import {
 } from './categorizer';
 
 /**
- * Where in the backbone a search request lives — a single leaf or a whole
- * group (in which case we match every leaf with that group prefix).
+ * Where in the backbone a search request lives. With the 3-depth tree, every
+ * non-terminal node still has descendants, so we always want to match BOTH
+ * the node's own id and every descendant id (`startsWith ${id}/`). The
+ * `kind` is kept for callers that want to render leaf-only vs group context
+ * in the UI later.
  */
-type CategoryIdScope = { kind: 'leaf'; id: string } | { kind: 'group'; id: string };
+type CategoryIdScope =
+  | { kind: 'leaf'; id: string; hasChildren: boolean }
+  | { kind: 'group'; id: string };
 
 function buildCommonCategoryIdClause(scope: CategoryIdScope): Record<string, unknown> {
-  if (scope.kind === 'leaf') {
+  if (scope.kind === 'leaf' && !scope.hasChildren) {
     return { commonCategoryId: scope.id };
   }
-  // Group → match the group itself (rare) and any leaf nested under it.
   return {
     OR: [
       { commonCategoryId: scope.id },
@@ -55,12 +59,47 @@ function sortRetailerSlugsForDisplay(slugs: readonly string[]): string[] {
   return [...ordered, ...rest];
 }
 
+/** One node in our backbone taxonomy path (root → leaf). */
+export type CommonCategoryPathNode = {
+  id: string;
+  nameHe: string;
+  nameEn: string;
+};
+
+/**
+ * One chain's category trail for a product, ordered department → group →
+ * sub-group. Only the levels the retailer actually filled are present.
+ */
+export type RetailerCategoryPath = {
+  retailerSlug: string;
+  retailerDisplayName: string;
+  retailerDisplayNameHe?: string;
+  segments: Array<{
+    id: string;
+    /** Hebrew display label from the scraped category tree, or the raw id when not resolved. */
+    name: string;
+    level: 'department' | 'group' | 'subGroup';
+  }>;
+};
+
 /** Snapshot of one canonical product enriched for the UI. */
 export type CatalogProductListItem = {
   id: string;
   name: string;
   nameHe?: string;
+  /** Hebrew product title from the transparency price file (e.g. Shufersal XML `ItemName`), when it differs from the site-facing `nameHe`. */
+  transparencyNameHe?: string;
+  /**
+   * Legacy heuristic key (e.g. "dairy"). Group-level. Kept for back-compat with
+   * older URLs and any remaining UI surfaces that still reference it.
+   */
   categoryKey?: string;
+  /**
+   * Backbone leaf id (e.g. "dairy/cheese"). Set whenever the canonical row has
+   * `commonCategoryId` populated. Used by the UI to group catalog results
+   * under sub-category section headings when filtering by a parent group.
+   */
+  commonCategoryId?: string;
   brand: string;
   unit: string;
   priceRangeLabel: string;
@@ -76,9 +115,20 @@ export type CatalogProductListItem = {
   availableRetailerSlugs: string[];
 };
 
+/**
+ * Detail view of a single canonical product — same shape as the list item
+ * plus resolved category paths. Used by `GET /products/:id` so the dialog
+ * can show "departmentt → category → sub" per retailer and in our taxonomy.
+ */
+export type CatalogProductDetail = CatalogProductListItem & {
+  commonCategoryPath?: CommonCategoryPathNode[];
+  retailerCategoryPaths?: RetailerCategoryPath[];
+};
+
 export type EnrichedShoppingBagItem = ShoppingBagItem & {
   name: string;
   nameHe?: string;
+  transparencyNameHe?: string;
   brand: string;
   unit: string;
   priceRangeLabel: string;
@@ -93,9 +143,11 @@ type CanonicalAggregate = {
   id: string;
   displayName: string;
   displayNameHe: string | null;
+  transparencyNameHe: string | null;
   brand: string | null;
   barcodeGtin: string | null;
   storedCategoryKey: string | null;
+  commonCategoryId: string | null;
   imageUrl: string | null;
   /** First retailer-product representative for unit/pack info. */
   unitLabel: string | null;
@@ -119,7 +171,7 @@ export class CatalogService {
 
   /**
    * Search canonical products. Matches against `displayName`, `displayNameHe`,
-   * `brand`, or `barcodeGtin`. Optionally restricts to a retailer (via current
+   * `transparencyNameHe`, `brand`, or `barcodeGtin`. Optionally restricts to a retailer (via current
    * prices) or a UI category (via keyword sweep across product names).
    *
    * Category resolution order:
@@ -212,6 +264,7 @@ export class CatalogService {
         OR: [
           { displayName: { contains: q, mode: 'insensitive' } },
           { displayNameHe: { contains: q } },
+          { transparencyNameHe: { contains: q } },
           { brand: { contains: q, mode: 'insensitive' } },
           { barcodeGtin: { equals: q } },
         ],
@@ -275,7 +328,10 @@ export class CatalogService {
   private async resolveCategoryIdScope(categoryId: string): Promise<CategoryIdScope | null> {
     const found = await this.categories.findById(categoryId);
     if (!found) return null;
-    if (found.isLeaf) return { kind: 'leaf', id: found.id };
+    if (found.isLeaf) {
+      const hasChildren = await this.categories.hasChildren(found.id);
+      return { kind: 'leaf', id: found.id, hasChildren };
+    }
     return { kind: 'group', id: found.id };
   }
 
@@ -313,6 +369,7 @@ export class CatalogService {
       return [
         { displayName: { contains: trimmed, mode: 'insensitive' } },
         { displayNameHe: { contains: trimmed } },
+        { transparencyNameHe: { contains: trimmed } },
       ];
     }
     return [
@@ -324,6 +381,10 @@ export class CatalogService {
       { displayNameHe: { startsWith: `${trimmed} ` } },
       { displayNameHe: { endsWith: ` ${trimmed}` } },
       { displayNameHe: { equals: trimmed } },
+      { transparencyNameHe: { contains: ` ${trimmed} ` } },
+      { transparencyNameHe: { startsWith: `${trimmed} ` } },
+      { transparencyNameHe: { endsWith: ` ${trimmed}` } },
+      { transparencyNameHe: { equals: trimmed } },
     ];
   }
 
@@ -379,6 +440,192 @@ export class CatalogService {
     }
   }
 
+  /**
+   * Detailed product fetch used by `GET /products/:id`. In addition to the
+   * standard list item it resolves:
+   *   • `commonCategoryPath` — root → leaf in our backbone (`Category` rows).
+   *   • `retailerCategoryPaths` — one entry per (retailer, distinct chain
+   *     category triple), with Hebrew names looked up in
+   *     `RetailerCategoryAlias`.
+   *
+   * Cost on top of `findOne`: at most two extra `findMany` queries
+   * (one for the alias name lookup, one for the backbone path).
+   */
+  async findOneDetailed(id: string): Promise<CatalogProductDetail> {
+    const found = await this.prisma.client.canonicalProduct.findUnique({
+      where: { id },
+      include: {
+        productMatches: {
+          include: {
+            retailerProduct: {
+              select: {
+                id: true,
+                unitLabel: true,
+                packDescription: true,
+                chainDepartmentId: true,
+                chainGroupId: true,
+                chainSubGroupId: true,
+                retailer: {
+                  select: { slug: true, displayName: true, displayNameHe: true },
+                },
+                prices: {
+                  where: { isCurrent: true },
+                  select: { amountMinor: true, retailerId: true },
+                },
+              },
+            },
+          },
+        },
+      },
+    });
+    if (!found) {
+      throw new NotFoundException(`Product not found: ${id}`);
+    }
+    const base = this.toListItem(this.aggregateCanonical(found));
+
+    const commonCategoryPath = base.commonCategoryId
+      ? await this.resolveCommonCategoryPath(base.commonCategoryId)
+      : undefined;
+
+    const retailerCategoryPaths = await this.resolveRetailerCategoryPaths(
+      found.productMatches.map((m) => m.retailerProduct),
+    );
+
+    return {
+      ...base,
+      commonCategoryPath,
+      retailerCategoryPaths,
+    };
+  }
+
+  /**
+   * Resolve a backbone id like `"dairy/milk/fresh"` into the ordered chain of
+   * its ancestors (`dairy`, `dairy/milk`, `dairy/milk/fresh`) with HE/EN labels.
+   * IDs are slug-based so we derive ancestors from the string itself and
+   * load all rows in a single `findMany`.
+   */
+  private async resolveCommonCategoryPath(
+    leafId: string,
+  ): Promise<CommonCategoryPathNode[] | undefined> {
+    const parts = leafId.split('/');
+    const ids: string[] = [];
+    for (let i = 1; i <= parts.length; i++) {
+      ids.push(parts.slice(0, i).join('/'));
+    }
+    const rows = await this.prisma.client.category.findMany({
+      where: { id: { in: ids } },
+      select: { id: true, nameHe: true, nameEn: true },
+    });
+    const byId = new Map(rows.map((r) => [r.id, r] as const));
+    const path: CommonCategoryPathNode[] = [];
+    for (const wantId of ids) {
+      const row = byId.get(wantId);
+      if (row) path.push(row);
+    }
+    return path.length > 0 ? path : undefined;
+  }
+
+  /**
+   * Build the per-retailer category trail from the matched `RetailerProduct`
+   * rows. Dedupes by `(retailerSlug, deptId, groupId, subGroupId)` so a SKU
+   * sold in many stores collapses to one trail, and looks every chain code
+   * up in `RetailerCategoryAlias` to get Hebrew labels.
+   */
+  private async resolveRetailerCategoryPaths(
+    rps: ReadonlyArray<{
+      chainDepartmentId: string | null;
+      chainGroupId: string | null;
+      chainSubGroupId: string | null;
+      retailer: { slug: string; displayName: string; displayNameHe: string | null } | null;
+    }>,
+  ): Promise<RetailerCategoryPath[] | undefined> {
+    type Key = string;
+    const keyOf = (slug: string, d?: string | null, g?: string | null, s?: string | null): Key =>
+      `${slug}|${d ?? ''}|${g ?? ''}|${s ?? ''}`;
+
+    const seen = new Map<
+      Key,
+      {
+        retailer: { slug: string; displayName: string; displayNameHe: string | null };
+        d?: string | null;
+        g?: string | null;
+        s?: string | null;
+      }
+    >();
+
+    for (const rp of rps) {
+      if (!rp.retailer) continue;
+      if (!rp.chainDepartmentId && !rp.chainGroupId && !rp.chainSubGroupId) continue;
+      const k = keyOf(rp.retailer.slug, rp.chainDepartmentId, rp.chainGroupId, rp.chainSubGroupId);
+      if (seen.has(k)) continue;
+      seen.set(k, {
+        retailer: rp.retailer,
+        d: rp.chainDepartmentId,
+        g: rp.chainGroupId,
+        s: rp.chainSubGroupId,
+      });
+    }
+
+    if (seen.size === 0) return undefined;
+
+    // Single alias lookup for every (retailerSlug, chainCategoryId) we need.
+    const lookupPairs = new Map<string, Set<string>>();
+    for (const v of seen.values()) {
+      const list = lookupPairs.get(v.retailer.slug) ?? new Set<string>();
+      if (v.d) list.add(v.d);
+      if (v.g) list.add(v.g);
+      if (v.s) list.add(v.s);
+      lookupPairs.set(v.retailer.slug, list);
+    }
+    const orFilters = [...lookupPairs.entries()]
+      .filter(([, ids]) => ids.size > 0)
+      .map(([slug, ids]) => ({ retailerSlug: slug, chainCategoryId: { in: [...ids] } }));
+    const aliasRows =
+      orFilters.length > 0
+        ? await this.prisma.client.retailerCategoryAlias.findMany({
+            where: { OR: orFilters },
+            select: { retailerSlug: true, chainCategoryId: true, chainCategoryName: true },
+          })
+        : [];
+    const aliasName = new Map<string, string>();
+    for (const r of aliasRows) {
+      aliasName.set(`${r.retailerSlug}|${r.chainCategoryId}`, r.chainCategoryName);
+    }
+    const labelFor = (slug: string, chainId: string): string =>
+      aliasName.get(`${slug}|${chainId}`) ?? chainId;
+
+    const paths: RetailerCategoryPath[] = [];
+    for (const v of seen.values()) {
+      const segments: RetailerCategoryPath['segments'] = [];
+      if (v.d) {
+        segments.push({ id: v.d, name: labelFor(v.retailer.slug, v.d), level: 'department' });
+      }
+      if (v.g) {
+        segments.push({ id: v.g, name: labelFor(v.retailer.slug, v.g), level: 'group' });
+      }
+      if (v.s) {
+        segments.push({ id: v.s, name: labelFor(v.retailer.slug, v.s), level: 'subGroup' });
+      }
+      paths.push({
+        retailerSlug: v.retailer.slug,
+        retailerDisplayName: v.retailer.displayName,
+        retailerDisplayNameHe: v.retailer.displayNameHe ?? undefined,
+        segments,
+      });
+    }
+
+    // Stable, UI-friendly ordering: known chains first, then the rest A–Z.
+    const slugOrder = sortRetailerSlugsForDisplay([
+      ...new Set(paths.map((p) => p.retailerSlug)),
+    ]);
+    paths.sort(
+      (a, b) =>
+        slugOrder.indexOf(a.retailerSlug) - slugOrder.indexOf(b.retailerSlug),
+    );
+
+    return paths;
+  }
+
   // -------- Bag enrichment --------
 
   async enrichBagItems(items: readonly ShoppingBagItem[]): Promise<EnrichedShoppingBagItem[]> {
@@ -428,6 +675,7 @@ export class CatalogService {
         ...item,
         name: cid ?? 'Unknown product',
         nameHe: undefined,
+        transparencyNameHe: undefined,
         brand: '—',
         unit: '—',
         priceRangeLabel: '—',
@@ -440,6 +688,7 @@ export class CatalogService {
       ...item,
       name: li.name,
       nameHe: li.nameHe,
+      transparencyNameHe: li.transparencyNameHe,
       brand: li.brand,
       unit: li.unit,
       priceRangeLabel: li.priceRangeLabel,
@@ -480,9 +729,11 @@ export class CatalogService {
       id: p.id,
       displayName: p.displayName,
       displayNameHe: p.displayNameHe,
+      transparencyNameHe: p.transparencyNameHe,
       brand: p.brand,
       barcodeGtin: p.barcodeGtin,
       storedCategoryKey: p.categoryKey,
+      commonCategoryId: p.commonCategoryId,
       imageUrl: p.imageUrl,
       unitLabel,
       packDescription,
@@ -494,12 +745,23 @@ export class CatalogService {
   }
 
   private toListItem(a: CanonicalAggregate): CatalogProductListItem {
-    const inferred = inferCategoryKey(a.displayName, a.displayNameHe ?? '', a.brand ?? '');
+    const inferred = inferCategoryKey(
+      a.displayName,
+      a.displayNameHe ?? '',
+      a.transparencyNameHe ?? '',
+      a.brand ?? '',
+    );
+    const he = a.displayNameHe ?? '';
+    const tr = a.transparencyNameHe?.trim() ?? '';
+    const transparencyNameHe =
+      tr.length > 0 && tr !== he.trim() ? a.transparencyNameHe ?? undefined : undefined;
     return {
       id: a.id,
       name: a.displayName,
       nameHe: a.displayNameHe ?? undefined,
+      transparencyNameHe,
       categoryKey: a.storedCategoryKey ?? inferred,
+      commonCategoryId: a.commonCategoryId ?? undefined,
       brand: a.brand ?? '—',
       unit: a.unitLabel ?? a.packDescription ?? '—',
       priceRangeLabel: this.priceRangeLabel(a.minMinor, a.maxMinor),
@@ -525,9 +787,11 @@ type CanonicalProductWithMatches = {
   id: string;
   displayName: string;
   displayNameHe: string | null;
+  transparencyNameHe: string | null;
   brand: string | null;
   barcodeGtin: string | null;
   categoryKey: string | null;
+  commonCategoryId: string | null;
   imageUrl: string | null;
   productMatches: Array<{
     retailerProduct: {

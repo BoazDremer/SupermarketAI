@@ -4,8 +4,9 @@
  * Shufersal does not expose a JSON catalog tree. We rely on three traits of
  * its public HTML pages:
  *
- *   - Each category page lives at `/online/he/{categoryCode}` where
- *     categoryCode is hierarchical (e.g. `G`, `G02`, `G0205`, `G020506`).
+ *   - Top-level departments (depth 0): `/online/he/{code}` (e.g. `A`, `G`).
+ *   - All descendants (depth ≥ 1), including direct children like `A16`:
+ *     `/online/he/c/{code}` — some no longer respond on `/online/he/{code}`.
  *   - Each product card on those pages carries `data-all-categories` with
  *     the FULL ancestor chain, e.g. "[G020402, G0204, G02, G]". One page
  *     thus reveals dozens of leaf->root paths.
@@ -25,6 +26,7 @@
 
 import { mkdir, readFile, writeFile, stat } from 'node:fs/promises';
 import path from 'node:path';
+import { createProgress, type ProgressReporter } from '../progress.js';
 import type { ChainCategoryNode, ChainCategoryTree } from './types.js';
 
 export async function defaultShufersalCacheDir(): Promise<string> {
@@ -61,19 +63,53 @@ export type ShufersalScrapeOptions = {
   delayMs?: number;
   /** Max age of cached HTML before re-fetch, in ms. Default 7 days. */
   cacheMaxAgeMs?: number;
-  /** Hard cap on total HTTP requests this run. Default 600. */
+  /** Hard cap on total HTTP requests this run. Default 900. */
   maxRequests?: number;
-  /** Skip fetching pages whose hierarchical depth exceeds this. Default 3. */
+  /**
+   * Do not enqueue or HTTP-fetch category codes deeper than this.
+   * Shufersal only embeds product cards on depth 0–1 pages; deeper URLs
+   * typically 404 or return an empty body (see negative cache files).
+   * Default 1 for product enrichment; category-tree scrapes may use 4+.
+   */
   maxDepth?: number;
   /** When true, do NOT make any HTTP calls; only re-parse already-cached HTML. */
   cacheOnly?: boolean;
+  /** When true, ignore on-disk HTML cache and re-fetch every category page. */
+  refreshCache?: boolean;
   /** Optional fetch impl override (testing). */
   fetchImpl?: typeof fetch;
+  /**
+   * If true, print live progress (visited / queued / network requests, ETA)
+   * to stderr while the BFS is running. Default `true`.
+   */
+  showProgress?: boolean;
 };
 
 /** Shufersal codes are hierarchical — 1 char top, +2 chars per level. */
-function codeDepth(code: string): number {
+export function codeDepth(code: string): number {
   return Math.max(0, Math.ceil((code.length - 1) / 2));
+}
+
+/**
+ * Candidate category page URLs, best-first.
+ * Depth 0: `/online/he/{code}` only.
+ * Depth ≥ 1: `/online/he/c/{code}` first, then legacy `/online/he/{code}` for
+ * departments that still respond on the old path (e.g. some `A04`-style codes).
+ */
+export function shufersalCategoryPageUrls(code: string): string[] {
+  const encoded = encodeURIComponent(code);
+  if (codeDepth(code) === 0) {
+    return [`${SHUFERSAL_BASE}/online/he/${encoded}`];
+  }
+  return [
+    `${SHUFERSAL_BASE}/online/he/c/${encoded}`,
+    `${SHUFERSAL_BASE}/online/he/${encoded}`,
+  ];
+}
+
+/** Canonical URL stored on tree nodes (first candidate). */
+export function shufersalCategoryPageUrl(code: string): string {
+  return shufersalCategoryPageUrls(code)[0]!;
 }
 
 type ShufersalParsedPage = {
@@ -168,6 +204,14 @@ function parseShufersalPage(html: string): ShufersalParsedPage {
   return { titleHe, paths };
 }
 
+function categoryPageLooksUsable(html: string, code: string): boolean {
+  if (!html || html.length < 200) return false;
+  const parsed = parseShufersalPage(html);
+  if (parsed.titleHe && parsed.titleHe !== code) return true;
+  if (parsed.paths.length > 0) return true;
+  return PATH_RE.test(html);
+}
+
 async function ensureDir(dir: string): Promise<void> {
   await mkdir(dir, { recursive: true });
 }
@@ -192,21 +236,35 @@ function delay(ms: number): Promise<void> {
   return new Promise((r) => setTimeout(r, ms));
 }
 
+export type ShufersalCategoryFetchResult = {
+  ok: boolean;
+  status: number;
+  html: string;
+  /** URL that returned usable HTML, if any. */
+  url?: string;
+};
+
 async function fetchCategoryPage(
   fetchImpl: typeof fetch,
   code: string,
-): Promise<{ ok: boolean; status: number; html: string }> {
-  const url = `${SHUFERSAL_BASE}/online/he/${encodeURIComponent(code)}`;
-  const res = await fetchImpl(url, {
-    headers: {
-      Accept: 'text/html,application/xhtml+xml',
-      'User-Agent':
-        'Mozilla/5.0 (compatible; SupermarketAI-Categories/1.0; +https://github.com/)',
-    },
-    redirect: 'follow',
-  });
-  const html = await res.text();
-  return { ok: res.ok, status: res.status, html };
+): Promise<ShufersalCategoryFetchResult> {
+  const headers = {
+    Accept: 'text/html,application/xhtml+xml',
+    'User-Agent':
+      'Mozilla/5.0 (compatible; SupermarketAI-Categories/1.0; +https://github.com/)',
+  };
+  let lastStatus = 0;
+  let lastHtml = '';
+  for (const url of shufersalCategoryPageUrls(code)) {
+    const res = await fetchImpl(url, { headers, redirect: 'follow' });
+    const html = await res.text();
+    lastStatus = res.status;
+    lastHtml = html;
+    if (res.ok && categoryPageLooksUsable(html, code)) {
+      return { ok: true, status: res.status, html, url };
+    }
+  }
+  return { ok: false, status: lastStatus, html: lastHtml };
 }
 
 /** Builds a tree from the union of paths discovered across all visited pages. */
@@ -224,7 +282,7 @@ function buildTree(
         node: {
           id: code,
           nameHe: knownNames.get(code) ?? code,
-          url: `${SHUFERSAL_BASE}/online/he/${code}`,
+          url: shufersalCategoryPageUrl(code),
           depth,
           children: [],
         },
@@ -281,20 +339,23 @@ export async function scrapeShufersalCategories(
 ): Promise<ChainCategoryTree> {
   const fetchImpl = options.fetchImpl ?? fetch;
   const delayMs = options.delayMs ?? 10_000;
-  const maxRequests = options.maxRequests ?? 600;
-  const maxDepth = options.maxDepth ?? 3;
+  const maxRequests = options.maxRequests ?? 900;
+  const maxDepth = options.maxDepth ?? 1;
   const cacheOnly = options.cacheOnly ?? false;
+  const refreshCache = options.refreshCache ?? false;
   const cacheMaxAgeMs = options.cacheMaxAgeMs ?? 7 * 24 * 60 * 60 * 1000;
   const cacheDir =
     options.cacheDir ??
     (await defaultShufersalCacheDir());
   await ensureDir(cacheDir);
+  const showProgress = options.showProgress ?? true;
 
   const knownNames = new Map<string, string>();
   for (const t of TOP_LEVEL) knownNames.set(t.code, t.nameHe);
 
   const allPaths: string[][] = [];
   const visited = new Set<string>();
+  let cacheHits = 0;
   // Depth-priority queue: shallow nodes first, so a small request budget
   // covers the tops of all departments rather than drilling into one.
   const queued = new Set<string>(TOP_LEVEL.map((t) => t.code));
@@ -315,16 +376,38 @@ export async function scrapeShufersalCategories(
   }
   let requests = 0;
 
+  // Progress is bounded by `maxRequests` because each network call has a
+  // `Crawl-delay` (~10s) attached — that's what drives the ETA. Cache-only
+  // iterations are tracked separately so the user can see the cache helping.
+  const progress: ProgressReporter | undefined = showProgress
+    ? createProgress({
+        label: 'shufersal-bfs',
+        total: maxRequests,
+        intervalMs: 5_000,
+        extra: () => ({
+          visited: visited.size,
+          queued: queue.length,
+          'cache-hits': cacheHits,
+        }),
+      })
+    : undefined;
+
   while (queue.length > 0 && requests < maxRequests) {
     const code = takeNext();
     if (!code) break;
     if (visited.has(code)) continue;
     visited.add(code);
 
-    let html = await readCache(cacheDir, code, cacheMaxAgeMs);
+    let html = refreshCache
+      ? undefined
+      : await readCache(cacheDir, code, cacheMaxAgeMs);
+    if (html !== undefined && !categoryPageLooksUsable(html, code)) {
+      html = undefined;
+    }
     if (html === undefined) {
       if (cacheOnly) continue; // skip un-cached entries entirely
       requests += 1;
+      progress?.tick();
       const r = await fetchCategoryPage(fetchImpl, code);
       if (!r.ok) {
         // 404 / 5xx — record an empty cache so we don't retry this run.
@@ -335,6 +418,8 @@ export async function scrapeShufersalCategories(
       html = r.html;
       await writeCache(cacheDir, code, html);
       if (delayMs > 0) await delay(delayMs);
+    } else {
+      cacheHits += 1;
     }
     if (html.length === 0) continue; // negative cache
     const parsed = parseShufersalPage(html);
@@ -351,6 +436,9 @@ export async function scrapeShufersalCategories(
       }
     }
   }
+  progress?.finish(
+    `finished — ${requests} network requests, ${cacheHits} cache hits, ${visited.size} codes visited`,
+  );
 
   const roots = buildTree(knownNames, allPaths);
 
@@ -363,8 +451,13 @@ export async function scrapeShufersalCategories(
   // The matcher will skip those entries; the unmapped report will list them.
   const unresolved = collectAllCodes(roots).filter((c) => !knownNames.has(c));
   if (unresolved.length > 0) {
+    const deeper = unresolved.filter((c) => codeDepth(c) > maxDepth);
     process.stderr.write(
-      `[shufersal] ${unresolved.length} codes lack Hebrew names (visit cap reached or 404): ${unresolved.slice(0, 8).join(', ')}${unresolved.length > 8 ? '…' : ''}\n`,
+      `[shufersal] ${unresolved.length} codes lack Hebrew names` +
+        (deeper.length > 0
+          ? ` (${deeper.length} deeper than maxDepth=${maxDepth}, not fetched)`
+          : '') +
+        `: ${unresolved.slice(0, 8).join(', ')}${unresolved.length > 8 ? '…' : ''}\n`,
     );
   }
 
@@ -372,11 +465,26 @@ export async function scrapeShufersalCategories(
     retailerSlug: 'shufersal',
     retailerNameHe: 'שופרסל',
     scrapedAt: new Date().toISOString(),
-    source: `${SHUFERSAL_BASE}/online/he/{categoryCode}`,
+    source: `${SHUFERSAL_BASE}/online/he/{categoryCode} and /online/he/c/{categoryCode}`,
     roots,
     leafCount: countLeaves(roots),
+    runStats: {
+      networkRequests: requests,
+      cacheHits,
+      codesVisited: visited.size,
+    },
   };
 }
 
-// Re-export internal helpers for testing.
+// Re-export for category-tree refresh / tests.
 export const __test__ = { parseShufersalPage, buildTree };
+export {
+  buildTree,
+  parseShufersalPage,
+  fetchCategoryPage,
+  TOP_LEVEL,
+  readCache,
+  writeCache,
+  collectAllCodes,
+  countLeaves,
+};

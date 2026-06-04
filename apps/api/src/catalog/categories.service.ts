@@ -1,23 +1,30 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 
-export type CategoryTreeLeaf = {
-  id: string;
-  nameHe: string;
-  nameEn: string;
-  parentId: string;
-};
-
-export type CategoryTreeGroup = {
+/**
+ * Public category node — recursive, up to 3 depths deep. Top-level
+ * "departments" carry the icon; deeper nodes may exist as intermediate
+ * "categories" with their own `children` (sub-categories that are the actual
+ * shopper filters). Every node carries its `parentId` (null at the root) so
+ * the client can render breadcrumb-style nav without re-traversing the tree.
+ */
+export type CategoryTreeNode = {
   id: string;
   nameHe: string;
   nameEn: string;
   icon: string | null;
-  children: CategoryTreeLeaf[];
+  parentId: string | null;
+  /** True iff the node has no children (i.e. a user-selectable filter). */
+  isLeaf: boolean;
+  children: CategoryTreeNode[];
 };
 
+/** Back-compat aliases — same shape as `CategoryTreeNode`. */
+export type CategoryTreeLeaf = CategoryTreeNode;
+export type CategoryTreeGroup = CategoryTreeNode;
+
 export type CategoryTreeResponse = {
-  groups: CategoryTreeGroup[];
+  groups: CategoryTreeNode[];
   /** ISO timestamp of the most recent alias-table update (for cache busting). */
   lastUpdatedAt: string | null;
 };
@@ -166,33 +173,31 @@ export class CategoriesService {
     const all = await this.prisma.client.category.findMany({
       orderBy: [{ sortOrder: 'asc' }, { id: 'asc' }],
     });
-    const byId = new Map<string, CategoryTreeGroup | CategoryTreeLeaf>();
-    const groups: CategoryTreeGroup[] = [];
 
+    // Build a node for every row, then wire `children` in a second pass.
+    const byId = new Map<string, CategoryTreeNode>();
     for (const c of all) {
-      if (!c.isLeaf) {
-        const g: CategoryTreeGroup = {
-          id: c.id,
-          nameHe: c.nameHe,
-          nameEn: c.nameEn,
-          icon: c.icon,
-          children: [],
-        };
-        byId.set(c.id, g);
-        groups.push(g);
-      }
-    }
-    for (const c of all) {
-      if (!c.isLeaf) continue;
-      if (!c.parentId) continue;
-      const parent = byId.get(c.parentId);
-      if (!parent || !('children' in parent)) continue;
-      parent.children.push({
+      byId.set(c.id, {
         id: c.id,
         nameHe: c.nameHe,
         nameEn: c.nameEn,
+        icon: c.icon,
         parentId: c.parentId,
+        isLeaf: c.isLeaf,
+        children: [],
       });
+    }
+    const roots: CategoryTreeNode[] = [];
+    for (const c of all) {
+      const node = byId.get(c.id);
+      if (!node) continue;
+      if (c.parentId) {
+        const parent = byId.get(c.parentId);
+        if (parent) parent.children.push(node);
+        else roots.push(node); // orphan — surface it anyway
+      } else {
+        roots.push(node);
+      }
     }
 
     const latestAlias = await this.prisma.client.retailerCategoryAlias.findFirst({
@@ -200,7 +205,7 @@ export class CategoriesService {
       select: { updatedAt: true },
     });
 
-    return { groups, lastUpdatedAt: latestAlias?.updatedAt.toISOString() ?? null };
+    return { groups: roots, lastUpdatedAt: latestAlias?.updatedAt.toISOString() ?? null };
   }
 
   // -------- Filter expansion --------
@@ -220,13 +225,23 @@ export class CategoriesService {
     });
     if (!category) return [];
 
+    // Walk every descendant id by repeatedly fetching children. The tree is at
+    // most 3 levels deep so this is at most 2 round-trips.
     const ids: string[] = [category.id];
-    if (!category.isLeaf) {
-      const leaves = await this.prisma.client.category.findMany({
-        where: { parentId: category.id },
+    const descendantNames: string[] = [];
+    let frontier: string[] = [category.id];
+    while (frontier.length > 0) {
+      const kids = await this.prisma.client.category.findMany({
+        where: { parentId: { in: frontier } },
         select: { id: true, nameHe: true },
       });
-      for (const l of leaves) ids.push(l.id);
+      if (kids.length === 0) break;
+      frontier = [];
+      for (const k of kids) {
+        ids.push(k.id);
+        descendantNames.push(k.nameHe);
+        frontier.push(k.id);
+      }
     }
 
     const aliases = await this.prisma.client.retailerCategoryAlias.findMany({
@@ -250,13 +265,7 @@ export class CategoriesService {
       for (const tok of tokenizeForSearch(cleaned)) set.add(tok);
     };
     addWithTokens(category.nameHe);
-    if (!category.isLeaf) {
-      const leafNames = await this.prisma.client.category.findMany({
-        where: { parentId: category.id },
-        select: { nameHe: true },
-      });
-      for (const l of leafNames) addWithTokens(l.nameHe);
-    }
+    for (const n of descendantNames) addWithTokens(n);
     for (const a of aliases) addWithTokens(a.chainCategoryName);
 
     return [...set].map((s) => s.trim()).filter((s) => s.length >= 2);
@@ -280,5 +289,19 @@ export class CategoriesService {
       select: { id: true, isLeaf: true },
     });
     return found ?? undefined;
+  }
+
+  /**
+   * True iff `categoryId` has at least one descendant in the `Category`
+   * table. A "leaf" in DB-speak (isLeaf=true) might still be intermediate in
+   * the proposed 3-depth tree if a future migration adds children; this
+   * helper centralizes the check so callers don't need to think about it.
+   */
+  async hasChildren(categoryId: string): Promise<boolean> {
+    const child = await this.prisma.client.category.findFirst({
+      where: { parentId: categoryId },
+      select: { id: true },
+    });
+    return child !== null;
   }
 }

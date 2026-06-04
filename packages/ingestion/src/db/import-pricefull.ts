@@ -2,6 +2,16 @@ import { getPrismaClient } from '@supermarket-price-compare/db';
 import type { PrismaClient } from '@supermarket-price-compare/db';
 import type { NormalizedPriceFullRow } from '../normalizers.js';
 
+/**
+ * Optional progress callback invoked after every Nth row of a `PriceFull`
+ * import. CLIs use this to drive a live reporter; library callers can pass
+ * undefined to keep the import silent.
+ */
+export type PriceFullImportProgress = (state: {
+  rowIndex: number;
+  totalRows: number;
+}) => void;
+
 export type PriceFullImportInput = {
   retailer: {
     slug: string;
@@ -24,6 +34,10 @@ export type PriceFullImportInput = {
   rows: readonly NormalizedPriceFullRow[];
   /** When true, do not write anything; just compute the summary. */
   dryRun?: boolean;
+  /** Invoked periodically while writing rows so a CLI can show progress. */
+  onProgress?: PriceFullImportProgress;
+  /** Tick `onProgress` every N rows (default 100). */
+  progressEvery?: number;
 };
 
 export type PriceFullImportSummary = {
@@ -146,7 +160,15 @@ export async function importPriceFull(input: PriceFullImportInput): Promise<Pric
     });
     summary.ingestionFileId = file.id;
 
-    await ingestRows(prisma, retailer.id, store.id, input.rows, summary);
+    await ingestRows(
+      prisma,
+      retailer.id,
+      store.id,
+      input.rows,
+      summary,
+      input.onProgress,
+      input.progressEvery,
+    );
 
     summary.durationMs = Date.now() - start;
     await prisma.ingestionRun.update({
@@ -180,8 +202,12 @@ async function ingestRows(
   storeId: string,
   rows: readonly NormalizedPriceFullRow[],
   summary: PriceFullImportSummary,
+  onProgress?: PriceFullImportProgress,
+  progressEvery = 100,
 ): Promise<void> {
-  for (const row of rows) {
+  for (let i = 0; i < rows.length; i += 1) {
+    const row = rows[i];
+    if (!row) continue;
     if (!row.product.externalItemCode) {
       summary.skippedRows += 1;
       continue;
@@ -254,6 +280,7 @@ async function ingestRows(
               data: {
                 displayName: row.product.name,
                 displayNameHe: row.product.nameHe,
+                transparencyNameHe: row.product.nameHe ?? row.product.name,
                 brand: row.product.brand,
                 barcodeGtin: row.product.barcode,
               },
@@ -286,6 +313,9 @@ async function ingestRows(
       console.error(
         `Row failed (item ${row.product.externalItemCode}): ${err instanceof Error ? err.message : String(err)}`,
       );
+    }
+    if (onProgress && ((i + 1) % progressEvery === 0 || i === rows.length - 1)) {
+      onProgress({ rowIndex: i + 1, totalRows: rows.length });
     }
   }
 }

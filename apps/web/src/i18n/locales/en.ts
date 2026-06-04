@@ -56,6 +56,9 @@ export default {
     showingCount: 'Showing {{shown}} of {{total}}',
     placeholder: 'Search products…',
     ariaSearch: 'Search products',
+    sectionUncategorised: 'Other',
+    sectionCount: '{{count}} items',
+    sectionCount_one: '{{count}} item',
   },
   searchEmpty: {
     title: 'No products match your search',
@@ -63,6 +66,7 @@ export default {
   },
   product: {
     imageSoon: 'Image coming soon',
+    transparencyName: 'Price file name',
     imagePlaceholder: 'Image placeholder',
     imageLargePlaceholder: 'Large image placeholder',
     priceRangeHint:
@@ -77,6 +81,9 @@ export default {
     chainAriaRamiLevy: 'Available at Rami Levy',
     chainAriaShufersal: 'Available at Shufersal',
     chainAriaOther: 'Available at {{slug}}',
+    categoryPathTitle: 'Category',
+    categoryPathOurApp: 'In our taxonomy',
+    categoryPathNone: "No category data yet.",
   },
   bag: {
     title: 'Shopping bag',

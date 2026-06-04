@@ -1,0 +1,273 @@
+{
+  "probedAt": "2026-05-19T06:40:38.730Z",
+  "searchTerm": "חלב",
+  "categoryCode": "A04",
+  "barcode": "7290112843951",
+  "totalCaptured": 20,
+  "jsonResponses": 4,
+  "productLikeResponses": 6,
+  "captured": [
+    {
+      "url": "https://www.shufersal.co.il/online/he/search/results?q=%D7%97%D7%9C%D7%91%3Arelevance&limit=10",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/json;charset=UTF-8",
+      "bodyBytes": 89297,
+      "jsonKeys": [
+        "results",
+        "pagination",
+        "facets"
+      ],
+      "productHints": [
+        "price",
+        "baseProduct",
+        "images",
+        "volumePricesFlag",
+        "volumePrices",
+        "productReferences",
+        "priceRange",
+        "firstCategoryNameList",
+        "sku",
+        "commercialDepartment",
+        "newProduct",
+        "productType",
+        "giftProduct",
+        "productSet",
+        "ignoreERPCategory",
+        "pricePerUnit",
+        "categoryPrice",
+        "pricePerUnitWithoutDiscount",
+        "depositPrice",
+        "gallery360Images",
+        "commercialCategoryGroup",
+        "commercialCategorySubGroup",
+        "productPriceGroup",
+        "secondLevelCategory",
+        "allCategoryCodes",
+        "effectivePrice",
+        "effectivePricePerUnit",
+        "baseProductImageLarge",
+        "baseProductImageMedium",
+        "baseProductImageSmall",
+        "baseProductDescription",
+        "isBeProduct",
+        "category"
+      ],
+      "sampleFile": "samples/019_online_he_search_results_P3E9JUQ3JTk3JUQ3JTlDJUQ3.json"
+    },
+    {
+      "url": "https://www.shufersal.co.il/online/he/search?text=%D7%97%D7%9C%D7%91",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "bodyBytes": 1117396,
+      "sampleFile": "samples/009_online_he_search_P3RleHQ9JUQ3JTk3JUQ3JTlD.html",
+      "productHints": [
+        "html:data-product-code"
+      ]
+    },
+    {
+      "url": "https://www.shufersal.co.il/online/he/search/fragment?q=%D7%97%D7%9C%D7%91:relevance&page=1",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "bodyBytes": 901276,
+      "sampleFile": "samples/012_online_he_search_fragment_P3E9JUQ3JTk3JUQ3JTlDJUQ3.html",
+      "productHints": [
+        "html:data-product-code"
+      ]
+    },
+    {
+      "url": "https://www.shufersal.co.il/online/he/search/fragment?q=%D7%97%D7%9C%D7%91:relevance&page=2",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "bodyBytes": 900467,
+      "sampleFile": "samples/013_online_he_search_fragment_P3E9JUQ3JTk3JUQ3JTlDJUQ3.html",
+      "productHints": [
+        "html:data-product-code"
+      ]
+    },
+    {
+      "url": "https://www.shufersal.co.il/online/he/search?text=7290112843951",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "bodyBytes": 259607,
+      "sampleFile": "samples/014_online_he_search_P3RleHQ9NzI5MDExMjg0Mzk1.html",
+      "productHints": [
+        "html:data-product-code"
+      ]
+    },
+    {
+      "url": "https://trc.taboola.com/1317777/trc/3/json?tim=1779172800515&data=%7B%22id%22%3A416%2C%22ii%22%3A%22%2Fonline%2Fhe%2Fs%22%2C%22it%22%3A%22video%22%2C%22sd%22%3Anull%2C%22ui%22%3Anull%2C%22vi%22%3A1779172800511%2C%22cv%22%3A%2220260504-1-RELEASE%22%2C%22uiv%22%3A%22default%22%2C%22u%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2FS%22%2C%22e%22%3Anull%2C%22cb%22%3A%22TFASC.trkCallback%22%2C%22qs%22%3A%22%22%2C%22r%22%3A%5B%7B%22li%22%3A%22rbox-tracking%22%2C%22s%22%3A0%2C%22uim%22%3A%22rbox-tracking%3Apub%3Dyoyo-shufersal-video%3Aabp%3D0%22%2C%22uip%22%3A%22rbox-tracking%22%2C%22orig_uip%22%3A%22rbox-tracking%22%7D%5D%2C%22mpvd%22%3A%7B%22en%22%3A%22page_view%22%2C%22tim%22%3A1779172800514%2C%22ref%22%3Anull%2C%22item-url%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2FS%22%2C%22tos%22%3A1%2C%22ssd%22%3A1%2C%22scd%22%3A0%2C%22it%22%3A%22JS_PIXEL%22%2C%22supv%22%3Atrue%7D%2C%22pa%22%3A%7B%22su%22%3Atrue%7D%2C%22psb%22%3Atrue%7D&pubit=i",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bodyBytes": 2588
+    },
+    {
+      "url": "https://trc.taboola.com/1700915/trc/3/json?tim=1779172800694&data=%7B%22id%22%3A117%2C%22ii%22%3A%22%2Fonline%2Fhe%2Fs%22%2C%22it%22%3A%22video%22%2C%22sd%22%3Anull%2C%22ui%22%3A%22f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40%22%2C%22vi%22%3A1779172800511%2C%22cv%22%3A%2220260504-1-RELEASE%22%2C%22uiv%22%3A%22default%22%2C%22u%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2FS%22%2C%22e%22%3Anull%2C%22cb%22%3A%22TFASC.trkCallback1%22%2C%22qs%22%3A%22%22%2C%22r%22%3A%5B%7B%22li%22%3A%22rbox-tracking%22%2C%22s%22%3A0%2C%22uim%22%3A%22rbox-tracking%3Apub%3Dyoyo-shufersal-video%3Aabp%3D0%22%2C%22uip%22%3A%22rbox-tracking%22%2C%22orig_uip%22%3A%22rbox-tracking%22%7D%5D%2C%22mpvd%22%3A%7B%22en%22%3A%22page_view%22%2C%22tim%22%3A1779172800517%2C%22ref%22%3Anull%2C%22item-url%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2FS%22%2C%22tos%22%3A3%2C%22ssd%22%3A1%2C%22scd%22%3A0%2C%22it%22%3A%22JS_PIXEL%22%2C%22supv%22%3Atrue%7D%2C%22pa%22%3A%7B%22su%22%3Atrue%7D%2C%22psb%22%3Atrue%7D&pubit=i",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bodyBytes": 2680
+    },
+    {
+      "url": "https://www.shufersal.co.il/online/he/cart/load?restoreCart=true",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "bodyBytes": 13233
+    },
+    {
+      "url": "https://www.shufersal.co.il/online/he/recommendations/entry-recommendations",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/json;charset=UTF-8",
+      "bodyBytes": 2,
+      "jsonKeys": [],
+      "productHints": [],
+      "sampleFile": "samples/003_online_he_recommendations_entry-recommendations.json"
+    },
+    {
+      "url": "https://www.shufersal.co.il/online/he/recommendations/show-advisor",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/json;charset=UTF-8",
+      "bodyBytes": 5,
+      "sampleFile": "samples/003_online_he_recommendations_show-advisor.json"
+    },
+    {
+      "url": "https://www.shufersal.co.il/online/_ui/modules/assortmentModalmd3035.js",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/javascript; charset=UTF-8",
+      "bodyBytes": 62588
+    },
+    {
+      "url": "https://st-eu.dynamicyield.com/spa/json?sec=9879135&ref=&scriptVersion=2.88.0&id=5638507697319708095&jsession=26r76pisbxohnrk103kcqhyew2b5lkf3&isSesNew=false&landingUrl=www.shufersal.co.il%2Fonline%2Fhe%2Fs&dyid_server=5638507697319708095&ctx=%7B%22lng%22%3A%2285%22%2C%22type%22%3A%22HOMEPAGE%22%7D",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bodyBytes": 47628,
+      "jsonKeys": [
+        "session",
+        "jsession",
+        "isNew",
+        "internalId",
+        "weather",
+        "currentWeather",
+        "feedProperties",
+        "itemsData",
+        "pd2",
+        "rvCount",
+        "rpCount",
+        "csCount",
+        "wlCount",
+        "audLDART",
+        "aud",
+        "shrAud",
+        "audCHC",
+        "audTCHC",
+        "audTAuds",
+        "audYCHC",
+        "audYAuds",
+        "audSCHC",
+        "audienceRules",
+        "satisfiedAudienceConditions",
+        "geoCode",
+        "geoCont",
+        "geoCity",
+        "geoCoords",
+        "geoRegionCode",
+        "geoFields"
+      ],
+      "productHints": [],
+      "sampleFile": "samples/006_spa_json_P3NlYz05ODc5MTM1JnJlZj0m.json"
+    },
+    {
+      "url": "https://trc.taboola.com/1700915/trc/3/json?tim=1779172808166&data=%7B%22id%22%3A90%2C%22ii%22%3A%22%2Fonline%2Fhe%2Fa04%22%2C%22it%22%3A%22video%22%2C%22sd%22%3A%22v2_866233b74552f33e8a73361a70448580_f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40_1779172800_1779172800_CNawjgYQs-hnGP_v2ffjMyABKAMwZjiI6wpArpAQSNbS2ANQ____________AVgAYABol_S6gt_Unr-qAXABgAEAiAEA%22%2C%22ui%22%3A%22f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40%22%2C%22vi%22%3A1779172808164%2C%22cv%22%3A%2220260504-1-RELEASE%22%2C%22uiv%22%3A%22default%22%2C%22u%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2FA04%22%2C%22e%22%3Anull%2C%22cb%22%3A%22TFASC.trkCallback1%22%2C%22qs%22%3A%22%22%2C%22r%22%3A%5B%7B%22li%22%3A%22rbox-tracking%22%2C%22s%22%3A0%2C%22uim%22%3A%22rbox-tracking%3Apub%3Dyoyo-shufersal-video%3Aabp%3D0%22%2C%22uip%22%3A%22rbox-tracking%22%2C%22orig_uip%22%3A%22rbox-tracking%22%7D%5D%2C%22mpvd%22%3A%7B%22en%22%3A%22page_view%22%2C%22tim%22%3A1779172808166%2C%22ref%22%3Anull%2C%22item-url%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2FA04%22%2C%22tos%22%3A7469%2C%22ssd%22%3A2%2C%22scd%22%3A100%2C%22it%22%3A%22JS_PIXEL%22%2C%22supv%22%3Atrue%7D%2C%22pa%22%3A%7B%22su%22%3Atrue%7D%2C%22psb%22%3Atrue%7D&pubit=i",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bodyBytes": 2454
+    },
+    {
+      "url": "https://trc.taboola.com/1317777/trc/3/json?tim=1779172808165&data=%7B%22id%22%3A799%2C%22ii%22%3A%22%2Fonline%2Fhe%2Fa04%22%2C%22it%22%3A%22video%22%2C%22sd%22%3A%22v2_76571e2b03319fabe7301a22912d0c71_f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40_1779172800_1779172800_CNawjgYQkbdQGP_v2ffjMyABKAEwZjiI6wpArpAQSNbS2ANQ____________AVgAYABol_S6gt_Unr-qAXABgAEAiAEA%22%2C%22ui%22%3A%22f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40%22%2C%22vi%22%3A1779172808164%2C%22cv%22%3A%2220260504-1-RELEASE%22%2C%22uiv%22%3A%22default%22%2C%22u%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2FA04%22%2C%22e%22%3Anull%2C%22cb%22%3A%22TFASC.trkCallback%22%2C%22qs%22%3A%22%22%2C%22r%22%3A%5B%7B%22li%22%3A%22rbox-tracking%22%2C%22s%22%3A0%2C%22uim%22%3A%22rbox-tracking%3Apub%3Dyoyo-shufersal-video%3Aabp%3D0%22%2C%22uip%22%3A%22rbox-tracking%22%2C%22orig_uip%22%3A%22rbox-tracking%22%7D%5D%2C%22mpvd%22%3A%7B%22en%22%3A%22page_view%22%2C%22tim%22%3A1779172808165%2C%22ref%22%3Anull%2C%22item-url%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2FA04%22%2C%22tos%22%3A7468%2C%22ssd%22%3A2%2C%22scd%22%3A100%2C%22it%22%3A%22JS_PIXEL%22%2C%22supv%22%3Atrue%7D%2C%22pa%22%3A%7B%22su%22%3Atrue%7D%2C%22psb%22%3Atrue%7D&pubit=i",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bodyBytes": 2488
+    },
+    {
+      "url": "https://trc.taboola.com/1317777/trc/3/json?tim=1779172821548&data=%7B%22id%22%3A440%2C%22ii%22%3A%22%2Fonline%2Fhe%2Fsearch%22%2C%22it%22%3A%22video%22%2C%22sd%22%3A%22v2_76571e2b03319fabe7301a22912d0c71_f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40_1779172800_1779172808_CNawjgYQkbdQGOSr2vfjMyACKAEwZjiI6wpArpAQSNbS2ANQ____________AVgAYABol_S6gt_Unr-qAXABgAEAiAEA%22%2C%22ui%22%3A%22f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40%22%2C%22vi%22%3A1779172821547%2C%22cv%22%3A%2220260504-1-RELEASE%22%2C%22uiv%22%3A%22default%22%2C%22u%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2Fsearch%3Ftext%3D%25D7%2597%25D7%259C%25D7%2591%22%2C%22e%22%3Anull%2C%22cb%22%3A%22TFASC.trkCallback%22%2C%22qs%22%3A%22%3Ftext%3D%25D7%2597%25D7%259C%25D7%2591%22%2C%22r%22%3A%5B%7B%22li%22%3A%22rbox-tracking%22%2C%22s%22%3A0%2C%22uim%22%3A%22rbox-tracking%3Apub%3Dyoyo-shufersal-video%3Aabp%3D0%22%2C%22uip%22%3A%22rbox-tracking%22%2C%22orig_uip%22%3A%22rbox-tracking%22%7D%5D%2C%22mpvd%22%3A%7B%22en%22%3A%22page_view%22%2C%22tim%22%3A1779172821548%2C%22ref%22%3Anull%2C%22item-url%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2Fsearch%3Ftext%3D%25D7%2597%25D7%259C%25D7%2591%22%2C%22tos%22%3A20367%2C%22ssd%22%3A3%2C%22scd%22%3A100%2C%22it%22%3A%22JS_PIXEL%22%2C%22supv%22%3Atrue%7D%2C%22pa%22%3A%7B%22su%22%3Atrue%7D%2C%22psb%22%3Atrue%7D&pubit=i",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bodyBytes": 2488
+    },
+    {
+      "url": "https://trc.taboola.com/1700915/trc/3/json?tim=1779172821549&data=%7B%22id%22%3A282%2C%22ii%22%3A%22%2Fonline%2Fhe%2Fsearch%22%2C%22it%22%3A%22video%22%2C%22sd%22%3A%22v2_866233b74552f33e8a73361a70448580_f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40_1779172800_1779172808_CNawjgYQs-hnGOSr2vfjMyACKAMwZjiI6wpArpAQSNbS2ANQ____________AVgAYABol_S6gt_Unr-qAXABgAEAiAEA%22%2C%22ui%22%3A%22f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40%22%2C%22vi%22%3A1779172821547%2C%22cv%22%3A%2220260504-1-RELEASE%22%2C%22uiv%22%3A%22default%22%2C%22u%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2Fsearch%3Ftext%3D%25D7%2597%25D7%259C%25D7%2591%22%2C%22e%22%3Anull%2C%22cb%22%3A%22TFASC.trkCallback1%22%2C%22qs%22%3A%22%3Ftext%3D%25D7%2597%25D7%259C%25D7%2591%22%2C%22r%22%3A%5B%7B%22li%22%3A%22rbox-tracking%22%2C%22s%22%3A0%2C%22uim%22%3A%22rbox-tracking%3Apub%3Dyoyo-shufersal-video%3Aabp%3D0%22%2C%22uip%22%3A%22rbox-tracking%22%2C%22orig_uip%22%3A%22rbox-tracking%22%7D%5D%2C%22mpvd%22%3A%7B%22en%22%3A%22page_view%22%2C%22tim%22%3A1779172821549%2C%22ref%22%3Anull%2C%22item-url%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2Fsearch%3Ftext%3D%25D7%2597%25D7%259C%25D7%2591%22%2C%22tos%22%3A20368%2C%22ssd%22%3A3%2C%22scd%22%3A100%2C%22it%22%3A%22JS_PIXEL%22%2C%22supv%22%3Atrue%7D%2C%22pa%22%3A%7B%22su%22%3Atrue%7D%2C%22psb%22%3Atrue%7D&pubit=i",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bodyBytes": 2454
+    },
+    {
+      "url": "https://trc.taboola.com/1317777/trc/3/json?tim=1779172827316&data=%7B%22id%22%3A382%2C%22ii%22%3A%22%2Fonline%2Fhe%2Fsearch%22%2C%22it%22%3A%22video%22%2C%22sd%22%3A%22v2_76571e2b03319fabe7301a22912d0c71_f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40_1779172800_1779172821_CNawjgYQkbdQGKuU2_fjMyADKAEwZjiI6wpArpAQSNbS2ANQ____________AVgAYABol_S6gt_Unr-qAXABgAEAiAEA%22%2C%22ui%22%3A%22f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40%22%2C%22vi%22%3A1779172827315%2C%22cv%22%3A%2220260504-1-RELEASE%22%2C%22uiv%22%3A%22default%22%2C%22u%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2Fsearch%3Ftext%3D7290112843951%22%2C%22e%22%3Anull%2C%22cb%22%3A%22TFASC.trkCallback%22%2C%22qs%22%3A%22%3Ftext%3D7290112843951%22%2C%22r%22%3A%5B%7B%22li%22%3A%22rbox-tracking%22%2C%22s%22%3A0%2C%22uim%22%3A%22rbox-tracking%3Apub%3Dyoyo-shufersal-video%3Aabp%3D0%22%2C%22uip%22%3A%22rbox-tracking%22%2C%22orig_uip%22%3A%22rbox-tracking%22%7D%5D%2C%22mpvd%22%3A%7B%22en%22%3A%22page_view%22%2C%22tim%22%3A1779172827316%2C%22ref%22%3Anull%2C%22item-url%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2Fsearch%3Ftext%3D7290112843951%22%2C%22tos%22%3A25911%2C%22ssd%22%3A4%2C%22scd%22%3A100%2C%22it%22%3A%22JS_PIXEL%22%2C%22supv%22%3Atrue%7D%2C%22pa%22%3A%7B%22su%22%3Atrue%7D%2C%22psb%22%3Atrue%7D&pubit=i",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bodyBytes": 2488
+    },
+    {
+      "url": "https://trc.taboola.com/1700915/trc/3/json?tim=1779172827320&data=%7B%22id%22%3A127%2C%22ii%22%3A%22%2Fonline%2Fhe%2Fsearch%22%2C%22it%22%3A%22video%22%2C%22sd%22%3A%22v2_866233b74552f33e8a73361a70448580_f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40_1779172800_1779172821_CNawjgYQs-hnGKuU2_fjMyADKAMwZjiI6wpArpAQSNbS2ANQ____________AVgAYABol_S6gt_Unr-qAXABgAEAiAEA%22%2C%22ui%22%3A%22f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40%22%2C%22vi%22%3A1779172827315%2C%22cv%22%3A%2220260504-1-RELEASE%22%2C%22uiv%22%3A%22default%22%2C%22u%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2Fsearch%3Ftext%3D7290112843951%22%2C%22e%22%3Anull%2C%22cb%22%3A%22TFASC.trkCallback1%22%2C%22qs%22%3A%22%3Ftext%3D7290112843951%22%2C%22r%22%3A%5B%7B%22li%22%3A%22rbox-tracking%22%2C%22s%22%3A0%2C%22uim%22%3A%22rbox-tracking%3Apub%3Dyoyo-shufersal-video%3Aabp%3D0%22%2C%22uip%22%3A%22rbox-tracking%22%2C%22orig_uip%22%3A%22rbox-tracking%22%7D%5D%2C%22mpvd%22%3A%7B%22en%22%3A%22page_view%22%2C%22tim%22%3A1779172827317%2C%22ref%22%3Anull%2C%22item-url%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2Fsearch%3Ftext%3D7290112843951%22%2C%22tos%22%3A25912%2C%22ssd%22%3A4%2C%22scd%22%3A100%2C%22it%22%3A%22JS_PIXEL%22%2C%22supv%22%3Atrue%7D%2C%22pa%22%3A%7B%22su%22%3Atrue%7D%2C%22psb%22%3Atrue%7D&pubit=i",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bodyBytes": 2454
+    },
+    {
+      "url": "https://trc.taboola.com/1317777/trc/3/json?tim=1779172833144&data=%7B%22id%22%3A617%2C%22ii%22%3A%22%2Fonline%2Fhe%2Fa%22%2C%22it%22%3A%22video%22%2C%22sd%22%3A%22v2_76571e2b03319fabe7301a22912d0c71_f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40_1779172800_1779172827_CNawjgYQkbdQGLPB2_fjMyAEKAEwZjiI6wpArpAQSNbS2ANQ____________AVgAYABol_S6gt_Unr-qAXABgAEAiAEA%22%2C%22ui%22%3A%22f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40%22%2C%22vi%22%3A1779172833143%2C%22cv%22%3A%2220260504-1-RELEASE%22%2C%22uiv%22%3A%22default%22%2C%22u%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2FA%22%2C%22e%22%3Anull%2C%22cb%22%3A%22TFASC.trkCallback%22%2C%22qs%22%3A%22%22%2C%22r%22%3A%5B%7B%22li%22%3A%22rbox-tracking%22%2C%22s%22%3A0%2C%22uim%22%3A%22rbox-tracking%3Apub%3Dyoyo-shufersal-video%3Aabp%3D0%22%2C%22uip%22%3A%22rbox-tracking%22%2C%22orig_uip%22%3A%22rbox-tracking%22%7D%5D%2C%22mpvd%22%3A%7B%22en%22%3A%22page_view%22%2C%22tim%22%3A1779172833144%2C%22ref%22%3Anull%2C%22item-url%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2FA%22%2C%22tos%22%3A31650%2C%22ssd%22%3A5%2C%22scd%22%3A100%2C%22it%22%3A%22JS_PIXEL%22%2C%22supv%22%3Atrue%7D%2C%22pa%22%3A%7B%22su%22%3Atrue%7D%2C%22psb%22%3Atrue%7D&pubit=i",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bodyBytes": 2488
+    },
+    {
+      "url": "https://trc.taboola.com/1700915/trc/3/json?tim=1779172833145&data=%7B%22id%22%3A705%2C%22ii%22%3A%22%2Fonline%2Fhe%2Fa%22%2C%22it%22%3A%22video%22%2C%22sd%22%3A%22v2_866233b74552f33e8a73361a70448580_f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40_1779172800_1779172827_CNawjgYQs-hnGLPB2_fjMyAEKAMwZjiI6wpArpAQSNbS2ANQ____________AVgAYABol_S6gt_Unr-qAXABgAEAiAEA%22%2C%22ui%22%3A%22f2f39dfd-78c8-4dcc-b172-5615b2a80c30-tuct11058b40%22%2C%22vi%22%3A1779172833143%2C%22cv%22%3A%2220260504-1-RELEASE%22%2C%22uiv%22%3A%22default%22%2C%22u%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2FA%22%2C%22e%22%3Anull%2C%22cb%22%3A%22TFASC.trkCallback1%22%2C%22qs%22%3A%22%22%2C%22r%22%3A%5B%7B%22li%22%3A%22rbox-tracking%22%2C%22s%22%3A0%2C%22uim%22%3A%22rbox-tracking%3Apub%3Dyoyo-shufersal-video%3Aabp%3D0%22%2C%22uip%22%3A%22rbox-tracking%22%2C%22orig_uip%22%3A%22rbox-tracking%22%7D%5D%2C%22mpvd%22%3A%7B%22en%22%3A%22page_view%22%2C%22tim%22%3A1779172833145%2C%22ref%22%3Anull%2C%22item-url%22%3A%22https%3A%2F%2Fwww.shufersal.co.il%2Fonline%2Fhe%2FA%22%2C%22tos%22%3A31651%2C%22ssd%22%3A5%2C%22scd%22%3A100%2C%22it%22%3A%22JS_PIXEL%22%2C%22supv%22%3Atrue%7D%2C%22pa%22%3A%7B%22su%22%3Atrue%7D%2C%22psb%22%3Atrue%7D&pubit=i",
+      "method": "GET",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bodyBytes": 2453
+    }
+  ],
+  "recommendations": [
+    {
+      "url": "https://www.shufersal.co.il/online/he/search/results?q=%D7%97%D7%9C%D7%91%3Arelevance&limit=10",
+      "method": "GET",
+      "reason": "JSON fields: price, baseProduct, images, volumePricesFlag, volumePrices, productReferences, priceRange, firstCategoryNameList, sku, commercialDepartment, newProduct, productType (89297 bytes)"
+    }
+  ],
+  "discoveredApis": [
+    {
+      "name": "search-by-term",
+      "ok": true,
+      "detail": "10 products, total=905",
+      "sampleUrl": "/online/he/search/results?q=חלב:relevance&limit=10&page=0"
+    },
+    {
+      "name": "full-catalog",
+      "ok": true,
+      "detail": "totalNumberOfResults=24784, pages=24784 @ limit=1",
+      "sampleUrl": "/online/he/search/results?q=:relevance&limit=100&page=0"
+    },
+    {
+      "name": "search-by-barcode",
+      "ok": true,
+      "detail": "P_7290112843951 categories=A04,A0410,A041002,categories",
+      "sampleUrl": "/online/he/search/results?q=7290112843951:relevance&limit=5"
+    }
+  ]
+}

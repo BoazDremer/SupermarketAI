@@ -19,6 +19,7 @@ import {
   scrapeShufersalCategories,
   defaultShufersalCacheDir,
 } from '../scrapers/shufersal-categories.js';
+import type { CategoryScrapeRunStats } from '../scrapers/types.js';
 import {
   harvestShufersalCachedCards,
   type ShufersalHarvestResult,
@@ -27,6 +28,8 @@ import {
 export type ShufersalCrawlOptions = {
   /** When true, do NOT fetch anything — just re-harvest from existing cache. */
   cacheOnly?: boolean;
+  /** When true, re-fetch all category HTML even if a cache file exists. */
+  refreshCache?: boolean;
   /**
    * Hard cap on HTTP requests. Default 1500 — enough to cover Shufersal's
    * full known tree (~600 reachable codes + retries) without runaway crawls.
@@ -36,6 +39,7 @@ export type ShufersalCrawlOptions = {
    * BFS depth cap (1 = top-level, 2 = group, 3 = sub-group …). Default 6 to
    * exhaust everything Shufersal reveals via `data-all-categories`.
    */
+  /** Max category code depth to HTTP-fetch (default 1 — only dept + group pages). */
   maxDepth?: number;
   /**
    * Delay between HTTP requests, ms. Default 10000 to honour the
@@ -54,6 +58,8 @@ export type ShufersalCrawlResult = ShufersalHarvestResult & {
   cacheDir: string;
   /** True when no network requests were made. */
   cacheOnly: boolean;
+  /** BFS crawl stats when `--crawl` ran (undefined for `--no-crawl`). */
+  crawlStats?: CategoryScrapeRunStats;
 };
 
 /**
@@ -67,18 +73,22 @@ export async function crawlShufersalForProducts(
   const log = options.log ?? ((m) => process.stderr.write(`${m}\n`));
   const cacheDir = options.cacheDir ?? (await defaultShufersalCacheDir());
 
+  let crawlStats: CategoryScrapeRunStats | undefined;
   if (!cacheOnly) {
+    const refresh = options.refreshCache ?? false;
     log(
-      `[shufersal-crawl] crawling tree: maxRequests=${options.maxRequests ?? 1500}, maxDepth=${options.maxDepth ?? 6}, delayMs=${options.delayMs ?? 10_000}`,
+      `[shufersal-crawl] crawling tree: maxRequests=${options.maxRequests ?? 1500}, maxDepth=${options.maxDepth ?? 6}, delayMs=${options.delayMs ?? 10_000}${refresh ? ', refreshCache=true' : ''}`,
     );
-    await scrapeShufersalCategories({
+    const tree = await scrapeShufersalCategories({
       cacheDir,
       cacheOnly: false,
+      refreshCache: options.refreshCache ?? false,
       maxRequests: options.maxRequests ?? 1500,
-      maxDepth: options.maxDepth ?? 6,
+      maxDepth: options.maxDepth ?? 1,
       delayMs: options.delayMs ?? 10_000,
       fetchImpl: options.fetchImpl,
     });
+    crawlStats = tree.runStats;
   } else {
     log(`[shufersal-crawl] cacheOnly mode: re-harvesting ${cacheDir}`);
   }
@@ -87,5 +97,5 @@ export async function crawlShufersalForProducts(
   log(
     `[shufersal-crawl] harvested ${harvest.cards.length} unique products from ${harvest.filesScanned} cached pages (${harvest.cardOccurrences} card occurrences)`,
   );
-  return { ...harvest, cacheDir, cacheOnly };
+  return { ...harvest, cacheDir, cacheOnly, crawlStats };
 }

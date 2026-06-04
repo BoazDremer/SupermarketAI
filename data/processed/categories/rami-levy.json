@@ -1,9 +1,1199 @@
 {
   "retailerSlug": "rami-levy",
   "retailerNameHe": "רמי לוי",
-  "scrapedAt": "2026-04-30T11:10:04.523Z",
-  "source": "https://www.rami-levy.co.il/api/menu + /api/catalog",
+  "scrapedAt": "2026-05-28T08:21:01.188Z",
+  "source": "merged: data/processed/categories/rami-levy.json + RetailerProduct.rawData + RetailerCategoryAlias + sample catalog",
   "roots": [
+    {
+      "id": "49",
+      "nameHe": "פירות וירקות",
+      "slug": "פירות-וירקות",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%A4%D7%99%D7%A8%D7%95%D7%AA-%D7%95%D7%99%D7%A8%D7%A7%D7%95%D7%AA",
+      "depth": 0,
+      "children": [
+        {
+          "id": "196",
+          "nameHe": "פירות",
+          "slug": "פירות",
+          "depth": 1,
+          "children": [
+            {
+              "id": "322",
+              "nameHe": "פירות טריים",
+              "slug": "פירות-טריים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "386",
+              "nameHe": "ירקות ארוזים",
+              "slug": "ירקות-ארוזים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 20
+        },
+        {
+          "id": "197",
+          "nameHe": "ירקות",
+          "slug": "ירקות",
+          "depth": 1,
+          "children": [
+            {
+              "id": "320",
+              "nameHe": "ירקות טריים",
+              "slug": "ירקות-טריים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "322",
+              "nameHe": "פירות טריים",
+              "slug": "פירות-טריים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "386",
+              "nameHe": "ירקות ארוזים",
+              "slug": "ירקות-ארוזים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "607",
+              "nameHe": "עשבי תיבול",
+              "slug": "עשבי-תיבול",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 99
+        },
+        {
+          "id": "199",
+          "nameHe": "פירות יבשים",
+          "slug": "פירות-יבשים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "321",
+              "nameHe": "פיצוחים טבעיים",
+              "slug": "פירות-יבשים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1003",
+              "nameHe": "פירות יבשים סיטונאות",
+              "slug": "פירות-יבשים-סיטונאות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1156",
+              "nameHe": "פירות יבשים",
+              "slug": "פירות-יבשים-1",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "279",
+          "nameHe": "פיצוחים ופירות יבשים",
+          "slug": "פיצוחים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "321",
+              "nameHe": "פיצוחים טבעיים",
+              "slug": "פירות-יבשים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "449",
+              "nameHe": "פיצוחים",
+              "slug": "פיצוחים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1156",
+              "nameHe": "פירות יבשים",
+              "slug": "פירות-יבשים-1",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1157",
+              "nameHe": "מנצ'ס",
+              "slug": "מנצ-ס",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1158",
+              "nameHe": "פיצוחים קלויים",
+              "slug": "פיצוחים-קלויים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 34
+        },
+        {
+          "id": "577",
+          "nameHe": "קליית השקמה בתפזורת",
+          "slug": "קליית-השקמה-בתפזורת",
+          "depth": 1,
+          "children": [
+            {
+              "id": "1190",
+              "nameHe": "תבלינים במשקל",
+              "slug": "תבלינים-במשקל-1",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "productCount": 153
+    },
+    {
+      "id": "50",
+      "nameHe": "חלב ביצים וסלטים",
+      "slug": "חלב-ביצים-וסלטים",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%97%D7%9C%D7%91-%D7%91%D7%99%D7%A6%D7%99%D7%9D-%D7%95%D7%A1%D7%9C%D7%98%D7%99%D7%9D",
+      "depth": 0,
+      "children": [
+        {
+          "id": "198",
+          "nameHe": "חלב",
+          "slug": "חלב",
+          "depth": 1,
+          "children": [
+            {
+              "id": "22",
+              "nameHe": "חלב טרי",
+              "slug": "חלב-טרי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "23",
+              "nameHe": "חלב עמיד ומלבין",
+              "slug": "חלב-עמיד-ומלבין",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "31",
+              "nameHe": "משקאות חלב ויוגורט",
+              "slug": "משקאות-חלב-ויוגורט",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "317",
+              "nameHe": "תחליפי חלב",
+              "slug": "משקאות-סויה-וללא-לקטוז",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "364",
+              "nameHe": "משקאות חלב",
+              "slug": "משקאות-חלב",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1171",
+              "nameHe": "תחליפי חלב מצונן",
+              "slug": "תחליפי-חלב-מצונן",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1219",
+              "nameHe": "משקאות חלבון",
+              "slug": "משקאות-חלבון-1",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 88
+        },
+        {
+          "id": "200",
+          "nameHe": "ביצים",
+          "slug": "ביצים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "295",
+              "nameHe": "ביצים",
+              "slug": "ביצים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 2
+        },
+        {
+          "id": "201",
+          "nameHe": "חמאה מרגרינה שמנת",
+          "slug": "חמאה-מרגרינה-שמנת",
+          "depth": 1,
+          "children": [
+            {
+              "id": "139",
+              "nameHe": "חמאה",
+              "slug": "חמאה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "242",
+              "nameHe": "שמנת לבישול ואפיה",
+              "slug": "קצפת-ושמנת",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "577",
+              "nameHe": "מרגרינה",
+              "slug": "מרגרינה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "859",
+              "nameHe": "קצפות",
+              "slug": "קצפות",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 35
+        },
+        {
+          "id": "202",
+          "nameHe": "גבינות",
+          "slug": "גבינות",
+          "depth": 1,
+          "children": [
+            {
+              "id": "69",
+              "nameHe": "גבינה מלוחה",
+              "slug": "גבינה-מלוחה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "189",
+              "nameHe": "גבינת שמנת,מותכת",
+              "slug": "גבינת-שמנת-מותכת",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "273",
+              "nameHe": "גבינת קוטג'",
+              "slug": "גבינת-קוטג",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "339",
+              "nameHe": "גבינה צהובה",
+              "slug": "גבינה-צהובה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "355",
+              "nameHe": "גבינות קשות",
+              "slug": "גבינה-קשה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "394",
+              "nameHe": "גבינה לבנה",
+              "slug": "גבינה-לבנה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "574",
+              "nameHe": "גבינות צאן",
+              "slug": "גבינות-צאן",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "575",
+              "nameHe": "לאבנה וגבינות רכות",
+              "slug": "לאבנה-וגבינות-רכות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "576",
+              "nameHe": "מוצרלה",
+              "slug": "מוצרלה",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 226
+        },
+        {
+          "id": "203",
+          "nameHe": "יוגורט ומעדני חלב",
+          "slug": "יוגורט-ומעדני-חלב",
+          "depth": 1,
+          "children": [
+            {
+              "id": "28",
+              "nameHe": "לבן, אשל ושמנת חמוצה",
+              "slug": "לבן-ואשל",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "31",
+              "nameHe": "משקאות חלב ויוגורט",
+              "slug": "משקאות-חלב-ויוגורט",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "94",
+              "nameHe": "יוגורט דיאט",
+              "slug": "יוגורט-דיאט",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "374",
+              "nameHe": "יוגורט לבן טבעי",
+              "slug": "יוגורט-לבן-טבעי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "389",
+              "nameHe": "יוגורט פרי , טעמים",
+              "slug": "יוגורט-פרי-טעמים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "466",
+              "nameHe": "מעדני חלב ויוגורט לילדים",
+              "slug": "מעדני-חלב-ויוגורט-לילדים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "467",
+              "nameHe": "מעדני חלב מבוגרים",
+              "slug": "מעדני-חלב-מבוגרים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "854",
+              "nameHe": "יוגורט  מועשר בחלבון",
+              "slug": "יוגורט-מועשר-בחלבון",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 93
+        },
+        {
+          "id": "204",
+          "nameHe": "סלטים",
+          "slug": "סלטים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "77",
+              "nameHe": "סלטי ירקות",
+              "slug": "סלטי-ירקות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "250",
+              "nameHe": "סלטי דגים",
+              "slug": "סלטי-דגים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "283",
+              "nameHe": "סלטי חצילים",
+              "slug": "סלטי-חצילים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "341",
+              "nameHe": "סלטי חומוס",
+              "slug": "סלטי-חומוס",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "578",
+              "nameHe": "ממרחים ומתבלים מצוננים",
+              "slug": "ממרחים-ומתבלים-מצוננים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "579",
+              "nameHe": "סלטי טחינה",
+              "slug": "סלטי-טחינה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "580",
+              "nameHe": "סלטי כרוב",
+              "slug": "סלטי-כרוב",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1178",
+              "nameHe": "אריסה וסחוג",
+              "slug": "אריסה-וסחוג",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 143
+        },
+        {
+          "id": "498",
+          "nameHe": "מזון מצונן",
+          "slug": "מזון-מצונן",
+          "depth": 1,
+          "children": [
+            {
+              "id": "228",
+              "nameHe": "קינוחים ועוגות מצוננות",
+              "slug": "קינוחים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "381",
+              "nameHe": "פסטה טרייה",
+              "slug": "פסטה-ומזון-מצונן",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "860",
+              "nameHe": "בצקים טריים",
+              "slug": "בצקים-טריים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 15
+        }
+      ],
+      "productCount": 602
+    },
+    {
+      "id": "51",
+      "nameHe": "בשר  ודגים",
+      "slug": "בשר-ודגים",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%91%D7%A9%D7%A8-%D7%95%D7%93%D7%92%D7%99%D7%9D",
+      "depth": 0,
+      "children": [
+        {
+          "id": "206",
+          "nameHe": "בשרים על האש",
+          "slug": "בשרים-על-האש",
+          "depth": 1,
+          "children": [
+            {
+              "id": "67",
+              "nameHe": "המבורגר",
+              "slug": "המבורגר",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "81",
+              "nameHe": "שיפודים וסטייקים",
+              "slug": "שיפודים-וסטייקים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "585",
+              "nameHe": "קבב",
+              "slug": "קבב",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 24
+        },
+        {
+          "id": "207",
+          "nameHe": "בשר קפוא",
+          "slug": "בשר-קפוא",
+          "depth": 1,
+          "children": [
+            {
+              "id": "54",
+              "nameHe": "בשר קפוא",
+              "slug": "בשר-קפוא",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "461",
+              "nameHe": "בשר טחון קפוא",
+              "slug": "בשר-טחון-קפוא",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 5
+        },
+        {
+          "id": "209",
+          "nameHe": "דגים",
+          "slug": "דגים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "318",
+              "nameHe": "דגים קפואים",
+              "slug": "דגים-קפואים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "837",
+              "nameHe": "דגים טריים",
+              "slug": "דגים-טריים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 19
+        },
+        {
+          "id": "210",
+          "nameHe": "נקניקים ומזון מצונן",
+          "slug": "נקניקיות-ונקניקים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "110",
+              "nameHe": "קבנוס",
+              "slug": "קבנוס",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "229",
+              "nameHe": "נקניקיות",
+              "slug": "נקניקיות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "288",
+              "nameHe": "נקניק",
+              "slug": "נקניק",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "377",
+              "nameHe": "פסטרמה",
+              "slug": "פסטרמה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1218",
+              "nameHe": "ארוחות מצוננות",
+              "slug": "ארוחה-מוכנה-מצוננת",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 114
+        },
+        {
+          "id": "211",
+          "nameHe": "עוף קפוא",
+          "slug": "עוף-קפוא",
+          "depth": 1,
+          "children": [
+            {
+              "id": "261",
+              "nameHe": "עוף קפוא",
+              "slug": "עוף-קפוא",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "429",
+              "nameHe": "עוף קפוא מהדרין",
+              "slug": "עוף-קפוא-מהדרין",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "768",
+              "nameHe": "עוף קפוא טחון",
+              "slug": "עוף-קפוא-טחון",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1179",
+              "nameHe": "עוף קפוא כשרות רובין",
+              "slug": "עוף-קפוא-כשרות-רובין",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 10
+        },
+        {
+          "id": "221",
+          "nameHe": "אוכל להכנה מהירה",
+          "slug": "אוכל-מוכן",
+          "depth": 1,
+          "children": [
+            {
+              "id": "462",
+              "nameHe": "מוצרי בשר ועוף מוכנים",
+              "slug": "מוצרי-בשר-ועוף-מוכנים",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "278",
+          "nameHe": "עוף טרי",
+          "slug": "עוף-טרי",
+          "depth": 1,
+          "children": [
+            {
+              "id": "66",
+              "nameHe": "עוף טרי איכותי",
+              "slug": "עוף-טרי-איכותי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "646",
+              "nameHe": "עוף טרי ארוז",
+              "slug": "עוף-טרי-ארוז",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "737",
+              "nameHe": "עוף טרי פרימיום ארוז",
+              "slug": "עוף-טרי-פרימיום-ארוז",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "767",
+              "nameHe": "עוף והודו ארוז כשרויות מיוחדות",
+              "slug": "עוף-והודו-ארוז-כשרויות-מיוחדות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "772",
+              "nameHe": "הודו טרי ארוז",
+              "slug": "הודו-טרי-ארוז",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "853",
+              "nameHe": "עוף טרי מחפוד",
+              "slug": "עוף-טרי-מחפוד",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "929",
+              "nameHe": "עוף טרי בכשרות קהילות",
+              "slug": "עוף-טרי-בכשרות-קהילות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1180",
+              "nameHe": "עוף טרי כשרות רובין",
+              "slug": "עוף-טרי-כשרות-רובין",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 14
+        },
+        {
+          "id": "298",
+          "nameHe": "בשר בקר וכבש טרי",
+          "slug": "בשר-בקר-וכבש-טרי",
+          "depth": 1,
+          "children": [
+            {
+              "id": "54",
+              "nameHe": "בשר קפוא",
+              "slug": "בשר-קפוא",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "91",
+              "nameHe": "בשר טרי איכותי",
+              "slug": "בשר-טרי-איכותי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "842",
+              "nameHe": "בשר טרי פרימיום ארוז",
+              "slug": "בשר-טרי-פרימיום",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "845",
+              "nameHe": "בשר על עצם",
+              "slug": "בשר-על-עצם",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 6
+        },
+        {
+          "id": "304",
+          "nameHe": "תחליפי בשר קפואים",
+          "slug": "תחליפי-בשר-קפואים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "613",
+              "nameHe": "נקניקיות מן הצומח",
+              "slug": "קציצות-ונקניקיות-טבע",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1052",
+              "nameHe": "תחליפי בשר",
+              "slug": "תחליפי-בשר-קפואים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 22
+        },
+        {
+          "id": "498",
+          "nameHe": "מזון מצונן",
+          "slug": "מזון-מצונן",
+          "depth": 1,
+          "children": [
+            {
+              "id": "288",
+              "nameHe": "נקניק",
+              "slug": "נקניק",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 1
+        }
+      ],
+      "productCount": 215
+    },
+    {
+      "id": "52",
+      "nameHe": "אורגני ובריאות",
+      "slug": "אורגני-ובריאות",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%90%D7%95%D7%A8%D7%92%D7%A0%D7%99-%D7%95%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA",
+      "depth": 0,
+      "children": [
+        {
+          "id": "214",
+          "nameHe": "מעדנים ללא לקטוז",
+          "slug": "סויה-וללא-לקטוז",
+          "depth": 1,
+          "children": [
+            {
+              "id": "581",
+              "nameHe": "מעדנים ללא לקטוז",
+              "slug": "מעדנים-ללא-לקטוז",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 9
+        },
+        {
+          "id": "274",
+          "nameHe": "נטול ומופחת סוכר",
+          "slug": "נטול-ומופחת-סוכר",
+          "depth": 1,
+          "children": [
+            {
+              "id": "328",
+              "nameHe": "מוצרים מופחתי סוכר",
+              "slug": "מוצרים-מופחתי-סוכר",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "412",
+              "nameHe": "ממתיקים",
+              "slug": "ממתיקים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "771",
+              "nameHe": "חטיפים ומתוקים מופחתי סוכר",
+              "slug": "חטיפים-ומתוקים-מופחתי-סוכר",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 68
+        },
+        {
+          "id": "276",
+          "nameHe": "אורגני וטבעוני",
+          "slug": "אורגני-וטבעוני",
+          "depth": 1,
+          "children": [
+            {
+              "id": "349",
+              "nameHe": "מוצרים אורגנים",
+              "slug": "מוצרים-אורגנים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "802",
+              "nameHe": "מוצרים טבעוניים",
+              "slug": "מוצרים-טבעוניים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 54
+        },
+        {
+          "id": "282",
+          "nameHe": "ללא גלוטן",
+          "slug": "ללא-גלוטן",
+          "depth": 1,
+          "children": [
+            {
+              "id": "507",
+              "nameHe": "מוצרים ללא גלוטן",
+              "slug": "מוצרים-ללא-גלוטן",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 106
+        },
+        {
+          "id": "497",
+          "nameHe": "מזון ותוספים לספורטאים",
+          "slug": "מזון-ותוספים-לספורטאים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "849",
+              "nameHe": "חטיפי חלבון",
+              "slug": "חטיפי-חלבון",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1167",
+              "nameHe": "ויטמנים",
+              "slug": "ויטמנים-1",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1168",
+              "nameHe": "אבקות חלבון",
+              "slug": "אבקות-חלבון",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 1
+        },
+        {
+          "id": "542",
+          "nameHe": "תחליפי גבינה וטופו",
+          "slug": "תחליפי-גבינה-וטופו",
+          "depth": 1,
+          "children": [
+            {
+              "id": "1021",
+              "nameHe": "תחליפי גבינה",
+              "slug": "תחליפי-גבינה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1051",
+              "nameHe": "טופו",
+              "slug": "טופו",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 13
+        }
+      ],
+      "productCount": 251
+    },
+    {
+      "id": "53",
+      "nameHe": "קפואים",
+      "slug": "קפואים",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%A7%D7%A4%D7%95%D7%90%D7%99%D7%9D",
+      "depth": 0,
+      "children": [
+        {
+          "id": "206",
+          "nameHe": "בשרים על האש",
+          "slug": "בשרים-על-האש",
+          "depth": 1,
+          "children": [
+            {
+              "id": "67",
+              "nameHe": "המבורגר",
+              "slug": "המבורגר",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "220",
+          "nameHe": "גלידות וארטיקים",
+          "slug": "גלידות-וארטיקים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "423",
+              "nameHe": "גביעי גלידה",
+              "slug": "גביעי-גלידה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "616",
+              "nameHe": "שלגונים ומאגדות קרטיבים",
+              "slug": "גלידות-אישיות-ומארזים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "831",
+              "nameHe": "גלידות משפחתיות",
+              "slug": "גלידות-ושלגונים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1128",
+              "nameHe": "שלוקים",
+              "slug": "שלוקים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 88
+        },
+        {
+          "id": "221",
+          "nameHe": "אוכל להכנה מהירה",
+          "slug": "אוכל-מוכן",
+          "depth": 1,
+          "children": [
+            {
+              "id": "258",
+              "nameHe": "שניצלים,שניצלונים",
+              "slug": "שניצלים-שניצלונים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "462",
+              "nameHe": "מוצרי בשר ועוף מוכנים",
+              "slug": "מוצרי-בשר-ועוף-מוכנים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "463",
+              "nameHe": "אוכל מוכן צמחוני",
+              "slug": "אוכל-מוכן-צמחוני",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "612",
+              "nameHe": "מוצרי דגים מוכנים",
+              "slug": "מוצרי-דגים-מוכנים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "614",
+              "nameHe": "שניצל טבע",
+              "slug": "שניצל-טבע",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "780",
+              "nameHe": "אוכל מוכן",
+              "slug": "אוכל-מוכן",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 103
+        },
+        {
+          "id": "222",
+          "nameHe": "ירקות, פירות וצ'יפס קפואים",
+          "slug": "ירקות-פירות-וצ-יפס-קפואים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "70",
+              "nameHe": "צ'יפס וטבעות בצל",
+              "slug": "צ-יפס",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "176",
+              "nameHe": "ירקות קפואים",
+              "slug": "ירקות-קפואים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "414",
+              "nameHe": "תבלינים קפואים",
+              "slug": "תבלינים-קפואים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "514",
+              "nameHe": "פירות קפואים",
+              "slug": "פירות-קפואים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 126
+        },
+        {
+          "id": "223",
+          "nameHe": "פיצות, מאפים ובצקים קפואים",
+          "slug": "פיצות-מאפים-ובצקים-קפואים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "112",
+              "nameHe": "מלווח וג'חנון",
+              "slug": "מלווח-וג-חנון",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "256",
+              "nameHe": "קובה,סיגרים ופסטלים",
+              "slug": "קובה-סיגרים-ופסטלים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "291",
+              "nameHe": "בורקסים",
+              "slug": "בורקסים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "333",
+              "nameHe": "פיצות",
+              "slug": "פיצות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "617",
+              "nameHe": "בצק קפוא",
+              "slug": "בצק-קפוא",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "618",
+              "nameHe": "מוצרי בצק",
+              "slug": "מוצרי-בצק",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "629",
+              "nameHe": "עוגות מצוננות",
+              "slug": "עוגות-מצוננות",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 131
+        }
+      ],
+      "productCount": 448
+    },
     {
       "id": "54",
       "nameHe": "שימורים בישול ואפיה",
@@ -16,313 +1206,655 @@
           "nameHe": "שימורים",
           "slug": "שימורים",
           "depth": 1,
-          "children": [],
-          "productCount": 315
-        },
-        {
-          "id": "275",
-          "nameHe": "מוצרי אפיה",
-          "slug": "מוצרי-אפיה",
-          "depth": 1,
-          "children": [],
-          "productCount": 183
+          "children": [
+            {
+              "id": "55",
+              "nameHe": "שימורי מלפפונים",
+              "slug": "שימורי-מלפפונים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "76",
+              "nameHe": "שימורי טונה",
+              "slug": "שימורי-טונה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "131",
+              "nameHe": "שימורי פירות ולפתנים",
+              "slug": "שימורי-פירות-ולפתנים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "148",
+              "nameHe": "שימורי עגבניות",
+              "slug": "שימורי-עגבניות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "171",
+              "nameHe": "שימורי זיתים",
+              "slug": "שימורי-זיתים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "199",
+              "nameHe": "שימורי תירס",
+              "slug": "שימורי-תירס-פטריות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "231",
+              "nameHe": "שימורי ירקות",
+              "slug": "שימורי-ירקות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "407",
+              "nameHe": "שימורי דגים",
+              "slug": "שימורי-דגים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "739",
+              "nameHe": "ירקות כבושים",
+              "slug": "ירקות-כבושים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1008",
+              "nameHe": "שימורי טונה סיטונאות",
+              "slug": "שימורי-טונה-סיטונאות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1009",
+              "nameHe": "שימורי ירקות סיטונאות",
+              "slug": "שימורי-ירקות-סיטונאות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1010",
+              "nameHe": "שימורי עגבניות סיטונאות",
+              "slug": "שימורי-עגבניות-סיטונאות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1112",
+              "nameHe": "שימורי פטריות",
+              "slug": "שימורי-פטריות",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 318
         },
         {
           "id": "226",
           "nameHe": "רטבים",
           "slug": "רטבים",
           "depth": 1,
-          "children": [],
-          "productCount": 138
-        },
-        {
-          "id": "231",
-          "nameHe": "תבלינים",
-          "slug": "תבלינים",
-          "depth": 1,
-          "children": [],
-          "productCount": 130
-        },
-        {
-          "id": "264",
-          "nameHe": "דבש, ריבה וממרחים",
-          "slug": "דבש-ריבה-וממרחים",
-          "depth": 1,
-          "children": [],
-          "productCount": 104
+          "children": [
+            {
+              "id": "209",
+              "nameHe": "רוטב סויה",
+              "slug": "רוטב-סויה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "217",
+              "nameHe": "רוטב לסלט",
+              "slug": "רוטב-לסלט",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "362",
+              "nameHe": "קטשופ",
+              "slug": "קטשופ",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "388",
+              "nameHe": "רטבי עגבניות",
+              "slug": "רטבי-עגבניות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "405",
+              "nameHe": "חרדל ועמבה",
+              "slug": "חרדל",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "406",
+              "nameHe": "רוטב לבישול",
+              "slug": "רוטב-לבישול",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "621",
+              "nameHe": "מיונז",
+              "slug": "מיונז",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "622",
+              "nameHe": "רוטב צ'ילי",
+              "slug": "רוטב-צ-ילי",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 129
         },
         {
           "id": "229",
           "nameHe": "מרקים ותבשילים",
           "slug": "מרקים-ותבשילים",
           "depth": 1,
-          "children": [],
-          "productCount": 88
+          "children": [
+            {
+              "id": "206",
+              "nameHe": "מרקי תיבול",
+              "slug": "מרקי-תיבול",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "221",
+              "nameHe": "שקדי מרק וקרוטונים",
+              "slug": "שקדי-מרק-וקרוטונים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "277",
+              "nameHe": "תבשילי אינסטנט ומנה חמה",
+              "slug": "תבשילי-אינסטנט",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "370",
+              "nameHe": "מרקי אינסטנט",
+              "slug": "מרקי-אינסטנט",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 82
         },
         {
-          "id": "305",
-          "nameHe": "קמח ופירורי לחם",
-          "slug": "קמח-ופירורי-לחם",
+          "id": "231",
+          "nameHe": "תבלינים",
+          "slug": "תבלינים",
           "depth": 1,
-          "children": [],
-          "productCount": 83
+          "children": [
+            {
+              "id": "276",
+              "nameHe": "סוכר",
+              "slug": "סוכר",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "354",
+              "nameHe": "תבלינים בשקית",
+              "slug": "תבלינים-בשקית-במיכל",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "460",
+              "nameHe": "תיבולים למזון",
+              "slug": "תיבולים-למזון",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "624",
+              "nameHe": "מלח",
+              "slug": "מלח",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "625",
+              "nameHe": "פלפל",
+              "slug": "פלפל",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "626",
+              "nameHe": "פפריקה",
+              "slug": "פפריקה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "790",
+              "nameHe": "תבלינים במשקל",
+              "slug": "תבלינים-במשקל",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1074",
+              "nameHe": "תבלינים במיכל",
+              "slug": "תבלינים-במיכל",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 131
+        },
+        {
+          "id": "264",
+          "nameHe": "דבש, ריבה וממרחים",
+          "slug": "דבש-ריבה-וממרחים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "60",
+              "nameHe": "ריבות וקונפיטורה",
+              "slug": "ריבות-וקונפיטורה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "252",
+              "nameHe": "דבש",
+              "slug": "דבש",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "404",
+              "nameHe": "חלבה",
+              "slug": "חלבה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "411",
+              "nameHe": "טחינה גולמית",
+              "slug": "טחינה-גולמית",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "619",
+              "nameHe": "סילאן",
+              "slug": "סילאן",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "630",
+              "nameHe": "ממרחי שוקולד",
+              "slug": "ממרחי-שוקולד",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "743",
+              "nameHe": "חמאת בוטנים",
+              "slug": "חמאת-בוטנים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "855",
+              "nameHe": "ממרחים שונים",
+              "slug": "ממרחים-שונים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 109
         },
         {
           "id": "267",
           "nameHe": "שמן, חומץ ומיץ לימון",
           "slug": "שמן-חומץ-ומיץ-לימון",
           "depth": 1,
-          "children": [],
-          "productCount": 40
+          "children": [
+            {
+              "id": "187",
+              "nameHe": "שמן זית",
+              "slug": "שמן-זית",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "253",
+              "nameHe": "שמנים צמחיים",
+              "slug": "שמנים-צמחיים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "264",
+              "nameHe": "חומץ",
+              "slug": "חומץ",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "521",
+              "nameHe": "שמן למאור",
+              "slug": "שמן-למאור",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "623",
+              "nameHe": "מיץ לימון",
+              "slug": "מיץ-לימון",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1011",
+              "nameHe": "שמנים סיטונאות",
+              "slug": "שמנים-סיטונאות",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 44
+        },
+        {
+          "id": "275",
+          "nameHe": "מוצרי אפיה",
+          "slug": "מוצרי-אפיה",
+          "depth": 1,
+          "children": [
+            {
+              "id": "105",
+              "nameHe": "תערובת ובסיס לעוגה ומאפים",
+              "slug": "תערובת-ובסיס-לעוגה-ומאפים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "332",
+              "nameHe": "ג'לי, סירופ, פודינג",
+              "slug": "ג-לי-סירופ-פודינג",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "337",
+              "nameHe": "עזרי אפיה",
+              "slug": "עזרי-אפיה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "620",
+              "nameHe": "קישוטים לאפיה",
+              "slug": "קישוטים-לאפיה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1163",
+              "nameHe": "קקאו",
+              "slug": "קקאו",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 181
+        },
+        {
+          "id": "305",
+          "nameHe": "קמח ופירורי לחם",
+          "slug": "קמח-ופירורי-לחם",
+          "depth": 1,
+          "children": [
+            {
+              "id": "358",
+              "nameHe": "קמח וסולת",
+              "slug": "קמח-וסולת",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "379",
+              "nameHe": "פירורי לחם, ציפוי לשניצל",
+              "slug": "פירורי-לחם-ציפוי-לשניצל",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1007",
+              "nameHe": "קמח וסולת סיטונאות",
+              "slug": "קמח-וסולת-סיטונאות",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 82
         },
         {
           "id": "306",
           "nameHe": "המטבח האסייאתי",
           "slug": "המטבח-האסייאתי",
           "depth": 1,
-          "children": [],
-          "productCount": 33
+          "children": [
+            {
+              "id": "360",
+              "nameHe": "המטבח האסייאתי",
+              "slug": "המטבח-האסייאתי",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 27
         }
       ],
-      "productCount": 1114
+      "productCount": 1103
     },
     {
-      "id": "60",
-      "nameHe": "פארם ותינוקות",
-      "slug": "פארם-ותינוקות",
-      "url": "https://www.rami-levy.co.il/he/online/market/%D7%A4%D7%90%D7%A8%D7%9D-%D7%95%D7%AA%D7%99%D7%A0%D7%95%D7%A7%D7%95%D7%AA",
+      "id": "55",
+      "nameHe": "קטניות ודגנים",
+      "slug": "קטניות-ודגנים",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%A7%D7%98%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%93%D7%92%D7%A0%D7%99%D7%9D",
       "depth": 0,
       "children": [
         {
-          "id": "258",
-          "nameHe": "שמפו, מרכך וטיפוח הגוף",
-          "slug": "שמפו-ומרכך",
+          "id": "230",
+          "nameHe": "פסטה, פתיתים, קוסקוס",
+          "slug": "פסטה-פתיתים-קוסקוס",
           "depth": 1,
-          "children": [],
-          "productCount": 208
-        },
-        {
-          "id": "293",
-          "nameHe": "היגיינת הפה",
-          "slug": "היגיינת-הפה",
-          "depth": 1,
-          "children": [],
-          "productCount": 191
-        },
-        {
-          "id": "257",
-          "nameHe": "סבונים",
-          "slug": "סבונים",
-          "depth": 1,
-          "children": [],
-          "productCount": 109
-        },
-        {
-          "id": "255",
-          "nameHe": "מזון לתינוקות",
-          "slug": "מזון-לתינוקות",
-          "depth": 1,
-          "children": [],
-          "productCount": 100
-        },
-        {
-          "id": "261",
-          "nameHe": "דאודורנט",
-          "slug": "דאודורנט",
-          "depth": 1,
-          "children": [],
-          "productCount": 100
-        },
-        {
-          "id": "256",
-          "nameHe": "טיפוח ואביזרי תינוקות וילדים",
-          "slug": "טיפוח-ואביזרי-תינוקות-וילדים",
-          "depth": 1,
-          "children": [],
-          "productCount": 94
-        },
-        {
-          "id": "251",
-          "nameHe": "מוצרי הגיינה",
-          "slug": "מוצרי-הגיינה",
-          "depth": 1,
-          "children": [],
-          "productCount": 86
-        },
-        {
-          "id": "254",
-          "nameHe": "חיתולים ומגבונים",
-          "slug": "חיתולים-ומגבונים",
-          "depth": 1,
-          "children": [],
-          "productCount": 86
-        },
-        {
-          "id": "252",
-          "nameHe": "מוצרי פארם",
-          "slug": "מוצרי-פארם",
-          "depth": 1,
-          "children": [],
-          "productCount": 74
-        },
-        {
-          "id": "292",
-          "nameHe": "גילוח והסרת שיער",
-          "slug": "גילוח-והסרת-שיער",
-          "depth": 1,
-          "children": [],
-          "productCount": 32
-        }
-      ],
-      "productCount": 1080
-    },
-    {
-      "id": "59",
-      "nameHe": "אחזקת הבית ובע\"ח",
-      "slug": "אחזקת-הבית-ובע-ח",
-      "url": "https://www.rami-levy.co.il/he/online/market/%D7%90%D7%97%D7%96%D7%A7%D7%AA-%D7%94%D7%91%D7%99%D7%AA-%D7%95%D7%91%D7%A2-%D7%97",
-      "depth": 0,
-      "children": [
-        {
-          "id": "245",
-          "nameHe": "מוצרי ניקיון לבית",
-          "slug": "מוצרי-ניקיון-לבית",
-          "depth": 1,
-          "children": [],
-          "productCount": 243
-        },
-        {
-          "id": "247",
-          "nameHe": "מוצרי כביסה",
-          "slug": "מוצרי-כביסה",
-          "depth": 1,
-          "children": [],
-          "productCount": 203
-        },
-        {
-          "id": "283",
-          "nameHe": "הכל לבית",
-          "slug": "כלי-בית",
-          "depth": 1,
-          "children": [],
-          "productCount": 128
-        },
-        {
-          "id": "249",
-          "nameHe": "קוטל חרקים ומבשמי אויר",
-          "slug": "קוטל-חרקים-ומבשמי-אויר",
-          "depth": 1,
-          "children": [],
-          "productCount": 108
-        },
-        {
-          "id": "248",
-          "nameHe": "אביזרי ניקיון",
-          "slug": "אביזרי-ניקיון",
-          "depth": 1,
-          "children": [],
-          "productCount": 106
-        },
-        {
-          "id": "246",
-          "nameHe": "ניקוי כלים",
-          "slug": "ניקוי-כלים",
-          "depth": 1,
-          "children": [],
-          "productCount": 74
-        },
-        {
-          "id": "589",
-          "nameHe": "מוצרי חשמל",
-          "slug": "מוצרי-חשמל",
-          "depth": 1,
-          "children": [],
-          "productCount": 11
-        },
-        {
-          "id": "294",
-          "nameHe": "מוצרי ילדים",
-          "slug": "מוצרי-ילדים",
-          "depth": 1,
-          "children": [],
-          "productCount": 8
-        },
-        {
-          "id": "471",
-          "nameHe": "ביגוד ואקססוריס",
-          "slug": "ביגוד",
-          "depth": 1,
-          "children": [],
-          "productCount": 8
-        }
-      ],
-      "productCount": 889
-    },
-    {
-      "id": "57",
-      "nameHe": "משקאות",
-      "slug": "משקאות",
-      "url": "https://www.rami-levy.co.il/he/online/market/%D7%9E%D7%A9%D7%A7%D7%90%D7%95%D7%AA",
-      "depth": 0,
-      "children": [
-        {
-          "id": "239",
-          "nameHe": "יינות",
-          "slug": "יינות",
-          "depth": 1,
-          "children": [],
-          "productCount": 177
-        },
-        {
-          "id": "290",
-          "nameHe": "אלכוהול ואנרגיה",
-          "slug": "אלכוהול-ואנרגיה",
-          "depth": 1,
-          "children": [],
-          "productCount": 162
-        },
-        {
-          "id": "237",
-          "nameHe": "משקאות קלים",
-          "slug": "משקאות-קלים",
-          "depth": 1,
-          "children": [],
-          "productCount": 160
-        },
-        {
-          "id": "238",
-          "nameHe": "משקאות חמים",
-          "slug": "משקאות-חמים",
-          "depth": 1,
-          "children": [],
+          "children": [
+            {
+              "id": "144",
+              "nameHe": "פתיתים",
+              "slug": "פתיתים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "174",
+              "nameHe": "נודלס ואטריות",
+              "slug": "נודלס-ואטריות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "190",
+              "nameHe": "פסטות",
+              "slug": "פסטות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "610",
+              "nameHe": "ניוקי, לזניה, קנלוני",
+              "slug": "ניוקי-לזניה-קנלוני",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "611",
+              "nameHe": "קוסקוס",
+              "slug": "קוסקוס",
+              "depth": 2,
+              "children": []
+            }
+          ],
           "productCount": 116
         },
         {
-          "id": "595",
-          "nameHe": "תה וחליטות",
-          "slug": "תה-וחליטות",
+          "id": "234",
+          "nameHe": "דגנים וחטיפי אנרגיה",
+          "slug": "דגנים-וחטיפי-אנרגיה",
           "depth": 1,
-          "children": [],
-          "productCount": 93
+          "children": [
+            {
+              "id": "340",
+              "nameHe": "גרנולה מוזלי וקוואקר",
+              "slug": "גרנולה-מוזלי-וקוואקר",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "350",
+              "nameHe": "דגני ילדים",
+              "slug": "דגני-ילדים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "432",
+              "nameHe": "דגני מבוגרים",
+              "slug": "דגני-מבוגרים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "433",
+              "nameHe": "חטיפי אנרגיה ובריאות",
+              "slug": "חטיפי-אנרגיה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "434",
+              "nameHe": "חטיף דגנים לילדים",
+              "slug": "חטיף-דגנים-לילדים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "738",
+              "nameHe": "שלווה ופצפוצי אורז",
+              "slug": "חיטה-תפוחה-ופצפוצי-אורז",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1212",
+              "nameHe": "קורנפלקס",
+              "slug": "קורנפלקס",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 133
         },
         {
-          "id": "591",
-          "nameHe": "משקאות במארזים",
-          "slug": "משקאות-במארזים",
+          "id": "272",
+          "nameHe": "פריכיות וקרקרים",
+          "slug": "מאפה-מלוח",
           "depth": 1,
-          "children": [],
-          "productCount": 53
+          "children": [
+            {
+              "id": "311",
+              "nameHe": "פריכיות",
+              "slug": "פריכיות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "312",
+              "nameHe": "פתית, לחמית וצנימים",
+              "slug": "פתית-לחמית-וצנימים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "313",
+              "nameHe": "קרקרים",
+              "slug": "קרקרים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 63
         },
         {
-          "id": "291",
-          "nameHe": "תרכיזים",
-          "slug": "תרכיזים",
+          "id": "303",
+          "nameHe": "אורז וקטניות",
+          "slug": "אורז-וקטניות",
           "depth": 1,
-          "children": [],
-          "productCount": 51
+          "children": [
+            {
+              "id": "202",
+              "nameHe": "אורז",
+              "slug": "אורז",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "323",
+              "nameHe": "קטניות",
+              "slug": "קטניות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "994",
+              "nameHe": "אורז סיטונאות",
+              "slug": "אורז-סיטונאות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1149",
+              "nameHe": "ארוחה בסיר אחד",
+              "slug": "ארוחה-בסיר-אחד",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 100
         }
       ],
-      "productCount": 812
+      "productCount": 412
     },
     {
       "id": "56",
@@ -332,163 +1864,639 @@
       "depth": 0,
       "children": [
         {
-          "id": "236",
-          "nameHe": "חטיפים מלוחים",
-          "slug": "חטיפים-מלוחים",
-          "depth": 1,
-          "children": [],
-          "productCount": 164
-        },
-        {
           "id": "235",
           "nameHe": "ממתקים",
           "slug": "ממתקים",
           "depth": 1,
-          "children": [],
-          "productCount": 158
+          "children": [
+            {
+              "id": "223",
+              "nameHe": "בונבוניירות ומארזי ממתקים",
+              "slug": "בונבוניירות-ומארזי-ממתקים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "299",
+              "nameHe": "מרשמלו",
+              "slug": "מרשמלו",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "347",
+              "nameHe": "שוקולד טבלאות",
+              "slug": "שוקולד-טבלאות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "431",
+              "nameHe": "שוקולד פרימיום",
+              "slug": "שוקולד-פרימיום",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "593",
+              "nameHe": "ממתקים שונים",
+              "slug": "ממתקים-שונים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "594",
+              "nameHe": "קרמבו",
+              "slug": "קרמבו",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "769",
+              "nameHe": "ממתקי גומי",
+              "slug": "ממתקי-גומי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "855",
+              "nameHe": "ממרחים שונים",
+              "slug": "ממרחים-שונים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 155
         },
         {
-          "id": "301",
-          "nameHe": "סוכריות ומסטיקים",
-          "slug": "סוכריות-ומסטיקים",
+          "id": "236",
+          "nameHe": "חטיפים מלוחים",
+          "slug": "חטיפים-מלוחים",
           "depth": 1,
-          "children": [],
-          "productCount": 132
-        },
-        {
-          "id": "302",
-          "nameHe": "עוגות ועוגיות",
-          "slug": "עוגות-ועוגיות",
-          "depth": 1,
-          "children": [],
-          "productCount": 121
+          "children": [
+            {
+              "id": "29",
+              "nameHe": "חטיפי ילדים",
+              "slug": "חטיפי-ילדים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "57",
+              "nameHe": "חטיפי בוטנים",
+              "slug": "חטיפי-בוטנים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "63",
+              "nameHe": "בייגלה",
+              "slug": "בייגלה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "177",
+              "nameHe": "חטיפי צ'יפס ותירס",
+              "slug": "חטיפי-צ-יפס-ותירס",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "587",
+              "nameHe": "אובלטים וגריסיני",
+              "slug": "אובלטים-וגריסיני",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "588",
+              "nameHe": "פופקורן",
+              "slug": "פופקורן",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 160
         },
         {
           "id": "299",
           "nameHe": "וופלים וביסקוויטים",
           "slug": "וופלים-וביסקוויטים",
           "depth": 1,
-          "children": [],
-          "productCount": 94
+          "children": [
+            {
+              "id": "301",
+              "nameHe": "ביסקוויטים",
+              "slug": "ביסקוויטים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "303",
+              "nameHe": "וופל",
+              "slug": "וופל",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 93
         },
         {
           "id": "300",
           "nameHe": "חטיפים מתוקים",
           "slug": "חטיפים-מתוקים",
           "depth": 1,
-          "children": [],
-          "productCount": 69
+          "children": [
+            {
+              "id": "223",
+              "nameHe": "בונבוניירות ומארזי ממתקים",
+              "slug": "בונבוניירות-ומארזי-ממתקים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "430",
+              "nameHe": "חטיף שוקולד בודד",
+              "slug": "חטיף-שוקולד-בודד",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "431",
+              "nameHe": "שוקולד פרימיום",
+              "slug": "שוקולד-פרימיום",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "589",
+              "nameHe": "אצבעות ומקלות שוקולד",
+              "slug": "אצבעות-ומקלות-שוקולד",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "590",
+              "nameHe": "חטיפי שוקולד בשקית",
+              "slug": "חטיפי-שוקולד-בשקית",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "591",
+              "nameHe": "חטיפי שוקולד במארז",
+              "slug": "מארזי-חטיפים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "592",
+              "nameHe": "מטבעות וכפתורי שוקולד",
+              "slug": "מטבעות-וכפתורי-שוקולד",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "856",
+              "nameHe": "ביצי שוקולד",
+              "slug": "ביצי-שוקולד",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 64
+        },
+        {
+          "id": "301",
+          "nameHe": "סוכריות ומסטיקים",
+          "slug": "סוכריות-ומסטיקים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "155",
+              "nameHe": "סוכריות",
+              "slug": "סוכריות-שונות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "382",
+              "nameHe": "סוכריות ללא סוכר",
+              "slug": "סוכריות-ללא-סוכר",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "395",
+              "nameHe": "סוכריות טופי , ג'לי,  גומי",
+              "slug": "סוכריות-טופי-ג-לי-גומי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "595",
+              "nameHe": "סוכריה על מקל",
+              "slug": "סוכריה-על-מקל",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "596",
+              "nameHe": "מסטיק",
+              "slug": "מסטיק",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 130
+        },
+        {
+          "id": "302",
+          "nameHe": "עוגות ועוגיות",
+          "slug": "עוגות-ועוגיות",
+          "depth": 1,
+          "children": [
+            {
+              "id": "306",
+              "nameHe": "עוגות",
+              "slug": "עוגות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "308",
+              "nameHe": "עוגיות חמאה",
+              "slug": "עוגיות-חמאה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "309",
+              "nameHe": "עוגיות שונות",
+              "slug": "עוגיות-שונות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "310",
+              "nameHe": "עוגיות סנדוויץ'",
+              "slug": "עוגיות-סנדביץ",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "465",
+              "nameHe": "עוגיות מלוחות",
+              "slug": "עוגיות-מלוחות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "599",
+              "nameHe": "עוגיות שוקוצ'יפס",
+              "slug": "עוגיות-שוקוצ-יפס",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "600",
+              "nameHe": "עוגות אישיות",
+              "slug": "עוגות-אישיות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "770",
+              "nameHe": "עוגיות ממולאות",
+              "slug": "עוגיות-ממולאות",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 130
         }
       ],
-      "productCount": 738
+      "productCount": 732
     },
     {
-      "id": "50",
-      "nameHe": "חלב ביצים וסלטים",
-      "slug": "חלב-ביצים-וסלטים",
-      "url": "https://www.rami-levy.co.il/he/online/market/%D7%97%D7%9C%D7%91-%D7%91%D7%99%D7%A6%D7%99%D7%9D-%D7%95%D7%A1%D7%9C%D7%98%D7%99%D7%9D",
+      "id": "57",
+      "nameHe": "משקאות",
+      "slug": "משקאות",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%9E%D7%A9%D7%A7%D7%90%D7%95%D7%AA",
       "depth": 0,
       "children": [
         {
-          "id": "202",
-          "nameHe": "גבינות",
-          "slug": "גבינות",
+          "id": "237",
+          "nameHe": "משקאות קלים",
+          "slug": "משקאות-קלים",
           "depth": 1,
-          "children": [],
-          "productCount": 221
+          "children": [
+            {
+              "id": "298",
+              "nameHe": "מים וסודה בטעמים",
+              "slug": "מים-וסודה-בטעמים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "435",
+              "nameHe": "משקאות קלים",
+              "slug": "משקאות-קלים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "436",
+              "nameHe": "משקאות מוגזים",
+              "slug": "משקאות-מוגזים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "437",
+              "nameHe": "מיץ טבעי ומצונן, נקטר פירות",
+              "slug": "מיצים-טריים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1148",
+              "nameHe": "משקאות אישיים",
+              "slug": "משקאות-אישיים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 171
         },
         {
-          "id": "204",
-          "nameHe": "סלטים",
-          "slug": "סלטים",
+          "id": "238",
+          "nameHe": "משקאות חמים",
+          "slug": "משקאות-חמים",
           "depth": 1,
-          "children": [],
-          "productCount": 143
+          "children": [
+            {
+              "id": "363",
+              "nameHe": "קפה נמס אבקה",
+              "slug": "קפה-נמס-אבקה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "367",
+              "nameHe": "קפה שחור",
+              "slug": "קפה-שחור",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "420",
+              "nameHe": "קפסולות ופולי קפה",
+              "slug": "קפה-ואביזרים-למכונה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "440",
+              "nameHe": "קפה נמס מגורען",
+              "slug": "קפה-נמס-מגורען",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "532",
+              "nameHe": "אבקת שוקו , סחלב",
+              "slug": "אבקת-שוקו-סחלב",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "777",
+              "nameHe": "תה שחור, קלאסי",
+              "slug": "תה-שחור-קלאסי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "778",
+              "nameHe": "חליטות",
+              "slug": "חליטות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1024",
+              "nameHe": "קפה שחור סיטונאות",
+              "slug": "קפה-שחור-סיטונאות",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 113
         },
         {
-          "id": "203",
-          "nameHe": "יוגורט ומעדני חלב",
-          "slug": "יוגורט-ומעדני-חלב",
+          "id": "239",
+          "nameHe": "יינות",
+          "slug": "יינות",
           "depth": 1,
-          "children": [],
-          "productCount": 120
+          "children": [
+            {
+              "id": "34",
+              "nameHe": "יינות לבנים",
+              "slug": "יינות-לבנים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "48",
+              "nameHe": "יינות אדומים",
+              "slug": "יינות-אדומים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "184",
+              "nameHe": "מיץ ענבים- תירוש",
+              "slug": "מיץ-ענבים-תירוש",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "421",
+              "nameHe": "יינות מבעבעים",
+              "slug": "יינות-מבעבעים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 178
         },
         {
-          "id": "198",
-          "nameHe": "חלב",
-          "slug": "חלב",
+          "id": "290",
+          "nameHe": "אלכוהול ואנרגיה",
+          "slug": "אלכוהול-ואנרגיה",
           "depth": 1,
-          "children": [],
-          "productCount": 93
+          "children": [
+            {
+              "id": "129",
+              "nameHe": "בירות במארז",
+              "slug": "בירה-בירה-שחורה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "156",
+              "nameHe": "משקאות חריפים",
+              "slug": "משקאות-חריפים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "530",
+              "nameHe": "משקאות אנרגיה",
+              "slug": "משקאות-אנרגיה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "907",
+              "nameHe": "בירה בודד",
+              "slug": "בירה-בודד",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 157
         },
         {
-          "id": "201",
-          "nameHe": "חמאה מרגרינה שמנת",
-          "slug": "חמאה-מרגרינה-שמנת",
+          "id": "291",
+          "nameHe": "תרכיזים",
+          "slug": "תרכיזים",
           "depth": 1,
-          "children": [],
-          "productCount": 29
+          "children": [
+            {
+              "id": "111",
+              "nameHe": "סירופ  ותרכיזים",
+              "slug": "סירופ-ותרכיזים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "822",
+              "nameHe": "סודה סטרים ואביזרים",
+              "slug": "סודה-סטרים-ואבזירים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 56
         },
         {
-          "id": "498",
-          "nameHe": "מזון מצונן",
-          "slug": "מזון-מצונן",
+          "id": "511",
+          "nameHe": "משקאות חריפים",
+          "slug": "משקאות-חריפים",
           "depth": 1,
-          "children": [],
-          "productCount": 17
+          "children": [
+            {
+              "id": "907",
+              "nameHe": "בירה בודד",
+              "slug": "בירה-בודד",
+              "depth": 2,
+              "children": []
+            }
+          ]
         },
         {
-          "id": "200",
-          "nameHe": "ביצים",
-          "slug": "ביצים",
+          "id": "591",
+          "nameHe": "משקאות במארזים",
+          "slug": "משקאות-במארזים",
           "depth": 1,
-          "children": [],
-          "productCount": 2
-        }
-      ],
-      "productCount": 625
-    },
-    {
-      "id": "53",
-      "nameHe": "קפואים",
-      "slug": "קפואים",
-      "url": "https://www.rami-levy.co.il/he/online/market/%D7%A7%D7%A4%D7%95%D7%90%D7%99%D7%9D",
-      "depth": 0,
-      "children": [
-        {
-          "id": "222",
-          "nameHe": "ירקות, פירות וצ'יפס קפואים",
-          "slug": "ירקות-פירות-וצ-יפס-קפואים",
-          "depth": 1,
-          "children": [],
-          "productCount": 129
+          "children": [
+            {
+              "id": "1214",
+              "nameHe": "משקאות קלים במארזים",
+              "slug": "משקאות-קלים-במארזים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1215",
+              "nameHe": "משקאות מוגזים במארזים",
+              "slug": "משקאות-מוגזים-במארזים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1216",
+              "nameHe": "מים וסודה במארזים",
+              "slug": "מים-וסודה-במארזים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 47
         },
         {
-          "id": "223",
-          "nameHe": "פיצות, מאפים ובצקים קפואים",
-          "slug": "פיצות-מאפים-ובצקים-קפואים",
+          "id": "595",
+          "nameHe": "תה וחליטות",
+          "slug": "תה-וחליטות",
           "depth": 1,
-          "children": [],
-          "productCount": 129
-        },
-        {
-          "id": "221",
-          "nameHe": "אוכל להכנה מהירה",
-          "slug": "אוכל-מוכן",
-          "depth": 1,
-          "children": [],
-          "productCount": 101
-        },
-        {
-          "id": "220",
-          "nameHe": "גלידות וארטיקים",
-          "slug": "גלידות-וארטיקים",
-          "depth": 1,
-          "children": [],
+          "children": [
+            {
+              "id": "51",
+              "nameHe": "תה ירוק",
+              "slug": "תה-ירוק",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "777",
+              "nameHe": "תה שחור, קלאסי",
+              "slug": "תה-שחור-קלאסי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "778",
+              "nameHe": "חליטות",
+              "slug": "חליטות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "779",
+              "nameHe": "תה טעמים",
+              "slug": "תה-טעמים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1140",
+              "nameHe": "תה שחור בטעמים",
+              "slug": "תה-שחור-בטעמים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1141",
+              "nameHe": "תה בתפזורת",
+              "slug": "תה-בתפזורת",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1176",
+              "nameHe": "חליטות קרות",
+              "slug": "חליטות-קרות",
+              "depth": 2,
+              "children": []
+            }
+          ],
           "productCount": 100
         }
       ],
-      "productCount": 459
+      "productCount": 822
     },
     {
       "id": "58",
@@ -502,259 +2510,1327 @@
           "nameHe": "חד פעמי",
           "slug": "חד-פעמי",
           "depth": 1,
-          "children": [],
-          "productCount": 174
+          "children": [
+            {
+              "id": "95",
+              "nameHe": "סכו\"ם חד-פעמי",
+              "slug": "סכו-ם-חד-פעמי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "165",
+              "nameHe": "מפות ומפיות שולחן",
+              "slug": "מפות-ומפיות-שולחן",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "361",
+              "nameHe": "כוסות וקשים חד פעמי",
+              "slug": "כוסות-וקשים-חד-פעמי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "385",
+              "nameHe": "צלחות חד פעמי",
+              "slug": "צלחות-חד-פעמי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "544",
+              "nameHe": "כלי הגשה ואחסון חד פעמי",
+              "slug": "כלי-הגשה-ואחסון-חד-פעמי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "825",
+              "nameHe": "אביזרי נוי  ושטיחים",
+              "slug": "אביזרי-נוי-ושטיחים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1064",
+              "nameHe": "סכו\"ם וששת",
+              "slug": "סכו-ם-וששת",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1099",
+              "nameHe": "חד-פעמי מתכלה",
+              "slug": "חד-פעמי-מתכלה",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 175
         },
         {
           "id": "242",
           "nameHe": "עטיפות, שקיות ותבניות",
           "slug": "עטיפות-שקיות-ותבניות",
           "depth": 1,
-          "children": [],
-          "productCount": 173
+          "children": [
+            {
+              "id": "137",
+              "nameHe": "רדיד אלומיניום",
+              "slug": "רדיד-אלומיניום",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "181",
+              "nameHe": "שקיות אשפה ואחסון",
+              "slug": "שקיות-אשפה-ואחסון",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "205",
+              "nameHe": "תבניות אפייה",
+              "slug": "תבניות-אפייה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "233",
+              "nameHe": "שקיות למזון",
+              "slug": "שקיות-למזון",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "526",
+              "nameHe": "ניילון נצמד",
+              "slug": "ניילון-נצמד",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "546",
+              "nameHe": "נייר אפיה ומזון",
+              "slug": "נייר-אפיה-ומזון",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1107",
+              "nameHe": "תבניות אפיה",
+              "slug": "תבניות-אפיה",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 165
         },
         {
           "id": "263",
           "nameHe": "מוצרי נייר וחד פעמי",
           "slug": "מוצרי-נייר-וחד-פעמי",
           "depth": 1,
-          "children": [],
-          "productCount": 41
-        },
-        {
-          "id": "281",
-          "nameHe": "פיקניק",
-          "slug": "פיקניק",
-          "depth": 1,
-          "children": [],
-          "productCount": 20
+          "children": [
+            {
+              "id": "203",
+              "nameHe": "נייר טואלט",
+              "slug": "נייר-טואלט",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "247",
+              "nameHe": "ממחטות",
+              "slug": "ממחטות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "545",
+              "nameHe": "מגבות נייר",
+              "slug": "מגבות-נייר",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 33
         },
         {
           "id": "277",
           "nameHe": "נרות וגפרורים",
           "slug": "נרות-וגפרורים",
           "depth": 1,
-          "children": [],
+          "children": [
+            {
+              "id": "107",
+              "nameHe": "נרות שעווה",
+              "slug": "נרות-שעווה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "519",
+              "nameHe": "גפרורים ומצתים",
+              "slug": "גפרורים-ומצתים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "520",
+              "nameHe": "נרות שמן",
+              "slug": "נרות-שמן",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "521",
+              "nameHe": "שמן למאור",
+              "slug": "שמן-למאור",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "839",
+              "nameHe": "חנוכה",
+              "slug": "חנוכה",
+              "depth": 2,
+              "children": []
+            }
+          ],
           "productCount": 18
-        }
-      ],
-      "productCount": 426
-    },
-    {
-      "id": "55",
-      "nameHe": "קטניות ודגנים",
-      "slug": "קטניות-ודגנים",
-      "url": "https://www.rami-levy.co.il/he/online/market/%D7%A7%D7%98%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%93%D7%92%D7%A0%D7%99%D7%9D",
-      "depth": 0,
-      "children": [
-        {
-          "id": "234",
-          "nameHe": "דגנים וחטיפי אנרגיה",
-          "slug": "דגנים-וחטיפי-אנרגיה",
-          "depth": 1,
-          "children": [],
-          "productCount": 137
         },
         {
-          "id": "230",
-          "nameHe": "פסטה, פתיתים, קוסקוס",
-          "slug": "פסטה-פתיתים-קוסקוס",
+          "id": "281",
+          "nameHe": "פיקניק",
+          "slug": "פיקניק",
           "depth": 1,
-          "children": [],
-          "productCount": 111
-        },
-        {
-          "id": "303",
-          "nameHe": "אורז וקטניות",
-          "slug": "אורז-וקטניות",
-          "depth": 1,
-          "children": [],
-          "productCount": 101
-        },
-        {
-          "id": "272",
-          "nameHe": "פריכיות וקרקרים",
-          "slug": "מאפה-מלוח",
-          "depth": 1,
-          "children": [],
-          "productCount": 70
-        }
-      ],
-      "productCount": 419
-    },
-    {
-      "id": "52",
-      "nameHe": "אורגני ובריאות",
-      "slug": "אורגני-ובריאות",
-      "url": "https://www.rami-levy.co.il/he/online/market/%D7%90%D7%95%D7%A8%D7%92%D7%A0%D7%99-%D7%95%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA",
-      "depth": 0,
-      "children": [
-        {
-          "id": "282",
-          "nameHe": "ללא גלוטן",
-          "slug": "ללא-גלוטן",
-          "depth": 1,
-          "children": [],
-          "productCount": 109
-        },
-        {
-          "id": "274",
-          "nameHe": "נטול ומופחת סוכר",
-          "slug": "נטול-ומופחת-סוכר",
-          "depth": 1,
-          "children": [],
-          "productCount": 70
-        },
-        {
-          "id": "276",
-          "nameHe": "אורגני וטבעוני",
-          "slug": "אורגני-וטבעוני",
-          "depth": 1,
-          "children": [],
-          "productCount": 54
-        },
-        {
-          "id": "542",
-          "nameHe": "תחליפי גבינה וטופו",
-          "slug": "תחליפי-גבינה-וטופו",
-          "depth": 1,
-          "children": [],
-          "productCount": 13
-        },
-        {
-          "id": "214",
-          "nameHe": "מעדנים ללא לקטוז",
-          "slug": "סויה-וללא-לקטוז",
-          "depth": 1,
-          "children": [],
-          "productCount": 9
-        },
-        {
-          "id": "497",
-          "nameHe": "מזון ותוספים לספורטאים",
-          "slug": "מזון-ותוספים-לספורטאים",
-          "depth": 1,
-          "children": [],
-          "productCount": 1
-        }
-      ],
-      "productCount": 256
-    },
-    {
-      "id": "51",
-      "nameHe": "בשר  ודגים",
-      "slug": "בשר-ודגים",
-      "url": "https://www.rami-levy.co.il/he/online/market/%D7%91%D7%A9%D7%A8-%D7%95%D7%93%D7%92%D7%99%D7%9D",
-      "depth": 0,
-      "children": [
-        {
-          "id": "210",
-          "nameHe": "נקניקים ומזון מצונן",
-          "slug": "נקניקיות-ונקניקים",
-          "depth": 1,
-          "children": [],
-          "productCount": 114
-        },
-        {
-          "id": "206",
-          "nameHe": "בשרים על האש",
-          "slug": "בשרים-על-האש",
-          "depth": 1,
-          "children": [],
-          "productCount": 23
-        },
-        {
-          "id": "304",
-          "nameHe": "תחליפי בשר קפואים",
-          "slug": "תחליפי-בשר-קפואים",
-          "depth": 1,
-          "children": [],
-          "productCount": 23
-        },
-        {
-          "id": "209",
-          "nameHe": "דגים",
-          "slug": "דגים",
-          "depth": 1,
-          "children": [],
-          "productCount": 19
-        },
-        {
-          "id": "278",
-          "nameHe": "עוף טרי",
-          "slug": "עוף-טרי",
-          "depth": 1,
-          "children": [],
-          "productCount": 14
-        },
-        {
-          "id": "211",
-          "nameHe": "עוף קפוא",
-          "slug": "עוף-קפוא",
-          "depth": 1,
-          "children": [],
-          "productCount": 9
-        },
-        {
-          "id": "207",
-          "nameHe": "בשר קפוא",
-          "slug": "בשר-קפוא",
-          "depth": 1,
-          "children": [],
-          "productCount": 6
-        },
-        {
-          "id": "298",
-          "nameHe": "בשר בקר וכבש טרי",
-          "slug": "בשר-בקר-וכבש-טרי",
-          "depth": 1,
-          "children": [],
-          "productCount": 6
-        },
-        {
-          "id": "498",
-          "nameHe": "מזון מצונן",
-          "slug": "מזון-מצונן",
-          "depth": 1,
-          "children": [],
-          "productCount": 1
-        }
-      ],
-      "productCount": 215
-    },
-    {
-      "id": "49",
-      "nameHe": "פירות וירקות",
-      "slug": "פירות-וירקות",
-      "url": "https://www.rami-levy.co.il/he/online/market/%D7%A4%D7%99%D7%A8%D7%95%D7%AA-%D7%95%D7%99%D7%A8%D7%A7%D7%95%D7%AA",
-      "depth": 0,
-      "children": [
-        {
-          "id": "197",
-          "nameHe": "ירקות",
-          "slug": "ירקות",
-          "depth": 1,
-          "children": [],
-          "productCount": 103
-        },
-        {
-          "id": "279",
-          "nameHe": "פיצוחים ופירות יבשים",
-          "slug": "פיצוחים",
-          "depth": 1,
-          "children": [],
-          "productCount": 39
-        },
-        {
-          "id": "196",
-          "nameHe": "פירות",
-          "slug": "פירות",
-          "depth": 1,
-          "children": [],
+          "children": [
+            {
+              "id": "477",
+              "nameHe": "שיפודים, פחמים  ומוצרים נלווים",
+              "slug": "שיפודים-פחמים-ומוצרים-נלווים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "547",
+              "nameHe": "כלים למנגל",
+              "slug": "כלים-למנגל",
+              "depth": 2,
+              "children": []
+            }
+          ],
           "productCount": 20
         }
       ],
-      "productCount": 162
+      "productCount": 411
+    },
+    {
+      "id": "59",
+      "nameHe": "אחזקת הבית ובע\"ח",
+      "slug": "אחזקת-הבית-ובע-ח",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%90%D7%97%D7%96%D7%A7%D7%AA-%D7%94%D7%91%D7%99%D7%AA-%D7%95%D7%91%D7%A2-%D7%97",
+      "depth": 0,
+      "children": [
+        {
+          "id": "245",
+          "nameHe": "מוצרי ניקיון לבית",
+          "slug": "מוצרי-ניקיון-לבית",
+          "depth": 1,
+          "children": [
+            {
+              "id": "27",
+              "nameHe": "חיטוי וניקוי לבית",
+              "slug": "ניקוי-כללי-ואביזרים-נילווים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "62",
+              "nameHe": "ניקוי אסלה ואמבטיה",
+              "slug": "ניקוי-אסלה-ואמבטיה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "82",
+              "nameHe": "אקונומיקה",
+              "slug": "אקונומיקה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "193",
+              "nameHe": "הסרת אבנית",
+              "slug": "הסרת-אבנית",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "204",
+              "nameHe": "מטליות למשטח ולרצפה",
+              "slug": "מטליות-למשטח-ולרצפה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "270",
+              "nameHe": "ניקוי שטיחים ורהיטים",
+              "slug": "ניקוי-שטיחים-ורהיטים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "369",
+              "nameHe": "ניקוי רצפות",
+              "slug": "ניקוי-רצפות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "543",
+              "nameHe": "ניקוי חלונות",
+              "slug": "ניקוי-חלונות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "776",
+              "nameHe": "מסיר שומנים",
+              "slug": "מסיר-שומנים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 233
+        },
+        {
+          "id": "246",
+          "nameHe": "ניקוי כלים",
+          "slug": "ניקוי-כלים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "121",
+              "nameHe": "נוזל כלים  ומשחה",
+              "slug": "נוזל-כלים-ומשחה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "335",
+              "nameHe": "מוצרים למדיח",
+              "slug": "מוצרים-למדיח",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 70
+        },
+        {
+          "id": "247",
+          "nameHe": "מוצרי כביסה",
+          "slug": "מוצרי-כביסה",
+          "depth": 1,
+          "children": [
+            {
+              "id": "41",
+              "nameHe": "מרכך כביסה",
+              "slug": "מרכך-כביסה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "141",
+              "nameHe": "מוצרי כביסה נלווים",
+              "slug": "מוצרי-כביסה-נלווים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "152",
+              "nameHe": "מסיר כתמים",
+              "slug": "מסיר-כתמים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "218",
+              "nameHe": "נוזל לכביסה",
+              "slug": "נוזל-לכביסה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "220",
+              "nameHe": "אבקות כביסה",
+              "slug": "אבקות-כביסה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "257",
+              "nameHe": "טבליות, קפסולות לכביסה",
+              "slug": "טבליות-קפסולות-לכביסה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "459",
+              "nameHe": "מרכך כביסה מרוכז",
+              "slug": "מרכך-כביסה-מרוכז",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1213",
+              "nameHe": "כביסכל",
+              "slug": "כביסכל",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 187
+        },
+        {
+          "id": "248",
+          "nameHe": "אביזרי ניקיון",
+          "slug": "אביזרי-ניקיון",
+          "depth": 1,
+          "children": [
+            {
+              "id": "40",
+              "nameHe": "כפפות מסכות ואלכוג'ל",
+              "slug": "כפפות-מסכות-ואלכוג-ל",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "204",
+              "nameHe": "מטליות למשטח ולרצפה",
+              "slug": "מטליות-למשטח-ולרצפה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "240",
+              "nameHe": "ברזלית, כרית יפנית, סקוטש",
+              "slug": "ברזלית-כרית-יפנית-סקוטש",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "535",
+              "nameHe": "כלי ניקיון",
+              "slug": "כלי-ניקיון",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "542",
+              "nameHe": "ניקוי נעליים",
+              "slug": "ניקוי-נעליים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "819",
+              "nameHe": "בלוק לניקוי",
+              "slug": "בלוק-לניקוי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1093",
+              "nameHe": "מוצרי ניקיון סיטונאות",
+              "slug": "מוצרי-ניקיון-סיטונאות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1169",
+              "nameHe": "אביזרי ניקיון לרכב",
+              "slug": "מטליות-לרכב",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 95
+        },
+        {
+          "id": "249",
+          "nameHe": "קוטל חרקים ומבשמי אויר",
+          "slug": "קוטל-חרקים-ומבשמי-אויר",
+          "depth": 1,
+          "children": [
+            {
+              "id": "62",
+              "nameHe": "ניקוי אסלה ואמבטיה",
+              "slug": "ניקוי-אסלה-ואמבטיה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "234",
+              "nameHe": "מטהרי אויר",
+              "slug": "מטהרי-אויר",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "401",
+              "nameHe": "קוטל חרקים ותכשירי יתושים",
+              "slug": "קוטל-חרקים-ותכשירי-יתושים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1122",
+              "nameHe": "מפיצי ריח ומטהרי אוויר",
+              "slug": "מפיצי-ריח-ומטהרי-אוויר",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 108
+        },
+        {
+          "id": "250",
+          "nameHe": "(unknown:250)",
+          "depth": 1,
+          "children": [
+            {
+              "id": "143",
+              "nameHe": "(unknown:143)",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "847",
+              "nameHe": "(unknown:847)",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "283",
+          "nameHe": "הכל לבית",
+          "slug": "כלי-בית",
+          "depth": 1,
+          "children": [
+            {
+              "id": "141",
+              "nameHe": "מוצרי כביסה נלווים",
+              "slug": "מוצרי-כביסה-נלווים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "499",
+              "nameHe": "כלי בית",
+              "slug": "כלי-בית",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "534",
+              "nameHe": "כלי מטבח",
+              "slug": "כלי-מטבח",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "536",
+              "nameHe": "ציוד משרדי",
+              "slug": "ציוד-משרדי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "541",
+              "nameHe": "משחקים לילדים",
+              "slug": "משחקים-לילדים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "816",
+              "nameHe": "מוצרי חשמל ואלקטרוניקה",
+              "slug": "מוצרי-חשמל-ואלקטרוניקה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "820",
+              "nameHe": "טקסטיל",
+              "slug": "טקסטיל",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "824",
+              "nameHe": "מטאטאים, מגבים ויעה",
+              "slug": "מטאטאים-מגבים-ויעה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "825",
+              "nameHe": "אביזרי נוי  ושטיחים",
+              "slug": "אביזרי-נוי-ושטיחים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "833",
+              "nameHe": "סוכות",
+              "slug": "סוכות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "834",
+              "nameHe": "עציצים",
+              "slug": "עציצים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "838",
+              "nameHe": "מוצרי חשמל",
+              "slug": "מוצרי-חשמל",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "839",
+              "nameHe": "חנוכה",
+              "slug": "חנוכה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1065",
+              "nameHe": "קופסאות לאחסון מזון",
+              "slug": "קופסאות-לאחסון-מזון",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1145",
+              "nameHe": "מזוודות",
+              "slug": "מזוודות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1155",
+              "nameHe": "אביזרי שירותים ואמבטיה",
+              "slug": "אביזרי-שירותים-ואמבטיה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1164",
+              "nameHe": "אביזרים ליום העצמאות",
+              "slug": "אביזרים-ליום-העצמאות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1170",
+              "nameHe": "אביזירי כושר ופנאי",
+              "slug": "אביזירי-כושר-ופנאי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1221",
+              "nameHe": "סירים ומחבתות",
+              "slug": "סירים-ומחבתות-1",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1222",
+              "nameHe": "כלי אוכל לילדים",
+              "slug": "כלי-אוכל-לילדים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 123
+        },
+        {
+          "id": "294",
+          "nameHe": "מוצרי ילדים",
+          "slug": "מוצרי-ילדים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "541",
+              "nameHe": "משחקים לילדים",
+              "slug": "משחקים-לילדים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "812",
+              "nameHe": "אביזרי קיץ",
+              "slug": "אביזרי-קיץ",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "823",
+              "nameHe": "(unknown:823)",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "832",
+              "nameHe": "(unknown:832)",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "959",
+              "nameHe": "בקבוקים",
+              "slug": "בקבוקים-2",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1175",
+              "nameHe": "(unknown:1175)",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 8
+        },
+        {
+          "id": "471",
+          "nameHe": "ביגוד ואקססוריס",
+          "slug": "ביגוד",
+          "depth": 1,
+          "children": [
+            {
+              "id": "835",
+              "nameHe": "טי שרט וגופיות",
+              "slug": "גופיות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "836",
+              "nameHe": "הלבשה תחתונה",
+              "slug": "הלבשה-תחתונה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "851",
+              "nameHe": "גרביים",
+              "slug": "גרביים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1185",
+              "nameHe": "(unknown:1185)",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1186",
+              "nameHe": "מטריות",
+              "slug": "מטריות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1217",
+              "nameHe": "כפפות וכובעי גרב",
+              "slug": "כפפות-וכובעי-גרב",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 7
+        },
+        {
+          "id": "494",
+          "nameHe": "מוצרי חשמל ואלקטרוניקה",
+          "slug": "מוצרי-חשמל-ואלקטרוניקה",
+          "depth": 1,
+          "children": [
+            {
+              "id": "816",
+              "nameHe": "מוצרי חשמל ואלקטרוניקה",
+              "slug": "מוצרי-חשמל-ואלקטרוניקה",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "589",
+          "nameHe": "מוצרי חשמל",
+          "slug": "מוצרי-חשמל",
+          "depth": 1,
+          "children": [
+            {
+              "id": "1057",
+              "nameHe": "סוללות",
+              "slug": "סוללה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1206",
+              "nameHe": "קומקומים",
+              "slug": "קומקום",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1207",
+              "nameHe": "חשמל למטבח",
+              "slug": "חשמל-למטבח",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1209",
+              "nameHe": "חשמל לבית",
+              "slug": "חשמל-לבית",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1210",
+              "nameHe": "מוצרי טיפוח",
+              "slug": "מוצרי-טיפוח",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1211",
+              "nameHe": "אביזרים לסלולר",
+              "slug": "אביזרים-לסלולר",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 11
+        },
+        {
+          "id": "596",
+          "nameHe": "ספרים",
+          "slug": "ספרים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "1220",
+              "nameHe": "ספרי קודש",
+              "slug": "ספרי-קודש",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "productCount": 842
+    },
+    {
+      "id": "60",
+      "nameHe": "פארם ותינוקות",
+      "slug": "פארם-ותינוקות",
+      "url": "https://www.rami-levy.co.il/he/online/market/%D7%A4%D7%90%D7%A8%D7%9D-%D7%95%D7%AA%D7%99%D7%A0%D7%95%D7%A7%D7%95%D7%AA",
+      "depth": 0,
+      "children": [
+        {
+          "id": "251",
+          "nameHe": "מוצרי הגיינה",
+          "slug": "מוצרי-הגיינה",
+          "depth": 1,
+          "children": [
+            {
+              "id": "456",
+              "nameHe": "טמפונים",
+              "slug": "טמפונים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "457",
+              "nameHe": "מגני תחתון",
+              "slug": "מגני-תחתון",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "555",
+              "nameHe": "תחבושות היגייניות",
+              "slug": "תחבושות-היגייניות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "558",
+              "nameHe": "היגיינה אינטימית לאישה",
+              "slug": "היגיינה-אינטימית-לאישה",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 86
+        },
+        {
+          "id": "252",
+          "nameHe": "מוצרי פארם",
+          "slug": "מוצרי-פארם",
+          "depth": 1,
+          "children": [
+            {
+              "id": "348",
+              "nameHe": "מוצרי טיפוח פנים",
+              "slug": "מוצרי-טיפוח-פנים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "446",
+              "nameHe": "צמר גפן וקיסמי אוזניים",
+              "slug": "צמר-גפן-וקיסמי-אוזניים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "458",
+              "nameHe": "אביזרי חבישה",
+              "slug": "אביזרי-חבישה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "472",
+              "nameHe": "צבעי שיער",
+              "slug": "צבעי-שיער",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "510",
+              "nameHe": "מוצרי הגנה מהשמש",
+              "slug": "מוצרי-הגנה-מהשמש",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1017",
+              "nameHe": "אביזרי שיער",
+              "slug": "אביזירי-שיער",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1018",
+              "nameHe": "עיצוב שיער",
+              "slug": "עיצוב-שיער",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1042",
+              "nameHe": "טיפוח ידיים וציפורניים",
+              "slug": "טיפוח-ציפורניים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 73
+        },
+        {
+          "id": "254",
+          "nameHe": "חיתולים ומגבונים",
+          "slug": "חיתולים-ומגבונים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "132",
+              "nameHe": "מגבונים",
+              "slug": "מגבונים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "134",
+              "nameHe": "חיתולים",
+              "slug": "חיתולים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 82
+        },
+        {
+          "id": "255",
+          "nameHe": "מזון לתינוקות",
+          "slug": "מזון-לתינוקות",
+          "depth": 1,
+          "children": [
+            {
+              "id": "61",
+              "nameHe": "תחליפי חלב לתינוק",
+              "slug": "תחליפי-חלב-לתינוק",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "292",
+              "nameHe": "ביסקוויטים וחטיפים לתינוק",
+              "slug": "ביסקוויטים-וחטיפים-לתינוק",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "373",
+              "nameHe": "מחית לתינוק",
+              "slug": "מחית-לתינוק",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "524",
+              "nameHe": "דייסה לתינוק",
+              "slug": "דייסה-לתינוק",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 99
+        },
+        {
+          "id": "256",
+          "nameHe": "טיפוח ואביזרי תינוקות וילדים",
+          "slug": "טיפוח-ואביזרי-תינוקות-וילדים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "443",
+              "nameHe": "מוצצים",
+              "slug": "מוצצים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "444",
+              "nameHe": "מוצרי היגיינה לתינוק",
+              "slug": "מוצרי-היגיינה-לתינוק",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "445",
+              "nameHe": "סבון נוזלי לילדים ותינוקות",
+              "slug": "סבון-נוזלי-לילדים-ותינוקות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "447",
+              "nameHe": "שמפו ומרכך לילדים ותינוקות",
+              "slug": "שמפו-ומרכך-לילדים-ותינוקות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "554",
+              "nameHe": "הריון והנקה",
+              "slug": "הריון-והנקה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "556",
+              "nameHe": "אביזרים לתינוק",
+              "slug": "אביזרים-לתינוק",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "557",
+              "nameHe": "בקבוקים",
+              "slug": "בקבוקים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 90
+        },
+        {
+          "id": "257",
+          "nameHe": "סבונים",
+          "slug": "סבונים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "214",
+              "nameHe": "סבון מוצק",
+              "slug": "סבון-מוצק",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "452",
+              "nameHe": "סבון נוזלי לידיים",
+              "slug": "סבון-נוזלי-לידיים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "453",
+              "nameHe": "סבון נוזלי לרחצה",
+              "slug": "סבון-נוזלי-לרחצה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "454",
+              "nameHe": "ג'ל רחצה לגבר",
+              "slug": "ג-ל-רחצה-לגבר",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 94
+        },
+        {
+          "id": "258",
+          "nameHe": "שמפו, מרכך וטיפוח הגוף",
+          "slug": "שמפו-ומרכך",
+          "depth": 1,
+          "children": [
+            {
+              "id": "222",
+              "nameHe": "אביזרי רחצה",
+              "slug": "אביזרי-רחצה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "366",
+              "nameHe": "מסכות וקרם לשיער",
+              "slug": "מוצרי-טיפוח-שיער",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "443",
+              "nameHe": "מוצצים",
+              "slug": "מוצצים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "450",
+              "nameHe": "שמפו ומרכך פרימיום",
+              "slug": "שמפו-ומרכך-פרימיום",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "451",
+              "nameHe": "שמפו ומרכך",
+              "slug": "שמפו-ומרכך-רגיל",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "472",
+              "nameHe": "צבעי שיער",
+              "slug": "צבעי-שיער",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "509",
+              "nameHe": "מוצרי טיפוח לגוף",
+              "slug": "מוצרי-טיפוח-לגוף",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "554",
+              "nameHe": "הריון והנקה",
+              "slug": "הריון-והנקה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1017",
+              "nameHe": "אביזרי שיער",
+              "slug": "אביזירי-שיער",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1113",
+              "nameHe": "טיפוח שיער מיקי בוגנים",
+              "slug": "טיפוח-שיער-מיקי-בוגנים",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 200
+        },
+        {
+          "id": "261",
+          "nameHe": "דאודורנט",
+          "slug": "דאודורנט",
+          "depth": 1,
+          "children": [
+            {
+              "id": "548",
+              "nameHe": "דאודורנט סטיק לאישה",
+              "slug": "דאודורנט-סטיק-לאישה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "549",
+              "nameHe": "דאודורנט סטיק לגבר",
+              "slug": "דאודורנט-סטיק-לגבר",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "550",
+              "nameHe": "דאודורנט ספריי לאישה",
+              "slug": "דאודורנט-ספריי-לאישה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "551",
+              "nameHe": "דאודורנט ספריי לגבר",
+              "slug": "דאודורנט-ספריי-לגבר",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "552",
+              "nameHe": "דאודורנט רול און לאישה",
+              "slug": "דאודורנט-רול-און-לאישה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "553",
+              "nameHe": "דאודורנט רול און לגבר",
+              "slug": "דאודורנט-רול-און-לגבר",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 95
+        },
+        {
+          "id": "292",
+          "nameHe": "גילוח והסרת שיער",
+          "slug": "גילוח-והסרת-שיער",
+          "depth": 1,
+          "children": [
+            {
+              "id": "399",
+              "nameHe": "תכשירי גילוח לגבר",
+              "slug": "תכשירי-גילוח-לגבר",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "471",
+              "nameHe": "מוצרי הסרת שיער לנשים",
+              "slug": "מוצרי-הסרת-שיער",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "984",
+              "nameHe": "גילוח והסרת שיער לגברים",
+              "slug": "גילוח-והסרת-שיער-לגברים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1105",
+              "nameHe": "סכיני גילוח",
+              "slug": "סכיני-גילוח",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 32
+        },
+        {
+          "id": "293",
+          "nameHe": "היגיינת הפה",
+          "slug": "היגיינת-הפה",
+          "depth": 1,
+          "children": [
+            {
+              "id": "103",
+              "nameHe": "משחות שיניים לילדים",
+              "slug": "משחות-שיניים-לילדים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "140",
+              "nameHe": "משחות מיוחדות",
+              "slug": "משחות-מיוחדות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "269",
+              "nameHe": "קיסמי שיניים וחוט דנטלי",
+              "slug": "קיסמי-שיניים-וחוט-דנטלי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "285",
+              "nameHe": "מברשות שיניים",
+              "slug": "מברשות-שיניים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "455",
+              "nameHe": "משחות שיניים מבוגרים",
+              "slug": "משחות-שיניים-מבוגרים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "741",
+              "nameHe": "מי פה ושטיפה דנטלית",
+              "slug": "מי-פה-ושטיפה-דנטלית",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 181
+        }
+      ],
+      "productCount": 1032
     },
     {
       "id": "61",
@@ -768,48 +3844,560 @@
           "nameHe": "לחם, פיתה, לחמניה",
           "slug": "לחם-פיתה-לחמניה",
           "depth": 1,
-          "children": [],
-          "productCount": 56
+          "children": [
+            {
+              "id": "18",
+              "nameHe": "לחמים",
+              "slug": "לחמים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "21",
+              "nameHe": "לחמניות",
+              "slug": "לחמניות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "473",
+              "nameHe": "חלה לשבת",
+              "slug": "חלה-לשבת",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "515",
+              "nameHe": "טורטיות",
+              "slug": "טורטיות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "627",
+              "nameHe": "פיתות",
+              "slug": "פיתות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "840",
+              "nameHe": "סופגניות ודונאטס",
+              "slug": "סופגניות-ודונאטס",
+              "depth": 2,
+              "children": []
+            }
+          ],
+          "productCount": 61
+        },
+        {
+          "id": "272",
+          "nameHe": "פריכיות וקרקרים",
+          "slug": "מאפה-מלוח",
+          "depth": 1,
+          "children": [
+            {
+              "id": "311",
+              "nameHe": "פריכיות",
+              "slug": "פריכיות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "312",
+              "nameHe": "פתית, לחמית וצנימים",
+              "slug": "פתית-לחמית-וצנימים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "313",
+              "nameHe": "קרקרים",
+              "slug": "קרקרים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "515",
+              "nameHe": "טורטיות",
+              "slug": "טורטיות",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "273",
+          "nameHe": "המאפייה הטרייה שלנו",
+          "slug": "המאפיה-הטריה-אפיה-במקום",
+          "depth": 1,
+          "children": [
+            {
+              "id": "305",
+              "nameHe": "מאפים, עוגות ועוגיות",
+              "slug": "מאפים-טריים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "476",
+              "nameHe": "מאפים מלוחים, מתוקים",
+              "slug": "מאפים-מלוחים-מתוקים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "586",
+              "nameHe": "לחמי המאפייה וחלות",
+              "slug": "לחמי-מאפייה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "840",
+              "nameHe": "סופגניות ודונאטס",
+              "slug": "סופגניות-ודונאטס",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1174",
+              "nameHe": "בגטים ולחמניות",
+              "slug": "בגטים-ולחמניות",
+              "depth": 2,
+              "children": []
+            }
+          ]
         },
         {
           "id": "280",
           "nameHe": "מצות  ומאפים לפסח",
           "slug": "מצות-ומאפים-לפסח",
           "depth": 1,
-          "children": [],
+          "children": [
+            {
+              "id": "474",
+              "nameHe": "מצות",
+              "slug": "מצות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "475",
+              "nameHe": "מאפה לפסח מתוק,מלוח",
+              "slug": "מאפה-לפסח-מתוק-מלוח",
+              "depth": 2,
+              "children": []
+            }
+          ],
           "productCount": 5
+        },
+        {
+          "id": "498",
+          "nameHe": "מזון מצונן",
+          "slug": "מזון-מצונן",
+          "depth": 1,
+          "children": [
+            {
+              "id": "475",
+              "nameHe": "מאפה לפסח מתוק,מלוח",
+              "slug": "מאפה-לפסח-מתוק-מלוח",
+              "depth": 2,
+              "children": []
+            }
+          ]
         }
       ],
-      "productCount": 61
+      "productCount": 66
+    },
+    {
+      "id": "85",
+      "nameHe": "מחלקה 85",
+      "depth": 0,
+      "children": [
+        {
+          "id": "202",
+          "nameHe": "גבינות",
+          "depth": 1,
+          "children": [
+            {
+              "id": "189",
+              "nameHe": "(unknown:189)",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "203",
+          "nameHe": "יוגורט ומעדני חלב",
+          "depth": 1,
+          "children": [
+            {
+              "id": "466",
+              "nameHe": "(unknown:466)",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "308",
+          "nameHe": "(unknown:308)",
+          "depth": 1,
+          "children": [
+            {
+              "id": "635",
+              "nameHe": "(unknown:635)",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "productCount": 1
+    },
+    {
+      "id": "1234",
+      "nameHe": "מוצרי חשמל ואלקטרוניקה",
+      "slug": "מוצרי-חשמל-ואלקטרוניקה",
+      "depth": 0,
+      "children": [
+        {
+          "id": "275",
+          "nameHe": "מוצרי אפיה",
+          "slug": "מוצרי-אפיה",
+          "depth": 1,
+          "children": [
+            {
+              "id": "332",
+              "nameHe": "ג'לי, סירופ, פודינג",
+              "slug": "ג-לי-סירופ-פודינג",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "1237",
       "nameHe": "מחלקה 1237",
       "depth": 0,
-      "children": [],
+      "children": [
+        {
+          "id": "511",
+          "nameHe": "משקאות חריפים",
+          "slug": "משקאות-חריפים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "881",
+              "nameHe": "ג'ין ורום",
+              "slug": "ג-ין-רום-וקוניאק",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "882",
+              "nameHe": "וודקה",
+              "slug": "וודקה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "891",
+              "nameHe": "ליקרים",
+              "slug": "ליקרים",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "523",
+          "nameHe": "יינות שופינג",
+          "slug": "יינות-1",
+          "depth": 1,
+          "children": [
+            {
+              "id": "890",
+              "nameHe": "יינות אדומים",
+              "slug": "יינות",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "939",
+              "nameHe": "יינות לבנים-שופינג",
+              "slug": "יינות-לבנים-1",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "940",
+              "nameHe": "יינות רוזה",
+              "slug": "יינות-רוזה",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "524",
+          "nameHe": "וויסקי וברנדי",
+          "slug": "וויסקי-וברנדי",
+          "depth": 1,
+          "children": [
+            {
+              "id": "883",
+              "nameHe": "וויסקי סקוטי",
+              "slug": "וויסקי-וברנדי",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "943",
+              "nameHe": "וויסקי בורבון",
+              "slug": "וויסקי-בורבון",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "944",
+              "nameHe": "וויסקי אירי",
+              "slug": "וויסקי-אירי",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        }
+      ],
       "productCount": 7
     },
     {
       "id": "1238",
       "nameHe": "מחלקה 1238",
       "depth": 0,
-      "children": [],
+      "children": [
+        {
+          "id": "504",
+          "nameHe": "ניקוי פנים",
+          "slug": "ניקוי-פנים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "900",
+              "nameHe": "סבון נוזלי לפנים",
+              "slug": "סבון-נוזלי-לפנים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "992",
+              "nameHe": "היגיינת העין",
+              "slug": "היגיינת-העין",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "505",
+          "nameHe": "טיפוח שיער",
+          "slug": "טיפוח-שיער",
+          "depth": 1,
+          "children": [
+            {
+              "id": "902",
+              "nameHe": "צבע שיער",
+              "slug": "צבי-שיער",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "507",
+          "nameHe": "טיפוח פנים",
+          "slug": "טיפוח-פנים",
+          "depth": 1,
+          "children": [
+            {
+              "id": "904",
+              "nameHe": "קרם לחות",
+              "slug": "קרם-ותחליב-לחות",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "514",
+          "nameHe": "היגיינת הפה-שופינג",
+          "slug": "היגיינת-הפה-1",
+          "depth": 1,
+          "children": [
+            {
+              "id": "916",
+              "nameHe": "מברשות שיניים- שופינג",
+              "slug": "מברשות-שיניים-1",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "516",
+          "nameHe": "טיפוח גוף",
+          "slug": "טיפוח-גוף",
+          "depth": 1,
+          "children": [
+            {
+              "id": "908",
+              "nameHe": "קרם ,תחליב ושמן גוף",
+              "slug": "קרם-שמן-וחמאת-גוף",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "957",
+              "nameHe": "קרם טיפוח טיפולי",
+              "slug": "קרמים-טיפוליים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "1133",
+              "nameHe": "ALIN",
+              "slug": "alin",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "517",
+          "nameHe": "דאודורנט שופינג",
+          "slug": "דאודורנט-1",
+          "depth": 1,
+          "children": [
+            {
+              "id": "912",
+              "nameHe": "דאודורנט גברים",
+              "slug": "דאודורנט-גברים",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "521",
+          "nameHe": "מכשירי מדידה ובדיקה",
+          "slug": "מכשירי-מדידה-ובדיקה",
+          "depth": 1,
+          "children": [
+            {
+              "id": "937",
+              "nameHe": "מדי חום",
+              "slug": "מכשירי-מדידה-ובדיקה",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "978",
+              "nameHe": "בדיקות הריון וביוץ",
+              "slug": "בדיקות-הריון-וביוץ",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "985",
+              "nameHe": "בדיקות קורונה",
+              "slug": "בדיקות-קורונה",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        }
+      ],
       "productCount": 2
     },
     {
       "id": "1243",
       "nameHe": "מחלקה 1243",
       "depth": 0,
-      "children": [],
+      "children": [
+        {
+          "id": "234",
+          "nameHe": "דגנים וחטיפי אנרגיה",
+          "slug": "דגנים-וחטיפי-אנרגיה",
+          "depth": 1,
+          "children": [
+            {
+              "id": "350",
+              "nameHe": "דגני ילדים",
+              "slug": "דגני-ילדים",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "id": "433",
+              "nameHe": "חטיפי אנרגיה ובריאות",
+              "slug": "חטיפי-אנרגיה",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "272",
+          "nameHe": "פריכיות וקרקרים",
+          "slug": "מאפה-מלוח",
+          "depth": 1,
+          "children": [
+            {
+              "id": "312",
+              "nameHe": "פתית, לחמית וצנימים",
+              "slug": "פתית-לחמית-וצנימים",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "530",
+          "nameHe": "אביזרי תינוקות",
+          "slug": "מוצרי-הנקה-והאכלה",
+          "depth": 1,
+          "children": [
+            {
+              "id": "973",
+              "nameHe": "כלי אוכל וכוסות שתייה",
+              "slug": "כלי-אוכל-וכוסות-שתייה",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "533",
+          "nameHe": "צעצועים",
+          "slug": "צעצועים-וטרמפולינות",
+          "depth": 1,
+          "children": [
+            {
+              "id": "1139",
+              "nameHe": "משחקי קופסא",
+              "slug": "משחקי-קופסא",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        }
+      ],
       "productCount": 2
-    },
-    {
-      "id": "85",
-      "nameHe": "מחלקה 85",
-      "depth": 0,
-      "children": [],
-      "productCount": 1
     }
   ],
-  "leafCount": 81
+  "leafCount": 468
 }

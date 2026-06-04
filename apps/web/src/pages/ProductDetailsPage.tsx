@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import { AddToBagButton } from '@/components/add-to-bag-button/AddToBagButton';
@@ -9,6 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { SubstitutionOptionsList } from '@/components/substitution-options-list/SubstitutionOptionsList';
 import { useProductQuery, useProductSubstitutionsQuery } from '@/hooks/use-catalog-api';
+import { useProductImage } from '@/hooks/use-product-image';
 import { localizedProductName } from '@/lib/product-localization';
 import { cn } from '@/lib/utils';
 
@@ -17,11 +17,10 @@ export function ProductDetailsPage() {
   const { id } = useParams<{ id: string }>();
   const { data: product, isLoading } = useProductQuery(id);
   const { data: subsData, isLoading: subsLoading } = useProductSubstitutionsQuery(id);
-  const [imageFailed, setImageFailed] = useState(false);
-
-  useEffect(() => {
-    setImageFailed(false);
-  }, [id]);
+  const { showImage, isLoadingImage, imageFailed, onImageError } = useProductImage(
+    product?.imageUrl,
+    id,
+  );
 
   if (isLoading) {
     return <p className="text-muted-foreground">{t('common.loading')}</p>;
@@ -41,7 +40,6 @@ export function ProductDetailsPage() {
 
   const subs = subsData?.substitutes ?? [];
   const displayName = localizedProductName(product, i18n.language.startsWith('he'));
-  const showImage = Boolean(product.imageUrl) && !imageFailed;
 
   return (
     <div className="space-y-6">
@@ -73,17 +71,21 @@ export function ProductDetailsPage() {
             <img
               src={product.imageUrl}
               alt={displayName}
-              loading="eager"
               decoding="async"
               referrerPolicy="no-referrer"
-              onError={() => setImageFailed(true)}
+              onError={onImageError}
               className="absolute inset-0 h-full w-full object-contain p-6"
             />
-          ) : (
+          ) : imageFailed || !product.imageUrl ? (
             <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
               {t('product.imageLargePlaceholder')}
             </div>
-          )}
+          ) : isLoadingImage ? (
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 animate-pulse bg-gradient-to-br from-transparent via-white/30 to-transparent dark:via-white/10"
+            />
+          ) : null}
           {(product.availableRetailerSlugs?.length ?? 0) > 0 ? (
             <div className="absolute start-3 top-3">
               <RetailerChainBadges slugs={product.availableRetailerSlugs ?? []} />
@@ -100,6 +102,13 @@ export function ProductDetailsPage() {
           <div>
             <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">{product.brand}</p>
             <h1 className="text-3xl font-bold tracking-tight">{displayName}</h1>
+            {product.transparencyNameHe &&
+            product.nameHe &&
+            product.transparencyNameHe.trim() !== product.nameHe.trim() ? (
+              <p className="mt-1 text-sm text-muted-foreground">
+                {t('product.transparencyName')}: {product.transparencyNameHe}
+              </p>
+            ) : null}
             <p className="mt-1 text-muted-foreground">{product.unit}</p>
             <p className="mt-4 text-2xl font-bold text-primary">{product.priceRangeLabel}</p>
           </div>

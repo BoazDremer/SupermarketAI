@@ -175,7 +175,7 @@ export function normalizePriceFullRow(
     ),
   );
 
-  const barcodeInput = pickString(raw, 'ItemCode', 'Barcode', 'barcode', 'GTIN', 'UPC');
+  const barcodeInput = pickString(raw, 'Barcode', 'barcode', 'GTIN', 'UPC', 'ItemCode');
   const barcode = normalizeBarcode(barcodeInput);
 
   const priceMajor = pickNumber(

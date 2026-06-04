@@ -1,9 +1,9 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AddToBagButton } from '@/components/add-to-bag-button/AddToBagButton';
 import { PromoBadge } from '@/components/promo-badge/PromoBadge';
 import { RetailerChainBadges } from '@/components/retailer-chain-badges/RetailerChainBadges';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { useProductImage } from '@/hooks/use-product-image';
 import { localizedProductName } from '@/lib/product-localization';
 import { cn } from '@/lib/utils';
 import type { MockProduct } from '@/types/mock-product';
@@ -17,10 +17,10 @@ type ProductCardProps = {
 export function ProductCard({ product, onOpenDetails, className }: ProductCardProps) {
   const { t, i18n } = useTranslation();
   const displayName = localizedProductName(product, i18n.language.startsWith('he'));
-  // Track image load failures so we fall back to the hue-gradient placeholder
-  // (some chain image URLs 404 over time).
-  const [imageFailed, setImageFailed] = useState(false);
-  const showImage = Boolean(product.imageUrl) && !imageFailed;
+  const { showImage, isLoadingImage, imageFailed, onImageError } = useProductImage(
+    product.imageUrl,
+    product.id,
+  );
 
   return (
     <Card
@@ -58,17 +58,21 @@ export function ProductCard({ product, onOpenDetails, className }: ProductCardPr
           <img
             src={product.imageUrl}
             alt={displayName}
-            loading="lazy"
             decoding="async"
             referrerPolicy="no-referrer"
-            onError={() => setImageFailed(true)}
+            onError={onImageError}
             className="absolute inset-0 h-full w-full object-contain p-2"
           />
-        ) : (
+        ) : imageFailed ? (
           <div className="absolute inset-0 flex items-center justify-center text-sm font-medium text-muted-foreground">
             {t('product.imageSoon')}
           </div>
-        )}
+        ) : isLoadingImage ? (
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 animate-pulse bg-gradient-to-br from-transparent via-white/30 to-transparent dark:via-white/10"
+          />
+        ) : null}
         {(product.availableRetailerSlugs?.length ?? 0) > 0 ? (
           <div className="absolute start-2 top-2">
             <RetailerChainBadges slugs={product.availableRetailerSlugs ?? []} />
@@ -83,6 +87,13 @@ export function ProductCard({ product, onOpenDetails, className }: ProductCardPr
       <CardContent className="flex flex-1 flex-col gap-1 pt-4">
         <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{product.brand}</p>
         <h3 className="line-clamp-2 text-base font-semibold leading-snug">{displayName}</h3>
+        {product.transparencyNameHe &&
+        product.nameHe &&
+        product.transparencyNameHe.trim() !== product.nameHe.trim() ? (
+          <p className="line-clamp-2 text-xs text-muted-foreground" title={product.transparencyNameHe}>
+            {t('product.transparencyName')}: {product.transparencyNameHe}
+          </p>
+        ) : null}
         <p className="text-sm text-muted-foreground">{product.unit}</p>
         <p className="text-sm font-semibold text-primary">{product.priceRangeLabel}</p>
       </CardContent>

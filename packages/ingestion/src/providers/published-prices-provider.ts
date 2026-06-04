@@ -303,8 +303,14 @@ export class PublishedPricesProvider extends BaseRetailerIngestionProvider {
   }
 
   /**
-   * Filter discovered files by an external store id (`001-070`, `070`, etc.).
-   * Filenames look like `PriceFull7290058140886-001-070-20260428-120006.gz`.
+   * Filter discovered files by an external store id (`001-070`, `070`, `039`, etc.).
+   *
+   * RL publishes at least three filename shapes (prefix is case-insensitive):
+   *   A) `PriceFull7290058140886-001-070-20260428-120006.gz` — subchain + branch
+   *   B) `pricefull7290058140886-039-202605180555.gz` — branch + merged timestamp
+   *      (online warehouse; no subchain segment in the name)
+   *   C) `PriceFull7290058140886-001-202605180010.gz` — subchain bulk; store only
+   *      in XML — handled by {@link filterSubChainPriceFull} + header peek.
    */
   filterByStoreId(
     files: readonly PublishedPricesDiscoveredFile[],
@@ -312,18 +318,50 @@ export class PublishedPricesProvider extends BaseRetailerIngestionProvider {
   ): PublishedPricesDiscoveredFile[] {
     const norm = storeId.trim();
     if (!norm) return [...files];
+    const want = storeIdMatchKeys(norm);
     const out: PublishedPricesDiscoveredFile[] = [];
     for (const f of files) {
-      const m = f.fileName.match(
+      // Pattern A: subchain + branch + date + time (physical stores).
+      const mSubBranch = f.fileName.match(
         /^[A-Za-z]+\d+-(?<sub>\d{1,4})-(?<branch>\d{1,4})-(?<date>\d{8})-(?<time>\d{4,6})\.gz$/i,
       );
-      if (!m || !m.groups) continue;
-      const sub = m.groups.sub ?? '';
-      const branch = m.groups.branch ?? '';
-      const candidates = new Set<string>([branch, `${sub}-${branch}`]);
-      if (candidates.has(norm)) out.push(f);
+      if (mSubBranch?.groups) {
+        const sub = mSubBranch.groups.sub ?? '';
+        const branch = mSubBranch.groups.branch ?? '';
+        const fileKeys = new Set([
+          ...storeIdMatchKeys(branch),
+          ...storeIdMatchKeys(`${sub}-${branch}`),
+        ]);
+        if (storeIdsOverlap(want, fileKeys)) out.push(f);
+        continue;
+      }
+
+      // Pattern B: branch + merged timestamp (e.g. online store 039).
+      const mBranchOnly = f.fileName.match(
+        /^[A-Za-z]+\d+-(?<branch>\d{1,4})-(?<stamp>\d{10,14})\.gz$/i,
+      );
+      if (mBranchOnly?.groups) {
+        const branch = mBranchOnly.groups.branch ?? '';
+        if (storeIdsOverlap(want, storeIdMatchKeys(branch))) out.push(f);
+      }
     }
     return out;
+  }
+
+  /**
+   * Subchain-level PriceFull files omit the branch segment in the filename:
+   *   `PriceFull7290058140886-001-202605180010.gz`
+   * The actual store is only known from `<StoreID>` inside the XML header.
+   */
+  filterSubChainPriceFull(
+    files: readonly PublishedPricesDiscoveredFile[],
+    subChainId: string,
+  ): PublishedPricesDiscoveredFile[] {
+    const sub = subChainId.trim();
+    if (!sub) return [];
+    return files.filter((f) =>
+      new RegExp(`^[A-Za-z]+\\d+-${sub}-\\d{10,14}\\.gz$`, 'i').test(f.fileName),
+    );
   }
 
   /** Sort PriceFull-like files newest first using the trailing date+time tokens. */
@@ -360,4 +398,33 @@ function extractFilenameTimestamp(name: string): string {
   if (m) return `${m[1]}${m[2]}`;
   const m2 = name.match(/(\d{12,14})\.gz$/i);
   return m2 ? m2[1]! : '';
+}
+
+/** Normalise store ids so `39`, `039`, and `001-039` all match each other. */
+export function storeIdMatchKeys(storeId: string): Set<string> {
+  const norm = storeId.trim();
+  const out = new Set<string>();
+  if (!norm) return out;
+  out.add(norm);
+  const branch = norm.includes('-') ? (norm.split('-').pop() ?? norm) : norm;
+  out.add(branch);
+  out.add(branch.replace(/^0+/, '') || branch);
+  out.add(branch.padStart(3, '0'));
+  if (norm.includes('-')) out.add(norm);
+  else if (/^\d{1,4}$/.test(branch)) out.add(`001-${branch.padStart(3, '0')}`);
+  return out;
+}
+
+/** `001-039` → `001`; bare `039` → `001` (RL's only subchain in practice). */
+export function subChainIdFromStoreId(storeId: string): string {
+  const norm = storeId.trim();
+  if (norm.includes('-')) return norm.split('-')[0] ?? '001';
+  return '001';
+}
+
+export function storeIdsOverlap(a: Set<string>, b: Set<string>): boolean {
+  for (const k of a) {
+    if (b.has(k)) return true;
+  }
+  return false;
 }

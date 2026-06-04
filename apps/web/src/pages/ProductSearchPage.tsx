@@ -1,19 +1,67 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
+import { CategoryDirectChildSection } from '@/components/category-product-section/CategoryDirectChildSection';
 import { ProductDetailsDialog } from '@/components/product-details-dialog/ProductDetailsDialog';
 import { ProductGrid } from '@/components/product-grid/ProductGrid';
 import { ProductSearchInput } from '@/components/product-search-input/ProductSearchInput';
-import { useInfiniteProductSearchQuery } from '@/hooks/use-catalog-api';
+import {
+  useCategoryTreeQuery,
+  useInfiniteProductSearchQuery,
+  type CategoryTreeNodeApi,
+} from '@/hooks/use-catalog-api';
 import { useInfiniteScrollSentinel } from '@/hooks/use-infinite-scroll-sentinel';
 import type { MockProduct } from '@/types/mock-product';
 
+/** Find a node by id in a recursive tree, walking all depths. */
+function findNodeById(
+  roots: readonly CategoryTreeNodeApi[],
+  id: string,
+): { node: CategoryTreeNodeApi; ancestors: CategoryTreeNodeApi[] } | undefined {
+  const stack: Array<{ node: CategoryTreeNodeApi; ancestors: CategoryTreeNodeApi[] }> = roots.map(
+    (n) => ({ node: n, ancestors: [] }),
+  );
+  while (stack.length > 0) {
+    const top = stack.pop()!;
+    if (top.node.id === id) return top;
+    for (const c of top.node.children) {
+      stack.push({ node: c, ancestors: [...top.ancestors, top.node] });
+    }
+  }
+  return undefined;
+}
+
+type Selection =
+  | { kind: 'node'; node: CategoryTreeNodeApi }
+  | { kind: 'none' };
+
+function resolveCategorySelection(
+  category: string | undefined,
+  roots: readonly CategoryTreeNodeApi[],
+): Selection {
+  if (!category) return { kind: 'none' };
+  const hit = findNodeById(roots, category);
+  if (hit) return { kind: 'node', node: hit.node };
+  return { kind: 'none' };
+}
+
 export function ProductSearchPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isHebrew = i18n.language?.startsWith('he') ?? false;
   const [params] = useSearchParams();
   const q = params.get('q') ?? '';
   const retailerId = params.get('retailerId') ?? undefined;
   const category = params.get('category') ?? undefined;
+
+  const { data: categoryTree } = useCategoryTreeQuery();
+  const groups = categoryTree?.groups ?? [];
+  const selection = resolveCategorySelection(category, groups);
+
+  /** Parent category with direct children: one paginated fetch per sub-category. */
+  const useGroupedSections =
+    selection.kind === 'node' &&
+    selection.node.children.length > 0 &&
+    q.trim().length === 0;
 
   const {
     data,
@@ -21,7 +69,9 @@ export function ProductSearchPage() {
     isFetchingNextPage,
     hasNextPage,
     fetchNextPage,
-  } = useInfiniteProductSearchQuery(q, retailerId, category, 24);
+  } = useInfiniteProductSearchQuery(q, retailerId, category, 24, {
+    enabled: !useGroupedSections,
+  });
 
   const products = useMemo(
     () => data?.pages.flatMap((page) => page.items) ?? [],
@@ -30,7 +80,7 @@ export function ProductSearchPage() {
   const total = data?.pages[0]?.total ?? 0;
 
   const { sentinelRef } = useInfiniteScrollSentinel({
-    enabled: Boolean(hasNextPage) && !isFetchingNextPage && !isLoading,
+    enabled: !useGroupedSections && Boolean(hasNextPage) && !isFetchingNextPage && !isLoading,
     onIntersect: () => {
       void fetchNextPage();
     },
@@ -42,6 +92,9 @@ export function ProductSearchPage() {
     setDialogProductId(p.id);
   }
 
+  const sectionChildren =
+    useGroupedSections && selection.kind === 'node' ? selection.node.children : [];
+
   return (
     <div className="space-y-6">
       <div>
@@ -49,7 +102,20 @@ export function ProductSearchPage() {
         <p className="text-sm text-muted-foreground">{t('search.subtitle')}</p>
       </div>
       <ProductSearchInput key={q} defaultValue={q} />
-      {isLoading ? (
+      {useGroupedSections ? (
+        <div className="space-y-8">
+          {sectionChildren.map((child, index) => (
+            <CategoryDirectChildSection
+              key={child.id}
+              child={child}
+              title={isHebrew ? child.nameHe : child.nameEn}
+              retailerId={retailerId}
+              loadImmediately={index === 0}
+              onOpenDetails={openDetails}
+            />
+          ))}
+        </div>
+      ) : isLoading ? (
         <p className="text-sm text-muted-foreground">{t('search.loadingProducts')}</p>
       ) : (
         <>

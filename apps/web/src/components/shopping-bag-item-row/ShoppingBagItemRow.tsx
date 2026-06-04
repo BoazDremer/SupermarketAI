@@ -1,11 +1,11 @@
 import { Trash2 } from 'lucide-react';
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { QuantitySelector } from '@/components/quantity-selector/QuantitySelector';
 import { RetailerChainBadges } from '@/components/retailer-chain-badges/RetailerChainBadges';
 import type { ShoppingBagItemApi } from '@/api/types';
 import { useRemoveBagItemMutation, useUpdateBagItemMutation } from '@/hooks/use-shopping-bag-api';
+import { useProductImage } from '@/hooks/use-product-image';
 import { localizedProductName } from '@/lib/product-localization';
 import { cn } from '@/lib/utils';
 
@@ -18,8 +18,10 @@ export function ShoppingBagItemRow({ line }: ShoppingBagItemRowProps) {
   const updateItem = useUpdateBagItemMutation();
   const removeItem = useRemoveBagItemMutation();
   const displayName = localizedProductName(line, i18n.language.startsWith('he'));
-  const [imageFailed, setImageFailed] = useState(false);
-  const showImage = Boolean(line.imageUrl) && !imageFailed;
+  const { showImage, isLoadingImage, onImageError } = useProductImage(
+    line.imageUrl,
+    line.canonicalProductId ?? line.id,
+  );
 
   return (
     <div className="flex gap-3 rounded-lg border bg-card p-3 shadow-sm">
@@ -42,11 +44,15 @@ export function ShoppingBagItemRow({ line }: ShoppingBagItemRowProps) {
           <img
             src={line.imageUrl}
             alt=""
-            loading="lazy"
             decoding="async"
             referrerPolicy="no-referrer"
-            onError={() => setImageFailed(true)}
+            onError={onImageError}
             className="absolute inset-0 h-full w-full object-contain p-1"
+          />
+        ) : isLoadingImage ? (
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 animate-pulse bg-gradient-to-br from-transparent via-white/30 to-transparent dark:via-white/10"
           />
         ) : null}
         {(line.availableRetailerSlugs?.length ?? 0) > 0 ? (

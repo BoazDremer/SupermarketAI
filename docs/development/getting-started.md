@@ -73,7 +73,7 @@ pnpm --filter @supermarket-price-compare/ingestion detect:online-stores
 # Shufersal: online store 413 (שופרסל ONLINE)
 pnpm ingest:prices -- --retailer=shufersal
 
-# Rami Levy: online store 001-070 (PublishedPrices/Cerberus)
+# Rami Levy: online store 039 (PublishedPrices/Cerberus)
 INGESTION_INSECURE_TLS=1 pnpm ingest:prices -- --retailer=rami-levy
 ```
 

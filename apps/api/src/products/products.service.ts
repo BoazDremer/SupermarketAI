@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import {
   CatalogService,
+  type CatalogProductDetail,
   type CatalogProductListItem,
 } from '../catalog/catalog.service';
 import type { SearchProductsQueryDto } from './dto/search-products.query.dto';
@@ -24,8 +25,8 @@ export class ProductsService {
     return { items, total, offset, limit };
   }
 
-  findOne(id: string): Promise<CatalogProductListItem> {
-    return this.catalog.findOne(id);
+  findOne(id: string): Promise<CatalogProductDetail> {
+    return this.catalog.findOneDetailed(id);
   }
 
   /**

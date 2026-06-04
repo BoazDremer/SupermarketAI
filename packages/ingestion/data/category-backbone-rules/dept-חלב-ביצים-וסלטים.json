@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "departmentId": "dept/חלב-ביצים-וסלטים",
+  "description": "Hand-curated overrides for dairy, eggs & salads.",
+  "skipAutoGeneralUnder": [
+    "dept/חלב-ביצים-וסלטים",
+    "dept/חלב-ביצים-וסלטים/חלב",
+    "dept/חלב-ביצים-וסלטים/ביצים",
+    "dept/חלב-ביצים-וסלטים/חמאה-מרגרינה-שמנת",
+    "dept/חלב-ביצים-וסלטים/גבינות",
+    "dept/חלב-ביצים-וסלטים/יוגורט-ומעדני-חלב",
+    "dept/חלב-ביצים-וסלטים/סלטים",
+    "dept/חלב-ביצים-וסלטים/מזון-מצונן"
+  ],
+  "rules": [
+    {
+      "id": "no-dept-general",
+      "summary": "Do not keep or synthesize dept/חלב-ביצים-וסלטים/general."
+    },
+    {
+      "id": "milk-leaf-order",
+      "summary": "Under חלב: …/משקאות-חלב immediately after …/חלב-עמיד-ומלבין."
+    },
+    {
+      "id": "rename-yogurt-drinks",
+      "summary": "Rename משקאות חלב ויוגורט → יוגורט ומשקאות יוגורט (id …/משקאות-חלב-ויוגורט)."
+    },
+    {
+      "id": "no-eggs-general",
+      "summary": "No /general under ביצים."
+    },
+    {
+      "id": "butter-order",
+      "summary": "Under חמאה-מרגרינה-שמנת: חמאה then מרגרינה; no /general."
+    },
+    {
+      "id": "cheese-order",
+      "summary": "Under גבינות: קוטג, לבנה, צהובה first; no /general."
+    },
+    {
+      "id": "yogurt-rename-merge",
+      "summary": "Rename parent to שמנת, יוגורט ומעדנים; merge מעדני חלב; no /general; diet after fruit flavors."
+    },
+    {
+      "id": "salads-order",
+      "summary": "Under סלטים: חומוס, טחינה, חצילים first; rename סלטי ירקות → סלטי ירקות וביצים; no /general."
+    },
+    {
+      "id": "no-chilled-food-general",
+      "summary": "No /general under מזון-מצונן."
+    }
+  ],
+  "productCategoryIdRemaps": [
+    {
+      "from": "dept/חלב-ביצים-וסלטים/general",
+      "to": "dept/חלב-ביצים-וסלטים/חלב/חלב-טרי"
+    },
+    {
+      "from": "dept/חלב-ביצים-וסלטים/חלב/general",
+      "to": "dept/חלב-ביצים-וסלטים/חלב/חלב-טרי"
+    },
+    {
+      "from": "dept/חלב-ביצים-וסלטים/ביצים/general",
+      "to": "dept/חלב-ביצים-וסלטים/ביצים/ביצים"
+    },
+    {
+      "from": "dept/חלב-ביצים-וסלטים/חמאה-מרגרינה-שמנת/general",
+      "to": "dept/חלב-ביצים-וסלטים/חמאה-מרגרינה-שמנת/חמאה"
+    },
+    {
+      "from": "dept/חלב-ביצים-וסלטים/גבינות/general",
+      "to": "dept/חלב-ביצים-וסלטים/גבינות/גבינת-קוטג"
+    },
+    {
+      "from": "dept/חלב-ביצים-וסלטים/יוגורט-ומעדני-חלב/general",
+      "to": "dept/חלב-ביצים-וסלטים/יוגורט-ומעדני-חלב/יוגורט-לבן-טבעי"
+    },
+    {
+      "from": "dept/חלב-ביצים-וסלטים/יוגורט-ומעדני-חלב/מעדני-חלב-ויוגורט-לילדים",
+      "to": "dept/חלב-ביצים-וסלטים/יוגורט-ומעדני-חלב/מעדני-חלב"
+    },
+    {
+      "from": "dept/חלב-ביצים-וסלטים/יוגורט-ומעדני-חלב/מעדני-חלב-מבוגרים",
+      "to": "dept/חלב-ביצים-וסלטים/יוגורט-ומעדני-חלב/מעדני-חלב"
+    },
+    {
+      "from": "dept/חלב-ביצים-וסלטים/סלטים/general",
+      "to": "dept/חלב-ביצים-וסלטים/סלטים/סלטי-חומוס"
+    },
+    {
+      "from": "dept/חלב-ביצים-וסלטים/מזון-מצונן/general",
+      "to": "dept/חלב-ביצים-וסלטים/מזון-מצונן/קינוחים"
+    }
+  ]
+}

@@ -6,16 +6,88 @@ const defaultParser = new XMLParser({
   trimValues: true,
   parseTagValue: true,
   parseAttributeValue: true,
+  // fast-xml-parser defaults this to 100 as a stack-overflow guard against
+  // adversarial XML. Israeli transparency files (notably RL's Stores XML) are
+  // trusted government feeds with deeper nesting; bump well past anything
+  // we've observed in practice but still finite to avoid pathological input.
+  maxNestedTags: 100_000,
 });
 
 export type ParseXmlOptions = ConstructorParameters<typeof XMLParser>[0];
+
+/**
+ * Decode an XML byte buffer to a string, honoring the BOM and any encoding
+ * declared in the `<?xml encoding="…"?>` prolog.
+ *
+ * Israeli transparency feeds are inconsistent: Shufersal serves UTF-8,
+ * Rami Levy serves UTF-16 LE (with a `0xFF 0xFE` BOM), and some legacy chains
+ * still ship `windows-1255` (Hebrew). Reading any of those as UTF-8 unconditionally
+ * silently turns every tag name into garbage, so all our store/price extractors
+ * return empty arrays.
+ */
+function decodeXmlBuffer(buffer: Buffer): string {
+  // 1) BOM sniff — the cheapest and most reliable signal.
+  if (
+    buffer.length >= 3 &&
+    buffer[0] === 0xef &&
+    buffer[1] === 0xbb &&
+    buffer[2] === 0xbf
+  ) {
+    return buffer.subarray(3).toString('utf8');
+  }
+  if (buffer.length >= 2 && buffer[0] === 0xff && buffer[1] === 0xfe) {
+    return buffer.subarray(2).toString('utf16le');
+  }
+  if (buffer.length >= 2 && buffer[0] === 0xfe && buffer[1] === 0xff) {
+    // Node Buffer can't decode UTF-16 BE directly; TextDecoder handles it.
+    return new TextDecoder('utf-16be').decode(buffer.subarray(2));
+  }
+
+  // 2) Look at the XML declaration for an explicit encoding hint.
+  const headAscii = buffer.subarray(0, Math.min(200, buffer.length)).toString('ascii');
+  const declMatch = /<\?xml[^>]*encoding=["']([^"']+)["']/i.exec(headAscii);
+  if (declMatch) {
+    const enc = declMatch[1]!.toLowerCase();
+    if (enc === 'utf-8' || enc === 'utf8') return buffer.toString('utf8');
+    if (enc === 'utf-16' || enc === 'utf-16le' || enc === 'utf16le') {
+      return buffer.toString('utf16le');
+    }
+    if (enc === 'utf-16be') return new TextDecoder('utf-16be').decode(buffer);
+    // Legacy Hebrew encodings — supported by TextDecoder via WHATWG names.
+    if (enc === 'windows-1255' || enc === 'iso-8859-8' || enc === 'hebrew') {
+      try {
+        return new TextDecoder(enc).decode(buffer);
+      } catch {
+        // Some Node versions need the canonical label; fall through to utf-8.
+      }
+    }
+  }
+
+  // 3) Default to UTF-8.
+  return buffer.toString('utf8');
+}
 
 /**
  * Parse XML bytes to a plain JS object tree (tags become keys; attributes merge on nodes).
  */
 export function parseXmlToObject(buffer: Buffer, options?: ParseXmlOptions): unknown {
   const parser = options ? new XMLParser(options) : defaultParser;
-  return parser.parse(buffer.toString('utf8'));
+  return parser.parse(decodeXmlBuffer(buffer));
+}
+
+/**
+ * Read the `<StoreID>` from a PriceFull XML header without parsing the full
+ * document. Israeli transparency PriceFull files declare the store once at
+ * the top (`<Root><StoreID>070</StoreID>…`) and every `<Item>` belongs to
+ * that store. Used to match subchain-level filenames (no branch in the name)
+ * to a requested store id.
+ */
+export function peekPriceFullStoreId(buffer: Buffer): string | undefined {
+  const head = decodeXmlBuffer(buffer).slice(0, 4_000);
+  const m = /<StoreID>\s*([^<]+?)\s*<\/StoreID>/i.exec(head);
+  if (!m) return undefined;
+  const id = m[1]!.trim();
+  return id.length > 0 ? id : undefined;
 }
 
 // ---------------------------------------------------------------------------

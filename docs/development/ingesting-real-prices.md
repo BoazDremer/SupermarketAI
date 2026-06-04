@@ -33,7 +33,7 @@ via Prisma. It is intended to be run manually for now (no scheduler).
 # Shufersal — online store 413 (שופרסל ONLINE)
 pnpm ingest:prices -- --retailer=shufersal
 
-# Rami Levy — store 001-070 by default
+# Rami Levy — online store 039 by default
 pnpm ingest:prices -- --retailer=rami-levy
 ```
 
@@ -48,7 +48,7 @@ pnpm --filter @supermarket-price-compare/ingestion ingest:prices -- --retailer=s
 | Flag | Description |
 | ---- | ----------- |
 | `--retailer=<key>` | **Required.** `shufersal` or `rami-levy`. |
-| `--storeId=<id>` | Override the default store id (`413` for Shufersal, `001-070` for Rami Levy). |
+| `--storeId=<id>` | Override the default store id (`413` for Shufersal, `039` for Rami Levy). |
 | `--localPriceFull=<path>` | Skip the download and parse a local `*.gz` (or `*.xml`) PriceFull file. |
 | `--localStores=<path>` | When detecting an online store from a Stores file, use a local copy. |
 | `--limit=<n>` | Import only the first N normalized rows (handy for testing). |
@@ -67,7 +67,7 @@ pnpm --filter @supermarket-price-compare/ingestion ingest:prices -- --retailer=s
 # Production import for Shufersal (online store 413)
 pnpm ingest:prices -- --retailer=shufersal
 
-# Production import for Rami Levy (online store 001-070)
+# Production import for Rami Levy (online store 039)
 INGESTION_INSECURE_TLS=1 pnpm ingest:prices -- --retailer=rami-levy
 
 # Pick a different Shufersal branch
@@ -137,7 +137,7 @@ Suggested checks:
 - `IngestionRun` table — most recent row should have status `COMPLETED`.
 - `IngestionFile` — your file with the right `sha256` + `sizeBytes`.
 - `Retailer` — slug `shufersal` or `rami-levy` exists.
-- `RetailerStore` — `externalStoreId = '413'` (or `'001-070'`).
+- `RetailerStore` — `externalStoreId = '413'` (Shufersal) or `'039'` (Rami Levy online).
 - `RetailerProduct` count matches the CLI summary.
 - `RetailerPrice` — exactly one row per product where `isCurrent = true`.
 

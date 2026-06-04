@@ -18,7 +18,12 @@
     "typecheck": "pnpm -r typecheck",
     "ingest:prices": "pnpm --filter @supermarket-price-compare/ingestion ingest:prices",
     "scrape:categories": "pnpm --filter @supermarket-price-compare/ingestion scrape:categories",
-    "map:products": "pnpm --filter @supermarket-price-compare/ingestion map:products"
+    "map:products": "pnpm --filter @supermarket-price-compare/ingestion map:products",
+    "enrich:shufersal": "pnpm --filter @supermarket-price-compare/ingestion enrich:shufersal",
+    "probe:shufersal-api": "pnpm --filter @supermarket-price-compare/ingestion probe:shufersal-api",
+    "refresh:shufersal-categories": "pnpm --filter @supermarket-price-compare/ingestion refresh:shufersal-categories",
+    "playwright:install": "pnpm --filter @supermarket-price-compare/ingestion playwright:install",
+    "backfill:images": "pnpm --filter @supermarket-price-compare/ingestion backfill:images"
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",

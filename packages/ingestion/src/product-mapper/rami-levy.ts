@@ -165,6 +165,44 @@ async function fetchDepartmentProducts(
 }
 
 /**
+ * Fetch a single product by barcode using `/api/catalog?q=<barcode>`.
+ *
+ * The department-walk enumerator above skips products whose `department_id`
+ * is null (deposits, seasonal one-offs, etc.), even though the same product
+ * is reachable via free-text search. This lookup is the targeted fallback
+ * we use to fill those gaps without re-pulling the whole catalog.
+ *
+ * Returns the matched product (image URL, brand, name…) or `undefined` when
+ * the barcode does not exist in RL's online catalog.
+ */
+async function fetchProductByBarcode(
+  fetchImpl: typeof fetch,
+  barcode: string,
+): Promise<CatalogProductRaw | undefined> {
+  const res = await fetchImpl(CATALOG_URL, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      'User-Agent': 'SupermarketAI-ProductMapper/1.0',
+    },
+    body: JSON.stringify({ q: barcode, size: 1 }),
+  });
+  if (!res.ok) {
+    throw new Error(
+      `Rami Levy /api/catalog q=${barcode} failed: HTTP ${res.status}`,
+    );
+  }
+  const json = (await res.json()) as CatalogResponse;
+  const first = (json.data ?? [])[0];
+  if (!first) return undefined;
+  const returnedBarcode = first.barcode != null ? String(first.barcode) : '';
+  // Guard against fuzzy text matches: only accept an exact-barcode hit.
+  if (returnedBarcode !== barcode) return undefined;
+  return first;
+}
+
+/**
  * Enumerate every Rami Levy product reachable via the public catalog API,
  * keyed by GTIN with its assigned department/group ids.
  */
@@ -223,4 +261,94 @@ export async function enumerateRamiLevyProducts(
 
   log(`[rami-levy] enumerated ${products.length} unique products across ${depts.length} depts`);
   return { products, perDepartment };
+}
+
+export type ResolveByBarcodeOptions = {
+  /** Sleep between catalog requests, ms. Default 250ms. */
+  delayMs?: number;
+  /** Optional fetch impl override (testing). */
+  fetchImpl?: typeof fetch;
+  /** Verbose progress callback (default writes a single status line to stderr). */
+  log?: (msg: string) => void;
+  /**
+   * Called every `progressEvery` lookups with the running counts so callers
+   * can render a live ETA. Default 25.
+   */
+  onProgress?: (state: {
+    completed: number;
+    total: number;
+    matched: number;
+    elapsedMs: number;
+  }) => void;
+  progressEvery?: number;
+};
+
+/**
+ * Resolve a list of barcodes by direct `/api/catalog?q=<barcode>` lookup.
+ *
+ * Use this AFTER `enumerateRamiLevyProducts()` to catch products that the
+ * department-walk missed (most commonly: department-less SKUs). Output is
+ * the subset of inputs that returned an exact-barcode hit, in the same
+ * shape as `RamiLevyEnumeratedProduct`.
+ *
+ * Calls are serial with `delayMs` between requests to stay polite — there
+ * is no batched query shape that RL accepts reliably.
+ */
+export async function resolveRamiLevyProductsByBarcode(
+  barcodes: readonly string[],
+  options: ResolveByBarcodeOptions = {},
+): Promise<RamiLevyEnumeratedProduct[]> {
+  const fetchImpl = options.fetchImpl ?? fetch;
+  const delayMs = options.delayMs ?? 250;
+  const progressEvery = options.progressEvery ?? 25;
+  const log = options.log ?? ((m) => process.stderr.write(`${m}\n`));
+
+  const out: RamiLevyEnumeratedProduct[] = [];
+  const t0 = Date.now();
+  let matched = 0;
+  const total = barcodes.length;
+
+  for (let i = 0; i < total; i++) {
+    const barcode = barcodes[i] ?? '';
+    if (!barcode) continue;
+    let raw: CatalogProductRaw | undefined;
+    try {
+      raw = await fetchProductByBarcode(fetchImpl, barcode);
+    } catch (err) {
+      // Don't abort the whole pass on a single network blip — log and move on.
+      log(`[rami-levy] q=${barcode} failed: ${(err as Error).message}`);
+    }
+    if (raw) {
+      const productId = typeof raw.id === 'number' ? raw.id : 0;
+      const deptId = raw.department?.id ?? 0;
+      const groupId = raw.group?.id ?? null;
+      const subGroupId = raw.subGroup?.id ?? raw.sub_group_id ?? null;
+      const name = typeof raw.name === 'string' ? raw.name.trim() : '';
+      out.push({
+        barcode,
+        productId,
+        departmentId: deptId,
+        groupId,
+        subGroupId,
+        name,
+        brand: pickBrand(raw),
+        shortName: cleanString(raw.gs?.short_name),
+        imageUrl: pickImageUrl(raw),
+      });
+      matched += 1;
+    }
+    const completed = i + 1;
+    if (options.onProgress && completed % progressEvery === 0) {
+      options.onProgress({
+        completed,
+        total,
+        matched,
+        elapsedMs: Date.now() - t0,
+      });
+    }
+    if (delayMs > 0 && completed < total) await delay(delayMs);
+  }
+
+  log(`[rami-levy] resolved ${matched}/${total} barcodes via direct lookup`);
+  return out;
 }

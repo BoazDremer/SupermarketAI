@@ -1,9 +1,12 @@
 /**
- * Hebrew + English synonyms keyed by backbone leaf id.
+ * Hebrew + English synonyms keyed by backbone node id.
  *
- * Each list is matched against a normalized chain category name. Any token
- * substring match counts as a hit; the matcher in `match.ts` ranks leaves by
- * how many distinct synonyms hit and how specific the longest hit was.
+ * The keys here target the 3-depth backbone (`packages/ingestion/src/category-
+ * mapper/backbone.ts`). A key may name a department, a category, or a sub-
+ * category — anything that exists in `COMMON_BY_ID`. The matcher in
+ * `similarity.ts` uses these lists as a fallback when the chainHints layer
+ * doesn't have a direct binding, and `refine.ts` consults them to corroborate
+ * a chain alias against the product's own name.
  *
  * Tips when extending:
  *   - Use the SHORTEST distinguishing prefix (Hebrew lacks word stemming so
@@ -15,8 +18,17 @@
 
 export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
   // --- dairy ---
-  'dairy/milk': ['חלב טרי', 'חלב מפוסטר', 'חלב', 'milk', 'שוקו'],
-  'dairy/cheese': [
+  //
+  // Generic "חלב" without a qualifier defaults to fresh cow milk in Hebrew,
+  // so unqualified milk synonyms key the `dairy/milk/fresh` terminal
+  // directly (plant-based and UHT terms live on `dairy/milk/alternatives`,
+  // ready-to-drink milk + protein drinks live on `dairy/milk/drinks`).
+  // Generic cheese terms key the `/general` fallback leaf — when the chain
+  // alias already picked a specific cheese sub-type, the refine pass keeps
+  // that more specific alias instead of demoting to /general (see refine.ts
+  // step 5).
+  'dairy/milk/fresh': ['חלב טרי', 'חלב מפוסטר', 'חלב', 'milk'],
+  'dairy/cheese/general': [
     'גבינ',
     'גבינה צהובה',
     'גבינת',
@@ -30,7 +42,7 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'מסקרפונה',
     'קוטג',
   ],
-  'dairy/yogurt': [
+  'dairy/yogurt-desserts': [
     'יוגורט',
     'מעדן',
     'מעדנים',
@@ -56,20 +68,61 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'קצפת',
     'whipping',
   ],
-  'dairy/plant-based': [
+  // Plant-based milk + UHT/shelf-stable + coffee whitener all live in the
+  // same "alternatives & shelf-stable" leaf in the 3-depth backbone.
+  'dairy/milk/alternatives': [
     'משקה שקדים',
     'משקה סויה',
     'משקה שיבולת',
+    'משקה קוקוס',
+    'משקה אורז',
     'חלב סויה',
     'חלב שקדים',
     'חלב שיבולת',
+    'חלב קוקוס',
+    'חלב אורז',
+    'סויה לבישול',
+    'שמנת סויה',
+    'אלפרו',
+    'אומגה',
+    'alpro',
+    'oatly',
     'almond milk',
     'soy milk',
     'oat milk',
+    'rice milk',
+    'coconut milk',
     'plant-based',
+    'plant based',
+    'dairy free',
     'vegan',
     'טבעוני',
     'צמחי',
+    'חלב עמיד',
+    'מלבין קפה',
+    'תחליף חלב',
+    'תחליפי חלב',
+    'uht',
+    'shelf-stable',
+  ],
+  // Ready-to-drink milk-based and protein drinks (Rivion, drinkable yogurt,
+  // Yotvata Pro, Go protein drinks, ready-to-drink coffee/latte).
+  'dairy/milk/drinks': [
+    'ריוויון',
+    'שוקו',
+    'משקה יוגורט',
+    'משקה חלב',
+    'משקה חלבון',
+    'משקה פרוטאין',
+    'מאסטר קפה',
+    'יטבתה פרו',
+    'גו לייט',
+    'protein drink',
+    'protein shake',
+    'milk drink',
+    'iced coffee',
+    'latte',
+    'cappuccino drink',
   ],
   // --- produce ---
   'produce/vegetables': [
@@ -147,24 +200,80 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'rosemary',
     'thyme',
   ],
-  'produce/organic': ['אורגני', 'organic', 'bio', 'שופרסל גרין', 'גרין', 'בריאות וטבע', 'תוספי מזון'],
+  'health-organic/organic-vegan': [
+    'אורגני',
+    'אורגנית',
+    'organic',
+    'bio',
+    'biodynamic',
+    'שופרסל גרין',
+    'בריאות וטבע',
+    'תזונה טבעית',
+  ],
   // --- bakery ---
-  'bakery/bread': ['לחם', 'baguette', 'בגט', 'bread', 'loaf'],
-  'bakery/pita-challah': ['פיתה', 'פיתות', 'חלה', 'בייגל', 'bagel', 'challah', 'pita'],
+  'bakery/bread': [
+    'לחם',
+    'baguette',
+    'בגט',
+    'באגט',
+    'בגטים',
+    'באגטים',
+    'לחמני',
+    'לחמניה',
+    'לחמניות',
+    'טוסט',
+    'פרוסות',
+    'מוצרי מאפה',
+    'bread',
+    'loaf',
+    'roll',
+    'sliced bread',
+  ],
+  'bakery/pita-challah': [
+    'פיתה',
+    'פיתות',
+    'חלה',
+    'חלות',
+    'בייגל',
+    'בייגלה',
+    'בייגלים',
+    'לאפה',
+    'לאפות',
+    'bagel',
+    'challah',
+    'pita',
+    'lafa',
+  ],
   'bakery/pastries': [
     'מאפה',
     'מאפי',
     'בורקס',
     'קרואסון',
-    'עוגה',
-    'עוגי',
     'מאפים',
     'pastry',
-    'cake',
     'croissant',
     'bourekas',
   ],
-  // --- breakfast ---
+  'bakery/cakes-cookies': [
+    'עוגה',
+    'עוגי',
+    'עוגות',
+    'עוגיות',
+    'cake',
+    'cookie',
+  ],
+  'bakery/rolls-baguettes': [
+    'בגט',
+    'באגט',
+    'בגטים',
+    'באגטים',
+    'לחמני',
+    'לחמניה',
+    'לחמניות',
+    'baguette',
+    'roll',
+  ],
+  // --- breakfast (kept top-level dept in new tree) ---
   'breakfast/cereals': [
     'דגני בוקר',
     'קורנפלקס',
@@ -179,21 +288,31 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'muesli',
     'cheerios',
   ],
-  'breakfast/spreads': [
+  'pantry/sweet-spreads': [
     'ממרח',
     'ממרחים',
     'ריבה',
+    'ריבת',
+    'קונפיטורה',
     'נוטלה',
     'חמאת בוטנים',
     'שוקולד למריחה',
+    'דבש',
+    'סילאן',
+    'סירופ מייפל',
     'jam',
     'spread',
+    'preserves',
+    'marmalade',
     'nutella',
     'peanut butter',
+    'honey',
+    'maple',
+    'silan',
+    'date syrup',
   ],
-  'breakfast/honey': ['דבש', 'סילאן', 'סירופ מייפל', 'honey', 'maple', 'silan', 'date syrup'],
   // --- meat / fish ---
-  'meat-fish/beef': [
+  'meat-fish/beef-lamb': [
     'בקר',
     'טלה',
     'כבש',
@@ -211,7 +330,7 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'ground meat',
     'bbq',
   ],
-  'meat-fish/poultry': [
+  'meat-fish/poultry/general': [
     'עוף',
     'הודו',
     'שוק עוף',
@@ -233,14 +352,21 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'בקלה',
     'סרדינים',
     'אנשובי',
+    'איקרה',
+    'אקרה',
+    'הרינג',
+    'מתיאס',
     'fish',
     'salmon',
     'tuna',
     'cod',
     'sardine',
     'anchovy',
+    'caviar',
+    'roe',
+    'herring',
   ],
-  'meat-fish/deli': [
+  'meat-fish/deli-sausage': [
     'נקני',
     'נקניק',
     'נקניקיות',
@@ -263,27 +389,48 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'מאפים קפואים',
   ],
   'frozen/ice-cream': ['גלידה', 'ארטיק', 'שלגון', 'ice cream', 'gelato', 'sorbet'],
-  'frozen/vegetables': ['ירקות קפואים', 'אפונה קפואה', 'frozen vegetables', 'frozen peas'],
-  'frozen/fish': ['דגים קפואים', 'frozen fish'],
+  'frozen/vegetables-fries': ['ירקות קפואים', 'אפונה קפואה', 'צ\'יפס קפוא', 'frozen vegetables', 'frozen peas', 'frozen fries'],
+  'frozen/meat-fish': ['דגים קפואים', 'עוף קפוא', 'בשר קפוא', 'frozen fish', 'frozen chicken', 'frozen meat'],
   // --- pantry ---
-  'pantry/grains': [
+  'pantry/rice-pasta-legumes': [
     'אורז',
     'פסטה',
     'נודלס',
     'בורגול',
     'קוסקוס',
+    'קטניות',
+    'עדשים',
+    'גרגרי חומוס',
+    'שעועית יבשה',
+    'מאש',
     'rice',
     'pasta',
     'noodle',
     'couscous',
     'spaghetti',
+    'lentils',
+    'chickpeas',
+    'beans',
+    'kidney',
   ],
-  'pantry/oils': ['שמן זית', 'שמן קנולה', 'שמן חמניות', 'שמן', 'oil', 'olive oil', 'canola'],
-  'pantry/flour-sugar': [
+  'pantry/oils-vinegar': [
+    'שמן זית',
+    'שמן קנולה',
+    'שמן חמניות',
+    'שמן',
+    'חומץ',
+    'מיץ לימון',
+    'oil',
+    'olive oil',
+    'canola',
+    'vinegar',
+  ],
+  'pantry/flour-sugar-baking': [
     'קמח',
     'סוכר',
     'אבקת אפיה',
     'שמרים',
+    'אבקת סוכר',
     'flour',
     'sugar',
     'baking',
@@ -305,17 +452,22 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
   ],
   'pantry/sauces': [
     'רוטב',
+    'רטבים',
     'קטשופ',
     'מיונז',
     'חרדל',
-    'חומץ',
-    'סויה',
+    'רוטב סויה',
+    'טחינה',
+    'חומוס',
+    'אמבה',
     'sauce',
     'ketchup',
     'mayonnaise',
     'mustard',
-    'vinegar',
     'soy sauce',
+    'tahini',
+    'hummus',
+    'amba',
   ],
   'pantry/canned': [
     'שימור',
@@ -328,20 +480,8 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'preserves',
     'corn',
   ],
-  'pantry/legumes': [
-    'קטניות',
-    'עדשים',
-    'גרגרי חומוס',
-    'שעועית יבשה',
-    'מאש',
-    'lentils',
-    'chickpeas',
-    'beans',
-    'kidney',
-  ],
-  'pantry/middle-eastern': ['טחינה', 'חומוס', 'אמבה', 'tahini', 'hummus', 'amba'],
-  // --- snacks / sweets ---
-  'snacks/salty': [
+  // --- snacks / sweets (new tree uses `snacks-sweets/...`) ---
+  'snacks-sweets/salty': [
     'חטיף',
     'חטיפים',
     'במבה',
@@ -355,7 +495,7 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'popcorn',
     'pretzel',
   ],
-  'snacks/chocolate': [
+  'snacks-sweets/chocolate-candy': [
     'שוקולד',
     'פרלינים',
     'טבלת שוקולד',
@@ -365,18 +505,16 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'chocolate',
     'praline',
   ],
-  'snacks/candy': ['סוכריות', 'גומי', 'מנטוס', 'candy', 'gummy', 'jelly', 'mint'],
-  'snacks/cookies': [
-    'עוגיות',
+  'snacks-sweets/gum-candy': ['סוכריות', 'גומי', 'מנטוס', 'מסטיק', 'candy', 'gummy', 'jelly', 'mint', 'gum'],
+  'snacks-sweets/cookies-wafers': [
     'ביסקויט',
     'ופל',
     'קרקר',
-    'cookie',
     'biscuit',
     'wafer',
     'cracker',
   ],
-  'snacks/dried-fruit': [
+  'produce/dried-nuts': [
     'פירות יבשים',
     'אגוזים',
     'בוטנים',
@@ -396,8 +534,8 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'nuts',
   ],
   // --- beverages ---
-  'beverages/water': ['מים מינרל', 'מים', 'נביעות', 'mineral water', 'spring water', 'sparkling'],
-  'beverages/soft': [
+  'beverages/water-soda': ['מים מינרל', 'מים', 'נביעות', 'סודה', 'mineral water', 'spring water', 'sparkling', 'soda'],
+  'beverages/soft-drinks': [
     'משקאות קלים',
     'משק קל',
     'קולה',
@@ -411,7 +549,7 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'fanta',
     'soda',
   ],
-  'beverages/juice': [
+  'beverages/juice-concentrates': [
     'מיץ',
     'תפוזינה',
     'משק פרי',
@@ -423,19 +561,26 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'concentrate',
     'syrup',
   ],
-  'beverages/coffee-tea': [
+  'beverages/hot-drinks/coffee': [
     'קפה',
-    'תה',
     'נס קפה',
     'אספרסו',
     'קפה נמס',
-    'משקאות חמים',
-    'משקה חם',
     'cappuccino',
     'coffee',
-    'tea',
     'espresso',
     'instant coffee',
+  ],
+  'beverages/hot-drinks/tea': [
+    'תה',
+    'חליטה',
+    'חליטות',
+    'tea',
+    'herbal tea',
+  ],
+  'beverages/hot-drinks/general': [
+    'משקאות חמים',
+    'משקה חם',
     'hot drink',
   ],
   'beverages/energy': [
@@ -470,8 +615,30 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'cognac',
   ],
   // --- baby ---
-  'baby/diapers': ['חיתול', 'חיתולים', 'diaper', 'pampers', 'huggies', 'libero'],
-  'baby/formula-food': [
+  'baby/diapers-wipes': [
+    'חיתול',
+    'חיתולים',
+    'טיטול',
+    'טיטולים',
+    'תחתוני ספיגה',
+    'תחתוני',
+    'ספיגה',
+    'הרטבת לילה',
+    'מגבונים לתינוק',
+    'מגבונ',
+    'pull-ups',
+    'pull ups',
+    'goodnites',
+    'diaper',
+    'pampers',
+    'huggies',
+    'האגיס',
+    'libero',
+    'training pants',
+    'wipes',
+    'baby wipes',
+  ],
+  'baby/baby-food': [
     'פורמולה',
     'מטרנה',
     'סימילאק',
@@ -487,8 +654,7 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'similac',
     'enfamil',
   ],
-  'baby/wipes': ['מגבונים לתינוק', 'מגבונ', 'wipes', 'baby wipes'],
-  'baby/care': [
+  'baby/baby-care': [
     'טיפוח תינוק',
     'אביזרי תינוק',
     'מוצרי ילדים',
@@ -506,6 +672,16 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'קוטל חרקים',
     'מבשם אויר',
     'מבשמי אויר',
+    'מטליות',
+    'מטלית',
+    'מטליות לחות',
+    'מטליות ניקוי',
+    'סקוצ',
+    'ספוג',
+    'ספוגי',
+    'מטאטא',
+    'דלי',
+    'מגב',
     'cleaning',
     'detergent',
     'bleach',
@@ -513,12 +689,20 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'multi-surface',
     'air freshener',
     'insecticide',
+    'sponge',
+    'mop',
+    'squeegee',
+    'wipes for floor',
+    'floor wipes',
   ],
-  'household/paper': [
+  'disposables/paper': [
     'נייר טואלט',
     'מגבת נייר',
+    'מגבות נייר',
     'טישו',
     'מפיות',
+    'מפית',
+    'מגבונים יבשים',
     'toilet paper',
     'paper towel',
     'tissue',
@@ -537,31 +721,54 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'persil',
     'ariel',
   ],
-  'household/kitchen': [
+  'home-kitchen/kitchen-utensils': [
     'כלי בית',
     'כלי מטבח',
-    'חד פעמי',
-    'אלומיניום',
     'נייר אפיה',
     'baking paper',
-    'aluminum',
-    'cling film',
     'kitchenware',
     'household',
   ],
+  'disposables/single-use': [
+    'חד פעמי',
+    'חד-פעמי',
+    'כלים חד פעמיים',
+    'single-use',
+    'disposable',
+  ],
+  'disposables/bags-foil': [
+    'אלומיניום',
+    'נייר כסף',
+    'שקיות',
+    'שקיות זבל',
+    'aluminum',
+    'cling film',
+    'foil',
+    'plastic wrap',
+    'trash bag',
+  ],
   // --- personal-care ---
-  'personal-care/toiletries': [
-    'סבון',
+  'personal-care/hair/shampoo-conditioner': [
     'שמפו',
     'מרכך שיער',
-    'גוף',
-    'soap',
     'shampoo',
     'conditioner',
+  ],
+  'personal-care/body': [
+    'סבון',
+    'גוף',
+    'ג\'ל רחצה',
+    'soap',
     'body wash',
     'shower gel',
+  ],
+  'personal-care/perfume-deodorant': [
     'דאודורנט',
+    'בושם',
+    'אנטיפרספירנט',
     'deodorant',
+    'perfume',
+    'antiperspirant',
   ],
   'personal-care/cosmetics': [
     'איפור',
@@ -569,13 +776,10 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'שפתון',
     'מייקאפ',
     'אודם',
-    'בושם',
     'lipstick',
     'mascara',
     'foundation',
     'cosmetic',
-    'perfume',
-    'בושם',
   ],
   'personal-care/oral': [
     'משחת שיניים',
@@ -625,23 +829,58 @@ export const LEAF_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
  * backbone GROUP id even when no specific leaf is a clear winner.
  */
 export const GROUP_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
-  dairy: ['מוצרי חלב', 'חלב ומוצרי חלב', 'חלבי', 'dairy'],
-  produce: ['פירות וירקות', 'ירקות ופירות', 'produce'],
-  bakery: ['מאפיה', 'מאפים', 'bakery'],
-  breakfast: ['ארוחת בוקר', 'דגנים', 'breakfast'],
-  'meat-fish': ['בשר ודגים', 'בשר ועוף', 'בשרים', 'דגים', 'meat', 'fish'],
+  dairy: ['מוצרי חלב', 'חלב ומוצרי חלב', 'חלב, ביצים וסלטים', 'חלבי', 'dairy'],
+  produce: [
+    'פירות וירקות',
+    'ירקות ופירות',
+    'עולם הפירות',
+    'עולם הפירות והירקות',
+    'produce',
+  ],
+  bakery: ['מאפיה', 'מאפים', 'לחם ומאפים', 'bakery'],
+  'meat-fish': [
+    'בשר ודגים',
+    'בשר, עוף ודגים',
+    'בשר עוף ודגים',
+    'בשר ועוף',
+    'בשרים',
+    'דגים',
+    'meat',
+    'fish',
+  ],
   frozen: ['קפוא', 'קפואים', 'מוצרים קפואים', 'frozen'],
   pantry: [
     'מזווה',
+    'מזון יבש',
     'יסודות מטבח',
     'יסודות',
     'מצרכי יסוד',
+    'בישול ואפיה',
+    'שימורים',
     'pantry',
     'staples',
   ],
-  snacks: ['חטיפים', 'ממתקים', 'חטיפים וממתקים', 'snacks', 'sweets'],
-  beverages: ['משקאות', 'משק קלים', 'beverages', 'drinks'],
+  breakfast: ['דגני בוקר', 'ארוחת בוקר', 'cereal', 'breakfast'],
+  'snacks-sweets': ['חטיפים', 'ממתקים', 'חטיפים וממתקים', 'snacks', 'sweets'],
+  beverages: [
+    'משקאות',
+    'משקאות, אלכוהול',
+    'משקאות, אלכוהול, יין וטבק',
+    'משק קלים',
+    'יין וטבק',
+    'beverages',
+    'drinks',
+  ],
   alcohol: ['אלכוהול', 'משקאות חריפים', 'יין ואלכוהול', 'alcohol'],
+  'health-organic': [
+    'אורגני',
+    'בריאות',
+    'דיאטה',
+    'בריאות וטבע',
+    'organic',
+    'health',
+    'natural',
+  ],
   baby: [
     'תינוקות',
     'מוצרי תינוקות',
@@ -649,6 +888,15 @@ export const GROUP_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'תינוקות וילדים',
     'baby',
   ],
+  'personal-care': [
+    'טיפוח',
+    'טיפוח ויופי',
+    'מוצרי פארם וטיפוח',
+    'קוסמטיקה',
+    'טיפוח אישי',
+    'personal care',
+  ],
+  pharmacy: ['בית מרקחת', 'פארם', 'מוצרי פארם', 'תרופות', 'pharmacy', 'pharm'],
   household: [
     'ניקיון',
     'בית וניקיון',
@@ -657,16 +905,22 @@ export const GROUP_SYNONYMS: Readonly<Record<string, readonly string[]>> = {
     'אחזקת בית',
     'household',
   ],
-  'personal-care': [
-    'טיפוח',
-    'טיפוח ויופי',
-    'מוצרי פארם',
-    'פארם',
-    'קוסמטיקה',
-    'personal care',
-    'pharm',
+  disposables: ['חד פעמי', 'חד-פעמי', 'נייר', 'מוצרי נייר', 'disposables'],
+  'home-kitchen': [
+    'כלי בית',
+    'כלי מטבח',
+    'ריהוט',
+    'אביזרי בית',
+    'home',
+    'kitchenware',
   ],
+  electronics: ['חשמל', 'אלקטרוניקה', 'מוצרי חשמל', 'electronics', 'appliance'],
   pet: ['חיות מחמד', 'בעלי חיים', 'בע"ח', 'pet'],
+  'garden-outdoor': ['גינה', 'גן', 'חוץ', 'רכב', 'garden', 'outdoor', 'auto'],
+  'kids-leisure': ['ילדים', 'פנאי', 'ביגוד', 'צעצועים', 'ספורט', 'kids', 'leisure', 'toys'],
+  tobacco: ['טבק', 'סיגריות', 'tobacco', 'cigarettes'],
+  promotions: ['מבצעים', 'מבצע', 'חגים', 'רשימות', 'promotion', 'sale'],
+  other: ['שונות', 'אחר', 'כללי', 'other', 'misc'],
 };
 
 /**

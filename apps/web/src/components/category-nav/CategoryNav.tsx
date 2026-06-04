@@ -4,22 +4,25 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { iconForName } from '@/lib/categories';
 import {
   useCategoryTreeQuery,
-  type CategoryTreeGroupApi,
+  type CategoryTreeNodeApi,
 } from '@/hooks/use-catalog-api';
 import { cn } from '@/lib/utils';
 
 /**
- * Top navigation strip listing every backbone group as an icon button.
+ * Top navigation strip listing every backbone department as an icon button.
  *
- * Clicking a group does two things at once:
- *   - Navigates to `/search?category=<groupId>` so the catalog is filtered by
- *     the whole group (the "All" option for that group).
- *   - Expands a second row underneath that lists the group's leaves so the
- *     user can drill into a more specific subcategory.
+ * The new 3-depth tree means a department may contain intermediate categories
+ * that themselves have sub-categories. We render up to three rows:
  *
- * Which group is "expanded" is derived purely from the URL (the parent of the
- * currently-selected category), so navigation and expansion stay in sync and
- * back/forward through history works as expected.
+ *   - Row 1 — departments (icon buttons)
+ *   - Row 2 — direct children of the active department (always shown when a
+ *     department is in the active ancestor chain)
+ *   - Row 3 — direct children of the active category (shown when a depth-1
+ *     category that has sub-categories is part of the active ancestor chain)
+ *
+ * "Active ancestor chain" = the selected node and every ancestor up to the
+ * root. Selecting any chip in any row drills the same URL parameter so
+ * back/forward stays in sync.
  */
 export function CategoryNav() {
   const { i18n } = useTranslation();
@@ -30,11 +33,14 @@ export function CategoryNav() {
   const { data, isLoading } = useCategoryTreeQuery();
   const groups = data?.groups ?? [];
 
-  // Map leaf id → parent group id so we can highlight/expand the right group
-  // when a leaf is selected.
-  const parentByLeaf = useMemo(() => {
-    const m = new Map<string, string>();
-    for (const g of groups) for (const l of g.children) m.set(l.id, g.id);
+  // Recursive index: id -> { node, ancestors[] (root → parent) }
+  const index = useMemo(() => {
+    const m = new Map<string, { node: CategoryTreeNodeApi; ancestors: CategoryTreeNodeApi[] }>();
+    function walk(node: CategoryTreeNodeApi, ancestors: CategoryTreeNodeApi[]): void {
+      m.set(node.id, { node, ancestors });
+      for (const c of node.children) walk(c, [...ancestors, node]);
+    }
+    for (const g of groups) walk(g, []);
     return m;
   }, [groups]);
 
@@ -54,13 +60,16 @@ export function CategoryNav() {
   }
   if (groups.length === 0) return null;
 
-  // The expanded group is whichever group is currently selected, or the
-  // parent group of the currently-selected leaf.
-  const expandedGroupId =
-    groups.find((g) => g.id === selected)?.id ?? parentByLeaf.get(selected) ?? null;
-  const expandedGroup = expandedGroupId
-    ? groups.find((g) => g.id === expandedGroupId)
-    : undefined;
+  // Walk the selected node and its ancestors. We need the department (root)
+  // and any intermediate category to decide which rows to render.
+  const selectedEntry = index.get(selected);
+  const chain: CategoryTreeNodeApi[] = selectedEntry
+    ? [...selectedEntry.ancestors, selectedEntry.node]
+    : [];
+  const activeDept = chain[0];
+  const activeCategory = chain[1]; // depth-1 (category) if the chain has one
+  const showSubRow =
+    activeCategory !== undefined && activeCategory.children.length > 0;
 
   return (
     <div className="border-b bg-card/90">
@@ -72,16 +81,27 @@ export function CategoryNav() {
               group={g}
               isHebrew={isHebrew}
               selectedCategoryId={selected}
-              parentByLeaf={parentByLeaf}
+              activeDeptId={activeDept?.id ?? null}
             />
           ))}
         </div>
 
-        {expandedGroup && (
-          <CategoryLeafRow
-            group={expandedGroup}
+        {activeDept && (
+          <CategoryChipRow
+            id={`category-children-${activeDept.id}`}
+            parent={activeDept}
             isHebrew={isHebrew}
             selectedCategoryId={selected}
+          />
+        )}
+
+        {showSubRow && activeCategory && (
+          <CategoryChipRow
+            id={`category-children-${activeCategory.id}`}
+            parent={activeCategory}
+            isHebrew={isHebrew}
+            selectedCategoryId={selected}
+            indent
           />
         )}
       </div>
@@ -90,23 +110,22 @@ export function CategoryNav() {
 }
 
 type CategoryGroupButtonProps = {
-  group: CategoryTreeGroupApi;
+  group: CategoryTreeNodeApi;
   isHebrew: boolean;
   selectedCategoryId: string;
-  parentByLeaf: Map<string, string>;
+  activeDeptId: string | null;
 };
 
 function CategoryGroupButton({
   group,
   isHebrew,
   selectedCategoryId,
-  parentByLeaf,
+  activeDeptId,
 }: CategoryGroupButtonProps) {
   const Icon = iconForName(group.icon);
   const label = isHebrew ? group.nameHe : group.nameEn;
   const isSelectedGroup = selectedCategoryId === group.id;
-  const selectedLeafBelongsToGroup = parentByLeaf.get(selectedCategoryId) === group.id;
-  const isActive = isSelectedGroup || selectedLeafBelongsToGroup;
+  const isActive = activeDeptId === group.id;
 
   return (
     <Link
@@ -114,7 +133,7 @@ function CategoryGroupButton({
       aria-label={label}
       aria-current={isSelectedGroup ? 'page' : undefined}
       aria-expanded={isActive}
-      aria-controls={`category-leaves-${group.id}`}
+      aria-controls={`category-children-${group.id}`}
       title={label}
       className={cn(
         'group flex w-20 shrink-0 flex-col items-center justify-start gap-1.5 rounded-lg border bg-background px-2 py-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground sm:w-24 sm:py-3',
@@ -129,42 +148,51 @@ function CategoryGroupButton({
   );
 }
 
-type CategoryLeafRowProps = {
-  group: CategoryTreeGroupApi;
+type CategoryChipRowProps = {
+  id: string;
+  parent: CategoryTreeNodeApi;
   isHebrew: boolean;
   selectedCategoryId: string;
+  /** When true, indents the row slightly to suggest a sub-tier. */
+  indent?: boolean;
 };
 
-function CategoryLeafRow({
-  group,
+function CategoryChipRow({
+  id,
+  parent,
   isHebrew,
   selectedCategoryId,
-}: CategoryLeafRowProps) {
+  indent,
+}: CategoryChipRowProps) {
+  if (parent.children.length === 0) return null;
   return (
     <div
-      id={`category-leaves-${group.id}`}
-      className="flex flex-wrap items-center gap-2 border-t pb-3 pt-2 sm:gap-2.5"
+      id={id}
+      className={cn(
+        'flex flex-wrap items-center gap-2 border-t pb-3 pt-2 sm:gap-2.5',
+        indent && 'pl-3 sm:pl-6',
+      )}
     >
       <span className="text-[11px] uppercase tracking-wide text-muted-foreground sm:text-xs">
-        {isHebrew ? group.nameHe : group.nameEn}
+        {isHebrew ? parent.nameHe : parent.nameEn}
       </span>
       <Link
-        to={`/search?category=${encodeURIComponent(group.id)}`}
+        to={`/search?category=${encodeURIComponent(parent.id)}`}
         className={cn(
           'inline-flex items-center rounded-full border bg-background px-3 py-1 text-[11px] font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground sm:text-xs',
-          selectedCategoryId === group.id &&
+          selectedCategoryId === parent.id &&
             'border-primary/50 bg-primary/10 text-primary',
         )}
       >
         {isHebrew ? 'הכל' : 'All'}
       </Link>
-      {group.children.map((leaf) => {
-        const active = selectedCategoryId === leaf.id;
-        const label = isHebrew ? leaf.nameHe : leaf.nameEn;
+      {parent.children.map((child) => {
+        const active = selectedCategoryId === child.id;
+        const label = isHebrew ? child.nameHe : child.nameEn;
         return (
           <Link
-            key={leaf.id}
-            to={`/search?category=${encodeURIComponent(leaf.id)}`}
+            key={child.id}
+            to={`/search?category=${encodeURIComponent(child.id)}`}
             className={cn(
               'inline-flex items-center rounded-full border bg-background px-3 py-1 text-[11px] font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground sm:text-xs',
               active && 'border-primary/50 bg-primary/10 text-primary',

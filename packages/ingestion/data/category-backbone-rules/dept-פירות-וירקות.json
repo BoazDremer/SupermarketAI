@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "departmentId": "dept/פירות-וירקות",
+  "description": "Hand-curated overrides for the fruits & vegetables department. Applied after RL-based generation and on top of RAW_COMMON_BACKBONE before /general fallback leaves are synthesized.",
+  "skipAutoGeneralUnder": [
+    "dept/פירות-וירקות",
+    "dept/פירות-וירקות/פירות",
+    "dept/פירות-וירקות/ירקות",
+    "dept/פירות-וירקות/פיצוחים"
+  ],
+  "rules": [
+    {
+      "id": "fruits-leaves",
+      "summary": "Under level-1 פירות keep exactly two leaves: פירות-טריים and פירות-יבשים."
+    },
+    {
+      "id": "dried-fruit-under-fruits",
+      "summary": "Collapse former level-1 group פירות-יבשים into leaf dept/.../פירות/פירות-יבשים; remove its former level-2 children."
+    },
+    {
+      "id": "packed-veg-only-under-vegetables",
+      "summary": "ירקות ארוזים must not appear under פירות; only under ירקות."
+    },
+    {
+      "id": "fresh-fruit-once",
+      "summary": "פירות-טריים appears only under פירות, not under ירקות."
+    },
+    {
+      "id": "no-general-under-fruits-veg-nuts",
+      "summary": "Do not synthesize /general under פירות, ירקות, or פיצוחים groups."
+    },
+    {
+      "id": "nuts-group-rename",
+      "summary": "Group dept/.../פיצוחים is named פיצוחים (not פיצוחים ופירות יבשים)."
+    },
+    {
+      "id": "nuts-three-leaves",
+      "summary": "Under פיצוחים keep only: פיצוחים-טבעיים, פיצוחים-קלויים, מנצ'ס."
+    },
+    {
+      "id": "remove-roasted-almonds-bulk-group",
+      "summary": "Remove level-1 קליית-השקמה-בתפזורת; RL codes move to dept/שימורים-בישול-ואפיה/תבלינים/תבלינים-במשקל."
+    },
+    {
+      "id": "no-dept-general",
+      "summary": "Do not keep or synthesize dept/פירות-וירקות/general."
+    }
+  ],
+  "productCategoryIdRemaps": [
+    {
+      "from": "dept/פירות-וירקות/פירות/ירקות-ארוזים",
+      "to": "dept/פירות-וירקות/ירקות/ירקות-ארוזים"
+    },
+    {
+      "from": "dept/פירות-וירקות/ירקות/פירות-טריים",
+      "to": "dept/פירות-וירקות/פירות/פירות-טריים"
+    },
+    {
+      "from": "dept/פירות-וירקות/פירות/general",
+      "to": "dept/פירות-וירקות/פירות/פירות-טריים"
+    },
+    {
+      "from": "dept/פירות-וירקות/ירקות/general",
+      "to": "dept/פירות-וירקות/ירקות/ירקות-טריים"
+    },
+    {
+      "from": "dept/פירות-וירקות/פירות-יבשים",
+      "to": "dept/פירות-וירקות/פירות/פירות-יבשים"
+    },
+    {
+      "from": "dept/פירות-וירקות/פירות-יבשים/פירות-יבשים",
+      "to": "dept/פירות-וירקות/פירות/פירות-יבשים"
+    },
+    {
+      "from": "dept/פירות-וירקות/פירות-יבשים/פירות-יבשים-סיטונאות",
+      "to": "dept/פירות-וירקות/פירות/פירות-יבשים"
+    },
+    {
+      "from": "dept/פירות-וירקות/פירות-יבשים/פירות-יבשים-1",
+      "to": "dept/פירות-וירקות/פירות/פירות-יבשים"
+    },
+    {
+      "from": "dept/פירות-וירקות/פירות-יבשים/general",
+      "to": "dept/פירות-וירקות/פירות/פירות-יבשים"
+    },
+    {
+      "from": "dept/פירות-וירקות/פיצוחים/פירות-יבשים",
+      "to": "dept/פירות-וירקות/פיצוחים/פיצוחים-טבעיים"
+    },
+    {
+      "from": "dept/פירות-וירקות/פיצוחים/פירות-יבשים-1",
+      "to": "dept/פירות-וירקות/פירות/פירות-יבשים"
+    },
+    {
+      "from": "dept/פירות-וירקות/פיצוחים/פיצוחים",
+      "to": "dept/פירות-וירקות/פיצוחים/פיצוחים-טבעיים"
+    },
+    {
+      "from": "dept/פירות-וירקות/פיצוחים/general",
+      "to": "dept/פירות-וירקות/פיצוחים/פיצוחים-טבעיים"
+    },
+    {
+      "from": "dept/פירות-וירקות/general",
+      "to": "dept/פירות-וירקות/פירות/פירות-טריים"
+    },
+    {
+      "from": "dept/פירות-וירקות/קליית-השקמה-בתפזורת/תבלינים-במשקל-1",
+      "to": "dept/שימורים-בישול-ואפיה/תבלינים/תבלינים-במשקל"
+    },
+    {
+      "from": "dept/פירות-וירקות/קליית-השקמה-בתפזורת/general",
+      "to": "dept/שימורים-בישול-ואפיה/תבלינים/תבלינים-במשקל"
+    }
+  ],
+  "productCategoryIdPrefixRemaps": [
+    {
+      "fromPrefix": "dept/פירות-וירקות/פירות-יבשים/",
+      "toPrefix": "dept/פירות-וירקות/פירות/פירות-יבשים"
+    },
+    {
+      "fromPrefix": "dept/פירות-וירקות/קליית-השקמה-בתפזורת",
+      "toPrefix": "dept/שימורים-בישול-ואפיה/תבלינים/תבלינים-במשקל"
+    }
+  ]
+}

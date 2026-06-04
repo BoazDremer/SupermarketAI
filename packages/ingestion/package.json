@@ -20,16 +20,26 @@
     "detect:online-stores": "pnpm run build && node dist/cli/detect-online-stores.js",
     "ingest:prices": "tsx src/cli/ingest-prices.ts",
     "scrape:categories": "tsx src/cli/scrape-categories.ts",
-    "map:products": "tsx src/cli/map-products.ts"
+    "map:products": "tsx src/cli/map-products.ts",
+    "enrich:shufersal": "tsx src/cli/enrich-shufersal.ts",
+    "probe:shufersal-api": "tsx src/cli/probe-shufersal-api.ts",
+    "refresh:shufersal-categories": "tsx src/cli/refresh-shufersal-categories.ts",
+    "build:shufersal-category-list": "tsx src/cli/build-shufersal-category-list.ts",
+    "refresh:rami-levy-categories": "tsx src/cli/refresh-rami-levy-categories.ts",
+    "generate:rl-based-common-tree": "tsx src/cli/generate-rl-based-common-tree.ts",
+    "playwright:install": "playwright install chromium",
+    "backfill:images": "tsx src/cli/backfill-images.ts"
   },
   "dependencies": {
     "@supermarket-price-compare/db": "workspace:*",
     "cheerio": "^1.0.0",
     "fast-xml-parser": "^4.5.3",
+    "fflate": "^0.8.2",
     "iconv-lite": "^0.7.2"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "playwright": "^1.49.1",
     "tsx": "^4.20.6",
     "typescript": "^5.7.2"
   }

@@ -121,6 +121,14 @@ model RetailerProduct {
   unitLabel        String?
   packDescription  String?
   rawData          Json?
+  /// Chain-native category id — RL: department id (`"54"`); Shufersal: root / least-specific `data-all-categories` code.
+  chainDepartmentId String?
+  /// Chain-native category id — RL: group id (`"225"`); Shufersal: intermediate code when present.
+  chainGroupId        String?
+  /// Chain-native category id — RL: sub-group id; Shufersal: most-specific (leaf) code.
+  chainSubGroupId     String?
+  /// Absolute image URL from the chain catalog (RL `img.rami-levy.co.il` or Shufersal card `<img>`).
+  chainImageUrl       String?
 
   retailer Retailer      @relation(fields: [retailerId], references: [id], onDelete: Cascade)
   store    RetailerStore @relation(fields: [storeId], references: [id], onDelete: Cascade)
@@ -137,6 +145,7 @@ model RetailerProduct {
   @@index([barcode])
   @@index([retailerId, externalItemCode])
   @@index([normalizedName])
+  @@index([chainDepartmentId])
 }
 
 /// Price observation for a retailer product at a store (history + current flag).
@@ -215,6 +224,8 @@ model CanonicalProduct {
   id            String  @id @default(cuid())
   displayName   String
   displayNameHe String?
+  /// Hebrew (or primary) product title as published in the transparency price file (e.g. Shufersal `ItemName`). Kept when the site shows a different `displayNameHe`.
+  transparencyNameHe String?
   brand         String?
   barcodeGtin   String?
   /// Legacy heuristic key (dairy/produce/...). Retained for back-compat; new

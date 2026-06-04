@@ -23,6 +23,12 @@ export type ChainCategoryNode = {
   productCount?: number;
 };
 
+export type CategoryScrapeRunStats = {
+  networkRequests: number;
+  cacheHits: number;
+  codesVisited: number;
+};
+
 export type ChainCategoryTree = {
   retailerSlug: 'shufersal' | 'rami-levy';
   retailerNameHe: string;
@@ -32,21 +38,32 @@ export type ChainCategoryTree = {
   roots: ChainCategoryNode[];
   /** Total leaf count, useful for sanity-check logging. */
   leafCount: number;
+  /** Present when the scraper tracked HTTP vs cache (Shufersal BFS). */
+  runStats?: CategoryScrapeRunStats;
 };
 
 /**
- * "Common" backbone the user-facing app uses.  Two levels deep:
- *   group  -> leaf
- * (Top-level groups are e.g. dairy/produce/meat; leaves are concrete shopper
- *  buckets like "milk", "yogurt", "cottage cheese", "eggs".)
+ * "Common" backbone the user-facing app uses. Up to three levels deep:
+ *   department -> category -> sub-category
+ * (Top-level departments are e.g. dairy/produce/meat-fish; leaves are concrete
+ *  shopper buckets like "milk", "yogurt", "soft cheese".)
  */
 export type CommonCategoryNode = {
-  id: string; // Stable slug, e.g. "dairy" or "dairy/milk".
+  id: string; // Stable slug, e.g. "dairy", "dairy/milk", "dairy/milk/fresh".
   nameHe: string;
   nameEn: string;
   /** Lucide icon name shown in the nav (top-level only). */
   icon?: string;
   parentId?: string;
+  /**
+   * Retailer chain codes that should resolve to this node. The mapper seeds
+   * RetailerCategoryAlias rows from these hints (with walk-up over a chain's
+   * own parent codes) and falls back to the synonym matcher when needed.
+   */
+  chainHints?: {
+    shufersal?: readonly string[];
+    ramiLevy?: readonly string[];
+  };
   children: CommonCategoryNode[];
 };
 

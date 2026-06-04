@@ -156,9 +156,12 @@ export const REAL_RETAILER_SOURCES: Record<string, RealRetailerSource> = {
     loginUrl: 'https://url.retail.publishedprices.co.il/login',
     loginUsername: 'RamiLevi',
     loginPassword: '',
-    // 001-070 is the documented online/delivery store. Operators may override
-    // via --storeId; detection from the Stores file is also attempted.
-    knownOnlineStoreIds: ['001-070'],
+    // Store 039 is RL's online warehouse — name "מרלוג אינטרנט", StoreType=2,
+    // address is literally https://www.rami-levy.co.il/he. Verified against
+    // the live Stores XML on 2026-05-18 via `pnpm ingest:prices -- --list-stores`.
+    // The previous hardcoded value `001-070` was Sderot, a small physical store —
+    // that's why our pre-fix RL catalog had only ~9k SKUs.
+    knownOnlineStoreIds: ['039'],
     notes:
       'PublishedPrices/Cerberus login. Use empty password. Files appear at /file with download links and a JSON listing endpoint.',
   },

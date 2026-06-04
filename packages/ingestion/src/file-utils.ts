@@ -3,6 +3,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { gunzip } from 'node:zlib';
 import { promisify } from 'node:util';
 import path from 'node:path';
+import { unzipSync } from 'fflate';
 
 const gunzipAsync = promisify(gunzip);
 
@@ -17,9 +18,48 @@ export function isProbablyGzip(buffer: Buffer): boolean {
   return buffer.length >= 2 && buffer[0] === 0x1f && buffer[1] === 0x8b;
 }
 
-/** If buffer looks like gzip (magic bytes), gunzip; otherwise return the same buffer. */
+/** RL (and some other chains) ship `.gz` downloads that are actually ZIP archives. */
+export function isProbablyZip(buffer: Buffer): boolean {
+  return (
+    buffer.length >= 4 &&
+    buffer[0] === 0x50 &&
+    buffer[1] === 0x4b &&
+    (buffer[2] === 0x03 || buffer[2] === 0x05 || buffer[2] === 0x07) &&
+    (buffer[3] === 0x04 || buffer[3] === 0x06 || buffer[3] === 0x08)
+  );
+}
+
+/**
+ * Extract the PriceFull (or Stores) XML from a single-file ZIP buffer.
+ * Typical layout: `PriceFull7290058140886-039-202605180555.xml` inside
+ * `pricefull7290058140886-039-202605180555.gz` (mislabeled extension).
+ */
+export function extractXmlFromZip(buffer: Buffer): Buffer {
+  const entries = unzipSync(new Uint8Array(buffer));
+  const names = Object.keys(entries).filter((n) => !n.endsWith('/'));
+  if (names.length === 0) {
+    throw new Error('ZIP archive is empty');
+  }
+  const xmlName =
+    names.find((n) => /\.xml$/i.test(n) && /price|store/i.test(n)) ??
+    names.find((n) => /\.xml$/i.test(n)) ??
+    names[0];
+  if (!xmlName) throw new Error('ZIP archive has no extractable entries');
+  const payload = entries[xmlName];
+  if (!payload || payload.length === 0) {
+    throw new Error(`ZIP entry ${xmlName} is empty`);
+  }
+  return Buffer.from(payload);
+}
+
+/**
+ * Decompress Israeli transparency feed bytes to raw XML.
+ * Handles true gzip (`0x1f 0x8b`) and ZIP-in-disguise (`.gz` that starts with `PK`).
+ */
 export async function decompressIfGzip(buffer: Buffer): Promise<Buffer> {
-  return isProbablyGzip(buffer) ? decompressGzip(buffer) : buffer;
+  if (isProbablyGzip(buffer)) return decompressGzip(buffer);
+  if (isProbablyZip(buffer)) return extractXmlFromZip(buffer);
+  return buffer;
 }
 
 /**
