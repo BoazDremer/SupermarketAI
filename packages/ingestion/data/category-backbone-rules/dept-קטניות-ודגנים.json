@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "departmentId": "dept/קטניות-ודגנים",
+  "description": "Hand-curated overrides for legumes & grains.",
+  "skipAutoGeneralUnder": [
+    "dept/קטניות-ודגנים",
+    "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס",
+    "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
+    "dept/קטניות-ודגנים/אורז-וקטניות"
+  ],
+  "rules": [
+    {
+      "id": "legumes-after-bread",
+      "summary": "Top-level order: …/לחם-מאפים-והמאפייה-הטריה then קטניות-ודגנים."
+    },
+    {
+      "id": "no-legumes-generals",
+      "summary": "No /general under קטניות-ודגנים dept or sub-groups."
+    },
+    {
+      "id": "pasta-first",
+      "summary": "Under פסטה-פתיתים-קוסקוס: פסטות first."
+    },
+    {
+      "id": "merge-salty-bakery-into-bread",
+      "summary": "פריכיות וקרקרים live under bread dept/מאפה-מלוח only."
+    },
+    {
+      "id": "cereals-cornflakes-order",
+      "summary": "Under דגנים-וחטיפי-אנרגיה: קורנפלקס after גרנולה-מוזלי-וקוואקר."
+    },
+    {
+      "id": "merge-bulk-rice",
+      "summary": "אורז-סיטונאות merged into אורז; ארוחה-בסיר-אחד removed."
+    }
+  ],
+  "productCategoryIdRemaps": [
+    {
+      "from": "dept/קטניות-ודגנים/general",
+      "to": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/פסטות"
+    },
+    {
+      "from": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/general",
+      "to": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/פסטות"
+    },
+    {
+      "from": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/general",
+      "to": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/גרנולה-מוזלי-וקוואקר"
+    },
+    {
+      "from": "dept/קטניות-ודגנים/אורז-וקטניות/general",
+      "to": "dept/קטניות-ודגנים/אורז-וקטניות/אורז"
+    },
+    {
+      "from": "dept/קטניות-ודגנים/מאפה-מלוח/general",
+      "to": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות"
+    },
+    {
+      "from": "dept/קטניות-ודגנים/אורז-וקטניות/אורז-סיטונאות",
+      "to": "dept/קטניות-ודגנים/אורז-וקטניות/אורז"
+    },
+    {
+      "from": "dept/קטניות-ודגנים/אורז-וקטניות/ארוחה-בסיר-אחד",
+      "to": "dept/קטניות-ודגנים/אורז-וקטניות/אורז"
+    }
+  ],
+  "productCategoryIdPrefixRemaps": [
+    {
+      "fromPrefix": "dept/קטניות-ודגנים/מאפה-מלוח",
+      "toPrefix": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח"
+    }
+  ]
+}

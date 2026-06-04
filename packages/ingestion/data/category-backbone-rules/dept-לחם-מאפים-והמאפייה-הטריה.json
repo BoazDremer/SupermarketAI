@@ -23,8 +23,12 @@
       "summary": "Under לחם-פיתה-לחמניה: לחמניות then פיתות."
     },
     {
-      "id": "merge-tortillas-under-crackers",
-      "summary": "Merge לחם-פיתה/טורטיות into מאפה-מלוח/טורטיות nested under פריכיות."
+      "id": "merge-tortillas-under-salty-bakery",
+      "summary": "Merge לחם-פיתה/טורטיות into מאפה-מלוח/טורטיות (sibling of פריכיות)."
+    },
+    {
+      "id": "merge-legumes-salty-bakery",
+      "summary": "Merge dept/קטניות-ודגנים/מאפה-מלוח subtree into dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח."
     },
     {
       "id": "bakery-donuts-order",
@@ -85,6 +89,10 @@
     {
       "fromPrefix": "dept/לחם-מאפים-והמאפייה-הטריה/מזון-מצונן",
       "toPrefix": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח"
+    },
+    {
+      "fromPrefix": "dept/קטניות-ודגנים/מאפה-מלוח",
+      "toPrefix": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח"
     }
   ]
 }

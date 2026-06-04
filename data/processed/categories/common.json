@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-06-04T07:53:48.270Z",
+  "builtAt": "2026-06-04T08:23:06.263Z",
   "_meta": {
     "backboneSource": "packages/ingestion/src/category-mapper/backbone.ts + data/category-backbone-rules/",
     "rulesApplied": true
@@ -745,29 +745,14 @@
               "nameHe": "פריכיות",
               "nameEn": "פריכיות",
               "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח",
-              "children": [
-                {
-                  "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/טורטיות",
-                  "nameHe": "טורטיות",
-                  "nameEn": "טורטיות",
-                  "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות",
-                  "children": []
-                },
-                {
-                  "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/טורטיות",
-                  "nameHe": "טורטיות",
-                  "nameEn": "טורטיות",
-                  "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות",
-                  "children": []
-                },
-                {
-                  "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות/general",
-                  "nameHe": "כללי",
-                  "nameEn": "General",
-                  "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות",
-                  "children": []
-                }
-              ]
+              "children": []
+            },
+            {
+              "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/טורטיות",
+              "nameHe": "טורטיות",
+              "nameEn": "טורטיות",
+              "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח",
+              "children": []
             },
             {
               "id": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פתית-לחמית-וצנימים",
@@ -846,6 +831,136 @@
               "nameHe": "מאפה לפסח מתוק,מלוח",
               "nameEn": "מאפה לפסח מתוק,מלוח",
               "parentId": "dept/לחם-מאפים-והמאפייה-הטריה/מצות-ומאפים-לפסח",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dept/קטניות-ודגנים",
+      "nameHe": "קטניות ודגנים",
+      "nameEn": "קטניות ודגנים",
+      "icon": "Wheat",
+      "children": [
+        {
+          "id": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס",
+          "nameHe": "פסטה, פתיתים, קוסקוס",
+          "nameEn": "פסטה, פתיתים, קוסקוס",
+          "parentId": "dept/קטניות-ודגנים",
+          "children": [
+            {
+              "id": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/פסטות",
+              "nameHe": "פסטות",
+              "nameEn": "פסטות",
+              "parentId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס",
+              "children": []
+            },
+            {
+              "id": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/פתיתים",
+              "nameHe": "פתיתים",
+              "nameEn": "פתיתים",
+              "parentId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס",
+              "children": []
+            },
+            {
+              "id": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/נודלס-ואטריות",
+              "nameHe": "נודלס ואטריות",
+              "nameEn": "נודלס ואטריות",
+              "parentId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס",
+              "children": []
+            },
+            {
+              "id": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/ניוקי-לזניה-קנלוני",
+              "nameHe": "ניוקי, לזניה, קנלוני",
+              "nameEn": "ניוקי, לזניה, קנלוני",
+              "parentId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס",
+              "children": []
+            },
+            {
+              "id": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/קוסקוס",
+              "nameHe": "קוסקוס",
+              "nameEn": "קוסקוס",
+              "parentId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
+          "nameHe": "דגנים וחטיפי אנרגיה",
+          "nameEn": "דגנים וחטיפי אנרגיה",
+          "parentId": "dept/קטניות-ודגנים",
+          "children": [
+            {
+              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/גרנולה-מוזלי-וקוואקר",
+              "nameHe": "גרנולה מוזלי וקוואקר",
+              "nameEn": "גרנולה מוזלי וקוואקר",
+              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
+              "children": []
+            },
+            {
+              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/קורנפלקס",
+              "nameHe": "קורנפלקס",
+              "nameEn": "קורנפלקס",
+              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
+              "children": []
+            },
+            {
+              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/דגני-ילדים",
+              "nameHe": "דגני ילדים",
+              "nameEn": "דגני ילדים",
+              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
+              "children": []
+            },
+            {
+              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/דגני-מבוגרים",
+              "nameHe": "דגני מבוגרים",
+              "nameEn": "דגני מבוגרים",
+              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
+              "children": []
+            },
+            {
+              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/חטיפי-אנרגיה",
+              "nameHe": "חטיפי אנרגיה ובריאות",
+              "nameEn": "חטיפי אנרגיה ובריאות",
+              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
+              "children": []
+            },
+            {
+              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/חטיף-דגנים-לילדים",
+              "nameHe": "חטיף דגנים לילדים",
+              "nameEn": "חטיף דגנים לילדים",
+              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
+              "children": []
+            },
+            {
+              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/חיטה-תפוחה-ופצפוצי-אורז",
+              "nameHe": "שלווה ופצפוצי אורז",
+              "nameEn": "שלווה ופצפוצי אורז",
+              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dept/קטניות-ודגנים/אורז-וקטניות",
+          "nameHe": "אורז וקטניות",
+          "nameEn": "אורז וקטניות",
+          "parentId": "dept/קטניות-ודגנים",
+          "children": [
+            {
+              "id": "dept/קטניות-ודגנים/אורז-וקטניות/אורז",
+              "nameHe": "אורז",
+              "nameEn": "אורז",
+              "parentId": "dept/קטניות-ודגנים/אורז-וקטניות",
+              "children": []
+            },
+            {
+              "id": "dept/קטניות-ודגנים/אורז-וקטניות/קטניות",
+              "nameHe": "קטניות",
+              "nameEn": "קטניות",
+              "parentId": "dept/קטניות-ודגנים/אורז-וקטניות",
               "children": []
             }
           ]
@@ -1823,214 +1938,6 @@
           "nameHe": "כללי",
           "nameEn": "General",
           "parentId": "dept/שימורים-בישול-ואפיה",
-          "children": []
-        }
-      ]
-    },
-    {
-      "id": "dept/קטניות-ודגנים",
-      "nameHe": "קטניות ודגנים",
-      "nameEn": "קטניות ודגנים",
-      "icon": "Package",
-      "children": [
-        {
-          "id": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס",
-          "nameHe": "פסטה, פתיתים, קוסקוס",
-          "nameEn": "פסטה, פתיתים, קוסקוס",
-          "parentId": "dept/קטניות-ודגנים",
-          "children": [
-            {
-              "id": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/פתיתים",
-              "nameHe": "פתיתים",
-              "nameEn": "פתיתים",
-              "parentId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/נודלס-ואטריות",
-              "nameHe": "נודלס ואטריות",
-              "nameEn": "נודלס ואטריות",
-              "parentId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/פסטות",
-              "nameHe": "פסטות",
-              "nameEn": "פסטות",
-              "parentId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/ניוקי-לזניה-קנלוני",
-              "nameHe": "ניוקי, לזניה, קנלוני",
-              "nameEn": "ניוקי, לזניה, קנלוני",
-              "parentId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/קוסקוס",
-              "nameHe": "קוסקוס",
-              "nameEn": "קוסקוס",
-              "parentId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
-          "nameHe": "דגנים וחטיפי אנרגיה",
-          "nameEn": "דגנים וחטיפי אנרגיה",
-          "parentId": "dept/קטניות-ודגנים",
-          "children": [
-            {
-              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/גרנולה-מוזלי-וקוואקר",
-              "nameHe": "גרנולה מוזלי וקוואקר",
-              "nameEn": "גרנולה מוזלי וקוואקר",
-              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/דגני-ילדים",
-              "nameHe": "דגני ילדים",
-              "nameEn": "דגני ילדים",
-              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/דגני-מבוגרים",
-              "nameHe": "דגני מבוגרים",
-              "nameEn": "דגני מבוגרים",
-              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/חטיפי-אנרגיה",
-              "nameHe": "חטיפי אנרגיה ובריאות",
-              "nameEn": "חטיפי אנרגיה ובריאות",
-              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/חטיף-דגנים-לילדים",
-              "nameHe": "חטיף דגנים לילדים",
-              "nameEn": "חטיף דגנים לילדים",
-              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/חיטה-תפוחה-ופצפוצי-אורז",
-              "nameHe": "שלווה ופצפוצי אורז",
-              "nameEn": "שלווה ופצפוצי אורז",
-              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/קורנפלקס",
-              "nameHe": "קורנפלקס",
-              "nameEn": "קורנפלקס",
-              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/קטניות-ודגנים/מאפה-מלוח",
-          "nameHe": "פריכיות וקרקרים",
-          "nameEn": "פריכיות וקרקרים",
-          "parentId": "dept/קטניות-ודגנים",
-          "children": [
-            {
-              "id": "dept/קטניות-ודגנים/מאפה-מלוח/פריכיות",
-              "nameHe": "פריכיות",
-              "nameEn": "פריכיות",
-              "parentId": "dept/קטניות-ודגנים/מאפה-מלוח",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/מאפה-מלוח/פתית-לחמית-וצנימים",
-              "nameHe": "פתית, לחמית וצנימים",
-              "nameEn": "פתית, לחמית וצנימים",
-              "parentId": "dept/קטניות-ודגנים/מאפה-מלוח",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/מאפה-מלוח/קרקרים",
-              "nameHe": "קרקרים",
-              "nameEn": "קרקרים",
-              "parentId": "dept/קטניות-ודגנים/מאפה-מלוח",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/מאפה-מלוח/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/קטניות-ודגנים/מאפה-מלוח",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/קטניות-ודגנים/אורז-וקטניות",
-          "nameHe": "אורז וקטניות",
-          "nameEn": "אורז וקטניות",
-          "parentId": "dept/קטניות-ודגנים",
-          "children": [
-            {
-              "id": "dept/קטניות-ודגנים/אורז-וקטניות/אורז",
-              "nameHe": "אורז",
-              "nameEn": "אורז",
-              "parentId": "dept/קטניות-ודגנים/אורז-וקטניות",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/אורז-וקטניות/קטניות",
-              "nameHe": "קטניות",
-              "nameEn": "קטניות",
-              "parentId": "dept/קטניות-ודגנים/אורז-וקטניות",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/אורז-וקטניות/אורז-סיטונאות",
-              "nameHe": "אורז סיטונאות",
-              "nameEn": "אורז סיטונאות",
-              "parentId": "dept/קטניות-ודגנים/אורז-וקטניות",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/אורז-וקטניות/ארוחה-בסיר-אחד",
-              "nameHe": "ארוחה בסיר אחד",
-              "nameEn": "ארוחה בסיר אחד",
-              "parentId": "dept/קטניות-ודגנים/אורז-וקטניות",
-              "children": []
-            },
-            {
-              "id": "dept/קטניות-ודגנים/אורז-וקטניות/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/קטניות-ודגנים/אורז-וקטניות",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/קטניות-ודגנים/general",
-          "nameHe": "כללי",
-          "nameEn": "General",
-          "parentId": "dept/קטניות-ודגנים",
           "children": []
         }
       ]
@@ -5186,36 +5093,6 @@
       "chainCategoryId": "A161404",
       "chainCategoryName": "מוצרי בשר עוף דגים ל.גלוטן",
       "chainCategoryDepth": 17,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/אורגני-ובריאות/ללא-גלוטן/מוצרים-ללא-גלוטן",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A220603",
-      "chainCategoryName": "נודלס/ דפי אורז",
-      "chainCategoryDepth": 7,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/אורגני-ובריאות/ללא-גלוטן/מוצרים-ללא-גלוטן",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A221113",
-      "chainCategoryName": "אטריות ביצים",
-      "chainCategoryDepth": 6,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/אורגני-ובריאות/ללא-גלוטן/מוצרים-ללא-גלוטן",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A221119",
-      "chainCategoryName": "פסטה מצוננת",
-      "chainCategoryDepth": 12,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -11521,7 +11398,7 @@
       "auto": false
     },
     {
-      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות/general",
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "272",
       "chainCategoryName": "פריכיות וקרקרים",
@@ -11531,11 +11408,21 @@
       "auto": false
     },
     {
-      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות/general",
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "311",
       "chainCategoryName": "פריכיות",
       "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/לחם-מאפים-והמאפייה-הטריה/מאפה-מלוח/פריכיות",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A100207",
+      "chainCategoryName": "עוגיות מאפיה",
+      "chainCategoryDepth": 6,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -15801,7 +15688,27 @@
       "auto": false
     },
     {
-      "commonId": "dept/קטניות-ודגנים/אורז-וקטניות/general",
+      "commonId": "dept/קטניות-ודגנים/אורז-וקטניות/אורז",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "1149",
+      "chainCategoryName": "ארוחה בסיר אחד",
+      "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קטניות-ודגנים/אורז-וקטניות/אורז",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "202",
+      "chainCategoryName": "גבינות",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קטניות-ודגנים/אורז-וקטניות/אורז",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "303",
       "chainCategoryName": "אורז וקטניות",
@@ -15813,9 +15720,9 @@
     {
       "commonId": "dept/קטניות-ודגנים/אורז-וקטניות/אורז",
       "retailerSlug": "rami-levy",
-      "chainCategoryId": "202",
-      "chainCategoryName": "גבינות",
-      "chainCategoryDepth": 1,
+      "chainCategoryId": "994",
+      "chainCategoryName": "אורז סיטונאות",
+      "chainCategoryDepth": 2,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -15843,29 +15750,29 @@
     {
       "commonId": "dept/קטניות-ודגנים/אורז-וקטניות/אורז",
       "retailerSlug": "shufersal",
+      "chainCategoryId": "A221107",
+      "chainCategoryName": "אורז",
+      "chainCategoryDepth": 3,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קטניות-ודגנים/אורז-וקטניות/אורז",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A221119",
+      "chainCategoryName": "פסטה מצוננת",
+      "chainCategoryDepth": 12,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קטניות-ודגנים/אורז-וקטניות/אורז",
+      "retailerSlug": "shufersal",
       "chainCategoryId": "A280225",
       "chainCategoryName": "פסטה אורז וקטניות אורגניות",
       "chainCategoryDepth": 6,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/קטניות-ודגנים/אורז-וקטניות/אורז-סיטונאות",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "994",
-      "chainCategoryName": "אורז סיטונאות",
-      "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/קטניות-ודגנים/אורז-וקטניות/ארוחה-בסיר-אחד",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "1149",
-      "chainCategoryName": "ארוחה בסיר אחד",
-      "chainCategoryDepth": 2,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -15881,7 +15788,7 @@
       "auto": false
     },
     {
-      "commonId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/general",
+      "commonId": "dept/קטניות-ודגנים/דגנים-וחטיפי-אנרגיה/גרנולה-מוזלי-וקוואקר",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "234",
       "chainCategoryName": "דגנים וחטיפי אנרגיה",
@@ -15961,31 +15868,21 @@
       "auto": false
     },
     {
-      "commonId": "dept/קטניות-ודגנים/מאפה-מלוח/פריכיות",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A100207",
-      "chainCategoryName": "עוגיות מאפיה",
-      "chainCategoryDepth": 6,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/general",
+      "commonId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/נודלס-ואטריות",
       "retailerSlug": "rami-levy",
-      "chainCategoryId": "230",
-      "chainCategoryName": "פסטה, פתיתים, קוסקוס",
-      "chainCategoryDepth": 1,
+      "chainCategoryId": "174",
+      "chainCategoryName": "נודלס ואטריות",
+      "chainCategoryDepth": 2,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
     },
     {
       "commonId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/נודלס-ואטריות",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "174",
-      "chainCategoryName": "נודלס ואטריות",
-      "chainCategoryDepth": 2,
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A220603",
+      "chainCategoryName": "נודלס/ דפי אורז",
+      "chainCategoryDepth": 7,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -16006,6 +15903,46 @@
       "chainCategoryId": "190",
       "chainCategoryName": "פסטות",
       "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/פסטות",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "230",
+      "chainCategoryName": "פסטה, פתיתים, קוסקוס",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/פסטות",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "55",
+      "chainCategoryName": "שימורי מלפפונים",
+      "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/פסטות",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A221110",
+      "chainCategoryName": "פסטה ואטריות",
+      "chainCategoryDepth": 8,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קטניות-ודגנים/פסטה-פתיתים-קוסקוס/פסטות",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A221113",
+      "chainCategoryName": "אטריות ביצים",
+      "chainCategoryDepth": 6,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -16693,26 +16630,6 @@
     {
       "commonId": "dept/שימורים-בישול-ואפיה/מוצרי-אפיה/עזרי-אפיה",
       "retailerSlug": "shufersal",
-      "chainCategoryId": "A221107",
-      "chainCategoryName": "אורז",
-      "chainCategoryDepth": 3,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/שימורים-בישול-ואפיה/מוצרי-אפיה/עזרי-אפיה",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A221110",
-      "chainCategoryName": "פסטה ואטריות",
-      "chainCategoryDepth": 8,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/שימורים-בישול-ואפיה/מוצרי-אפיה/עזרי-אפיה",
-      "retailerSlug": "shufersal",
       "chainCategoryId": "A222301",
       "chainCategoryName": "מלח",
       "chainCategoryDepth": 3,
@@ -17275,16 +17192,6 @@
       "retailerSlug": "rami-levy",
       "chainCategoryId": "1009",
       "chainCategoryName": "שימורי ירקות סיטונאות",
-      "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/שימורים-בישול-ואפיה/שימורים/שימורי-מלפפונים",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "55",
-      "chainCategoryName": "שימורי מלפפונים",
       "chainCategoryDepth": 2,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",

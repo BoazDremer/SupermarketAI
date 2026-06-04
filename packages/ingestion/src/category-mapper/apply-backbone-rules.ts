@@ -28,6 +28,7 @@ const DEPT_FRUITS_VEG = 'dept/פירות-וירקות';
 const DEPT_DAIRY = 'dept/חלב-ביצים-וסלטים';
 const DEPT_MEAT = 'dept/בשר-ודגים';
 const DEPT_BREAD = 'dept/לחם-מאפים-והמאפייה-הטריה';
+const DEPT_LEGUMES = 'dept/קטניות-ודגנים';
 const SPICES_BY_WEIGHT_ID = 'dept/שימורים-בישול-ואפיה/תבלינים/תבלינים-במשקל';
 
 const FALLBACK_LEAF_SUFFIX = /\/(general|other|misc)$/;
@@ -495,23 +496,31 @@ function patchBreadDepartment(roots: readonly BackboneNode[], dept: BackboneNode
     breadGroup.children = breadGroup.children.filter((c) => c.id !== duplicateTortillasId);
 
     const crackers = findChild(saltyFood, `${DEPT_BREAD}/מאפה-מלוח/פריכיות`);
+    if (crackers) {
+      const nestedTortillas = crackers.children.filter((c) => c.id === tortillasTargetId);
+      for (const t of nestedTortillas) {
+        mergeHintsIntoNode(roots, tortillasTargetId, t.chainHints);
+      }
+      crackers.children = crackers.children.filter((c) => c.id !== tortillasTargetId);
+    }
+
     let tortillas = findChild(saltyFood, tortillasTargetId);
-    if (crackers && tortillas && tortillas.parentId !== crackers.id) {
-      saltyFood.children = saltyFood.children.filter((c) => c.id !== tortillasTargetId);
-      tortillas.parentId = crackers.id;
-      crackers.children.push(tortillas);
-    } else if (crackers && !tortillas) {
+    if (!tortillas) {
       tortillas = {
         id: tortillasTargetId,
         nameHe: 'טורטיות',
         nameEn: 'טורטיות',
-        parentId: crackers.id,
+        parentId: saltyFood.id,
         children: [],
       };
-      crackers.children.push(tortillas);
+      saltyFood.children.push(tortillas);
+    } else {
+      tortillas.parentId = saltyFood.id;
     }
+
     reorderChildren(saltyFood, [
       `${DEPT_BREAD}/מאפה-מלוח/פריכיות`,
+      `${DEPT_BREAD}/מאפה-מלוח/טורטיות`,
       `${DEPT_BREAD}/מאפה-מלוח/פתית-לחמית-וצנימים`,
       `${DEPT_BREAD}/מאפה-מלוח/קרקרים`,
     ]);
@@ -585,12 +594,93 @@ function patchBreadDepartment(roots: readonly BackboneNode[], dept: BackboneNode
   );
 }
 
+function patchLegumesDepartment(roots: readonly BackboneNode[], dept: BackboneNode): void {
+  const cereals = findChild(dept, `${DEPT_LEGUMES}/דגנים-וחטיפי-אנרגיה`);
+  if (cereals) {
+    reorderChildren(cereals, [
+      `${DEPT_LEGUMES}/דגנים-וחטיפי-אנרגיה/גרנולה-מוזלי-וקוואקר`,
+      `${DEPT_LEGUMES}/דגנים-וחטיפי-אנרגיה/קורנפלקס`,
+      `${DEPT_LEGUMES}/דגנים-וחטיפי-אנרגיה/דגני-ילדים`,
+      `${DEPT_LEGUMES}/דגנים-וחטיפי-אנרגיה/דגני-מבוגרים`,
+      `${DEPT_LEGUMES}/דגנים-וחטיפי-אנרגיה/חטיפי-אנרגיה`,
+      `${DEPT_LEGUMES}/דגנים-וחטיפי-אנרגיה/חטיף-דגנים-לילדים`,
+      `${DEPT_LEGUMES}/דגנים-וחטיפי-אנרגיה/חיטה-תפוחה-ופצפוצי-אורז`,
+    ]);
+  }
+
+  const riceGroup = findChild(dept, `${DEPT_LEGUMES}/אורז-וקטניות`);
+  const riceId = `${DEPT_LEGUMES}/אורז-וקטניות/אורז`;
+  if (riceGroup) {
+    const mergeRiceInto = (fromId: string) => {
+      const from = findChild(riceGroup, fromId);
+      if (from) mergeHintsIntoNode(roots, riceId, from.chainHints);
+    };
+    mergeRiceInto(`${DEPT_LEGUMES}/אורז-וקטניות/אורז-סיטונאות`);
+    mergeRiceInto(`${DEPT_LEGUMES}/אורז-וקטניות/ארוחה-בסיר-אחד`);
+    const removedRiceIds = new Set([
+      `${DEPT_LEGUMES}/אורז-וקטניות/אורז-סיטונאות`,
+      `${DEPT_LEGUMES}/אורז-וקטניות/ארוחה-בסיר-אחד`,
+    ]);
+    riceGroup.children = riceGroup.children.filter((c) => !removedRiceIds.has(c.id));
+    reorderChildren(riceGroup, [riceId, `${DEPT_LEGUMES}/אורז-וקטניות/קטניות`]);
+  }
+
+  const pasta = findChild(dept, `${DEPT_LEGUMES}/פסטה-פתיתים-קוסקוס`);
+  if (pasta) {
+    reorderChildren(pasta, [
+      `${DEPT_LEGUMES}/פסטה-פתיתים-קוסקוס/פסטות`,
+      `${DEPT_LEGUMES}/פסטה-פתיתים-קוסקוס/פתיתים`,
+      `${DEPT_LEGUMES}/פסטה-פתיתים-קוסקוס/נודלס-ואטריות`,
+      `${DEPT_LEGUMES}/פסטה-פתיתים-קוסקוס/ניוקי-לזניה-קנלוני`,
+      `${DEPT_LEGUMES}/פסטה-פתיתים-קוסקוס/קוסקוס`,
+    ]);
+  }
+
+  const stripGeneralUnder = [
+    {
+      group: `${DEPT_LEGUMES}/פסטה-פתיתים-קוסקוס`,
+      hintTarget: `${DEPT_LEGUMES}/פסטה-פתיתים-קוסקוס/פסטות`,
+    },
+    {
+      group: `${DEPT_LEGUMES}/דגנים-וחטיפי-אנרגיה`,
+      hintTarget: `${DEPT_LEGUMES}/דגנים-וחטיפי-אנרגיה/גרנולה-מוזלי-וקוואקר`,
+    },
+    { group: `${DEPT_LEGUMES}/אורז-וקטניות`, hintTarget: `${DEPT_LEGUMES}/אורז-וקטניות/אורז` },
+  ] as const;
+  for (const { group, hintTarget } of stripGeneralUnder) {
+    const node = findChild(dept, group);
+    if (!node) continue;
+    mergeHintsIntoNode(roots, hintTarget, node.chainHints);
+    node.children = node.children.filter((c) => !isFallbackLeafId(c.id));
+  }
+
+  const legumesSaltyId = `${DEPT_LEGUMES}/מאפה-מלוח`;
+  const breadSaltyId = `${DEPT_BREAD}/מאפה-מלוח`;
+  const legumesSalty = findChild(dept, legumesSaltyId);
+  if (legumesSalty) {
+    const breadDept = findNodeById(roots, DEPT_BREAD);
+    const breadSalty = breadDept ? findChild(breadDept, breadSaltyId) : undefined;
+    if (breadSalty) {
+      mergeHintsIntoNode(roots, breadSaltyId, legumesSalty.chainHints);
+      for (const child of legumesSalty.children) {
+        const suffix = child.id.slice(legumesSaltyId.length);
+        mergeHintsIntoNode(roots, `${breadSaltyId}${suffix}`, child.chainHints);
+      }
+    }
+    dept.children = dept.children.filter((c) => c.id !== legumesSaltyId);
+  }
+
+  mergeHintsIntoNode(roots, `${DEPT_LEGUMES}/פסטה-פתיתים-קוסקוס/פסטות`, dept.chainHints);
+  dept.children = dept.children.filter((c) => !isFallbackLeafId(c.id));
+}
+
 function loadAllRulePacks(): RulePackJson[] {
   return [
     readRulePack('dept-פירות-וירקות.json'),
     readRulePack('dept-חלב-ביצים-וסלטים.json'),
     readRulePack('dept-בשר-ודגים.json'),
     readRulePack('dept-לחם-מאפים-והמאפייה-הטריה.json'),
+    readRulePack('dept-קטניות-ודגנים.json'),
   ];
 }
 
@@ -659,6 +749,9 @@ export function applyInternalBackboneRules(
   const breadDept = findNodeById(cloned, DEPT_BREAD);
   if (breadDept) patchBreadDepartment(cloned, breadDept);
 
+  const legumesDept = findNodeById(cloned, DEPT_LEGUMES);
+  if (legumesDept) patchLegumesDepartment(cloned, legumesDept);
+
   patchRootDepartmentOrder(cloned);
 
   return cloned;
@@ -674,6 +767,14 @@ function patchRootDepartmentOrder(roots: BackboneNode[]): void {
   bread.nameEn = 'לחמים ומוצרי מאפה';
   const meatIdxAfter = roots.findIndex((d) => d.id === DEPT_MEAT);
   roots.splice(meatIdxAfter + 1, 0, bread);
+
+  const legumesIdx = roots.findIndex((d) => d.id === DEPT_LEGUMES);
+  const breadIdxAfter = roots.findIndex((d) => d.id === DEPT_BREAD);
+  if (legumesIdx >= 0 && breadIdxAfter >= 0) {
+    const [legumes] = roots.splice(legumesIdx, 1);
+    const breadPos = roots.findIndex((d) => d.id === DEPT_BREAD);
+    roots.splice(breadPos + 1, 0, legumes);
+  }
 }
 
 /** Short status for CLI logs — confirms rule packs loaded and the fruits dept shape. */
