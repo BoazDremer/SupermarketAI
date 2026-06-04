@@ -31,6 +31,7 @@ const DEPT_BREAD = 'dept/לחם-מאפים-והמאפייה-הטריה';
 const DEPT_LEGUMES = 'dept/קטניות-ודגנים';
 const DEPT_PANTRY = 'dept/שימורים-בישול-ואפיה';
 const DEPT_BEVERAGES = 'dept/משקאות';
+const DEPT_FROZEN = 'dept/קפואים';
 const SPICES_BY_WEIGHT_ID = 'dept/שימורים-בישול-ואפיה/תבלינים/תבלינים-במשקל';
 
 const FALLBACK_LEAF_SUFFIX = /\/(general|other|misc)$/;
@@ -685,6 +686,7 @@ function loadAllRulePacks(): RulePackJson[] {
     readRulePack('dept-קטניות-ודגנים.json'),
     readRulePack('dept-שימורים-בישול-ואפיה.json'),
     readRulePack('dept-משקאות.json'),
+    readRulePack('dept-קפואים.json'),
   ];
 }
 
@@ -761,6 +763,9 @@ export function applyInternalBackboneRules(
 
   const beveragesDept = findNodeById(cloned, DEPT_BEVERAGES);
   if (beveragesDept) patchBeveragesDepartment(cloned, beveragesDept);
+
+  const frozenDept = findNodeById(cloned, DEPT_FROZEN);
+  if (frozenDept) patchFrozenDepartment(cloned, frozenDept);
 
   patchRootDepartmentOrder(cloned);
 
@@ -960,6 +965,40 @@ function patchBeveragesDepartment(roots: readonly BackboneNode[], dept: Backbone
   dept.children = dept.children.filter((c) => !isFallbackLeafId(c.id));
 }
 
+function patchFrozenDepartment(roots: readonly BackboneNode[], dept: BackboneNode): void {
+  const stripGeneralUnder = (groupId: string, hintTargetId: string) => {
+    const group = findChild(dept, groupId);
+    if (!group) return;
+    mergeHintsIntoNode(roots, hintTargetId, group.chainHints);
+    group.children = group.children.filter((c) => !isFallbackLeafId(c.id));
+  };
+
+  const defaultLeafId = `${DEPT_FROZEN}/גלידות-וארטיקים/גביעי-גלידה`;
+  const readyMeatId = `${DEPT_FROZEN}/אוכל-מוכן/מוצרי-בשר-ועוף-מוכנים`;
+  const bbqId = `${DEPT_FROZEN}/בשרים-על-האש`;
+  const bbq = findChild(dept, bbqId);
+  if (bbq) {
+    const burger = findChild(bbq, `${bbqId}/המבורגר`);
+    if (burger) mergeHintsIntoNode(roots, readyMeatId, burger.chainHints);
+    mergeHintsIntoNode(roots, readyMeatId, bbq.chainHints);
+    dept.children = dept.children.filter((c) => c.id !== bbqId);
+  }
+
+  stripGeneralUnder(`${DEPT_FROZEN}/גלידות-וארטיקים`, defaultLeafId);
+  stripGeneralUnder(`${DEPT_FROZEN}/אוכל-מוכן`, `${DEPT_FROZEN}/אוכל-מוכן/שניצלים-שניצלונים`);
+  stripGeneralUnder(
+    `${DEPT_FROZEN}/ירקות-פירות-וצ-יפס-קפואים`,
+    `${DEPT_FROZEN}/ירקות-פירות-וצ-יפס-קפואים/צ-יפס`,
+  );
+  stripGeneralUnder(
+    `${DEPT_FROZEN}/פיצות-מאפים-ובצקים-קפואים`,
+    `${DEPT_FROZEN}/פיצות-מאפים-ובצקים-קפואים/מלווח-וג-חנון`,
+  );
+
+  mergeHintsIntoNode(roots, defaultLeafId, dept.chainHints);
+  dept.children = dept.children.filter((c) => !isFallbackLeafId(c.id));
+}
+
 /** Top-level dept order + display names not tied to a single department rule pack. */
 function patchRootDepartmentOrder(roots: BackboneNode[]): void {
   const breadIdx = roots.findIndex((d) => d.id === DEPT_BREAD);
@@ -994,6 +1033,14 @@ function patchRootDepartmentOrder(roots: BackboneNode[]): void {
     const [beverages] = roots.splice(beveragesIdx, 1);
     const pantryPos = roots.findIndex((d) => d.id === DEPT_PANTRY);
     roots.splice(pantryPos + 1, 0, beverages);
+  }
+
+  const frozenIdx = roots.findIndex((d) => d.id === DEPT_FROZEN);
+  const beveragesIdxAfter = roots.findIndex((d) => d.id === DEPT_BEVERAGES);
+  if (frozenIdx >= 0 && beveragesIdxAfter >= 0) {
+    const [frozen] = roots.splice(frozenIdx, 1);
+    const beveragesPos = roots.findIndex((d) => d.id === DEPT_BEVERAGES);
+    roots.splice(beveragesPos + 1, 0, frozen);
   }
 }
 

@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-06-04T12:21:21.909Z",
+  "builtAt": "2026-06-04T12:45:00.465Z",
   "unmapped": [
     {
       "retailerSlug": "shufersal",
@@ -19961,6 +19961,346 @@
         {
           "commonId": "dairy/cheese/general",
           "score": 0.011
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 4,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 5,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 4,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 3,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 4,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 3,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 3,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 4,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 3,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 3,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 2,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 5,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 6,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 5,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 5,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 12,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
+        }
+      ]
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A2414",
+      "chainCategoryName": "חוגגים על האש",
+      "chainCategoryDepth": 8,
+      "nearMisses": [
+        {
+          "commonId": "meat-fish/poultry/general",
+          "score": 0.023
+        },
+        {
+          "commonId": "meat-fish/beef-lamb",
+          "score": 0.019
+        },
+        {
+          "commonId": "meat-fish/fish",
+          "score": 0.019
         }
       ]
     },
@@ -83426,6 +83766,13 @@
       "chainCategoryId": "G030209",
       "chainCategoryName": "אוזניות",
       "chainCategoryDepth": 7,
+      "nearMisses": []
+    },
+    {
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "G030210",
+      "chainCategoryName": "רחפנים",
+      "chainCategoryDepth": 5,
       "nearMisses": []
     },
     {

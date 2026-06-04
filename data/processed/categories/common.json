@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-06-04T12:21:21.909Z",
+  "builtAt": "2026-06-04T12:45:00.465Z",
   "_meta": {
     "backboneSource": "packages/ingestion/src/category-mapper/backbone.ts + data/category-backbone-rules/",
     "rulesApplied": true
@@ -1693,6 +1693,193 @@
       ]
     },
     {
+      "id": "dept/קפואים",
+      "nameHe": "קפואים",
+      "nameEn": "קפואים",
+      "icon": "Snowflake",
+      "children": [
+        {
+          "id": "dept/קפואים/גלידות-וארטיקים",
+          "nameHe": "גלידות וארטיקים",
+          "nameEn": "גלידות וארטיקים",
+          "parentId": "dept/קפואים",
+          "children": [
+            {
+              "id": "dept/קפואים/גלידות-וארטיקים/גביעי-גלידה",
+              "nameHe": "גביעי גלידה",
+              "nameEn": "גביעי גלידה",
+              "parentId": "dept/קפואים/גלידות-וארטיקים",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/גלידות-וארטיקים/גלידות-אישיות-ומארזים",
+              "nameHe": "שלגונים ומאגדות קרטיבים",
+              "nameEn": "שלגונים ומאגדות קרטיבים",
+              "parentId": "dept/קפואים/גלידות-וארטיקים",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/גלידות-וארטיקים/גלידות-ושלגונים",
+              "nameHe": "גלידות משפחתיות",
+              "nameEn": "גלידות משפחתיות",
+              "parentId": "dept/קפואים/גלידות-וארטיקים",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/גלידות-וארטיקים/שלוקים",
+              "nameHe": "שלוקים",
+              "nameEn": "שלוקים",
+              "parentId": "dept/קפואים/גלידות-וארטיקים",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dept/קפואים/אוכל-מוכן",
+          "nameHe": "אוכל להכנה מהירה",
+          "nameEn": "אוכל להכנה מהירה",
+          "parentId": "dept/קפואים",
+          "children": [
+            {
+              "id": "dept/קפואים/אוכל-מוכן/שניצלים-שניצלונים",
+              "nameHe": "שניצלים,שניצלונים",
+              "nameEn": "שניצלים,שניצלונים",
+              "parentId": "dept/קפואים/אוכל-מוכן",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/אוכל-מוכן/מוצרי-בשר-ועוף-מוכנים",
+              "nameHe": "מוצרי בשר ועוף מוכנים",
+              "nameEn": "מוצרי בשר ועוף מוכנים",
+              "parentId": "dept/קפואים/אוכל-מוכן",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/אוכל-מוכן/אוכל-מוכן-צמחוני",
+              "nameHe": "אוכל מוכן צמחוני",
+              "nameEn": "אוכל מוכן צמחוני",
+              "parentId": "dept/קפואים/אוכל-מוכן",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/אוכל-מוכן/מוצרי-דגים-מוכנים",
+              "nameHe": "מוצרי דגים מוכנים",
+              "nameEn": "מוצרי דגים מוכנים",
+              "parentId": "dept/קפואים/אוכל-מוכן",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/אוכל-מוכן/שניצל-טבע",
+              "nameHe": "שניצל טבע",
+              "nameEn": "שניצל טבע",
+              "parentId": "dept/קפואים/אוכל-מוכן",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/אוכל-מוכן/אוכל-מוכן",
+              "nameHe": "אוכל מוכן",
+              "nameEn": "אוכל מוכן",
+              "parentId": "dept/קפואים/אוכל-מוכן",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים",
+          "nameHe": "ירקות, פירות וצ'יפס קפואים",
+          "nameEn": "ירקות, פירות וצ'יפס קפואים",
+          "parentId": "dept/קפואים",
+          "children": [
+            {
+              "id": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/צ-יפס",
+              "nameHe": "צ'יפס וטבעות בצל",
+              "nameEn": "צ'יפס וטבעות בצל",
+              "parentId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/ירקות-קפואים",
+              "nameHe": "ירקות קפואים",
+              "nameEn": "ירקות קפואים",
+              "parentId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/תבלינים-קפואים",
+              "nameHe": "תבלינים קפואים",
+              "nameEn": "תבלינים קפואים",
+              "parentId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/פירות-קפואים",
+              "nameHe": "פירות קפואים",
+              "nameEn": "פירות קפואים",
+              "parentId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
+          "nameHe": "פיצות, מאפים ובצקים קפואים",
+          "nameEn": "פיצות, מאפים ובצקים קפואים",
+          "parentId": "dept/קפואים",
+          "children": [
+            {
+              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/מלווח-וג-חנון",
+              "nameHe": "מלווח וג'חנון",
+              "nameEn": "מלווח וג'חנון",
+              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/קובה-סיגרים-ופסטלים",
+              "nameHe": "קובה,סיגרים ופסטלים",
+              "nameEn": "קובה,סיגרים ופסטלים",
+              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/בורקסים",
+              "nameHe": "בורקסים",
+              "nameEn": "בורקסים",
+              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/פיצות",
+              "nameHe": "פיצות",
+              "nameEn": "פיצות",
+              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/בצק-קפוא",
+              "nameHe": "בצק קפוא",
+              "nameEn": "בצק קפוא",
+              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/מוצרי-בצק",
+              "nameHe": "מוצרי בצק",
+              "nameEn": "מוצרי בצק",
+              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
+              "children": []
+            },
+            {
+              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/עוגות-מצוננות",
+              "nameHe": "עוגות מצוננות",
+              "nameEn": "עוגות מצוננות",
+              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "dept/אורגני-ובריאות",
       "nameHe": "אורגני ובריאות",
       "nameEn": "אורגני ובריאות",
@@ -1877,250 +2064,6 @@
           "nameHe": "כללי",
           "nameEn": "General",
           "parentId": "dept/אורגני-ובריאות",
-          "children": []
-        }
-      ]
-    },
-    {
-      "id": "dept/קפואים",
-      "nameHe": "קפואים",
-      "nameEn": "קפואים",
-      "icon": "Snowflake",
-      "children": [
-        {
-          "id": "dept/קפואים/בשרים-על-האש",
-          "nameHe": "בשרים על האש",
-          "nameEn": "בשרים על האש",
-          "parentId": "dept/קפואים",
-          "children": [
-            {
-              "id": "dept/קפואים/בשרים-על-האש/המבורגר",
-              "nameHe": "המבורגר",
-              "nameEn": "המבורגר",
-              "parentId": "dept/קפואים/בשרים-על-האש",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/בשרים-על-האש/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/קפואים/בשרים-על-האש",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/קפואים/גלידות-וארטיקים",
-          "nameHe": "גלידות וארטיקים",
-          "nameEn": "גלידות וארטיקים",
-          "parentId": "dept/קפואים",
-          "children": [
-            {
-              "id": "dept/קפואים/גלידות-וארטיקים/גביעי-גלידה",
-              "nameHe": "גביעי גלידה",
-              "nameEn": "גביעי גלידה",
-              "parentId": "dept/קפואים/גלידות-וארטיקים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/גלידות-וארטיקים/גלידות-אישיות-ומארזים",
-              "nameHe": "שלגונים ומאגדות קרטיבים",
-              "nameEn": "שלגונים ומאגדות קרטיבים",
-              "parentId": "dept/קפואים/גלידות-וארטיקים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/גלידות-וארטיקים/גלידות-ושלגונים",
-              "nameHe": "גלידות משפחתיות",
-              "nameEn": "גלידות משפחתיות",
-              "parentId": "dept/קפואים/גלידות-וארטיקים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/גלידות-וארטיקים/שלוקים",
-              "nameHe": "שלוקים",
-              "nameEn": "שלוקים",
-              "parentId": "dept/קפואים/גלידות-וארטיקים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/גלידות-וארטיקים/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/קפואים/גלידות-וארטיקים",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/קפואים/אוכל-מוכן",
-          "nameHe": "אוכל להכנה מהירה",
-          "nameEn": "אוכל להכנה מהירה",
-          "parentId": "dept/קפואים",
-          "children": [
-            {
-              "id": "dept/קפואים/אוכל-מוכן/שניצלים-שניצלונים",
-              "nameHe": "שניצלים,שניצלונים",
-              "nameEn": "שניצלים,שניצלונים",
-              "parentId": "dept/קפואים/אוכל-מוכן",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/אוכל-מוכן/מוצרי-בשר-ועוף-מוכנים",
-              "nameHe": "מוצרי בשר ועוף מוכנים",
-              "nameEn": "מוצרי בשר ועוף מוכנים",
-              "parentId": "dept/קפואים/אוכל-מוכן",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/אוכל-מוכן/אוכל-מוכן-צמחוני",
-              "nameHe": "אוכל מוכן צמחוני",
-              "nameEn": "אוכל מוכן צמחוני",
-              "parentId": "dept/קפואים/אוכל-מוכן",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/אוכל-מוכן/מוצרי-דגים-מוכנים",
-              "nameHe": "מוצרי דגים מוכנים",
-              "nameEn": "מוצרי דגים מוכנים",
-              "parentId": "dept/קפואים/אוכל-מוכן",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/אוכל-מוכן/שניצל-טבע",
-              "nameHe": "שניצל טבע",
-              "nameEn": "שניצל טבע",
-              "parentId": "dept/קפואים/אוכל-מוכן",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/אוכל-מוכן/אוכל-מוכן",
-              "nameHe": "אוכל מוכן",
-              "nameEn": "אוכל מוכן",
-              "parentId": "dept/קפואים/אוכל-מוכן",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/אוכל-מוכן/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/קפואים/אוכל-מוכן",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים",
-          "nameHe": "ירקות, פירות וצ'יפס קפואים",
-          "nameEn": "ירקות, פירות וצ'יפס קפואים",
-          "parentId": "dept/קפואים",
-          "children": [
-            {
-              "id": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/צ-יפס",
-              "nameHe": "צ'יפס וטבעות בצל",
-              "nameEn": "צ'יפס וטבעות בצל",
-              "parentId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/ירקות-קפואים",
-              "nameHe": "ירקות קפואים",
-              "nameEn": "ירקות קפואים",
-              "parentId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/תבלינים-קפואים",
-              "nameHe": "תבלינים קפואים",
-              "nameEn": "תבלינים קפואים",
-              "parentId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/פירות-קפואים",
-              "nameHe": "פירות קפואים",
-              "nameEn": "פירות קפואים",
-              "parentId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
-          "nameHe": "פיצות, מאפים ובצקים קפואים",
-          "nameEn": "פיצות, מאפים ובצקים קפואים",
-          "parentId": "dept/קפואים",
-          "children": [
-            {
-              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/מלווח-וג-חנון",
-              "nameHe": "מלווח וג'חנון",
-              "nameEn": "מלווח וג'חנון",
-              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/קובה-סיגרים-ופסטלים",
-              "nameHe": "קובה,סיגרים ופסטלים",
-              "nameEn": "קובה,סיגרים ופסטלים",
-              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/בורקסים",
-              "nameHe": "בורקסים",
-              "nameEn": "בורקסים",
-              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/פיצות",
-              "nameHe": "פיצות",
-              "nameEn": "פיצות",
-              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/בצק-קפוא",
-              "nameHe": "בצק קפוא",
-              "nameEn": "בצק קפוא",
-              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/מוצרי-בצק",
-              "nameHe": "מוצרי בצק",
-              "nameEn": "מוצרי בצק",
-              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/עוגות-מצוננות",
-              "nameHe": "עוגות מצוננות",
-              "nameEn": "עוגות מצוננות",
-              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
-              "children": []
-            },
-            {
-              "id": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/קפואים/general",
-          "nameHe": "כללי",
-          "nameEn": "General",
-          "parentId": "dept/קפואים",
           "children": []
         }
       ]
@@ -4590,36 +4533,6 @@
     {
       "commonId": "dept/אורגני-ובריאות/אורגני-וטבעוני/מוצרים-אורגנים",
       "retailerSlug": "shufersal",
-      "chainCategoryId": "A160207",
-      "chainCategoryName": "גלידות משפחתיות",
-      "chainCategoryDepth": 5,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/אורגני-ובריאות/אורגני-וטבעוני/מוצרים-אורגנים",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A160210",
-      "chainCategoryName": "מארז גלידות",
-      "chainCategoryDepth": 6,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/אורגני-ובריאות/אורגני-וטבעוני/מוצרים-אורגנים",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A160501",
-      "chainCategoryName": "ירקות קפואים",
-      "chainCategoryDepth": 8,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/אורגני-ובריאות/אורגני-וטבעוני/מוצרים-אורגנים",
-      "retailerSlug": "shufersal",
       "chainCategoryId": "A280216",
       "chainCategoryName": "תבלינים, מרקים ורטבים אורגניים",
       "chainCategoryDepth": 6,
@@ -4803,36 +4716,6 @@
       "chainCategoryId": "A101803",
       "chainCategoryName": "לחמים ללא גלוטן - קפוא",
       "chainCategoryDepth": 20,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/אורגני-ובריאות/ללא-גלוטן/מוצרים-ללא-גלוטן",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A160801",
-      "chainCategoryName": "בורקסים",
-      "chainCategoryDepth": 9,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/אורגני-ובריאות/ללא-גלוטן/מוצרים-ללא-גלוטן",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A160804",
-      "chainCategoryName": "מאפים תימניים קפואים",
-      "chainCategoryDepth": 5,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/אורגני-ובריאות/ללא-גלוטן/מוצרים-ללא-גלוטן",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A160807",
-      "chainCategoryName": "בצקים מוכנים",
-      "chainCategoryDepth": 8,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -15748,16 +15631,6 @@
       "auto": false
     },
     {
-      "commonId": "dept/קפואים/general",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "53",
-      "chainCategoryName": "קפואים",
-      "chainCategoryDepth": 0,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
       "commonId": "dept/קפואים/אוכל-מוכן/אוכל-מוכן",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "780",
@@ -15848,6 +15721,16 @@
       "auto": false
     },
     {
+      "commonId": "dept/קפואים/אוכל-מוכן/אוכל-מוכן-צמחוני",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A162407",
+      "chainCategoryName": "סלטים מוכנים ארוזים",
+      "chainCategoryDepth": 5,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
       "commonId": "dept/קפואים/אוכל-מוכן/מוצרי-בשר-ועוף-מוכנים",
       "retailerSlug": "shufersal",
       "chainCategoryId": "A161108",
@@ -15863,6 +15746,16 @@
       "chainCategoryId": "612",
       "chainCategoryName": "מוצרי דגים מוכנים",
       "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קפואים/אוכל-מוכן/מוצרי-דגים-מוכנים",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A160807",
+      "chainCategoryName": "בצקים מוכנים",
+      "chainCategoryDepth": 8,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -15888,47 +15781,7 @@
       "auto": false
     },
     {
-      "commonId": "dept/קפואים/בשרים-על-האש/המבורגר",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A160507",
-      "chainCategoryName": "צ'יפס קפוא",
-      "chainCategoryDepth": 6,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/קפואים/בשרים-על-האש/המבורגר",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A162407",
-      "chainCategoryName": "סלטים מוכנים ארוזים",
-      "chainCategoryDepth": 5,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/קפואים/בשרים-על-האש/המבורגר",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A2414",
-      "chainCategoryName": "חוגגים על האש",
-      "chainCategoryDepth": 4,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/קפואים/בשרים-על-האש/המבורגר",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "G030210",
-      "chainCategoryName": "רחפנים",
-      "chainCategoryDepth": 5,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/קפואים/גלידות-וארטיקים/general",
+      "commonId": "dept/קפואים/גלידות-וארטיקים/גביעי-גלידה",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "220",
       "chainCategoryName": "גלידות וארטיקים",
@@ -15943,6 +15796,16 @@
       "chainCategoryId": "423",
       "chainCategoryName": "גביעי גלידה",
       "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קפואים/גלידות-וארטיקים/גביעי-גלידה",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "53",
+      "chainCategoryName": "קפואים",
+      "chainCategoryDepth": 0,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -15963,6 +15826,16 @@
       "chainCategoryId": "831",
       "chainCategoryName": "גלידות משפחתיות",
       "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קפואים/גלידות-וארטיקים/גלידות-ושלגונים",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A160207",
+      "chainCategoryName": "גלידות משפחתיות",
+      "chainCategoryDepth": 5,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -15998,11 +15871,11 @@
       "auto": false
     },
     {
-      "commonId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/general",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "222",
-      "chainCategoryName": "ירקות, פירות וצ'יפס קפואים",
-      "chainCategoryDepth": 1,
+      "commonId": "dept/קפואים/גלידות-וארטיקים/שלוקים",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A160210",
+      "chainCategoryName": "מארז גלידות",
+      "chainCategoryDepth": 6,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -16020,8 +15893,28 @@
     {
       "commonId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/ירקות-קפואים",
       "retailerSlug": "shufersal",
+      "chainCategoryId": "A160501",
+      "chainCategoryName": "ירקות קפואים",
+      "chainCategoryDepth": 8,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/ירקות-קפואים",
+      "retailerSlug": "shufersal",
       "chainCategoryId": "A160504",
       "chainCategoryName": "פירות קפואים",
+      "chainCategoryDepth": 6,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/ירקות-קפואים",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A160507",
+      "chainCategoryName": "צ'יפס קפוא",
       "chainCategoryDepth": 6,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
@@ -16050,6 +15943,16 @@
     {
       "commonId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/צ-יפס",
       "retailerSlug": "rami-levy",
+      "chainCategoryId": "222",
+      "chainCategoryName": "ירקות, פירות וצ'יפס קפואים",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/צ-יפס",
+      "retailerSlug": "rami-levy",
       "chainCategoryId": "70",
       "chainCategoryName": "צ'יפס וטבעות בצל",
       "chainCategoryDepth": 2,
@@ -16068,11 +15971,11 @@
       "auto": false
     },
     {
-      "commonId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/general",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "223",
-      "chainCategoryName": "פיצות, מאפים ובצקים קפואים",
-      "chainCategoryDepth": 1,
+      "commonId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/בורקסים",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A160801",
+      "chainCategoryName": "בורקסים",
+      "chainCategoryDepth": 9,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -16103,6 +16006,16 @@
       "chainCategoryId": "112",
       "chainCategoryName": "מלווח וג'חנון",
       "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/מלווח-וג-חנון",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "223",
+      "chainCategoryName": "פיצות, מאפים ובצקים קפואים",
+      "chainCategoryDepth": 1,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -16143,6 +16056,16 @@
       "chainCategoryId": "333",
       "chainCategoryName": "פיצות",
       "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/פיצות",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A160804",
+      "chainCategoryName": "מאפים תימניים קפואים",
+      "chainCategoryDepth": 5,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false

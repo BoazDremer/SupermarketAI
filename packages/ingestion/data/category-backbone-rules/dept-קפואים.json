@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "departmentId": "dept/קפואים",
+  "description": "Hand-curated overrides for frozen foods (no /general leaves).",
+  "skipAutoGeneralUnder": [
+    "dept/קפואים",
+    "dept/קפואים/גלידות-וארטיקים",
+    "dept/קפואים/אוכל-מוכן",
+    "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים",
+    "dept/קפואים/פיצות-מאפים-ובצקים-קפואים"
+  ],
+  "rules": [
+    {
+      "id": "frozen-no-general",
+      "summary": "No /general under dept/קפואים or any frozen subgroup."
+    },
+    {
+      "id": "remove-frozen-bbq",
+      "summary": "Remove בשרים-על-האש; merge into אוכל-מוכן/מוצרי-בשר-ועוף-מוכנים."
+    }
+  ],
+  "productCategoryIdRemaps": [
+    {
+      "from": "dept/קפואים/general",
+      "to": "dept/קפואים/גלידות-וארטיקים/גביעי-גלידה"
+    },
+    {
+      "from": "dept/קפואים/בשרים-על-האש",
+      "to": "dept/קפואים/אוכל-מוכן/מוצרי-בשר-ועוף-מוכנים"
+    },
+    {
+      "from": "dept/קפואים/בשרים-על-האש/general",
+      "to": "dept/קפואים/אוכל-מוכן/מוצרי-בשר-ועוף-מוכנים"
+    },
+    {
+      "from": "dept/קפואים/בשרים-על-האש/המבורגר",
+      "to": "dept/קפואים/אוכל-מוכן/מוצרי-בשר-ועוף-מוכנים"
+    },
+    {
+      "from": "dept/קפואים/גלידות-וארטיקים/general",
+      "to": "dept/קפואים/גלידות-וארטיקים/גביעי-גלידה"
+    },
+    {
+      "from": "dept/קפואים/אוכל-מוכן/general",
+      "to": "dept/קפואים/אוכל-מוכן/שניצלים-שניצלונים"
+    },
+    {
+      "from": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/general",
+      "to": "dept/קפואים/ירקות-פירות-וצ-יפס-קפואים/צ-יפס"
+    },
+    {
+      "from": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/general",
+      "to": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/מלווח-וג-חנון"
+    }
+  ]
+}

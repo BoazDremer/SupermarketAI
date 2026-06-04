@@ -3189,40 +3189,6 @@ const RAW_COMMON_BACKBONE: ReadonlyArray<BackboneNode> = [
       },
       "children": [
         {
-          "id": "dept/קפואים/בשרים-על-האש",
-          "nameHe": "בשרים על האש",
-          "nameEn": "בשרים על האש",
-          "parentId": "dept/קפואים",
-          "chainHints": {
-            "ramiLevy": [
-              "206"
-            ]
-          },
-          "children": [
-            {
-              "id": "dept/קפואים/בשרים-על-האש/המבורגר",
-              "nameHe": "המבורגר",
-              "nameEn": "המבורגר",
-              "parentId": "dept/קפואים/בשרים-על-האש",
-              "chainHints": {
-                "ramiLevy": [
-                  "67"
-                ],
-                "shufersal": [
-                  "A160507",
-                  "A162407",
-                  "A162406",
-                  "A100507",
-                  "A100804",
-                  "A2414",
-                  "G030210"
-                ]
-              },
-              "children": []
-            }
-          ]
-        },
-        {
           "id": "dept/קפואים/גלידות-וארטיקים",
           "nameHe": "גלידות וארטיקים",
           "nameEn": "גלידות וארטיקים",
