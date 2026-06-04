@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "departmentId": "dept/משקאות",
+  "description": "Hand-curated overrides for beverages (no /general leaves).",
+  "skipAutoGeneralUnder": [
+    "dept/משקאות",
+    "dept/משקאות/משקאות-קלים",
+    "dept/משקאות/משקאות-חמים",
+    "dept/משקאות/יינות",
+    "dept/משקאות/אלכוהול-ואנרגיה",
+    "dept/משקאות/תרכיזים",
+    "dept/משקאות/משקאות-במארזים",
+    "dept/משקאות/תה-וחליטות"
+  ],
+  "rules": [
+    {
+      "id": "beverages-icon",
+      "summary": "Dept icon: CupSoda (packaged drinks; no plastic-bottle glyph in Lucide)."
+    },
+    {
+      "id": "beverages-no-general",
+      "summary": "No /general under dept/משקאות or any beverage subgroup."
+    },
+    {
+      "id": "merge-duplicate-spirits-dept",
+      "summary": "Remove top-level משקאות-חריפים; merge …/בירה-בודד into אלכוהול-ואנרגיה/בירה-בודד."
+    }
+  ],
+  "productCategoryIdRemaps": [
+    {
+      "from": "dept/משקאות/general",
+      "to": "dept/משקאות/משקאות-קלים/מים-וסודה-בטעמים"
+    },
+    {
+      "from": "dept/משקאות/משקאות-קלים/general",
+      "to": "dept/משקאות/משקאות-קלים/מים-וסודה-בטעמים"
+    },
+    {
+      "from": "dept/משקאות/משקאות-חמים/general",
+      "to": "dept/משקאות/משקאות-חמים/קפה-נמס-אבקה"
+    },
+    {
+      "from": "dept/משקאות/יינות/general",
+      "to": "dept/משקאות/יינות/יינות-לבנים"
+    },
+    {
+      "from": "dept/משקאות/אלכוהול-ואנרגיה/general",
+      "to": "dept/משקאות/אלכוהול-ואנרגיה/בירה-בירה-שחורה"
+    },
+    {
+      "from": "dept/משקאות/תרכיזים/general",
+      "to": "dept/משקאות/תרכיזים/סירופ-ותרכיזים"
+    },
+    {
+      "from": "dept/משקאות/משקאות-חריפים",
+      "to": "dept/משקאות/אלכוהול-ואנרגיה/בירה-בודד"
+    },
+    {
+      "from": "dept/משקאות/משקאות-חריפים/general",
+      "to": "dept/משקאות/אלכוהול-ואנרגיה/בירה-בודד"
+    },
+    {
+      "from": "dept/משקאות/משקאות-חריפים/בירה-בודד",
+      "to": "dept/משקאות/אלכוהול-ואנרגיה/בירה-בודד"
+    },
+    {
+      "from": "dept/משקאות/משקאות-במארזים/general",
+      "to": "dept/משקאות/משקאות-במארזים/משקאות-קלים-במארזים"
+    },
+    {
+      "from": "dept/משקאות/תה-וחליטות/general",
+      "to": "dept/משקאות/תה-וחליטות/תה-ירוק"
+    }
+  ]
+}

@@ -178,7 +178,7 @@ function iconForDept(name: string): string {
   if (name.includes('פירות') || name.includes('ירקות')) return 'Salad';
   if (name.includes('בשר') || name.includes('דגים')) return 'Beef';
   if (name.includes('קפוא')) return 'Snowflake';
-  if (name.includes('משקאות')) return 'GlassWater';
+  if (name.includes('משקאות')) return 'CupSoda';
   if (name.includes('פארם') || name.includes('בריאות')) return 'Pill';
   if (name.includes('לחם') || name.includes('מאפים')) return 'Croissant';
   if (name.includes('בית') || name.includes('אחזקת')) return 'SprayCan';

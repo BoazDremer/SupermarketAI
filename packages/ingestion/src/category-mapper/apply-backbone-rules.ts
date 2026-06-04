@@ -30,6 +30,7 @@ const DEPT_MEAT = 'dept/בשר-ודגים';
 const DEPT_BREAD = 'dept/לחם-מאפים-והמאפייה-הטריה';
 const DEPT_LEGUMES = 'dept/קטניות-ודגנים';
 const DEPT_PANTRY = 'dept/שימורים-בישול-ואפיה';
+const DEPT_BEVERAGES = 'dept/משקאות';
 const SPICES_BY_WEIGHT_ID = 'dept/שימורים-בישול-ואפיה/תבלינים/תבלינים-במשקל';
 
 const FALLBACK_LEAF_SUFFIX = /\/(general|other|misc)$/;
@@ -683,6 +684,7 @@ function loadAllRulePacks(): RulePackJson[] {
     readRulePack('dept-לחם-מאפים-והמאפייה-הטריה.json'),
     readRulePack('dept-קטניות-ודגנים.json'),
     readRulePack('dept-שימורים-בישול-ואפיה.json'),
+    readRulePack('dept-משקאות.json'),
   ];
 }
 
@@ -756,6 +758,9 @@ export function applyInternalBackboneRules(
 
   const pantryDept = findNodeById(cloned, DEPT_PANTRY);
   if (pantryDept) patchPantryDepartment(cloned, pantryDept);
+
+  const beveragesDept = findNodeById(cloned, DEPT_BEVERAGES);
+  if (beveragesDept) patchBeveragesDepartment(cloned, beveragesDept);
 
   patchRootDepartmentOrder(cloned);
 
@@ -912,6 +917,49 @@ function patchPantryDepartment(roots: readonly BackboneNode[], dept: BackboneNod
   dept.children = dept.children.filter((c) => !isFallbackLeafId(c.id));
 }
 
+function patchBeveragesDepartment(roots: readonly BackboneNode[], dept: BackboneNode): void {
+  dept.icon = 'CupSoda';
+
+  const stripGeneralUnder = (groupId: string, hintTargetId: string) => {
+    const group = findChild(dept, groupId);
+    if (!group) return;
+    mergeHintsIntoNode(roots, hintTargetId, group.chainHints);
+    group.children = group.children.filter((c) => !isFallbackLeafId(c.id));
+  };
+
+  const softDrinksId = `${DEPT_BEVERAGES}/משקאות-קלים`;
+  const defaultLeafId = `${softDrinksId}/מים-וסודה-בטעמים`;
+
+  stripGeneralUnder(softDrinksId, defaultLeafId);
+  stripGeneralUnder(`${DEPT_BEVERAGES}/משקאות-חמים`, `${DEPT_BEVERAGES}/משקאות-חמים/קפה-נמס-אבקה`);
+  stripGeneralUnder(`${DEPT_BEVERAGES}/יינות`, `${DEPT_BEVERAGES}/יינות/יינות-לבנים`);
+  stripGeneralUnder(
+    `${DEPT_BEVERAGES}/אלכוהול-ואנרגיה`,
+    `${DEPT_BEVERAGES}/אלכוהול-ואנרגיה/בירה-בירה-שחורה`,
+  );
+  stripGeneralUnder(`${DEPT_BEVERAGES}/תרכיזים`, `${DEPT_BEVERAGES}/תרכיזים/סירופ-ותרכיזים`);
+
+  const alcoholId = `${DEPT_BEVERAGES}/אלכוהול-ואנרגיה`;
+  const singleBeerId = `${alcoholId}/בירה-בודד`;
+  const duplicateSpiritsId = `${DEPT_BEVERAGES}/משקאות-חריפים`;
+  const duplicateSpirits = findChild(dept, duplicateSpiritsId);
+  if (duplicateSpirits) {
+    const dupBeer = findChild(duplicateSpirits, `${duplicateSpiritsId}/בירה-בודד`);
+    if (dupBeer) mergeHintsIntoNode(roots, singleBeerId, dupBeer.chainHints);
+    mergeHintsIntoNode(roots, singleBeerId, duplicateSpirits.chainHints);
+    dept.children = dept.children.filter((c) => c.id !== duplicateSpiritsId);
+  }
+
+  stripGeneralUnder(
+    `${DEPT_BEVERAGES}/משקאות-במארזים`,
+    `${DEPT_BEVERAGES}/משקאות-במארזים/משקאות-קלים-במארזים`,
+  );
+  stripGeneralUnder(`${DEPT_BEVERAGES}/תה-וחליטות`, `${DEPT_BEVERAGES}/תה-וחליטות/תה-ירוק`);
+
+  mergeHintsIntoNode(roots, defaultLeafId, dept.chainHints);
+  dept.children = dept.children.filter((c) => !isFallbackLeafId(c.id));
+}
+
 /** Top-level dept order + display names not tied to a single department rule pack. */
 function patchRootDepartmentOrder(roots: BackboneNode[]): void {
   const breadIdx = roots.findIndex((d) => d.id === DEPT_BREAD);
@@ -938,6 +986,14 @@ function patchRootDepartmentOrder(roots: BackboneNode[]): void {
     pantry.icon = 'CookingPot';
     const legumesPos = roots.findIndex((d) => d.id === DEPT_LEGUMES);
     roots.splice(legumesPos + 1, 0, pantry);
+  }
+
+  const beveragesIdx = roots.findIndex((d) => d.id === DEPT_BEVERAGES);
+  const pantryIdxAfter = roots.findIndex((d) => d.id === DEPT_PANTRY);
+  if (beveragesIdx >= 0 && pantryIdxAfter >= 0) {
+    const [beverages] = roots.splice(beveragesIdx, 1);
+    const pantryPos = roots.findIndex((d) => d.id === DEPT_PANTRY);
+    roots.splice(pantryPos + 1, 0, beverages);
   }
 }
 

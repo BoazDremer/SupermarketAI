@@ -4197,7 +4197,7 @@ const RAW_COMMON_BACKBONE: ReadonlyArray<BackboneNode> = [
       "id": "dept/משקאות",
       "nameHe": "משקאות",
       "nameEn": "משקאות",
-      "icon": "GlassWater",
+      "icon": "CupSoda",
       "chainHints": {
         "ramiLevy": [
           "57"
@@ -4625,31 +4625,6 @@ const RAW_COMMON_BACKBONE: ReadonlyArray<BackboneNode> = [
                 ],
                 "shufersal": [
                   "A130206"
-                ]
-              },
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/משקאות/משקאות-חריפים",
-          "nameHe": "משקאות חריפים",
-          "nameEn": "משקאות חריפים",
-          "parentId": "dept/משקאות",
-          "chainHints": {
-            "ramiLevy": [
-              "511"
-            ]
-          },
-          "children": [
-            {
-              "id": "dept/משקאות/משקאות-חריפים/בירה-בודד",
-              "nameHe": "בירה בודד",
-              "nameEn": "בירה בודד",
-              "parentId": "dept/משקאות/משקאות-חריפים",
-              "chainHints": {
-                "ramiLevy": [
-                  "907"
                 ]
               },
               "children": []

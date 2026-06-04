@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-06-04T09:44:59.120Z",
+  "builtAt": "2026-06-04T12:21:21.909Z",
   "_meta": {
     "backboneSource": "packages/ingestion/src/category-mapper/backbone.ts + data/category-backbone-rules/",
     "rulesApplied": true
@@ -1398,6 +1398,301 @@
       ]
     },
     {
+      "id": "dept/משקאות",
+      "nameHe": "משקאות",
+      "nameEn": "משקאות",
+      "icon": "CupSoda",
+      "children": [
+        {
+          "id": "dept/משקאות/משקאות-קלים",
+          "nameHe": "משקאות קלים",
+          "nameEn": "משקאות קלים",
+          "parentId": "dept/משקאות",
+          "children": [
+            {
+              "id": "dept/משקאות/משקאות-קלים/מים-וסודה-בטעמים",
+              "nameHe": "מים וסודה בטעמים",
+              "nameEn": "מים וסודה בטעמים",
+              "parentId": "dept/משקאות/משקאות-קלים",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/משקאות-קלים/משקאות-קלים",
+              "nameHe": "משקאות קלים",
+              "nameEn": "משקאות קלים",
+              "parentId": "dept/משקאות/משקאות-קלים",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/משקאות-קלים/משקאות-מוגזים",
+              "nameHe": "משקאות מוגזים",
+              "nameEn": "משקאות מוגזים",
+              "parentId": "dept/משקאות/משקאות-קלים",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/משקאות-קלים/מיצים-טריים",
+              "nameHe": "מיץ טבעי ומצונן, נקטר פירות",
+              "nameEn": "מיץ טבעי ומצונן, נקטר פירות",
+              "parentId": "dept/משקאות/משקאות-קלים",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/משקאות-קלים/משקאות-אישיים",
+              "nameHe": "משקאות אישיים",
+              "nameEn": "משקאות אישיים",
+              "parentId": "dept/משקאות/משקאות-קלים",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dept/משקאות/משקאות-חמים",
+          "nameHe": "משקאות חמים",
+          "nameEn": "משקאות חמים",
+          "parentId": "dept/משקאות",
+          "children": [
+            {
+              "id": "dept/משקאות/משקאות-חמים/קפה-נמס-אבקה",
+              "nameHe": "קפה נמס אבקה",
+              "nameEn": "קפה נמס אבקה",
+              "parentId": "dept/משקאות/משקאות-חמים",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/משקאות-חמים/קפה-שחור",
+              "nameHe": "קפה שחור",
+              "nameEn": "קפה שחור",
+              "parentId": "dept/משקאות/משקאות-חמים",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/משקאות-חמים/קפה-ואביזרים-למכונה",
+              "nameHe": "קפסולות ופולי קפה",
+              "nameEn": "קפסולות ופולי קפה",
+              "parentId": "dept/משקאות/משקאות-חמים",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/משקאות-חמים/קפה-נמס-מגורען",
+              "nameHe": "קפה נמס מגורען",
+              "nameEn": "קפה נמס מגורען",
+              "parentId": "dept/משקאות/משקאות-חמים",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/משקאות-חמים/אבקת-שוקו-סחלב",
+              "nameHe": "אבקת שוקו , סחלב",
+              "nameEn": "אבקת שוקו , סחלב",
+              "parentId": "dept/משקאות/משקאות-חמים",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/משקאות-חמים/תה-שחור-קלאסי",
+              "nameHe": "תה שחור, קלאסי",
+              "nameEn": "תה שחור, קלאסי",
+              "parentId": "dept/משקאות/משקאות-חמים",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/משקאות-חמים/חליטות",
+              "nameHe": "חליטות",
+              "nameEn": "חליטות",
+              "parentId": "dept/משקאות/משקאות-חמים",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/משקאות-חמים/קפה-שחור-סיטונאות",
+              "nameHe": "קפה שחור סיטונאות",
+              "nameEn": "קפה שחור סיטונאות",
+              "parentId": "dept/משקאות/משקאות-חמים",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dept/משקאות/יינות",
+          "nameHe": "יינות",
+          "nameEn": "יינות",
+          "parentId": "dept/משקאות",
+          "children": [
+            {
+              "id": "dept/משקאות/יינות/יינות-לבנים",
+              "nameHe": "יינות לבנים",
+              "nameEn": "יינות לבנים",
+              "parentId": "dept/משקאות/יינות",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/יינות/יינות-אדומים",
+              "nameHe": "יינות אדומים",
+              "nameEn": "יינות אדומים",
+              "parentId": "dept/משקאות/יינות",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/יינות/מיץ-ענבים-תירוש",
+              "nameHe": "מיץ ענבים- תירוש",
+              "nameEn": "מיץ ענבים- תירוש",
+              "parentId": "dept/משקאות/יינות",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/יינות/יינות-מבעבעים",
+              "nameHe": "יינות מבעבעים",
+              "nameEn": "יינות מבעבעים",
+              "parentId": "dept/משקאות/יינות",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dept/משקאות/אלכוהול-ואנרגיה",
+          "nameHe": "אלכוהול ואנרגיה",
+          "nameEn": "אלכוהול ואנרגיה",
+          "parentId": "dept/משקאות",
+          "children": [
+            {
+              "id": "dept/משקאות/אלכוהול-ואנרגיה/בירה-בירה-שחורה",
+              "nameHe": "בירות במארז",
+              "nameEn": "בירות במארז",
+              "parentId": "dept/משקאות/אלכוהול-ואנרגיה",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/אלכוהול-ואנרגיה/משקאות-חריפים",
+              "nameHe": "משקאות חריפים",
+              "nameEn": "משקאות חריפים",
+              "parentId": "dept/משקאות/אלכוהול-ואנרגיה",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/אלכוהול-ואנרגיה/משקאות-אנרגיה",
+              "nameHe": "משקאות אנרגיה",
+              "nameEn": "משקאות אנרגיה",
+              "parentId": "dept/משקאות/אלכוהול-ואנרגיה",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/אלכוהול-ואנרגיה/בירה-בודד",
+              "nameHe": "בירה בודד",
+              "nameEn": "בירה בודד",
+              "parentId": "dept/משקאות/אלכוהול-ואנרגיה",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dept/משקאות/תרכיזים",
+          "nameHe": "תרכיזים",
+          "nameEn": "תרכיזים",
+          "parentId": "dept/משקאות",
+          "children": [
+            {
+              "id": "dept/משקאות/תרכיזים/סירופ-ותרכיזים",
+              "nameHe": "סירופ  ותרכיזים",
+              "nameEn": "סירופ  ותרכיזים",
+              "parentId": "dept/משקאות/תרכיזים",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/תרכיזים/סודה-סטרים-ואבזירים",
+              "nameHe": "סודה סטרים ואביזרים",
+              "nameEn": "סודה סטרים ואביזרים",
+              "parentId": "dept/משקאות/תרכיזים",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dept/משקאות/משקאות-במארזים",
+          "nameHe": "משקאות במארזים",
+          "nameEn": "משקאות במארזים",
+          "parentId": "dept/משקאות",
+          "children": [
+            {
+              "id": "dept/משקאות/משקאות-במארזים/משקאות-קלים-במארזים",
+              "nameHe": "משקאות קלים במארזים",
+              "nameEn": "משקאות קלים במארזים",
+              "parentId": "dept/משקאות/משקאות-במארזים",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/משקאות-במארזים/משקאות-מוגזים-במארזים",
+              "nameHe": "משקאות מוגזים במארזים",
+              "nameEn": "משקאות מוגזים במארזים",
+              "parentId": "dept/משקאות/משקאות-במארזים",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/משקאות-במארזים/מים-וסודה-במארזים",
+              "nameHe": "מים וסודה במארזים",
+              "nameEn": "מים וסודה במארזים",
+              "parentId": "dept/משקאות/משקאות-במארזים",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dept/משקאות/תה-וחליטות",
+          "nameHe": "תה וחליטות",
+          "nameEn": "תה וחליטות",
+          "parentId": "dept/משקאות",
+          "children": [
+            {
+              "id": "dept/משקאות/תה-וחליטות/תה-ירוק",
+              "nameHe": "תה ירוק",
+              "nameEn": "תה ירוק",
+              "parentId": "dept/משקאות/תה-וחליטות",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/תה-וחליטות/תה-שחור-קלאסי",
+              "nameHe": "תה שחור, קלאסי",
+              "nameEn": "תה שחור, קלאסי",
+              "parentId": "dept/משקאות/תה-וחליטות",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/תה-וחליטות/חליטות",
+              "nameHe": "חליטות",
+              "nameEn": "חליטות",
+              "parentId": "dept/משקאות/תה-וחליטות",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/תה-וחליטות/תה-טעמים",
+              "nameHe": "תה טעמים",
+              "nameEn": "תה טעמים",
+              "parentId": "dept/משקאות/תה-וחליטות",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/תה-וחליטות/תה-שחור-בטעמים",
+              "nameHe": "תה שחור בטעמים",
+              "nameEn": "תה שחור בטעמים",
+              "parentId": "dept/משקאות/תה-וחליטות",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/תה-וחליטות/תה-בתפזורת",
+              "nameHe": "תה בתפזורת",
+              "nameEn": "תה בתפזורת",
+              "parentId": "dept/משקאות/תה-וחליטות",
+              "children": []
+            },
+            {
+              "id": "dept/משקאות/תה-וחליטות/חליטות-קרות",
+              "nameHe": "חליטות קרות",
+              "nameEn": "חליטות קרות",
+              "parentId": "dept/משקאות/תה-וחליטות",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "dept/אורגני-ובריאות",
       "nameHe": "אורגני ובריאות",
       "nameEn": "אורגני ובריאות",
@@ -2190,379 +2485,6 @@
           "nameHe": "כללי",
           "nameEn": "General",
           "parentId": "dept/חטיפים-ומתוקים",
-          "children": []
-        }
-      ]
-    },
-    {
-      "id": "dept/משקאות",
-      "nameHe": "משקאות",
-      "nameEn": "משקאות",
-      "icon": "GlassWater",
-      "children": [
-        {
-          "id": "dept/משקאות/משקאות-קלים",
-          "nameHe": "משקאות קלים",
-          "nameEn": "משקאות קלים",
-          "parentId": "dept/משקאות",
-          "children": [
-            {
-              "id": "dept/משקאות/משקאות-קלים/מים-וסודה-בטעמים",
-              "nameHe": "מים וסודה בטעמים",
-              "nameEn": "מים וסודה בטעמים",
-              "parentId": "dept/משקאות/משקאות-קלים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-קלים/משקאות-קלים",
-              "nameHe": "משקאות קלים",
-              "nameEn": "משקאות קלים",
-              "parentId": "dept/משקאות/משקאות-קלים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-קלים/משקאות-מוגזים",
-              "nameHe": "משקאות מוגזים",
-              "nameEn": "משקאות מוגזים",
-              "parentId": "dept/משקאות/משקאות-קלים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-קלים/מיצים-טריים",
-              "nameHe": "מיץ טבעי ומצונן, נקטר פירות",
-              "nameEn": "מיץ טבעי ומצונן, נקטר פירות",
-              "parentId": "dept/משקאות/משקאות-קלים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-קלים/משקאות-אישיים",
-              "nameHe": "משקאות אישיים",
-              "nameEn": "משקאות אישיים",
-              "parentId": "dept/משקאות/משקאות-קלים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-קלים/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/משקאות/משקאות-קלים",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/משקאות/משקאות-חמים",
-          "nameHe": "משקאות חמים",
-          "nameEn": "משקאות חמים",
-          "parentId": "dept/משקאות",
-          "children": [
-            {
-              "id": "dept/משקאות/משקאות-חמים/קפה-נמס-אבקה",
-              "nameHe": "קפה נמס אבקה",
-              "nameEn": "קפה נמס אבקה",
-              "parentId": "dept/משקאות/משקאות-חמים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-חמים/קפה-שחור",
-              "nameHe": "קפה שחור",
-              "nameEn": "קפה שחור",
-              "parentId": "dept/משקאות/משקאות-חמים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-חמים/קפה-ואביזרים-למכונה",
-              "nameHe": "קפסולות ופולי קפה",
-              "nameEn": "קפסולות ופולי קפה",
-              "parentId": "dept/משקאות/משקאות-חמים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-חמים/קפה-נמס-מגורען",
-              "nameHe": "קפה נמס מגורען",
-              "nameEn": "קפה נמס מגורען",
-              "parentId": "dept/משקאות/משקאות-חמים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-חמים/אבקת-שוקו-סחלב",
-              "nameHe": "אבקת שוקו , סחלב",
-              "nameEn": "אבקת שוקו , סחלב",
-              "parentId": "dept/משקאות/משקאות-חמים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-חמים/תה-שחור-קלאסי",
-              "nameHe": "תה שחור, קלאסי",
-              "nameEn": "תה שחור, קלאסי",
-              "parentId": "dept/משקאות/משקאות-חמים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-חמים/חליטות",
-              "nameHe": "חליטות",
-              "nameEn": "חליטות",
-              "parentId": "dept/משקאות/משקאות-חמים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-חמים/קפה-שחור-סיטונאות",
-              "nameHe": "קפה שחור סיטונאות",
-              "nameEn": "קפה שחור סיטונאות",
-              "parentId": "dept/משקאות/משקאות-חמים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-חמים/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/משקאות/משקאות-חמים",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/משקאות/יינות",
-          "nameHe": "יינות",
-          "nameEn": "יינות",
-          "parentId": "dept/משקאות",
-          "children": [
-            {
-              "id": "dept/משקאות/יינות/יינות-לבנים",
-              "nameHe": "יינות לבנים",
-              "nameEn": "יינות לבנים",
-              "parentId": "dept/משקאות/יינות",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/יינות/יינות-אדומים",
-              "nameHe": "יינות אדומים",
-              "nameEn": "יינות אדומים",
-              "parentId": "dept/משקאות/יינות",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/יינות/מיץ-ענבים-תירוש",
-              "nameHe": "מיץ ענבים- תירוש",
-              "nameEn": "מיץ ענבים- תירוש",
-              "parentId": "dept/משקאות/יינות",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/יינות/יינות-מבעבעים",
-              "nameHe": "יינות מבעבעים",
-              "nameEn": "יינות מבעבעים",
-              "parentId": "dept/משקאות/יינות",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/יינות/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/משקאות/יינות",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/משקאות/אלכוהול-ואנרגיה",
-          "nameHe": "אלכוהול ואנרגיה",
-          "nameEn": "אלכוהול ואנרגיה",
-          "parentId": "dept/משקאות",
-          "children": [
-            {
-              "id": "dept/משקאות/אלכוהול-ואנרגיה/בירה-בירה-שחורה",
-              "nameHe": "בירות במארז",
-              "nameEn": "בירות במארז",
-              "parentId": "dept/משקאות/אלכוהול-ואנרגיה",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/אלכוהול-ואנרגיה/משקאות-חריפים",
-              "nameHe": "משקאות חריפים",
-              "nameEn": "משקאות חריפים",
-              "parentId": "dept/משקאות/אלכוהול-ואנרגיה",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/אלכוהול-ואנרגיה/משקאות-אנרגיה",
-              "nameHe": "משקאות אנרגיה",
-              "nameEn": "משקאות אנרגיה",
-              "parentId": "dept/משקאות/אלכוהול-ואנרגיה",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/אלכוהול-ואנרגיה/בירה-בודד",
-              "nameHe": "בירה בודד",
-              "nameEn": "בירה בודד",
-              "parentId": "dept/משקאות/אלכוהול-ואנרגיה",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/אלכוהול-ואנרגיה/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/משקאות/אלכוהול-ואנרגיה",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/משקאות/תרכיזים",
-          "nameHe": "תרכיזים",
-          "nameEn": "תרכיזים",
-          "parentId": "dept/משקאות",
-          "children": [
-            {
-              "id": "dept/משקאות/תרכיזים/סירופ-ותרכיזים",
-              "nameHe": "סירופ  ותרכיזים",
-              "nameEn": "סירופ  ותרכיזים",
-              "parentId": "dept/משקאות/תרכיזים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/תרכיזים/סודה-סטרים-ואבזירים",
-              "nameHe": "סודה סטרים ואביזרים",
-              "nameEn": "סודה סטרים ואביזרים",
-              "parentId": "dept/משקאות/תרכיזים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/תרכיזים/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/משקאות/תרכיזים",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/משקאות/משקאות-חריפים",
-          "nameHe": "משקאות חריפים",
-          "nameEn": "משקאות חריפים",
-          "parentId": "dept/משקאות",
-          "children": [
-            {
-              "id": "dept/משקאות/משקאות-חריפים/בירה-בודד",
-              "nameHe": "בירה בודד",
-              "nameEn": "בירה בודד",
-              "parentId": "dept/משקאות/משקאות-חריפים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-חריפים/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/משקאות/משקאות-חריפים",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/משקאות/משקאות-במארזים",
-          "nameHe": "משקאות במארזים",
-          "nameEn": "משקאות במארזים",
-          "parentId": "dept/משקאות",
-          "children": [
-            {
-              "id": "dept/משקאות/משקאות-במארזים/משקאות-קלים-במארזים",
-              "nameHe": "משקאות קלים במארזים",
-              "nameEn": "משקאות קלים במארזים",
-              "parentId": "dept/משקאות/משקאות-במארזים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-במארזים/משקאות-מוגזים-במארזים",
-              "nameHe": "משקאות מוגזים במארזים",
-              "nameEn": "משקאות מוגזים במארזים",
-              "parentId": "dept/משקאות/משקאות-במארזים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-במארזים/מים-וסודה-במארזים",
-              "nameHe": "מים וסודה במארזים",
-              "nameEn": "מים וסודה במארזים",
-              "parentId": "dept/משקאות/משקאות-במארזים",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/משקאות-במארזים/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/משקאות/משקאות-במארזים",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/משקאות/תה-וחליטות",
-          "nameHe": "תה וחליטות",
-          "nameEn": "תה וחליטות",
-          "parentId": "dept/משקאות",
-          "children": [
-            {
-              "id": "dept/משקאות/תה-וחליטות/תה-ירוק",
-              "nameHe": "תה ירוק",
-              "nameEn": "תה ירוק",
-              "parentId": "dept/משקאות/תה-וחליטות",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/תה-וחליטות/תה-שחור-קלאסי",
-              "nameHe": "תה שחור, קלאסי",
-              "nameEn": "תה שחור, קלאסי",
-              "parentId": "dept/משקאות/תה-וחליטות",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/תה-וחליטות/חליטות",
-              "nameHe": "חליטות",
-              "nameEn": "חליטות",
-              "parentId": "dept/משקאות/תה-וחליטות",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/תה-וחליטות/תה-טעמים",
-              "nameHe": "תה טעמים",
-              "nameEn": "תה טעמים",
-              "parentId": "dept/משקאות/תה-וחליטות",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/תה-וחליטות/תה-שחור-בטעמים",
-              "nameHe": "תה שחור בטעמים",
-              "nameEn": "תה שחור בטעמים",
-              "parentId": "dept/משקאות/תה-וחליטות",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/תה-וחליטות/תה-בתפזורת",
-              "nameHe": "תה בתפזורת",
-              "nameEn": "תה בתפזורת",
-              "parentId": "dept/משקאות/תה-וחליטות",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/תה-וחליטות/חליטות-קרות",
-              "nameHe": "חליטות קרות",
-              "nameEn": "חליטות קרות",
-              "parentId": "dept/משקאות/תה-וחליטות",
-              "children": []
-            },
-            {
-              "id": "dept/משקאות/תה-וחליטות/general",
-              "nameHe": "כללי",
-              "nameEn": "General",
-              "parentId": "dept/משקאות/תה-וחליטות",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "dept/משקאות/general",
-          "nameHe": "כללי",
-          "nameEn": "General",
-          "parentId": "dept/משקאות",
           "children": []
         }
       ]
@@ -4776,16 +4698,6 @@
       "auto": false
     },
     {
-      "commonId": "dept/אורגני-ובריאות/אורגני-וטבעוני/מוצרים-אורגנים",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "C300101",
-      "chainCategoryName": "מוצרים לשגרת חירום",
-      "chainCategoryDepth": 5,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
       "commonId": "dept/אורגני-ובריאות/אורגני-וטבעוני/מוצרים-טבעוניים",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "802",
@@ -5168,16 +5080,6 @@
     {
       "commonId": "dept/אורגני-ובריאות/נטול-ומופחת-סוכר/חטיפים-ומתוקים-מופחתי-סוכר",
       "retailerSlug": "shufersal",
-      "chainCategoryId": "A130519",
-      "chainCategoryName": "תה ירוק",
-      "chainCategoryDepth": 5,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/אורגני-ובריאות/נטול-ומופחת-סוכר/חטיפים-ומתוקים-מופחתי-סוכר",
-      "retailerSlug": "shufersal",
       "chainCategoryId": "A250702",
       "chainCategoryName": "קרקרים",
       "chainCategoryDepth": 6,
@@ -5341,26 +5243,6 @@
       "chainCategoryId": "A011203",
       "chainCategoryName": "טופו ומעדני סויה",
       "chainCategoryDepth": 13,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/אורגני-ובריאות/תחליפי-גבינה-וטופו/טופו",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A130816",
-      "chainCategoryName": "מיצים ונקטרים",
-      "chainCategoryDepth": 7,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/אורגני-ובריאות/תחליפי-גבינה-וטופו/טופו",
-      "retailerSlug": "shufersal",
-      "chainCategoryId": "A130824",
-      "chainCategoryName": "מיץ סחוט טרי",
-      "chainCategoryDepth": 6,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -9666,16 +9548,6 @@
       "auto": false
     },
     {
-      "commonId": "dept/חטיפים-ומתוקים/חטיפים-מלוחים/חטיפי-בוטנים",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "57",
-      "chainCategoryName": "חטיפי בוטנים",
-      "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
       "commonId": "dept/חטיפים-ומתוקים/חטיפים-מלוחים/חטיפי-ילדים",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "29",
@@ -9917,16 +9789,6 @@
     },
     {
       "commonId": "dept/חטיפים-ומתוקים/חטיפים-מתוקים/מארזי-חטיפים",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "591",
-      "chainCategoryName": "חטיפי שוקולד במארז",
-      "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/חטיפים-ומתוקים/חטיפים-מתוקים/מארזי-חטיפים",
       "retailerSlug": "shufersal",
       "chainCategoryId": "A250534",
       "chainCategoryName": "חטיפי שוקולד במארז",
@@ -10060,16 +9922,6 @@
       "retailerSlug": "rami-levy",
       "chainCategoryId": "596",
       "chainCategoryName": "מסטיק",
-      "chainCategoryDepth": 2,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/חטיפים-ומתוקים/סוכריות-ומסטיקים/סוכריה-על-מקל",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "595",
-      "chainCategoryName": "סוכריה על מקל",
       "chainCategoryDepth": 2,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
@@ -11436,6 +11288,16 @@
       "auto": false
     },
     {
+      "commonId": "dept/מחלקה-1237/משקאות-חריפים/general",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "511",
+      "chainCategoryName": "משקאות חריפים",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
       "commonId": "dept/מחלקה-1237/משקאות-חריפים/ג-ין-רום-וקוניאק",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "881",
@@ -11756,16 +11618,6 @@
       "auto": false
     },
     {
-      "commonId": "dept/משקאות/אלכוהול-ואנרגיה/general",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "290",
-      "chainCategoryName": "אלכוהול ואנרגיה",
-      "chainCategoryDepth": 1,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
       "commonId": "dept/משקאות/אלכוהול-ואנרגיה/בירה-בודד",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "907",
@@ -11781,6 +11633,16 @@
       "chainCategoryId": "129",
       "chainCategoryName": "בירות במארז",
       "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/משקאות/אלכוהול-ואנרגיה/בירה-בירה-שחורה",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "290",
+      "chainCategoryName": "אלכוהול ואנרגיה",
+      "chainCategoryDepth": 1,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -11936,16 +11798,6 @@
       "auto": false
     },
     {
-      "commonId": "dept/משקאות/יינות/general",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "239",
-      "chainCategoryName": "יינות",
-      "chainCategoryDepth": 1,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
       "commonId": "dept/משקאות/יינות/יינות-אדומים",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "48",
@@ -11961,6 +11813,16 @@
       "chainCategoryId": "A132008",
       "chainCategoryName": "יינות אדומים",
       "chainCategoryDepth": 8,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/משקאות/יינות/יינות-לבנים",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "239",
+      "chainCategoryName": "יינות",
+      "chainCategoryDepth": 1,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -12116,11 +11978,11 @@
       "auto": false
     },
     {
-      "commonId": "dept/משקאות/משקאות-חמים/general",
+      "commonId": "dept/משקאות/משקאות-במארזים/משקאות-קלים-במארזים",
       "retailerSlug": "rami-levy",
-      "chainCategoryId": "238",
-      "chainCategoryName": "משקאות חמים",
-      "chainCategoryDepth": 1,
+      "chainCategoryId": "591",
+      "chainCategoryName": "חטיפי שוקולד במארז",
+      "chainCategoryDepth": 2,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -12268,6 +12130,16 @@
     {
       "commonId": "dept/משקאות/משקאות-חמים/קפה-נמס-אבקה",
       "retailerSlug": "rami-levy",
+      "chainCategoryId": "238",
+      "chainCategoryName": "משקאות חמים",
+      "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/משקאות/משקאות-חמים/קפה-נמס-אבקה",
+      "retailerSlug": "rami-levy",
       "chainCategoryId": "363",
       "chainCategoryName": "קפה נמס אבקה",
       "chainCategoryDepth": 2,
@@ -12318,6 +12190,16 @@
     {
       "commonId": "dept/משקאות/משקאות-חמים/קפה-שחור",
       "retailerSlug": "shufersal",
+      "chainCategoryId": "C300101",
+      "chainCategoryName": "מוצרים לשגרת חירום",
+      "chainCategoryDepth": 5,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/משקאות/משקאות-חמים/קפה-שחור",
+      "retailerSlug": "shufersal",
       "chainCategoryId": "G150707",
       "chainCategoryName": "ערכות קפה וציוד נלווה",
       "chainCategoryDepth": 7,
@@ -12356,17 +12238,7 @@
       "auto": false
     },
     {
-      "commonId": "dept/משקאות/משקאות-חריפים/general",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "511",
-      "chainCategoryName": "משקאות חריפים",
-      "chainCategoryDepth": 1,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/משקאות/משקאות-קלים/general",
+      "commonId": "dept/משקאות/משקאות-קלים/מים-וסודה-בטעמים",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "237",
       "chainCategoryName": "משקאות קלים",
@@ -12381,6 +12253,16 @@
       "chainCategoryId": "298",
       "chainCategoryName": "בשר בקר וכבש טרי",
       "chainCategoryDepth": 1,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/משקאות/משקאות-קלים/מים-וסודה-בטעמים",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "57",
+      "chainCategoryName": "חטיפי בוטנים",
+      "chainCategoryDepth": 2,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -12411,6 +12293,16 @@
       "chainCategoryId": "A130208",
       "chainCategoryName": "בקבוק מים מינרלים וסודה אישי",
       "chainCategoryDepth": 5,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/משקאות/משקאות-קלים/מים-וסודה-בטעמים",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A130816",
+      "chainCategoryName": "מיצים ונקטרים",
+      "chainCategoryDepth": 7,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
@@ -12516,6 +12408,16 @@
       "auto": false
     },
     {
+      "commonId": "dept/משקאות/משקאות-קלים/משקאות-קלים",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A130824",
+      "chainCategoryName": "מיץ סחוט טרי",
+      "chainCategoryDepth": 6,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
       "commonId": "dept/משקאות/תה-וחליטות/חליטות-קרות",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "1176",
@@ -12556,6 +12458,26 @@
       "auto": false
     },
     {
+      "commonId": "dept/משקאות/תה-וחליטות/תה-ירוק",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "595",
+      "chainCategoryName": "סוכריה על מקל",
+      "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/משקאות/תה-וחליטות/תה-ירוק",
+      "retailerSlug": "shufersal",
+      "chainCategoryId": "A130519",
+      "chainCategoryName": "תה ירוק",
+      "chainCategoryDepth": 5,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
       "commonId": "dept/משקאות/תה-וחליטות/תה-שחור-בטעמים",
       "retailerSlug": "rami-levy",
       "chainCategoryId": "1140",
@@ -12590,6 +12512,16 @@
       "retailerSlug": "rami-levy",
       "chainCategoryId": "111",
       "chainCategoryName": "סירופ  ותרכיזים",
+      "chainCategoryDepth": 2,
+      "confidence": 1,
+      "matchedSynonym": "chainHint:direct",
+      "auto": false
+    },
+    {
+      "commonId": "dept/משקאות/תרכיזים/סירופ-ותרכיזים",
+      "retailerSlug": "rami-levy",
+      "chainCategoryId": "291",
+      "chainCategoryName": "בורקסים",
       "chainCategoryDepth": 2,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
@@ -16141,16 +16073,6 @@
       "chainCategoryId": "223",
       "chainCategoryName": "פיצות, מאפים ובצקים קפואים",
       "chainCategoryDepth": 1,
-      "confidence": 1,
-      "matchedSynonym": "chainHint:direct",
-      "auto": false
-    },
-    {
-      "commonId": "dept/קפואים/פיצות-מאפים-ובצקים-קפואים/בורקסים",
-      "retailerSlug": "rami-levy",
-      "chainCategoryId": "291",
-      "chainCategoryName": "בורקסים",
-      "chainCategoryDepth": 2,
       "confidence": 1,
       "matchedSynonym": "chainHint:direct",
       "auto": false
